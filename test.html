@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Octofan</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="image/favicon.svg" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module">
+        import { WEB_PAGE } from './home.js';
+        window.WEB_PAGE = WEB_PAGE;
+    </script>
+    <link type="text/css" rel="stylesheet" href="aero/AeroWebPage.css">
+    <link type="text/css" rel="stylesheet" href="aero/AeroHeader.css">
+    <link type="text/css" rel="stylesheet" href="aero/AeroSlide.css">
+    <link type="text/css" rel="stylesheet" href="aero/AeroFooter.css">
+</head>
+
+<body onload="WEB_PAGE.build()">
+
+    <header>
+        <div>
+            <div class="menu-handler"><img src="aero/menu-icon.svg" alt="menu"></div>
+            <div class="menu-logo"><img src="graphics/logo.svg" alt="logo"></div>
+        </div>
+        <nav>
+            <ul>
+                <li class="current"><a href="/">Home</a></li>
+                <li><a href="/technology.html">Technology</a></li>
+                <li><a href="/applications.html">Applications</a></li>
+                <li><a href="/team.html">Team</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <footer>contact@octofan.com</footer>
+</body>
+
+</html>

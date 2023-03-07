@@ -1,0 +1,193 @@
+/* <header> */
+header {
+	background-color: black;
+	/*width: 100%;*/
+	height: 48px;
+	padding: 0px 8% 0px 8%;
+	
+	border-bottom: solid 1px rgba(64, 64, 64, 0.5);
+}
+
+
+
+
+
+
+/* <nav> */
+
+@media (orientation : landscape) {
+	header {
+		height: 48px;
+		display: flex;
+		flex-direction: row;
+	}
+
+header>* {
+	flex: auto;
+}
+
+	div.menu-logo {
+		width: 80px;
+	}
+	
+	div.menu-logo > img {
+		margin: 8px 8px 8px 8px;
+		height: 32px;
+		width: 64px;
+	}
+
+	nav {
+		z-index: 64;
+		width: calc(100% - 128px);
+	}
+
+	@media screen and (max-width: 600px) {
+		nav {
+			width: calc(100% - 64px);
+		}
+	}
+
+	nav>ul {
+		margin: 0px 0px 0px 0px;
+		margin-inline-start: 0px;
+		padding-inline-start: 0px;
+	}
+
+	nav>ul>li {
+		display: inline-block;
+		color: red;
+		text-decoration: none;
+		/*padding: 12px 12px 12px 12px;*/
+		padding: 0px;
+		line-height: 48px;
+		height: 48px;
+	}
+
+	nav>ul>li.current {
+		border-bottom: solid 2px red;
+	}
+
+
+
+
+	nav>ul>li>a {
+		color: white;
+		text-decoration: none;
+		font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
+			"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+		font-size: 16px;
+		font-weight: lighter;
+		line-height: 48px;
+		height: 48px;
+		/*padding: 0px;*/
+		padding: 12px 12px 12px 12px;
+		margin: 0px;
+		vertical-align: baseline;
+	}
+
+	nav>ul>li:hover {
+		background-color: red;
+		/*border-radius: 2px;*/
+	}
+
+	nav>ul>li:hover>a {
+		color: black;
+	}
+}
+
+
+@media ( orientation : portrait) {
+	header {
+		height: 64px;
+		padding: 0px 0px 0px 0px;
+	}
+
+
+	.aero-menu-icons-wrapper {
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	div.menu-handler {
+		display: inline-block;
+		vertical-align: top;
+		padding: 0px;
+		margin: 0px 0px 0px 0px;
+	}
+
+	div.menu-handler > img {
+		margin: 14px 14px 14px 14px;
+		/*height: 48px;*/
+		width: 36px;
+	}
+
+	div.menu-logo {
+		display: inline-block;
+		vertical-align: top;
+		width: 80px;
+		margin: 0px 0px 0px calc(50vw - 96px);
+	}
+	
+	div.menu-logo > img {
+		margin: 24px 0px 0px 0px;
+		width: 64px;
+	}
+
+
+	nav {
+		z-index: 64;
+		width: calc(100% - 96px);
+		position: absolute;
+		top: 66px;
+		left: 0px;
+		padding: 0px 0px 0px 16px;
+		background-color: black;
+		visibility: hidden;
+	}
+
+	@media screen and (max-width: 600px) {
+		nav {
+			width: calc(100% - 64px);
+		}
+	}
+
+	nav>ul {
+		margin: 0px 0px 0px 0px;
+		margin-inline-start: 0px;
+		padding-inline-start: 0px;
+	}
+
+	nav>ul>li {
+		display: block;
+		color: red;
+		text-decoration: none;
+		/*padding: 12px 12px 12px 12px;*/
+		padding: 0px;
+		line-height: 48px;
+		height: 48px;
+		border-bottom: solid 1px rgba(64, 64, 64, 0.6);
+	}
+
+	nav>ul>li.current>a {
+		border-left: solid 4px red;
+	}
+
+	nav>ul>li>a {
+		color: white;
+		text-decoration: none;
+		font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
+			"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+		font-size: 16px;
+		font-weight: lighter;
+		line-height: 48px;
+		height: 48px;
+		/*padding: 0px;*/
+		padding: 12px 12px 12px 12px;
+		margin: 0px;
+		vertical-align: baseline;
+	}
+}
+
+/* </nav> */
+
+/* </header> */

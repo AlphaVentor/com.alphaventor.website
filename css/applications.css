@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+
+.app-hyseawinds {
+    /* background: url(../image/Details_one4-high.png); */
+    background-position: center center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 772px;
+    padding: 0px 40px;
+    margin-top: 246px;
+}
+
+.spacer{
+	height: 256px;
+}
+
+
+.app-blackops {
+    /* background: url(../image/Details_one4-high.png); */
+    background-position: center center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 772px;
+    padding: 0px 40px;
+    margin-top: 246px;
+}

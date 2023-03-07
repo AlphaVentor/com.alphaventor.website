@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+<title>Octofan</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="shortcut icon" href="image/favicon.svg" type="image/x-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="aero-style.css" />
+<link rel="stylesheet" href="apps-grid.css" />
+<script type="module">
+		import { loadHighResImages } from './script.js';
+		window.loadHighResImages = loadHighResImages;
+	</script>
+</head>
+
+<body onload="loadHighResImages()">
+	<header>
+		<div>
+			<img src="graphics/logo.svg" alt="Logo">
+		</div>
+		<nav>
+			<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="/technology.html">Technology</a></li>
+				<li class="current"><a href="/applications.html">Applications</a></li>
+				<li><a href="/team.html">Team</a></li>
+				<li><a href="/contact.html">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div class="apps-grid">
+		<div class="app" onclick="location.href='http://www.example.com'">
+			<div
+				style="background-image: url('assets/applications/commuting-icon.png');">
+			</div>
+			<div>Commuting</div>
+		</div>
+		<div class="app">
+			<div
+				style="background-image: url('assets/applications/fire-fighting03-icon.png');">
+			</div>
+			<div>Fire-fighting</div>
+		</div>
+		<div class="app">
+			<div
+				style="background-image: url('assets/applications/holiday-icon.png');">
+			</div>
+			<div>Tourism</div>
+		</div>
+		<div class="app">
+			<div
+				style="background-image: url('assets/applications/freight-icon.png');">
+			</div>
+			<div>Freight</div>
+		</div>
+		<div class="app">
+			<div
+				style="background-image: url('assets/applications/search-and-rescue-icon.png');">
+			</div>
+			<div>Search & Rescue</div>
+		</div>
+		<div class="app">
+			<div
+				style="background-image: url('assets/applications/championship-icon.png');">
+			</div>
+			<div>Racing</div>
+		</div>
+		<div class="app selected">
+			<div
+				style="background-image: url('assets/applications/hsw-icon.png');">
+			</div>
+			<div>Offshore wind</div>
+		</div>
+		<div class="app">
+			<div
+				style="background-image: url('assets/applications/emergency-icon.png');">
+			</div>
+			<div>Emergency</div>
+		</div>
+		<div class="app">
+			<div
+				style="background-image: url('assets/applications/aid-icon.png');">
+			</div>
+			<div>First-response</div>
+		</div>
+		<div class="app">
+			<div
+				style="background-image: url('assets/applications/fresh-products-icon.png');">
+			</div>
+			<div>Fresh products</div>
+		</div>
+	</div>
+
+	<footer>contact@octofan.com</footer>
+</body>
+</html>

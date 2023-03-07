@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Octofan</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="image/favicon.svg" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/font.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <header class="header nav-down">
+        <a href="/" class="logo">
+            <img src="image/logo_octo.svg" alt="Logo">
+        </a>
+        <a href="/" class="octof">
+            <img src="image/octofan.svg" alt="Logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="https://marketplace.octofan.com">Pre-Order!</a></li>
+                <li><a href="/applications.html">Applications</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+            <select name="langue" id="site_langue">
+                <option value="en"><a href="#">EN</a></option>
+                <option value="fr"><a href="#">FR</a></option>
+            </select>
+        </nav>
+    </header>
+    <section class="menu-mobile">
+        <nav>
+            <div class="top">
+                <a href="/">
+                    <img src="image/embleme_octofan.svg" alt="Logo">
+                </a>
+                <div class="c-nav">
+                    <a href="/" class="octof">
+                        <img src="image/octofan.svg" alt="Logo">
+                    </a>
+                </div>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <select name="langue" id="site_langue_mobile">
+                    <option value="en" selected><a href="#">EN</a></option>
+                    <option value="fr"><a href="#">FR</a></option>
+                </select>
+            </ul>
+        </nav>
+    </section>
+    <section class="formulaire">
+        <div class="titre"><span>Stay in the loop</span> </div>
+        <form class="form" method="POST" data-netlify="true" name="contact_form">
+            <input type="hidden" id="subject" name="subject" value="I want to stay in the OCTOFAN's loop">
+            <input type="text" required class="column-1 fm" name="first-name" placeholder="First name*">
+            <input type="text" required class="column-2 name " name="name" placeholder="Name*">
+            <input type="email" required class="column-1 email" name="email" placeholder="Email*">
+            <input type="phone" required class="column-2 phone" name="phone" placeholder="Phone*">
+            <textarea rows="4" required class="textarea" placeholder="Write something..." name="message" cols="50"></textarea>
+            <span class="output_message"></span><button class="btn-form">Send</button>
+        </form>
+    </section>
+    <footer>
+        <section class="info-foot1">
+            <img src="image/logo_octofan.svg" class="logo_footer" alt="Logo">
+            <div class="links">
+                <span>Links</span>
+                <div class="link">
+                    <a href="/invest.html">Invest</a>
+                    <a href="/contact.html">Contact</a>
+                    <a href="/rgpd.html">RGPD</a>
+                </div>
+            </div>
+            <div class="social">
+                <span>Social</span>
+                <div class="icon">
+                    <a href="#"><img src="image/linkedin 1.svg" alt="linkedin" class="linkedin"></a>
+                    <a href="#"><img src="image/facebook.svg" alt="facebook" class="facebook"></a>
+                    <a href="#"><img src="image/instagram.svg" alt="instagram" class="instagram"></a>
+                    <a href="#"><img src="image/weixing.svg" alt="weixing" class="weixing"></a>
+                    <a href="#"><img src="image/weibo.svg" alt="weibo" class="weibo"></a>
+                    <a href="#"><img src="image/reddit.svg" alt="reddit" class="reddit"></a>
+                </div>
+            </div>
+            <div class="backToTop">
+                <span id="sbttBacktotop" class="sbttBacktotop">
+                    <img src="/image/up-arrow.svg" alt="sbtt">
+                </span>
+            </div>
+        </section>
+        <section class="info-foot2">
+            <span>Copyright Octofan. All Rights Reserved.</span>
+            <span class="credit">Credits <a href="https://simply-on.fr/" target="_blank">Simply-On</a> & <a
+                    href="https://bihua.fr" target="_blank">Bihua</a></span>
+        </section>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/script.js" defer></script>
+    <input id="progress_width">
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+/* <footer> */
+footer {
+	background-color: rgb(64, 64, 64);
+	width: 100%;
+	color: rgb(128, 128, 128);
+}
+
+/* </footer> */
+
+
+
+.aero-footer {
+	background: #2c3840;
+	color: #8aa0ae;
+	padding: 0;
+	margin: 0;
+}
+
+.aero-footer .marketing-site-footer-menu-social a {
+	color: #fefefe;
+}
+
+.aero-footer .column-block {
+	margin-bottom: 30px;
+}
+
+.aero-footer-row {
+	margin-bottom: 1rem;
+	display: flex;
+	padding: 0 8% 0 8%;
+}
+
+.aero-footer-column {
+	padding: 0px 4% 0px 4%;
+}
+
+.aero-footer-social > a > img {
+	width: 64px;
+	height: 64px;
+	margin: 0px 20px 0px 20px;
+}
+
+@media screen and (max-width: 39.9375em) {
+	.aero-footer .columns {
+		margin-bottom: 2rem;
+	}
+}
+
+.marketing-site-footer-name {
+	color: #fefefe;
+	margin-bottom: 1rem;
+	font-size: 2rem;
+}
+
+.marketing-site-footer-title {
+	color: #fefefe;
+	margin-bottom: 1rem;
+	font-size: 1.25rem;
+}
+
+.marketing-site-footer-block {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	margin-bottom: 1rem;
+}
+
+.marketing-site-footer-block .fa {
+	font-size: 2rem;
+	color: #020304;
+}
+
+.marketing-site-footer-block p {
+	margin-left: 1rem;
+	line-height: 1.125rem;
+}
+
+.aero-footer-bottom {
+	background: #020304;
+	padding: 8px 8% 8px 8%;
+	margin-bottom: 0;
+	color: white;
+}
+.aero-footer-bottom > a {
+	display: inline-block;
+	padding: 2px 8px 2px 8px;
+	margin: 0px 0px 0px 0px;
+	border-left: solid 1px #8aa0ae;
+	text-decoration: none;
+	color: rgb(128, 128, 128);
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
+			"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+		font-size: 12px;
+		font-weight: normal;
+}
+
+.aero-footer-bottom > a:hover {
+	text-decoration: underline;
+}
+
+.marketing-site-footer-bottom .marketing-site-footer-bottom-links a {
+	color: #8aa0ae;
+}
+
+@media screen and (max-width: 63.9375em) {
+	.marketing-site-footer-bottom .marketing-site-footer-bottom-links {
+		-webkit-justify-content: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+	}
+}
+
+@media screen and (max-width: 63.9375em) {
+	.marketing-site-footer-bottom {
+		text-align: center;
+	}
+}
