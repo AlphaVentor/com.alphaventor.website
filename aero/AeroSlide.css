@@ -330,6 +330,10 @@ div[class^="background-"] {
 	background-color: black;
 }
 
+.background-grey64 {
+	background-color: rgb(64, 64, 64);
+}
+
 .background-pic {
 	background-size: cover;
 	background-position: center;

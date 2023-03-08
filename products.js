@@ -26,7 +26,7 @@ export const WEB_PAGE = page([
         asset: "assets/aircrafts/nake/render0x02-low.png"
     }),
     slide("prime", {
-        theme: "light", background: "white",
+        theme: "light", background: "grey64",
         title: `Architecture A`,
         subtitle: `Standard RADIAL/RADIAL TURBO-COMPRESSOR`,
         paragraph: `Well-suited for low to moderate expansion ratio on both 
