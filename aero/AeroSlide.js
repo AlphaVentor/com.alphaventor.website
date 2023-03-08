@@ -128,6 +128,7 @@ export class AeroSlide extends AeroComponent {
                     case "black": this.sectionNode.classList.add("background-black"); break;
                     case "white": this.sectionNode.classList.add("background-white"); break;
                     case "grey64": this.sectionNode.classList.add("background-grey64"); break;
+                    case "grey128": this.sectionNode.classList.add("background-grey128"); break;
                 }
             }
         }

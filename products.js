@@ -26,7 +26,7 @@ export const WEB_PAGE = page([
         asset: "assets/aircrafts/nake/render0x02-low.png"
     }),
     slide("prime", {
-        theme: "light", background: "grey64",
+        theme: "dark", background: "grey64",
         title: `Architecture A`,
         subtitle: `Standard RADIAL/RADIAL TURBO-COMPRESSOR`,
         paragraph: `Well-suited for low to moderate expansion ratio on both 
@@ -41,7 +41,7 @@ export const WEB_PAGE = page([
         asset: "assets/architectures/turbocompressor-arch-A.png"
     }),
     slide("prime", {
-        theme: "light", background: "white",
+        theme: "dark", background: "grey128",
        	title: `Architecture B`,
         subtitle: `Versatile <b>Point-to-Point</b> logistics, H2-backed, with best in
         class efficiency`,
@@ -50,7 +50,7 @@ export const WEB_PAGE = page([
         asset: "assets/architectures/turbocompressor-arch-B.png"
     }),
     slide("prime", {
-        theme: "light", background: "white",
+        theme: "dark", background: "grey64",
         title: `Architecture C`,
         subtitle: `Versatile <b>Point-to-Point</b> logistics, H2-backed, with best in
         class efficiency`,
@@ -59,7 +59,7 @@ export const WEB_PAGE = page([
         asset: "assets/architectures/turbocompressor-arch-C.png"
     }),
     slide("prime", {
-        theme: "light", background: "white",
+        theme: "light", background: "grey128",
         title: `Architecture D`,
         subtitle: `Versatile <b>Point-to-Point</b> logistics, H2-backed, with best in
         class efficiency`,
@@ -68,7 +68,7 @@ export const WEB_PAGE = page([
         asset: "assets/architectures/turbocompressor-arch-D.png"
     }),
      slide("prime", {
-        theme: "light", background: "white",
+        theme: "dark", background: "grey64",
        	title: `Architecture E`,
         subtitle: `Versatile <b>Point-to-Point</b> logistics, H2-backed, with best in
         class efficiency`,
