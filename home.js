@@ -12,13 +12,13 @@ export const WEB_PAGE = page([
         theme: "dark", background: "black",
         title: `Say Hello to <span class="emphasis">SiTy8000u</span> "Silent Typhoon"`,
         subtitle: `The world's first heavy duty multi-role drone propeller`,
-        asset: "assets/aircrafts/turbos/SiTyphoon-config-low.png"
+        asset: "assets/turbos/SiTyphoon-config-low.png"
     }),
     slide("prime", {
-        theme: "light", background: "assets/backgrounds/skies-background-01-high.jpg",
+        theme: "light", background: "assets/backgrounds/skies-background-01-low.jpg",
         title: `Opening a new area for eVTOL`,
         subtitle: `Thrust up to 46kN`,
-        asset: "assets/aircrafts/evtol-cruise.png"
+        asset: "assets/aircrafts/evtol-cruise-low.png"
     }),
     slide("paragraph", {
         theme: "light", background: "white",

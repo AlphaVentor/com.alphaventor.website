@@ -87,7 +87,7 @@ export class AeroHeader extends AeroComponent {
         let menuLogoNode = document.createElement("div");
         menuLogoNode.classList.add("menu-logo");
         let frontImgNode = document.createElement("img");
-        frontImgNode.src = "graphics/logo.svg";
+        frontImgNode.src = this.props.logo;
         frontImgNode.alt = "logo";
         menuLogoNode.appendChild(frontImgNode);
         iconsWrapperNode.appendChild(menuLogoNode);
