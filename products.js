@@ -30,7 +30,14 @@ export const WEB_PAGE = page([
         title: `Architecture A`,
         subtitle: `Standard RADIAL/RADIAL TURBO-COMPRESSOR`,
         paragraph: `Well-suited for low to moderate expansion ratio on both 
-        sides and low to medium mass flows on both expander and compressor side. `,
+        sides and low to medium mass flows on both expander and compressor side. 
+        <ul>
+        <li>Air separtion units</li>
+<li>Cryogenic</li>
+<li>Reversed Brayton</li>
+<li>Oil&Gas general duty</li>
+		</ul>
+        `,
         asset: "assets/architectures/turbocompressor-arch-A.png"
     }),
     slide("prime", {
