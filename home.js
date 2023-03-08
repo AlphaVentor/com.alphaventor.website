@@ -58,7 +58,7 @@ export const WEB_PAGE = page([
         subtitle: `Versatile <b>Point-to-Point</b> shuttle that ease commuters life`,
         paragraph: `With a 24 seats and an ability to land vertically on natural
         surfaces, Octofan enables unseen city integration.`,
-        asset: "assets/aircrafts/bus/render0x05-low.png"
+        asset: "assets/aircrafts/evtol-takinf-off05-low.png"
     }),
     footer({}),
 ]);
