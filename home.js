@@ -22,7 +22,7 @@ export const WEB_PAGE = page([
         asset: "assets/aircrafts/evtol-taking-off05-low.png"
     }),
     slide("paragraph", {
-        theme: "light", background: "pic:assets/capabilities/CFD-Screenshot-02.jpg",
+        theme: "dark", background: "pic:assets/capabilities/CFD-Screenshot-02.jpg",
         subtitle: `CFD for advanced turbo-units`,
         paragraph: `With a comprehensive know-how in aerodynamics, AlphaVentor is able to support custom turbomachines development`,
     }),
