@@ -15,11 +15,11 @@ export const WEB_PAGE = page([
         asset: "assets/turbos/SiTyphoon-config-low.png"
     }),
     slide("prime", {
-        theme: "light", 
+        theme: "dark", 
         background: "pic:assets/backgrounds/skies-background-01-low.jpg",
         title: `Opening a new area for eVTOL`,
         subtitle: `Thrust up to 46kN`,
-        asset: "assets/aircrafts/evtol-cruise-low.png"
+        asset: "assets/aircrafts/evtol-taking-off05-low.png"
     }),
     slide("paragraph", {
         theme: "light", background: "white",
@@ -59,7 +59,7 @@ export const WEB_PAGE = page([
         subtitle: `Versatile <b>Point-to-Point</b> shuttle that ease commuters life`,
         paragraph: `With a 24 seats and an ability to land vertically on natural
         surfaces, Octofan enables unseen city integration.`,
-        asset: "assets/aircrafts/evtol-taking-off05-low.png"
+        asset: "assets/aircrafts/evtol-cruise-low.png"
     }),
     footer({}),
 ]);
