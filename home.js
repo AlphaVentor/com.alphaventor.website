@@ -15,7 +15,8 @@ export const WEB_PAGE = page([
         asset: "assets/turbos/SiTyphoon-config-low.png"
     }),
     slide("prime", {
-        theme: "light", background: "assets/backgrounds/skies-background-01-low.jpg",
+        theme: "light", 
+        background: "pic:assets/backgrounds/skies-background-01-low.jpg",
         title: `Opening a new area for eVTOL`,
         subtitle: `Thrust up to 46kN`,
         asset: "assets/aircrafts/evtol-cruise-low.png"
