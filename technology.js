@@ -3,7 +3,7 @@ import { page, header, slide, footer } from './aero/aero.js';
 
 export const WEB_PAGE = page([
     header({ 
-		logo : "graphics/logo.png",
+		logo : "graphics/alphaventor-logo-512x256px.png",
         menus: ["Home", "Technology", "Applications", "Partners", "Contact"],
         hrefs: ["/index.html", "/technology.html", "/applications.html", "/partners.html", "/contact.html"],
         selected: "Technology" }),
