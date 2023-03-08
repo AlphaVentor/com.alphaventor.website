@@ -10,16 +10,15 @@ export const WEB_PAGE = page([
         selected: "Home" }),
     slide("prime", {
         theme: "dark", background: "black",
-        title: `Say Hello to <span class="emphasis">OCTOFAN</span>`,
-        subtitle: `The world's first H2-powered multirole heavy duty drone with
-        switchable nacelles`,
-        asset: "assets/aircrafts/freighter/render0x07-low.png"
+        title: `Say Hello to <span class="emphasis">SiTy8000u</span> "Silent Typhoon"`,
+        subtitle: `The world's first heavy duty multi-role drone propeller`,
+        asset: "assets/aircrafts/turbos/SiTyphoon-config-low.png"
     }),
     slide("prime", {
-        theme: "light", background: "pic:assets/backgrounds/sky03-low.jpg",
-        title: `One Machine, Thousands of Applications`,
-        subtitle: `When aerospace embraces platform paradigm`,
-        asset: "assets/aircrafts/fleet/render0x03-low.png"
+        theme: "light", background: "assets/backgrounds/skies-background-01-high.jpg",
+        title: `Opening a new area for eVTOL`,
+        subtitle: `Thrust up to 46kN`,
+        asset: "assets/aircrafts/evtol-cruise.png"
     }),
     slide("paragraph", {
         theme: "light", background: "white",
