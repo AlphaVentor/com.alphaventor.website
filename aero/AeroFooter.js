@@ -8,14 +8,14 @@ const CONTENT = `
     <h4 class="marketing-site-footer-name">Stay tuned!</h4>
     <p>We push news from time to time, follow us on:</p>
     <div class="aero-footer-social">
-          <a href="https://www.linkedin.com/company/octofan"><img src="aero/icons/LinkedIn-icon.svg"></a>
-          <a href="https://twitter.com/OctofanDrone"><img src="aero/icons/Twitter-icon.svg"></a>
+          <a href="https://www.linkedin.com/company/alphaventor"><img src="aero/icons/LinkedIn-icon.svg"></a>
+          <a href="https://twitter.com/alphaventor256"><img src="aero/icons/Twitter-icon.svg"></a>
   </div>
   </div>
   <div class="aero-footer-column">
      <h4 class="marketing-site-footer-title">Contact Info</h4>
     <div class="marketing-site-footer-block">
-      <p>37 rue de l'industrie, 92400 Courbevoie, France</p>
+      <p>20-22 place Charles de Gaulle, 78100 Saint Germain en Laye, France</p>
     </div>
     <div class="marketing-site-footer-block">
       <p>contact@octofan.com</p>
