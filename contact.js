@@ -10,7 +10,7 @@ export const WEB_PAGE = page([
     slide("prime", {
         theme: "light", background: "pic:assets/backgrounds/industry.jpg",
         title: `Contact`,
-        paragraph: `Write us at contact@octofan.com`
+        paragraph: `Write us at contact@alphaventor.com`
     }),
     footer({}),
 ]);
