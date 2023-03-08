@@ -1,31 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>https://octofan.com/</loc>
+		<loc>https://alphaventor.com/</loc>
 		<lastmod>2022-11-11</lastmod>
 	</url>
 	<url>
-		<loc>https://octofan.com/technology.html</loc>
+		<loc>https://alphaventor.com/technology.html</loc>
 		<lastmod>2022-11-11</lastmod>
 	</url>
 	<url>
-		<loc>https://octofan.com/applications.html</loc>
+		<loc>https://alphaventor.com/applications.html</loc>
 		<lastmod>2022-11-11</lastmod>
 	</url>
 	<url>
-		<loc>https://octofan.com/team.html</loc>
+		<loc>https://alphaventor.com/team.html</loc>
 		<lastmod>2022-11-11</lastmod>
 	</url>
 	<url>
-		<loc>https://octofan.com/contact.html</loc>
-		<lastmod>2022-11-11</lastmod>
-	</url>
-	<url>
-		<loc>https://octofan.com/blackdeck.html</loc>
-		<lastmod>2022-11-11</lastmod>
-	</url>
-	<url>
-		<loc>https://octofan.com/hyseawinds.html</loc>
+		<loc>https://alphaventor.com/contact.html</loc>
 		<lastmod>2022-11-11</lastmod>
 	</url>
 </urlset>
