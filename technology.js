@@ -9,6 +9,10 @@ export const WEB_PAGE = page([
         selected: "Technology" }),
     slide("prime", {
         theme: "dark", background: "black",
+        asset: "assets/technology/slide01.jpg"
+    }),
+    slide("prime", {
+        theme: "dark", background: "black",
         title: `Incredible dynamics`,
         subtitle: `Efficient Take-off to cruise`,
         paragraph: `Efficient transition from take-off to cruise mode is at the
