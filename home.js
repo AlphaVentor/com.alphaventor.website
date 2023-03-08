@@ -15,18 +15,6 @@ export const WEB_PAGE = page([
         asset: "assets/turbos/SiTyphoon-config-low.png"
     }),
     slide("prime", {
-        theme: "dark", 
-        background: "pic:assets/backgrounds/skies-background-01-low.jpg",
-        title: `Opening a new area for eVTOL`,
-        subtitle: `Thrust up to 46kN`,
-        asset: "assets/aircrafts/evtol-taking-off05-low.png"
-    }),
-    slide("paragraph", {
-        theme: "dark", background: "pic:assets/capabilities/CFD-Screenshot-02.jpg",
-        subtitle: `CFD for advanced turbo-units`,
-        paragraph: `With a comprehensive know-how in aerodynamics, AlphaVentor is able to support custom turbomachines development`,
-    }),
-    slide("prime", {
         theme: "dark", background: "black",
         metrics: [
             {
@@ -38,6 +26,18 @@ export const WEB_PAGE = page([
                 parameter: "Max speed"
             }
         ]
+    }),
+    slide("prime", {
+        theme: "dark", 
+        background: "pic:assets/backgrounds/skies-background-01-low.jpg",
+        title: `Opening a new area for eVTOL`,
+        subtitle: `Thrust up to 46kN`,
+        asset: "assets/aircrafts/evtol-taking-off05-low.png"
+    }),
+    slide("paragraph", {
+        theme: "dark", background: "pic:assets/capabilities/CFD-Screenshot-02.jpg",
+        subtitle: `CFD for advanced turbo-units`,
+        paragraph: `With a comprehensive know-how in aerodynamics, AlphaVentor is able to support custom turbomachines development`,
     }),
     slide("prime", {
         theme: "dark", background: "pic:assets/backgrounds/london-octofan-env01.jpg",
