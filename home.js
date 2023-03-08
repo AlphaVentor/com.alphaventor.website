@@ -22,30 +22,16 @@ export const WEB_PAGE = page([
         asset: "assets/aircrafts/evtol-taking-off05-low.png"
     }),
     slide("paragraph", {
-        theme: "light", background: "white",
-        subtitle: `The case for Factoring`,
-        paragraph: `Multi-copters already proved their ubiquitous nature, with
-        applications range growing everyday. But when it comes to develop
-        the ultimate heavy-duty passengers-enabled best-in-class energy
-        efficient drone, factoring becomes the obvious path: one carrier
-        with extended capabilities, serving as a platform to enpower
-        thousands of third-parties applications that come right under the
-        machine as dedicated nacelles.`,
+        theme: "light", background: "pic:assets/capabilities/CFD-Screenshot-02.jpg",
+        subtitle: `CFD for advanced turbo-units`,
+        paragraph: `With a comprehensive know-how in aerodynamics, AlphaVentor is able to support custom turbomachines development`,
     }),
     slide("prime", {
         theme: "dark", background: "black",
         metrics: [
             {
-                number: "6000", unit: "kg",
-                parameter: "Max nacelle weight",
-            },
-            {
-                modifier: ">", number: "12", unit: "h",
-                parameter: "Flight time (ECO MODE 250km/h, full load)",
-            },
-            {
-                modifier: ">", number: "3000", unit: "km",
-                parameter: "Range (ECO MODE 250 km/h, full load)",
+                number: "4600", unit: "kg",
+                parameter: "Max Take-off thrust",
             },
             {
                 modifier: ">", number: "450", unit: "km/h",
@@ -56,9 +42,8 @@ export const WEB_PAGE = page([
     slide("prime", {
         theme: "dark", background: "pic:assets/backgrounds/london-octofan-env01.jpg",
         title: `Downtown airport`,
-        subtitle: `Versatile <b>Point-to-Point</b> shuttle that ease commuters life`,
-        paragraph: `With a 24 seats and an ability to land vertically on natural
-        surfaces, Octofan enables unseen city integration.`,
+        subtitle: `Versatile <b>Point-to-Point</b> Build versatile aircraft`,
+        paragraph: `Silent Typhoon propeller enables advanced aircraft like Octofan.`,
         asset: "assets/aircrafts/evtol-cruise-low.png"
     }),
     footer({}),
