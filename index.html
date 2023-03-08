@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
 <title>Octofan</title>
 <meta charset="UTF-8">
@@ -7,14 +8,11 @@
 <link rel="shortcut icon" href="image/favicon.svg" type="image/x-icon">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="style.css" />
-<link rel="stylesheet" href="welcome/style.css" />
 <script type="module">
-		import("./welcome/script.js").then(module => {
-			window.welcome = new module.Welcome("../home.js");
-			window.welcome.play()
-		}).catch(err => console.log(err));
-	</script>
+	import { WEB_PAGE } from './home.js';
+	window.WEB_PAGE = WEB_PAGE;
+</script>
 </head>
-<body>
+<body onload="WEB_PAGE.start()">
 </body>
 </html>

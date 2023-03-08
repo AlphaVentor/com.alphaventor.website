@@ -3,9 +3,10 @@ import { page, header, slide, footer, deck } from './aero/aero.js';
 
 export const WEB_PAGE = page([
     header({
-        menus: ["Home", "Technology", "Applications", "Team", "Contact"],
-        hrefs: ["/index2.html", "/technology.html", "/applications.html", "/team.html", "/contact.html"],
-        selected: "Team"
+		logo : "graphics/logo.png",
+        menus: ["Home", "Technology", "Applications", "Partners", "Contact"],
+        hrefs: ["/index.html", "/technology.html", "/applications.html", "/partners.html", "/contact.html"],
+        selected: "Partners"
     }),
     slide("prime", {
         theme: "dark", background: "black",

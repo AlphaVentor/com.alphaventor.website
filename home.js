@@ -4,6 +4,7 @@ import { page, header, slide, footer } from './aero/aero.js';
 
 export const WEB_PAGE = page([
     header({ 
+		logo : "graphics/logo.png",
         menus: ["Home", "Technology", "Applications", "Team", "Contact"],
         hrefs: ["/index2.html", "/technology.html", "/applications.html", "/team.html", "/contact.html"],
         selected: "Home" }),
