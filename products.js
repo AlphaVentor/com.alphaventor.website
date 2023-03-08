@@ -6,7 +6,7 @@ export const WEB_PAGE = page([
 		logo : "graphics/alphaventor-logo-512x256px.png",
         menus: ["Home", "Products", "Technology", "Partners", "Contact"],
         hrefs: ["/index.html", "/products.html", "/technology.html", "/partners.html", "/contact.html"],
-        selected: "Applications"
+        selected: "Products"
     }),
     slide("prime", {
         theme: "dark", background: "black",
@@ -26,13 +26,57 @@ export const WEB_PAGE = page([
         asset: "assets/aircrafts/nake/render0x02-low.png"
     }),
     slide("prime", {
-        theme: "light", background: "pic:assets/backgrounds/aerial-warehouse02-low.png",
+        theme: "light", background: "white",
+        title: `Architecture A`,
+        subtitle: `Standard RADIAL/RADIAL TURBO-COMPRESSOR`,
+        paragraph: `Well-suited for low to moderate expansion ratio on both 
+        sides and low to medium mass flows on both expander and compressor side. `,
+        asset: "assets/aircrafts/architectures/turbocompressor-arch-A.png"
+    }),
+    slide("prime", {
+        theme: "light", background: "white",
         title: `Meet the new truck`,
         subtitle: `Versatile <b>Point-to-Point</b> logistics, H2-backed, with best in
         class efficiency`,
         paragraph: `With a net payload of more than 4.2 tons and loading volume of
         more than 24 m3, Octofan freighter is a game changer in logistics.`,
-        asset: "assets/aircrafts/freighter/render0x02-low.png"
+        asset: "assets/aircrafts/architectures/turbocompressor-arch-B.png"
+    }),
+    slide("prime", {
+        theme: "light", background: "white",
+        title: `Meet the new truck`,
+        subtitle: `Versatile <b>Point-to-Point</b> logistics, H2-backed, with best in
+        class efficiency`,
+        paragraph: `With a net payload of more than 4.2 tons and loading volume of
+        more than 24 m3, Octofan freighter is a game changer in logistics.`,
+        asset: "assets/aircrafts/architectures/turbocompressor-arch-C.png"
+    }),
+    slide("prime", {
+        theme: "light", background: "white",
+        title: `Meet the new truck`,
+        subtitle: `Versatile <b>Point-to-Point</b> logistics, H2-backed, with best in
+        class efficiency`,
+        paragraph: `With a net payload of more than 4.2 tons and loading volume of
+        more than 24 m3, Octofan freighter is a game changer in logistics.`,
+        asset: "assets/aircrafts/architectures/turbocompressor-arch-D.png"
+    }),
+     slide("prime", {
+        theme: "light", background: "white",
+        title: `Meet the new truck`,
+        subtitle: `Versatile <b>Point-to-Point</b> logistics, H2-backed, with best in
+        class efficiency`,
+        paragraph: `With a net payload of more than 4.2 tons and loading volume of
+        more than 24 m3, Octofan freighter is a game changer in logistics.`,
+        asset: "assets/aircrafts/architectures/turbocompressor-arch-E.png"
+    }),
+    slide("prime", {
+        theme: "light", background: "white",
+        title: `Meet the new truck`,
+        subtitle: `Versatile <b>Point-to-Point</b> logistics, H2-backed, with best in
+        class efficiency`,
+        paragraph: `With a net payload of more than 4.2 tons and loading volume of
+        more than 24 m3, Octofan freighter is a game changer in logistics.`,
+        asset: "assets/aircrafts/architectures/turbocompressor-arch-A.png"
     }),
  slide("prime", {
         theme: "light", background: "white",
