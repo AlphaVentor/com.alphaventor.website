@@ -11,7 +11,7 @@ export const WEB_PAGE = page([
     slide("prime", {
         theme: "dark", background: "black",
         title: `Say Hello to <span class="emphasis">SiTy8000u</span> "Silent Typhoon"`,
-        subtitle: `The world's first heavy duty multi-role drone propeller`,
+        subtitle: `The world's first heavy duty eVTOL propeller`,
         asset: "assets/turbos/SiTyphoon-config-low.png"
     }),
     slide("prime", {
