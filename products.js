@@ -12,7 +12,7 @@ export const WEB_PAGE = page([
         theme: "dark", background: "black",
         title: `Build on this platform`,
         subtitle: `Opening aircraft development to thrird parties`,
-        paragraph: `Building on the indredible performance of Octofan, 
+        paragraph: `Building on the indredible performance of eVTOL drone, 
         Third-Parties of all horizons can develop dedicated solutions: 
         <li>Fire-fighting</li>
         <li>Emergency post-crisis/catastrophies fast response</li>
