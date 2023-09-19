@@ -31,9 +31,9 @@ header>* {
 	}
 	
 	div.menu-logo > img {
-		margin: 8px 8px 8px 8px;
-		height: 32px;
-		width: 32px;
+		margin: 2px 2px 2px 2px;
+		height: 40px;
+		width: 40px;
 	}
 
 	nav {
@@ -129,8 +129,8 @@ header>* {
 	}
 	
 	div.menu-logo > img {
-		margin: 16px 0px 0px 0px;
-		width: 32px;
+		margin: 12px 0px 0px 0px;
+		width: 40px;
 	}
 
 
