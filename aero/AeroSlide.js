@@ -1,6 +1,6 @@
 import { AeroComponent } from "./AeroComponent.js";
+import { LoadHandler } from "./aero.js";
 
-import { AeroWebPage } from "./AeroWebPage.js";
 
 
 
@@ -75,29 +75,12 @@ export class AeroSlide extends AeroComponent {
         this.props = props;
     }
 
-    render(state) {
-        if (!this.isInitialized) {
-            this.draw();
-            this.isInitialized = true;
-        }
-        else if (this.isInitialized && state.imageResolution == 1) {
-            this.redrawHighRes();
-        }
-    }
-
-    draw() {
+    initializeNodes(){
         this.sectionNode = document.createElement("section");
-        this.sectionNode.classList.add("aero-slide-" + this.type);
+        this.sectionNode.classList.add("aero-slide");
 
-        /* <theme> */
-        if (this.props.theme != undefined) {
-            switch (this.props.theme) {
-                case "dark": this.sectionNode.classList.add("aero-theme-dark"); break;
-                case "light": this.sectionNode.classList.add("aero-theme-light"); break;
-                case undefined: break;
-            }
-        }
-        /* </theme> */
+        this.setType(this.type);
+        this.setTheme(this.props.theme ? this.props.theme : "light");
 
 
         /* <background> */
@@ -110,18 +93,8 @@ export class AeroSlide extends AeroComponent {
                 let backgroundImagePath = backgroundParam.substring(4, n);
                 this.hasBackgroundImage = true;
                 this.backgroundImagePath = backgroundImagePath;
-
                 this.sectionNode.classList.add("background-pic");
-
-                let _this = this;
-                let backgroundImageBuffer = new Image();
-                backgroundImageBuffer.onload = function () {
-                    _this.sectionNode.style.backgroundImage = `url(${backgroundImageBuffer.src})`;
-                    _this.isBackgroundImageLoaded = true;
-                    _this.page.notifyElementHasBeenLoaded();
-                };
-                backgroundImageBuffer.src = backgroundImagePath; // trigger
-
+                // load later on
             }
             else {
                 switch (backgroundParam) {
@@ -133,17 +106,16 @@ export class AeroSlide extends AeroComponent {
                 }
             }
         }
-
         /* </background> */
 
 
+        /* <text> */
         let textNode = document.createElement("div");
         textNode.classList.add("text");
 
         /* <h1> */
         if (this.props.title != undefined) {
             let h1Node = document.createElement("h1");
-            h1Node.classList.add("aero-slide");
             h1Node.innerHTML = this.props.title;
             textNode.appendChild(h1Node);
         }
@@ -152,7 +124,6 @@ export class AeroSlide extends AeroComponent {
         /* <h2> */
         if (this.props.subtitle != undefined) {
             let h2Node = document.createElement("h2");
-            h2Node.classList.add("aero-slide");
             h2Node.innerHTML = this.props.subtitle;
             textNode.appendChild(h2Node);
         }
@@ -161,12 +132,12 @@ export class AeroSlide extends AeroComponent {
         /* <p> */
         if (this.props.paragraph != undefined) {
             let pNode = document.createElement("p");
-            pNode.innerHTML = this.props.paragraph;
             textNode.appendChild(pNode);
         }
         /* </p> */
 
         this.sectionNode.appendChild(textNode);
+        /* </text> */
 
         /* <metrics> */
         if (this.props.metrics != undefined) { this.drawMetrics(this.props.metrics); }
@@ -179,21 +150,74 @@ export class AeroSlide extends AeroComponent {
             assetNode.classList.add("aero-slide-asset");
             this.sectionNode.appendChild(assetNode);
 
-            let assetImagePath = this.props.asset;
-            this.assetImagePath = assetImagePath;
+            this.assetImagePath = this.props.asset;
             this.assetNode = assetNode;
             this.hasAssetImage = true;
+        }
+        /* </assset> */
 
-            let _this = this;
+        return this.sectionNode;
+    }
+
+
+    setType(type) {
+        this.sectionNode.setAttribute("type", type);
+    }
+
+    setTheme(theme) {
+        this.sectionNode.setAttribute("theme", theme);
+    }
+
+
+    /**
+     * 
+     * @param {LoadHandler} handler 
+     */
+    load(handler) {
+        const _this = this;
+        if (this.hasBackgroundImage) {
+            const id = handler.generateId();
+
+            let backgroundImageBuffer = new Image();
+            handler.registerLoading(id);
+            backgroundImageBuffer.onload = function () {
+                _this.sectionNode.style.backgroundImage = `url(${backgroundImageBuffer.src})`;
+                _this.isBackgroundImageLoaded = true;
+                handler.notifyCompleted(id);
+            };
+            backgroundImageBuffer.src = this.backgroundImagePath; // trigger
+        }
+
+        /* <asset> */
+        if (this.hasAssetImage) {
+            const id = handler.generateId();
             let assetImageBuffer = new Image();
+            handler.registerLoading(id);
             assetImageBuffer.onload = function () {
                 _this.assetNode.style.backgroundImage = `url(${assetImageBuffer.src})`;
                 _this.isAssetImageLoaded = true;
-                _this.page.notifyElementHasBeenLoaded();
+                handler.notifyCompleted(id);
             };
-            assetImageBuffer.src = assetImagePath; // trigger
+            assetImageBuffer.src = this.assetImagePath; // trigger
         }
         /* </assset> */
+
+    }
+
+    render(state) {
+        if (!this.isInitialized) {
+            this.draw();
+            this.isInitialized = true;
+        }
+        else if (this.isInitialized && state.imageResolution == 1) {
+            this.redrawHighRes();
+        }
+    }
+
+    draw() {
+
+
+
     }
 
     drawMetrics(script) {
@@ -288,31 +312,4 @@ export class AeroSlide extends AeroComponent {
         }
     }
 
-    getEnveloppe() {
-        return this.sectionNode;
-    }
-
-
-    /**
-     * 
-     * @param {AeroWebPage} page 
-     */
-    link(page) {
-        this.page = page;
-        page.import_CSS("aero/AeroSlide.css");
-    }
-
-    isLoaded() {
-
-        let isLoadedState = true; // assume loaded
-        if (this.hasBackgroundImage && !this.isBackgroundImageLoaded) {
-            return false;
-        }
-
-        if (this.hasAssetImage && !this.isAssetImageLoaded) {
-            return false;
-        }
-
-        return true;
-    }
 }

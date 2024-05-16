@@ -18,6 +18,11 @@ export class AeroDeck extends AeroComponent {
         this.props = props;
     }
 
+
+    initializeNodes(){
+        
+    }
+
     render() {
         if (!this.isInitialized) {
             this.draw();

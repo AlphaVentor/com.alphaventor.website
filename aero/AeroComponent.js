@@ -1,15 +1,8 @@
-import { AeroWebPage } from "./AeroWebPage.js";
+
 
 
 export class AeroComponent {
 
-
-    /**
-     * @type {AeroWebPage}
-     */
-    page;
-
-    isInitialized = false;
 
     /**
      * @type {boolean} current landscape painting option
@@ -26,11 +19,10 @@ export class AeroComponent {
    */
     screenHeight = 1080;
 
-    constructor() {
-    }
 
-    link(page) {
-        this.page = page;
+    static isCSSLoading = false;
+
+    constructor() {
     }
 
     onOrientationChanged(isLandscape) {
@@ -44,14 +36,5 @@ export class AeroComponent {
         this.screenHeight = height;
     }
 
-    /**
-     * 
-     */
-    clearEnveloppe() {
-        let enveloppeNode = this.getEnveloppe();
-        let child;
-        while ((child = enveloppeNode.firstChild)) {
-            enveloppeNode.removeChild(child);
-        }
-    }
+   
 }

@@ -1,4 +1,5 @@
 import { AeroComponent } from "./AeroComponent.js";
+import { clearChildNodes } from "./aero.js";
 
 /*
 export const MENUS = ["Home", "Technology", "Applications", "Team", "Contact"];
@@ -24,22 +25,30 @@ export class AeroHeader extends AeroComponent {
     constructor(props) {
         super();
         this.props = props;
+       
     }
+
+    initializeNodes(state){
+        this.headerNode = document.createElement('header');
+        this.isLandscape = state.isLandscape;
+        this.draw();
+        
+        return this.headerNode;
+    }
+
+    getEnveloppe() {
+        return this.headerNode;
+    }
+
+    load(){ /* nothing to load here */ }
 
     render(state) {
-        if (!this.isInitialized) { // paint
-            this.headerNode = document.createElement('header');
+        if (state.isLandscape != this.isLandscape) { // repaint
             this.isLandscape = state.isLandscape;
-            this.draw();
-            this.isInitialized = true;
-        }
-        else if (state.isLandscape != this.isLandscape) { // repaint
-            this.isLandscape = state.isLandscape;
-            this.clearEnveloppe();
+            clearChildNodes(this.headerNode);
             this.draw();
         }
     }
-
 
     draw() {
         if (this.isLandscape) {
@@ -114,12 +123,16 @@ export class AeroHeader extends AeroComponent {
 
         /* <nav> */
         let navNode = document.createElement('nav');
+        
         let unorderedListNode = document.createElement('ul');
+
         this.props.menus.forEach((menu, index) => {
             let listItemNode = document.createElement('li');
+            listItemNode.classList.add("aero-header-menu")
+            
             let isSelected = (menu == selectedMenu);
             if (isSelected) {
-                listItemNode.classList.add("current");
+                listItemNode.setAttribute("selected", "");
             }
     
             let aNode = document.createElement("a");
@@ -135,9 +148,7 @@ export class AeroHeader extends AeroComponent {
     }
 
 
-    getEnveloppe() {
-        return this.headerNode;
-    }
+  
 
     /**
    * 

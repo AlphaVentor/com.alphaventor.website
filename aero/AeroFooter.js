@@ -31,44 +31,33 @@ const CONTENT = `
 
 export class AeroFooter extends AeroComponent {
 
-    /** @type{HTMLElement} */
-    footerNode;
+  /** @type{HTMLElement} */
+  footerNode;
 
 
-    props;
+  props;
 
-    constructor(props){
-        super();   
-        this.props = props;    
-    }
-
-    render(){
-        if(!this.isInitialized){
-            this.footerNode = document.createElement('footer');
-            this.footerNode.classList.add('aero-footer');
-            this.footerNode.innerHTML = CONTENT;
-            this.isInitialized = true;     
-        }
-    }
-
-    getEnveloppe(){
-        return this.footerNode;
-    }
-
-      /**
-     * 
-     * @param {AeroWebPage} page 
-     */
-       link(page) {
-        this.page = page;
-        page.import_CSS("aero/AeroFooter.css");
-    }
-
-    isLoaded(){
-        return this.isInitialized;
-    }
+  constructor(props) {
+    super();
+    this.props = props;
 
 
-    
+  }
+
+  initializeNodes() {
+    this.footerNode = document.createElement('footer');
+    this.footerNode.classList.add('aero-footer');
+    this.footerNode.innerHTML = CONTENT;
+    return this.footerNode;
+  }
+
+
+
+  load() { /* nothing to load */ }
+
+  render() {
+
+  }
+
 
 }

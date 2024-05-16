@@ -1,11 +1,12 @@
 /* <header> */
 header {
-	background-color: black;
+	background-color: rgb(255, 255, 255);
 	/*width: 100%;*/
-	height: 48px;
+	height: 64px;
 	padding: 0px 8% 0px 8%;
-	
+
 	border-bottom: solid 1px rgba(64, 64, 64, 0.5);
+	color: black;
 }
 
 
@@ -17,27 +18,27 @@ header {
 
 @media (orientation : landscape) {
 	header {
-		height: 48px;
+		height: 64px;
 		display: flex;
 		flex-direction: row;
 	}
 
-header>* {
-	flex: auto;
-}
+	header>* {
+		flex: auto;
+	}
 
 	div.menu-logo {
 		width: 80px;
 	}
-	
-	div.menu-logo > img {
-		margin: 2px 2px 2px 2px;
-		height: 44px;
-		width: 44px;
+
+	div.menu-logo>img {
+		margin: 8px 16px 8px 16px;
+		height: 48px;
+		width: 48px;
 	}
 
 	nav {
-		z-index: 64;
+		z-index: 12;
 		width: calc(100% - 128px);
 	}
 
@@ -53,50 +54,42 @@ header>* {
 		padding-inline-start: 0px;
 	}
 
-	nav>ul>li {
+	.aero-header-menu {
 		display: inline-block;
 		color: red;
 		text-decoration: none;
-		/*padding: 12px 12px 12px 12px;*/
-		padding: 0px;
+        padding: 8px 12px 6px 12px;
 		line-height: 48px;
 		height: 48px;
+		cursor: pointer;
 	}
 
-	nav>ul>li.current {
-		border-bottom: solid 2px red;
+	.aero-header-menu[selected] {
+		border-bottom: solid 2px rgb(224, 149, 0);
 	}
 
-
-
-
-	nav>ul>li>a {
-		color: white;
+	.aero-header-menu > a {
+		color: rgb(64, 64, 64);
 		text-decoration: none;
 		font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
 			"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-		font-size: 16px;
-		font-weight: lighter;
-		line-height: 48px;
-		height: 48px;
-		/*padding: 0px;*/
-		padding: 12px 12px 12px 12px;
+		font-size: 20px;
+		font-weight: normal;
+        padding: 8px 12px 8px 12px;
 		margin: 0px;
 		vertical-align: baseline;
 	}
 
-	nav>ul>li:hover {
-		background-color: red;
-		/*border-radius: 2px;*/
+	.aero-header-menu:hover > a {
+		background-color: rgb(199, 204, 208);
+		border-radius: 4px;
+		color: rgb(24, 24, 24);
 	}
 
-	nav>ul>li:hover>a {
-		color: black;
-	}
 }
 
 
-@media ( orientation : portrait) {
+@media (orientation : portrait) {
 	header {
 		height: 64px;
 		padding: 0px 0px 0px 0px;
@@ -106,6 +99,7 @@ header>* {
 	.aero-menu-icons-wrapper {
 		display: inline-block;
 		vertical-align: top;
+		cursor: pointer;
 	}
 
 	div.menu-handler {
@@ -115,7 +109,7 @@ header>* {
 		margin: 0px 0px 0px 0px;
 	}
 
-	div.menu-handler > img {
+	div.menu-handler>img {
 		margin: 14px 14px 14px 14px;
 		/*height: 48px;*/
 		width: 36px;
@@ -127,15 +121,15 @@ header>* {
 		width: 80px;
 		margin: 0px 0px 0px calc(50vw - 96px);
 	}
-	
-	div.menu-logo > img {
+
+	div.menu-logo>img {
 		margin: 3px 0px 0px 0px;
 		width: 56px;
 	}
 
 
 	nav {
-		z-index: 64;
+		z-index: 12;
 		width: calc(100% - 96px);
 		position: absolute;
 		top: 66px;
@@ -157,22 +151,24 @@ header>* {
 		padding-inline-start: 0px;
 	}
 
-	nav>ul>li {
+	.aero-header-menu {
 		display: block;
 		color: red;
 		text-decoration: none;
-		/*padding: 12px 12px 12px 12px;*/
-		padding: 0px;
-		line-height: 48px;
-		height: 48px;
+		padding: 12px 12px 12px 12px;
 		border-bottom: solid 1px rgba(64, 64, 64, 0.6);
 	}
 
-	nav>ul>li.current>a {
+	.aero-header-menu:hover > a {
+		background-color: aqua;
+		color: white;
+	}
+
+	.aero-header-menu[selected] >a {
 		border-left: solid 4px red;
 	}
 
-	nav>ul>li>a {
+	.aero-header-menu > a {
 		color: white;
 		text-decoration: none;
 		font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
@@ -182,7 +178,7 @@ header>* {
 		line-height: 48px;
 		height: 48px;
 		/*padding: 0px;*/
-		padding: 12px 12px 12px 12px;
+		padding: 8px 8px 8px 8px;
 		margin: 0px;
 		vertical-align: baseline;
 	}
