@@ -14,7 +14,8 @@ section[class^="aero-movie-"]>div.text {
 /* <asset> */
 
 .aero-movie {
-	background-color: black;
+	background-color: rgb(255, 255, 255);
+	height: fit-content;
 	/*overflow: auto;*/
 }
 

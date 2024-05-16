@@ -98,9 +98,10 @@ export class AeroWebPage {
             const modalBox = new ModalBox({
                 image: "assets/icons/cookie.png",
                 title: "0 cookies : Total privacy",
-                explanation: "0 cookie means that no tracking of any kinf is used on this site."
+                explanation: "Zero cookie policy means that no tracking of any kind is used on this site."
             }, () => { 
                 this.topLayer.removeChild(modalBox.getEnvelope());
+                this.run();
             });
             this.topLayer.appendChild(modalBox.getEnvelope());
         }
@@ -136,12 +137,15 @@ export class AeroWebPage {
         this.wrapperNode.classList.remove("hidden");
     }
 
-
     render() {
         let state = this.generateState();
         this.header.render(state);
         this.elements.forEach(element => element.render(state));
         this.footer.render(state);
+    }
+
+    run(){
+        this.elements.forEach(element => { if(element.run){ element.run(); }});
     }
 
     notifyElementHasBeenLoaded() {

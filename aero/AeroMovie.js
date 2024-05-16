@@ -70,6 +70,19 @@ export class AeroMovie extends AeroComponent {
     /** @type {HTMLDivElement} */
     assetNode;
 
+
+    sequences = [
+        "assets/sequences/alpha-movie0.mp4",
+        "assets/sequences/sequence3.mp4",
+        "assets/sequences/sequence0.mp4",
+        "assets/sequences/sequence1.mp4",
+        "assets/sequences/sequence2.mp4"
+    ];
+
+    sequenceIndex = 0;
+
+    sourceNode;
+
     constructor(type, props) {
         super();
         this.type = type;
@@ -95,7 +108,6 @@ export class AeroMovie extends AeroComponent {
     }
 
     draw() {
-       
 
         /* <video> */
         this.videoNode = document.createElement("video");
@@ -107,6 +119,8 @@ export class AeroMovie extends AeroComponent {
         //this.videoNode.setAttribute("controls", "");
         // autoplay  
 
+        this.videoNode.playbackRate = 1.0;
+
         const _this = this;
         this.sectionNode.addEventListener('mouseover', () => {
             console.log("Test");
@@ -115,13 +129,32 @@ export class AeroMovie extends AeroComponent {
 
         this.sectionNode.appendChild(this.videoNode);
 
-        this.sourceNode = document.createElement("source");
-        this.sourceNode.src = "assets/sequences/sequence3.mp4";
-        this.sourceNode.type = "video/mp4";
+        this.sourceNode = this.generateNextSourceNode();
         this.videoNode.appendChild(this.sourceNode);
-
-
         /* </video> */
+    }
+
+
+    run(){
+        this.videoNode.play();
+        let nextSourceNode = this.generateNextSourceNode();
+
+        this.videoNode.addEventListener('ended', () => {
+            this.videoNode.removeChild(this.sourceNode);
+            this.videoNode.appendChild(this.sourceNode = nextSourceNode);
+            this.videoNode.load();
+            this.videoNode.play();
+
+            nextSourceNode = this.generateNextSourceNode();
+        });
+    }
+
+    generateNextSourceNode(){
+        if(this.sequenceIndex >= this.sequences.length){ this.sequenceIndex = 0; }
+        const sourceNode = document.createElement("source");
+        sourceNode.src = this.sequences[this.sequenceIndex++];
+        sourceNode.type = "video/mp4";
+        return sourceNode;
     }
 
 

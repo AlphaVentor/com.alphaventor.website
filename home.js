@@ -15,6 +15,13 @@ export const WEB_PAGE = page({
             sequences: ["assets/turbos/SiTyphoon-config-low.png"]
         }),
         slide("prime", {
+            theme: "light", background: "white",
+            title: `Showcase your products`,
+            subtitle: `Leverage the power of the <span class="emphasis">AlphaVentor</span> 
+            platform to give your client a digital twin of your products`,
+            asset: "assets/slides/slide00.png"
+        }),
+        slide("prime", {
             theme: "dark", background: "black",
             title: `Say Hello to <span class="emphasis">SiTy8000u</span> "Silent Typhoon"`,
             subtitle: `The world's first heavy duty eVTOL propeller`,
