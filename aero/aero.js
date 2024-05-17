@@ -1,5 +1,6 @@
 import { AeroDeck } from "./AeroDeck.js";
 import { AeroFooter } from "./AeroFooter.js";
+import { AeroGrid, AeroGridCard } from "./AeroGrid.js";
 import { AeroHeader } from "./AeroHeader.js";
 import { AeroMovie } from "./AeroMovie.js";
 import { AeroSlide } from "./AeroSlide.js";
@@ -24,6 +25,14 @@ export const movie = function (type, props) {
 
 export const deck = function (props) {
     return new AeroDeck(props);
+}
+
+export const grid = function (type, props) {
+    return new AeroGrid(type, props);
+}
+
+export const gridCard = function (type, props) {
+    return new AeroGridCard(type, props);
 }
 
 export const footer = function (props) {
@@ -85,6 +94,7 @@ export class LoadHandler {
 export const CSS_FILENAMES = [
     "aero/AeroDeck.css",
     "aero/AeroFooter.css",
+    "aero/AeroGrid.css",
     "aero/AeroMovie.css",
     "aero/AeroHeader.css",
     "aero/AeroSlide.css",

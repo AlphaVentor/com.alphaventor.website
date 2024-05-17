@@ -71,18 +71,6 @@ export class AeroMovie extends AeroComponent {
     assetNode;
 
 
-    sequences = [
-        "assets/sequences/alpha-movie0.mp4",
-        "assets/sequences/sequence3.mp4",
-        "assets/sequences/sequence0.mp4",
-        "assets/sequences/sequence1.mp4",
-        "assets/sequences/sequence2.mp4"
-    ];
-
-    sequenceIndex = 0;
-
-    sourceNode;
-
     constructor(type, props) {
         super();
         this.type = type;
@@ -90,24 +78,9 @@ export class AeroMovie extends AeroComponent {
     }
 
 
-    initializeNodes(){
+    initializeNodes() {
         this.sectionNode = document.createElement("section");
         this.sectionNode.classList.add("aero-movie");
-
-        return this.sectionNode;
-    }
-
-    render(state) {
-        if (!this.isInitialized) {
-            this.draw();
-            this.isInitialized = true;
-        }
-        else if (this.isInitialized && state.imageResolution == 1) {
-            this.redrawHighRes();
-        }
-    }
-
-    draw() {
 
         /* <video> */
         this.videoNode = document.createElement("video");
@@ -115,47 +88,19 @@ export class AeroMovie extends AeroComponent {
         this.videoNode.setAttribute("muted", "");
         // this.videoNode.setAttribute("playsinline", "");
         this.videoNode.setAttribute("autoplay", "");
-        //this.videoNode.setAttribute("loop", "");
+        this.videoNode.setAttribute("loop", "");
         //this.videoNode.setAttribute("controls", "");
         // autoplay  
 
         this.videoNode.playbackRate = 1.0;
 
-        const _this = this;
-        this.sectionNode.addEventListener('mouseover', () => {
-            console.log("Test");
-            _this.videoNode.play();
-        });
-
         this.sectionNode.appendChild(this.videoNode);
 
-        this.sourceNode = this.generateNextSourceNode();
-        this.videoNode.appendChild(this.sourceNode);
         /* </video> */
+
+        return this.sectionNode;
     }
 
-
-    run(){
-        this.videoNode.play();
-        let nextSourceNode = this.generateNextSourceNode();
-
-        this.videoNode.addEventListener('ended', () => {
-            this.videoNode.removeChild(this.sourceNode);
-            this.videoNode.appendChild(this.sourceNode = nextSourceNode);
-            this.videoNode.load();
-            this.videoNode.play();
-
-            nextSourceNode = this.generateNextSourceNode();
-        });
-    }
-
-    generateNextSourceNode(){
-        if(this.sequenceIndex >= this.sequences.length){ this.sequenceIndex = 0; }
-        const sourceNode = document.createElement("source");
-        sourceNode.src = this.sequences[this.sequenceIndex++];
-        sourceNode.type = "video/mp4";
-        return sourceNode;
-    }
 
 
     /**
@@ -163,8 +108,40 @@ export class AeroMovie extends AeroComponent {
      * @param {LoadHandler} handler 
      */
     load(handler) {
+        const sourceNode = document.createElement("source");
+        sourceNode.src = this.props.sequence;
+        sourceNode.type = "video/mp4";
         
+        const id = handler.generateId;
+        handler.registerLoading(id);
+
+        this.videoNode.addEventListener('loadeddata', function() {
+            handler.notifyCompleted(id);
+        }, false);
+
+        this.videoNode.appendChild(sourceNode);
     }
 
-   
+    render() {
+        if (!this.isInitialized) {
+            this.draw();
+            this.isInitialized = true;
+        }
+    }
+
+    draw() {
+
+    }
+
+
+    run() {
+        this.videoNode.play();
+    }
+
+    generateNextSourceNode() {
+        if (this.sequenceIndex >= this.sequences.length) { this.sequenceIndex = 0; }
+       
+    }
+
+
 }

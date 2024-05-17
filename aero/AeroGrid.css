@@ -1,11 +1,11 @@
-/* <aero-slide> */
-.aero-slide {
+/* <aero-grid> */
+.aero-grid {
 	margin: 0px 0px 0px 0px;
 	padding: 0px 0px 0px 0px;
 	width: 100%;
 }
 
-.aero-slide > div.text {
+.aero-grid > div.text {
 	margin: 0px 0px 0px 0px;
 	padding: 8px 16% 8px 16%;
 }
@@ -13,9 +13,9 @@
 
 /* <asset> */
 
-div.aero-slide-asset {
-	margin: 8px 12% 8px 12%;
-	padding: 0px;
+div.aero-grid-asset {
+	margin: 0px 0px 0px 0px;
+	padding: 8px 12% 8px 12%;
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -25,16 +25,16 @@ div.aero-slide-asset {
 }
 
 @media (orientation : landscape) {
-	div.aero-slide-asset {
+	div.aero-grid-asset {
 		height: 600px;
-		margin: 8px 12% 8px 12%;
+		padding: 8px 12% 8px 12%;
 	}
 }
 
 @media (orientation : portrait) {
-	div.aero-slide-asset {
+	div.aero-grid-asset {
 		height: 320px;
-		margin: 4px 4% 4px 4%;
+		padding: 4px 0px 4px 0px;
 	}
 }
 
@@ -43,9 +43,9 @@ div.aero-slide-asset {
 
 
 /* <metrics> */
-div.aero-slide[type = "metrics"] {
+div.aero-grid[type = "metrics"] {
 	margin: 0px 0px 0px 0px;
-	margin: 8px 12% 8px 12%;
+	padding: 8px 12% 8px 12%;
 	display: inline-flex;
 	background-color: black;
 	z-index: 2;
@@ -53,29 +53,29 @@ div.aero-slide[type = "metrics"] {
 }
 
 
-div.aero-slide-metrics-item {
+div.aero-grid-metrics-item {
 	flex: auto;
 	padding: 20px;
 }
 
-div.aero-slide-metrics-item * {
+div.aero-grid-metrics-item * {
 	padding: 0px;
 	margin: 0px;
 }
 
-div.aero-slide-metrics-item-value>span {
+div.aero-grid-metrics-item-value>span {
 	vertical-align: baseline;
 	color: #9fffa5;
 }
 
-div.aero-slide-metrics-item-value>span.modifier {
+div.aero-grid-metrics-item-value>span.modifier {
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
 		"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	font-size: 64px;
 	font-weight: normal;
 }
 
-div.aero-slide-metrics-item-value>span.number {
+div.aero-grid-metrics-item-value>span.number {
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
 		"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	font-size: 64px;
@@ -83,14 +83,14 @@ div.aero-slide-metrics-item-value>span.number {
 	padding: 0px 4px 0px 4px;
 }
 
-div.aero-slide-metrics-item-value>span.unit {
+div.aero-grid-metrics-item-value>span.unit {
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
 		"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	font-size: 32px;
 	font-weight: bold;
 }
 
-div.aero-slide-metrics-item-parameter {
+div.aero-grid-metrics-item-parameter {
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
 		"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	font-size: 16px;
@@ -103,25 +103,25 @@ div.aero-slide-metrics-item-parameter {
 @media (orientation : landscape) {
 	/* default */
 
-	div.aero-slide-metrics-item {
+	div.aero-grid-metrics-item {
 		border-left: 1px solid rgba(64, 64, 64, 0.92);
 	}
 
-	div.aero-slide[type = "metrics"]>div.aero-slide-metrics-item:first-child {
+	div.aero-grid[type = "metrics"]>div.aero-grid-metrics-item:first-child {
 		border-left: none;
 	}
 }
 
 @media (orientation : portrait) {
-	div.aero-slide[type="metrics"] {
+	div.aero-grid[type="metrics"] {
 		display: flex;
 		flex-wrap: wrap;
 	}
-	div.aero-slide-metrics-item {
+	div.aero-grid-metrics-item {
 		border-top: 1px solid rgba(64, 64, 64, 0.92);
 	}
 
-	div.aero-slide[type = "metrics"] > div.aero-slide-metrics-item:first-child {
+	div.aero-grid[type = "metrics"] > div.aero-grid-metrics-item:first-child {
 		border-top: none;
 	}
 }
@@ -130,7 +130,7 @@ div.aero-slide-metrics-item-parameter {
 /* </metrics> */
 
 /* <h1> */
-.aero-slide h1 {
+.aero-grid h1 {
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
 		"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	font-weight: lighter;
@@ -143,20 +143,20 @@ div.aero-slide-metrics-item-parameter {
 }
 
 @media (orientation : landscape) {
-	.aero-slide h1{
+	.aero-grid h1{
 		font-size: 64px;
 		line-height: 64px;
 	}
 }
 
 @media (orientation : portrait) {
-	aero-slide h1{
+	aero-grid h1{
 		font-size: 48px;
 		line-height: 48px;
 	}
 }
 
-.aero-slide h1 > span.emphasis {
+.aero-grid h1 > span.emphasis {
 	font-weight: bold;
 }
 
@@ -164,7 +164,7 @@ div.aero-slide-metrics-item-parameter {
 
 
 /* <h2> */
-.aero-slide h2 {
+.aero-grid h2 {
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
 		"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	font-size: 24px;
@@ -181,14 +181,14 @@ div.aero-slide-metrics-item-parameter {
 
 
 @media (orientation : landscape) {
-	.aero-slide h2 {
+	.aero-grid h2 {
 		font-size: 24px;
 		line-height: 24px;
 	}
 }
 
 @media (orientation : portrait) {
-	.aero-slide h2 {
+	.aero-grid h2 {
 		font-size: 20px;
 		line-height: 20px;
 	}
@@ -196,7 +196,7 @@ div.aero-slide-metrics-item-parameter {
 
 /* </h2> */
 
-.aero-slide p {
+.aero-grid p {
 	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande",
 		sans-serif;
 	font-size: 20px;
@@ -209,7 +209,7 @@ div.aero-slide-metrics-item-parameter {
 	margin: 0px;
 }
 
-.aero-slide > a {
+.aero-grid > a {
 	position: absolute;
 	z-index: 10;
 	overflow: hidden;
@@ -238,7 +238,7 @@ div.aero-slide-metrics-item-parameter {
 	text-decoration: none;
 }
 
-.aero-slide > a:hover {
+.aero-grid > a:hover {
 	background-color: #269f42;
 	background-image: linear-gradient(-180deg, #2fcb53 0%, #269f42 90%);
 	background-position: -.5em;
@@ -246,12 +246,12 @@ div.aero-slide-metrics-item-parameter {
 	text-decoration: none;
 }
 
-.aero-slide > a:focus {
+.aero-grid > a:focus {
 	box-shadow: 0 0 0 0.2em rgba(52, 208, 88, 0.4);
 	text-decoration: none;
 }
 
-.aero-slide > a:active {
+.aero-grid > a:active {
 	background-color: #279f43;
 	background-image: none;
 	border-color: rgba(27, 31, 35, 0.5);
@@ -262,36 +262,36 @@ div.aero-slide-metrics-item-parameter {
 @media (orientation : landscape) {}
 
 @media (orientation : portrait) {
-	.aero-slide  h1 {
+	.aero-grid  h1 {
 		font-size: 32px;
 		line-height: 32px;
 	}
 
-	.aero-slide h2 {
+	.aero-grid h2 {
 		font-size: 18px;
 		line-height: 18px;
 	}
 
-	.aero-slide p {
+	.aero-grid p {
 		font-size: 16px;
 	}
 }
 
-.aero-slide-paragraph {
+.aero-grid-paragraph {
 	font-size: 16px;
 	padding: 32px 0px 32px 0px;
 }
 
-/* </aero-slides> */
+/* </aero-grids> */
 
-/* <aero-slide-prime> */
+/* <aero-grid-prime> */
 
-/* </aero-slide-prime> */
+/* </aero-grid-prime> */
 
 
 
 /* <themes> */
-.aero-slide[theme = "light"] {
+.aero-grid[theme = "light"] {
 	color: black;
 	/*background-color: rgba(255, 255, 255, 0.24);*/
 	/*backdrop-filter: blur(12px);*/
@@ -299,7 +299,7 @@ div.aero-slide-metrics-item-parameter {
 	/*text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.75);*/
 }
 
-.aero-slide[theme = "dark"] {
+.aero-grid[theme = "dark"] {
 	color: white;
 	/*background-color: rgba(0, 0, 0, 0.16);*/
 	/*backdrop-filter: blur(12px);*/
@@ -349,3 +349,26 @@ div[class^="background-"] {
 
 
 /* </backgrounds> */
+
+.aero-grid-deck {
+	left: 50%;
+    position: relative;
+    transform: translateX(-50vw);
+    margin: 64px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, auto));
+    /* flex-wrap: wrap; */
+    gap: 32px;
+    align-items: center;
+}
+
+/* <cards> */
+
+.aero-grid-card {
+    height: 320px;
+    border: solid 1px #d6d6d6;
+    border-radius: 16px;
+}
+
+
+/* </cards> */

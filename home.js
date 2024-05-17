@@ -1,5 +1,5 @@
 
-import { page, header, slide, footer, movie } from './aero/aero.js';
+import { page, header, slide, footer, movie, grid, gridCard } from './aero/aero.js';
 
 
 export const WEB_PAGE = page({
@@ -12,7 +12,7 @@ export const WEB_PAGE = page({
     }),
     elements: [
         movie("std", {
-            sequences: ["assets/turbos/SiTyphoon-config-low.png"]
+            sequence : "assets/sequences/alpha-movie0.mp4"
         }),
         slide("prime", {
             theme: "light", background: "white",
@@ -20,6 +20,28 @@ export const WEB_PAGE = page({
             subtitle: `Leverage the power of the <span class="emphasis">AlphaVentor</span> 
             platform to give your client a digital twin of your products`,
             asset: "assets/slides/slide00.png"
+        }),
+        grid("light", {
+            theme: "light", 
+            background: "white",
+            cards : [
+                gridCard("light", {
+                    theme: "light", 
+                    background: "pic:assets/images/casing00.png",
+                }),
+                gridCard("light", {
+                    theme: "light", 
+                    background: "pic:assets/aircrafts/evtol-cruise-low.png",
+                }),
+                gridCard("light", {
+                    theme: "light", 
+                    background: "blue",
+                }),
+                gridCard("light", {
+                    theme: "light", 
+                    background: "white",
+                })
+            ]
         }),
         slide("prime", {
             theme: "dark", background: "black",
