@@ -7,7 +7,7 @@
     left: 0px;
     width: 100vw;
     height: 100vh;
-    backdrop-filter: blur(6px);
+    background-color: #808080d9;
     z-index: 64;
 }
 
@@ -109,6 +109,7 @@
     .modalbox {
         width: 600px;
         padding: 24px;
+        flex-direction: row;
     }
 
 
@@ -116,16 +117,25 @@
         width: 120px;
         margin: 24px;
     }
+
 }
 
 @media (orientation : portrait) {
     .modalbox {
         width: 80vw;
         padding: 5vw;
+        flex-direction: column;
     }
 
     .modalbox-icon {
-        width: 20vw;
+        height: 18vh;
         margin: 4vw;
+        width: auto;
+        background-position: center;
+    }
+
+    .modalbox-button {
+        flex-shrink: 0;
+        flex-grow: 1;
     }
 }
