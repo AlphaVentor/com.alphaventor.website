@@ -28,7 +28,7 @@ export class AeroHeader extends AeroComponent {
        
     }
 
-    initializeNodes(state){
+    initializeNodes(handler, state){
         this.headerNode = document.createElement('header');
         this.isLandscape = state.isLandscape;
         this.draw();

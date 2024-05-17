@@ -75,7 +75,12 @@ export class AeroSlide extends AeroComponent {
         this.props = props;
     }
 
-    initializeNodes(){
+    /**
+     * 
+     * @param {LoadHandler} handler 
+     * @returns 
+     */
+    initializeNodes(handler){
         this.sectionNode = document.createElement("section");
         this.sectionNode.classList.add("aero-slide");
 
@@ -91,10 +96,8 @@ export class AeroSlide extends AeroComponent {
                 /* extract backgroundImagePath */
                 let n = backgroundParam.length;
                 let backgroundImagePath = backgroundParam.substring(4, n);
-                this.hasBackgroundImage = true;
-                this.backgroundImagePath = backgroundImagePath;
                 this.sectionNode.classList.add("background-pic");
-                // load later on
+                handler.loadBackgroundImage(this.sectionNode, backgroundImagePath);
             }
             else {
                 switch (backgroundParam) {
@@ -148,11 +151,9 @@ export class AeroSlide extends AeroComponent {
         if (this.props.asset != undefined) {
             let assetNode = document.createElement("div");
             assetNode.classList.add("aero-slide-asset");
+            let assetImagePath = this.props.asset;
+            handler.loadBackgroundImage(assetNode, assetImagePath);
             this.sectionNode.appendChild(assetNode);
-
-            this.assetImagePath = this.props.asset;
-            this.assetNode = assetNode;
-            this.hasAssetImage = true;
         }
         /* </assset> */
 
@@ -176,29 +177,12 @@ export class AeroSlide extends AeroComponent {
     load(handler) {
         const _this = this;
         if (this.hasBackgroundImage) {
-            const id = handler.generateId();
-
-            let backgroundImageBuffer = new Image();
-            handler.registerLoading(id);
-            backgroundImageBuffer.onload = function () {
-                _this.sectionNode.style.backgroundImage = `url(${backgroundImageBuffer.src})`;
-                _this.isBackgroundImageLoaded = true;
-                handler.notifyCompleted(id);
-            };
-            backgroundImageBuffer.src = this.backgroundImagePath; // trigger
+           
         }
 
         /* <asset> */
         if (this.hasAssetImage) {
-            const id = handler.generateId();
-            let assetImageBuffer = new Image();
-            handler.registerLoading(id);
-            assetImageBuffer.onload = function () {
-                _this.assetNode.style.backgroundImage = `url(${assetImageBuffer.src})`;
-                _this.isAssetImageLoaded = true;
-                handler.notifyCompleted(id);
-            };
-            assetImageBuffer.src = this.assetImagePath; // trigger
+         
         }
         /* </assset> */
 

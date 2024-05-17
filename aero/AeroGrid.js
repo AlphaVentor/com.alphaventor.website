@@ -64,7 +64,13 @@ export class AeroGrid extends AeroComponent {
         this.props = props;
     }
 
-    initializeNodes(state){
+    /**
+     * 
+     * @param {LoadHandler} handler 
+     * @param {*} state 
+     * @returns 
+     */
+    initializeNodes(handler, state){
         this.sectionNode = document.createElement("section");
         this.sectionNode.classList.add("aero-grid");
 
@@ -80,10 +86,9 @@ export class AeroGrid extends AeroComponent {
                 /* extract backgroundImagePath */
                 let n = backgroundParam.length;
                 let backgroundImagePath = backgroundParam.substring(4, n);
-                this.hasBackgroundImage = true;
-                this.backgroundImagePath = backgroundImagePath;
                 this.sectionNode.classList.add("background-pic");
-                // load later on
+                handler.loadBackgroundImage(this.sectionNode, backgroundImagePath);
+                
             }
             else {
                 switch (backgroundParam) {
@@ -103,7 +108,7 @@ export class AeroGrid extends AeroComponent {
         this.deckNode.classList.add("aero-grid-deck");
 
         this.props.cards.forEach(card => {
-            this.deckNode.appendChild(card.initializeNodes(state));
+            this.deckNode.appendChild(card.initializeNodes(handler, state));
         });
 
         this.sectionNode.appendChild(this.deckNode);
@@ -123,32 +128,6 @@ export class AeroGrid extends AeroComponent {
         this.sectionNode.setAttribute("theme", theme);
     }
 
-
-    /**
-     * 
-     * @param {LoadHandler} handler 
-     */
-    load(handler) {
-
-        /* <background > */
-        const _this = this;
-        if (this.hasBackgroundImage) {
-            const id = handler.generateId();
-
-            let backgroundImageBuffer = new Image();
-            handler.registerLoading(id);
-            backgroundImageBuffer.onload = function () {
-                _this.sectionNode.style.backgroundImage = `url(${backgroundImageBuffer.src})`;
-                _this.isBackgroundImageLoaded = true;
-                handler.notifyCompleted(id);
-            };
-            backgroundImageBuffer.src = this.backgroundImagePath; // trigger
-        }
-        /* </background > */
-
-        /* load cards */
-        this.props.cards.forEach(card => card.load(handler));
-    }
 
     render(state) {
         if (!this.isInitialized) {
@@ -193,7 +172,13 @@ export class AeroGridCard extends AeroComponent {
          this.props = props;
      }
 
-     initializeNodes(state){
+     /**
+      * 
+      * @param {LoadHandler} handler 
+      * @param {*} state 
+      * @returns 
+      */
+     initializeNodes(handler, state){
         this.cardNode = document.createElement("div");
         this.cardNode.classList.add("aero-grid-card");
 
@@ -207,10 +192,8 @@ export class AeroGridCard extends AeroComponent {
                 /* extract backgroundImagePath */
                 let n = backgroundParam.length;
                 let backgroundImagePath = backgroundParam.substring(4, n);
-                this.hasBackgroundImage = true;
-                this.backgroundImagePath = backgroundImagePath;
                 this.cardNode.classList.add("background-pic");
-                // load later on
+                handler.loadBackgroundImage(this.cardNode, backgroundImagePath);
             }
             else {
                 switch (backgroundParam) {
@@ -231,31 +214,6 @@ export class AeroGridCard extends AeroComponent {
         return this.cardNode;
     }
 
-
-
-    /**
-     * 
-     * @param {LoadHandler} handler 
-     */
-    load(handler) {
-
-        /* <background > */
-        const _this = this;
-        if (this.hasBackgroundImage) {
-            const id = handler.generateId();
-
-            let backgroundImageBuffer = new Image();
-            handler.registerLoading(id);
-            backgroundImageBuffer.onload = function () {
-                _this.cardNode.style.backgroundImage = `url(${backgroundImageBuffer.src})`;
-                _this.isBackgroundImageLoaded = true;
-                handler.notifyCompleted(id);
-            };
-            backgroundImageBuffer.src = this.backgroundImagePath; // trigger
-        }
-        /* </background > */
-
-    }
 
     setType(type) {
         this.cardNode.setAttribute("type", type);

@@ -44,16 +44,13 @@ export class AeroFooter extends AeroComponent {
 
   }
 
-  initializeNodes() {
+  initializeNodes(handler, state) {
     this.footerNode = document.createElement('footer');
     this.footerNode.classList.add('aero-footer');
     this.footerNode.innerHTML = CONTENT;
     return this.footerNode;
   }
 
-
-
-  load() { /* nothing to load */ }
 
   render() {
 

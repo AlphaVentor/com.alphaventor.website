@@ -23,10 +23,10 @@ export class AeroWebPage {
     wrapperNode;
 
     /** @type {HTMLDivElement} */
-    baseNode;
+    baseLayerNode;
 
     /** @type {HTMLDivElement} */
-    overlayNode;
+    topLayerNode;
 
     /** @type{AeroHeader} */
     header;
@@ -82,8 +82,8 @@ export class AeroWebPage {
 
 
         /* build */
-        this.baseNode = document.createElement("div");
-        this.baseNode.id = "base-layer";
+        this.baseLayerNode = document.createElement("div");
+        this.baseLayerNode.id = "base-layer";
 
 
         this.hide();
@@ -97,18 +97,12 @@ export class AeroWebPage {
         /* load static resources as well */
         CSS_loadStylesheets(handler);
 
+        /* initialize all (base) components */
+        this.baseLayerNode.appendChild(this.header.initializeNodes(handler, state));
+        this.elements.forEach(element => this.baseLayerNode.appendChild(element.initializeNodes(handler, state)));
+        this.baseLayerNode.appendChild(this.footer.initializeNodes(handler, state));
 
-
-        this.baseNode.appendChild(this.header.initializeNodes(state));
-        this.elements.forEach(element => this.baseNode.appendChild(element.initializeNodes(state)));
-        this.baseNode.appendChild(this.footer.initializeNodes(state));
-
-         /* load all components */
-         this.header.load(handler);
-         this.elements.forEach(element => element.load(handler));
-         this.footer.load(handler);
-
-        this.wrapperNode.appendChild(this.baseNode);
+        this.wrapperNode.appendChild(this.baseLayerNode);
 
 
         /* orientation */
@@ -118,22 +112,22 @@ export class AeroWebPage {
         }, false);
 
 
-        this.overlayNode = document.createElement("div");
-        this.overlayNode.id = "overlay";
+        this.topLayerNode = document.createElement("div");
+        this.topLayerNode.id = "overlay";
         if (this.props.hasCookiesModalBox) {
             const modalBox = new ModalBox({
                 image: "assets/icons/cookie.png",
                 title: "0 cookies : Total privacy",
                 explanation: "Zero cookie policy means that no tracking of any kind is used on this site."
             }, () => { 
-                this.overlayNode.removeChild(modalBox.getEnvelope());
+                this.topLayerNode.removeChild(modalBox.getEnvelope());
                 this.run();
             });
-            this.overlayNode.appendChild(modalBox.getEnvelope());
+            this.topLayerNode.appendChild(modalBox.getEnvelope());
 
         }
 
-        this.wrapperNode.appendChild(this.overlayNode);
+        this.wrapperNode.appendChild(this.topLayerNode);
 
 
 

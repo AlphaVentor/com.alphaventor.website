@@ -78,6 +78,30 @@ export class LoadHandler {
         }
     }
 
+    loadBackgroundImage(target, pathname){
+
+        /* generate an id for this loading operation */
+        const id = this.generateId();
+        
+        /* register it */
+        this.registerLoading(id);
+
+        const backgroundImageBuffer = new Image();
+        
+        const _this = this;
+        backgroundImageBuffer.onload = function () {
+            
+            /* assign image from buffer */
+            target.style.backgroundImage = `url(${backgroundImageBuffer.src})`;
+
+            /* notify handler */
+            _this.notifyCompleted(id);
+        };
+
+        /* trigger loading */
+        backgroundImageBuffer.src = pathname;
+    }
+
     listenCompleted(onLoaded) {
         if (this.resources.size == 0) {
             onLoaded();
@@ -134,4 +158,5 @@ export function clearChildNodes(enveloppeNode) {
         enveloppeNode.removeChild(enveloppeNode.lastChild);
     }
 }
+
 

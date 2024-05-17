@@ -78,7 +78,7 @@ export class AeroMovie extends AeroComponent {
     }
 
 
-    initializeNodes() {
+    initializeNodes(handler, state) {
         this.sectionNode = document.createElement("section");
         this.sectionNode.classList.add("aero-movie");
 
@@ -94,20 +94,7 @@ export class AeroMovie extends AeroComponent {
 
         this.videoNode.playbackRate = 1.0;
 
-        this.sectionNode.appendChild(this.videoNode);
 
-        /* </video> */
-
-        return this.sectionNode;
-    }
-
-
-
-    /**
-     * 
-     * @param {LoadHandler} handler 
-     */
-    load(handler) {
         const sourceNode = document.createElement("source");
         sourceNode.src = this.props.sequence;
         sourceNode.type = "video/mp4";
@@ -120,7 +107,15 @@ export class AeroMovie extends AeroComponent {
         }, false);
 
         this.videoNode.appendChild(sourceNode);
+
+        this.sectionNode.appendChild(this.videoNode);
+
+        /* </video> */
+
+        return this.sectionNode;
     }
+
+
 
     render() {
         if (!this.isInitialized) {
