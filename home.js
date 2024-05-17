@@ -12,7 +12,7 @@ export const WEB_PAGE = page({
     }),
     elements: [
         movie("std", {
-            sequence : "assets/sequences/alpha-movie0.mp4"
+            sequence : "assets/videos/AlphaVentor-movie1-720p.mp4"
         }),
         slide("prime", {
             theme: "light", background: "white",
