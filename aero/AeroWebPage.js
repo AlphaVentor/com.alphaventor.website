@@ -22,6 +22,12 @@ export class AeroWebPage {
     /** @type {HTMLDivElement} */
     wrapperNode;
 
+    /** @type {HTMLDivElement} */
+    baseNode;
+
+    /** @type {HTMLDivElement} */
+    overlayNode;
+
     /** @type{AeroHeader} */
     header;
 
@@ -70,44 +76,19 @@ export class AeroWebPage {
 
         this.bodyNode = document.body;
 
+        this.wrapperNode = document.createElement("div");
+        this.wrapperNode.classList.add("hidden");
+        this.bodyNode.appendChild(this.wrapperNode);
+
 
         /* build */
-        this.wrapperNode = document.createElement("div");
-        this.wrapperNode.id = "base-layer";
+        this.baseNode = document.createElement("div");
+        this.baseNode.id = "base-layer";
 
-        this.bodyNode.appendChild(this.wrapperNode);
 
         this.hide();
 
         let state = this.generateState();
-
-        this.wrapperNode.appendChild(this.header.initializeNodes(state));
-        this.elements.forEach(element => this.wrapperNode.appendChild(element.initializeNodes(state)));
-        this.wrapperNode.appendChild(this.footer.initializeNodes(state));
-
-        /* orientation */
-        let _this = this;
-        this.orientationObserver.addEventListener("change", function (event) {
-            _this.render();
-        }, false);
-
-
-        this.topLayer = document.createElement("div");
-        this.topLayer.id = "overlay";
-        if (this.props.hasCookiesModalBox) {
-            const modalBox = new ModalBox({
-                image: "assets/icons/cookie.png",
-                title: "0 cookies : Total privacy",
-                explanation: "Zero cookie policy means that no tracking of any kind is used on this site."
-            }, () => { 
-                this.topLayer.removeChild(modalBox.getEnvelope());
-                this.run();
-            });
-            this.topLayer.appendChild(modalBox.getEnvelope());
-        }
-
-        this.bodyNode.appendChild(this.topLayer);
-
 
 
         /* loading */
@@ -116,10 +97,48 @@ export class AeroWebPage {
         /* load static resources as well */
         CSS_loadStylesheets(handler);
 
-        /* load all components */
-        this.header.load(handler);
-        this.elements.forEach(element => element.load(handler));
-        this.footer.load(handler);
+
+
+        this.baseNode.appendChild(this.header.initializeNodes(state));
+        this.elements.forEach(element => this.baseNode.appendChild(element.initializeNodes(state)));
+        this.baseNode.appendChild(this.footer.initializeNodes(state));
+
+         /* load all components */
+         this.header.load(handler);
+         this.elements.forEach(element => element.load(handler));
+         this.footer.load(handler);
+
+        this.wrapperNode.appendChild(this.baseNode);
+
+
+        /* orientation */
+        let _this = this;
+        this.orientationObserver.addEventListener("change", function (event) {
+            _this.render();
+        }, false);
+
+
+        this.overlayNode = document.createElement("div");
+        this.overlayNode.id = "overlay";
+        if (this.props.hasCookiesModalBox) {
+            const modalBox = new ModalBox({
+                image: "assets/icons/cookie.png",
+                title: "0 cookies : Total privacy",
+                explanation: "Zero cookie policy means that no tracking of any kind is used on this site."
+            }, () => { 
+                this.overlayNode.removeChild(modalBox.getEnvelope());
+                this.run();
+            });
+            this.overlayNode.appendChild(modalBox.getEnvelope());
+
+        }
+
+        this.wrapperNode.appendChild(this.overlayNode);
+
+
+
+
+       
 
         /* once completed, render and show */
         handler.listenCompleted(() => {

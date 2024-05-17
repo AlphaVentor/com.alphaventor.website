@@ -1,4 +1,11 @@
 
+body {
+    background-color: white;
+	padding: 0px;
+    margin: 0px;
+}
+
+
 #base-layer {
 	z-index: 2;
 	background-color: rgb(255, 255, 255);
@@ -17,9 +24,3 @@
 }
 
 
-
-.hidden {
-	visibility: hidden;
-	height: 0px;
-	overflow: hidden;
-}
