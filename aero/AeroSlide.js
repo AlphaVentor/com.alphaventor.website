@@ -114,7 +114,7 @@ export class AeroSlide extends AeroComponent {
 
         /* <text> */
         let textNode = document.createElement("div");
-        textNode.classList.add("text");
+        textNode.classList.add("aero-slide-text");
 
         /* <h1> */
         if (this.props.title != undefined) {
@@ -152,6 +152,7 @@ export class AeroSlide extends AeroComponent {
         if (this.props.asset != undefined) {
             let assetNode = document.createElement("div");
             assetNode.classList.add("aero-slide-asset");
+            if(this.props.assetAspectRatio){ assetNode.style.aspectRatio = this.props.assetAspectRatio; }
             let assetImagePath = this.props.asset;
             handler.loadBackgroundImage(assetNode, assetImagePath);
             this.sectionNode.appendChild(assetNode);
