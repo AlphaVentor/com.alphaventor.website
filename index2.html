@@ -7,12 +7,18 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <link rel="shortcut icon" href="favicon.ico" type="image/png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="aero/boot.css" />
+<link rel="stylesheet" href="aero/aero.css" />
 <script type="module">
-	import { boot } from './aero/boot.js';
-	window.boot = boot;
+	import { WEB_PAGE } from './home.js';
+	window.WEB_PAGE = WEB_PAGE;
 </script>
 </head>
-<body onload="boot('/home.js')">
+<body onload="WEB_PAGE.start()">
+	<div id="base">
+	</div>
+	<div id="overlay">
+	</div>
+	<div id="veil">
+	</div>
 </body>
 </html>

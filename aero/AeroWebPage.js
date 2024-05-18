@@ -4,6 +4,7 @@ import { CSS_loadStylesheets, LoadHandler } from "./aero.js";
 import { ModalBox } from "./ModalBox.js";
 
 
+
 export class AeroWebPage {
 
 
@@ -27,6 +28,9 @@ export class AeroWebPage {
 
     /** @type {HTMLDivElement} */
     topLayerNode;
+
+    /** @type {HTMLDivElement} */
+    veilNode;
 
     /** @type{AeroHeader} */
     header;
@@ -74,19 +78,8 @@ export class AeroWebPage {
 
     start() {
 
-        this.bodyNode = document.body;
-
-        this.wrapperNode = document.createElement("div");
-        this.wrapperNode.classList.add("hidden");
-        this.bodyNode.appendChild(this.wrapperNode);
-
-
         /* build */
-        this.baseLayerNode = document.createElement("div");
-        this.baseLayerNode.id = "base-layer";
-
-
-        this.hide();
+        this.baseLayerNode = document.querySelector("#base");
 
         let state = this.generateState();
 
@@ -102,7 +95,6 @@ export class AeroWebPage {
         this.elements.forEach(element => this.baseLayerNode.appendChild(element.initializeNodes(handler, state)));
         this.baseLayerNode.appendChild(this.footer.initializeNodes(handler, state));
 
-        this.wrapperNode.appendChild(this.baseLayerNode);
 
 
         /* orientation */
@@ -112,8 +104,7 @@ export class AeroWebPage {
         }, false);
 
 
-        this.topLayerNode = document.createElement("div");
-        this.topLayerNode.id = "overlay";
+        this.topLayerNode = document.querySelector("#overlay");
         if (this.props.hasCookiesModalBox) {
             const modalBox = new ModalBox({
                 image: "icons/cookie.png",
@@ -127,12 +118,8 @@ export class AeroWebPage {
 
         }
 
-        this.wrapperNode.appendChild(this.topLayerNode);
+        this.veilNode = document.querySelector("#veil");
 
-
-
-
-       
 
         /* once completed, render and show */
         handler.listenCompleted(() => {
@@ -143,11 +130,15 @@ export class AeroWebPage {
 
 
     hide() {
-        this.wrapperNode.classList.add("hidden");
+        this.baseLayerNode.classList.add("hidden");
+        this.topLayerNode.classList.add("hidden");
+        this.veilNode.classList.remove("hidden");
     }
 
     show() {
-        this.wrapperNode.classList.remove("hidden");
+        this.baseLayerNode.classList.remove("hidden");
+        this.topLayerNode.classList.remove("hidden");
+        this.veilNode.classList.add("hidden");
     }
 
     render() {
