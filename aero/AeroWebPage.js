@@ -116,7 +116,7 @@ export class AeroWebPage {
         this.topLayerNode.id = "overlay";
         if (this.props.hasCookiesModalBox) {
             const modalBox = new ModalBox({
-                image: "assets/icons/cookie.png",
+                image: "icons/cookie.png",
                 title: "0 cookies : Total privacy",
                 explanation: "Zero cookie policy means that no tracking of any kind is used on this site."
             }, () => { 

@@ -20,6 +20,14 @@ header {
 }
 
 
+.menu-login {
+	width: 64px;
+	cursor: pointer;
+}
+
+.menu-login:hover > img {
+	fill: blue;
+}
 
 
 
@@ -36,11 +44,12 @@ header {
 		flex: auto;
 	}
 
-	div.menu-logo {
+	.menu-logo {
 		width: 80px;
+		cursor: pointer;
 	}
 
-	div.menu-logo>img {
+	.menu-logo>img {
 		margin: 8px 16px 8px 16px;
 		height: 48px;
 		width: 48px;
@@ -89,6 +98,14 @@ header {
 		color: rgb(24, 24, 24);
 	}
 
+
+
+	.menu-login>img {
+		margin: 8px 16px 8px 16px;
+		height: 48px;
+		width: 48px;
+	}
+
 }
 
 
@@ -102,30 +119,30 @@ header {
 	.aero-menu-icons-wrapper {
 		display: inline-block;
 		vertical-align: top;
-		cursor: pointer;
+		display: flex;
 	}
 
-	div.menu-handler {
+	.menu-handler {
 		display: inline-block;
 		vertical-align: top;
 		padding: 0px;
 		margin: 0px 0px 0px 0px;
 	}
 
-	div.menu-handler>img {
+	.menu-handler>img {
 		margin: 14px 14px 14px 14px;
 		/*height: 48px;*/
 		width: 36px;
 	}
 
-	div.menu-logo {
+	.menu-logo {
 		display: inline-block;
 		vertical-align: top;
 		width: 80px;
 		margin: 0px 0px 0px calc(50vw - 96px);
 	}
 
-	div.menu-logo>img {
+	.menu-logo>img {
 		margin: 3px 0px 0px 0px;
 		width: 56px;
 	}
@@ -185,6 +202,18 @@ header {
 		padding: 8px 8px 8px 8px;
 		margin: 0px;
 		vertical-align: baseline;
+	}
+
+	.menu-login {
+		display: inline-block;
+		vertical-align: top;
+		margin-left: auto;
+		margin-right: 0px;
+	}
+
+	.menu-login>img {
+		margin: 10px 0px 0px 0px;
+		width: 42px;
 	}
 }
 

@@ -25,14 +25,14 @@ export class AeroHeader extends AeroComponent {
     constructor(props) {
         super();
         this.props = props;
-       
+
     }
 
-    initializeNodes(handler, state){
+    initializeNodes(handler, state) {
         this.headerNode = document.createElement('header');
         this.isLandscape = state.isLandscape;
         this.draw();
-        
+
         return this.headerNode;
     }
 
@@ -40,7 +40,7 @@ export class AeroHeader extends AeroComponent {
         return this.headerNode;
     }
 
-    load(){ /* nothing to load here */ }
+    load() { /* nothing to load here */ }
 
     render(state) {
         if (state.isLandscape != this.isLandscape) { // repaint
@@ -72,8 +72,14 @@ export class AeroHeader extends AeroComponent {
         this.headerNode.appendChild(menuLogoNode);
         /* </front-icon> */
 
+        /* <nav> */
         let selectedMenu = this.props.selected;
         this.headerNode.appendChild(this.buildNavNode(selectedMenu));
+        /* </nav> */
+
+        /* <login-icon> */
+        this.headerNode.appendChild(this.buildLoginNode());
+        /* </login-icon> */
     }
 
 
@@ -111,10 +117,14 @@ export class AeroHeader extends AeroComponent {
 
         this.isNavVisible = false; // hidden by default in portrait
         let _this = this;
-        menuHandlerNode.addEventListener("click", function(){
+        menuHandlerNode.addEventListener("click", function () {
             navNode.style.visibility = _this.isNavVisible ? "hidden" : "visible";
             _this.isNavVisible = !_this.isNavVisible;
         }, false);
+
+        /* <login-icon> */
+        iconsWrapperNode.appendChild(this.buildLoginNode());
+        /* </login-icon> */
     }
 
 
@@ -123,18 +133,18 @@ export class AeroHeader extends AeroComponent {
 
         /* <nav> */
         let navNode = document.createElement('nav');
-        
+
         let unorderedListNode = document.createElement('ul');
 
         this.props.menus.forEach((menu, index) => {
             let listItemNode = document.createElement('li');
             listItemNode.classList.add("aero-header-menu")
-            
+
             let isSelected = (menu == selectedMenu);
             if (isSelected) {
                 listItemNode.setAttribute("selected", "");
             }
-    
+
             let aNode = document.createElement("a");
             aNode.href = isSelected ? "/" : this.props.hrefs[index];
             aNode.innerHTML = menu;
@@ -143,12 +153,27 @@ export class AeroHeader extends AeroComponent {
         });
         navNode.appendChild(unorderedListNode);
         /* </nav> */
-    
+
         return navNode;
     }
 
+    buildLoginNode() {
+        /* <login-icon> */
+        const loginNode = document.createElement("a");
+        
+        loginNode.href ="https://app.alphaventor.com";
 
-  
+        loginNode.classList.add("menu-login");
+        let loginImgNode = document.createElement("img");
+        loginImgNode.src = "icons/login.svg";
+        loginImgNode.alt = "login";
+        loginNode.appendChild(loginImgNode);
+        return loginNode;
+        /* </login-icon> */
+    }
+
+
+
 
     /**
    * 
@@ -159,11 +184,8 @@ export class AeroHeader extends AeroComponent {
         page.import_CSS("aero/AeroHeader.css");
     }
 
-    isLoaded(){
+    isLoaded() {
         return this.isInitialized;
     }
 
 }
-
-
-
