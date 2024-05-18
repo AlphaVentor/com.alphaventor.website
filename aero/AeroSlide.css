@@ -26,14 +26,14 @@ div.aero-slide-asset {
 
 @media (orientation : landscape) {
 	div.aero-slide-asset {
-		height: 600px;
+		height: 360px;
 		margin: 8px 12% 8px 12%;
 	}
 }
 
 @media (orientation : portrait) {
 	div.aero-slide-asset {
-		height: 320px;
+		height: 420px;
 		margin: 4px 4% 4px 4%;
 	}
 }
@@ -139,7 +139,7 @@ div.aero-slide-metrics-item-parameter {
 	border-radius: 4px;
 	margin: 0px;
 	z-index: 8;
-	text-align: center;
+	text-align: left;
 }
 
 @media (orientation : landscape) {
@@ -176,7 +176,7 @@ div.aero-slide-metrics-item-parameter {
 	/*white-space: nowrap;*/
 	margin: 0px;
 	z-index: 6;
-	text-align: center;
+	text-align: left;
 }
 
 
@@ -201,7 +201,7 @@ div.aero-slide-metrics-item-parameter {
 		sans-serif;
 	font-size: 20px;
 	font-weight: normal;
-	text-align: justify;
+	text-align: left;
 	z-index: 4;
 	padding: 0px 0px 0px 0px;
 	padding: 6px 6px 6px 8px;

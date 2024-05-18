@@ -135,6 +135,7 @@ export class AeroSlide extends AeroComponent {
         /* <p> */
         if (this.props.paragraph != undefined) {
             let pNode = document.createElement("p");
+            pNode.innerHTML = this.props.paragraph;
             textNode.appendChild(pNode);
         }
         /* </p> */
