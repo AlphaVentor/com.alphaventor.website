@@ -34,7 +34,7 @@ export const WEB_PAGE = page({
         }),
         slide("prime", {
             theme: "light", background: "white",
-            title: `<b>Integrate</b> your technical objects along the <b>integration chain</b>`,
+            title: `<b>Deliver</b> your technical objects along the <b>integration chain</b>`,
             subtitle: `Gain value beyond your product inherent value.`,
             paragraph: `Delivering a great product is an achievement. Seamlessly integrate in your customers assemblies is 
             paramount, like going from good to unavoidable.`,
