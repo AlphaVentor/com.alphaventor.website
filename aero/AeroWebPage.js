@@ -105,18 +105,7 @@ export class AeroWebPage {
 
 
         this.topLayerNode = document.querySelector("#overlay");
-        if (this.props.hasCookiesModalBox) {
-            const modalBox = new ModalBox({
-                image: "icons/cookie.png",
-                title: "0 cookies : Total privacy",
-                explanation: "Zero cookie policy means that no tracking of any kind is used on this site."
-            }, () => { 
-                this.topLayerNode.removeChild(modalBox.getEnvelope());
-                this.run();
-            });
-            this.topLayerNode.appendChild(modalBox.getEnvelope());
 
-        }
 
         this.veilNode = document.querySelector("#veil");
 

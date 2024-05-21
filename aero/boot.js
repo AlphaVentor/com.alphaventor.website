@@ -1,11 +1,13 @@
+import { ModalBox } from "./ModalBox.js";
 
 
+let hasCookiesModalBox = true;
 
 /**
  * 
  * @param {*} pagePathname 
  */
-export const boot = function (pagePathname) {
+export const boot = function (pagePathname, ) {
 
     /* <structure> */
 
@@ -32,6 +34,7 @@ export const boot = function (pagePathname) {
 
     /* </structure> */
 
+   
 
     veilNode.innerHTML = `
         <div class="boot-loader">
@@ -52,8 +55,29 @@ window.WEB_PAGE = WEB_PAGE;
 
 
     import(pagePathname).then((mod) => {
-        mod.WEB_PAGE.start();
+
+        const page = mod.WEB_PAGE;
+
+        /* start page */
+        page.start();
+        
         console.log("WEBPAGE loaded!");
+
+        if (hasCookiesModalBox) {
+            this.hasCookiesModalBox = false;
+            const modalBox = new ModalBox({
+                image: "icons/cookie.png",
+                title: "0 cookies : Total privacy",
+                explanation: "Zero cookie policy means that no tracking of any kind is used on this site."
+            }, () => { 
+                topLayerNode.removeChild(modalBox.getEnvelope());
+
+                /* run */
+                this.run();
+            });
+            topLayerNode.appendChild(modalBox.getEnvelope());
+        }
+
     });
     
 

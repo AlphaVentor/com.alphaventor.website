@@ -99,12 +99,13 @@ export class AeroMovie extends AeroComponent {
         sourceNode.src = this.props.sequence;
         sourceNode.type = "video/mp4";
         
+        
         const id = handler.generateId;
         handler.registerLoading(id);
-
         this.videoNode.addEventListener('loadeddata', function() {
             handler.notifyCompleted(id);
         }, false);
+        
 
         this.videoNode.appendChild(sourceNode);
 
