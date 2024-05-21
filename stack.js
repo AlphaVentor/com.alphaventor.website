@@ -6,9 +6,9 @@ export const WEB_PAGE = page({
     hasCookiesModalBox : true,
     header: header({
         logo: "assets/logos/logo-small-light.png",
-        menus: ["Home", "Applications", "Technology", "Contact"],
-        hrefs: ["/index2.html", "/applications.html", "/technology.html", "/contact.html"],
-        selected: "Home"
+        menus: ["Platform", "Engineering", "Stack", "Contact"],
+        hrefs: ["/index.html", "/engineering.html", "/stack.html", "/contact.html"],
+        selected: "Stack"
     }),
     elements: [
         slide("prime", {
@@ -20,9 +20,6 @@ export const WEB_PAGE = page({
             Alphaventor platform is the way.`,
             asset: "assets/slides/slide02.png",
             assetAspectRatio : 16/9
-        }),
-        movie("std", {
-            sequence : "assets/videos/AlphaVentor-movie1-720p.mp4"
         }),
         slide("prime", {
             theme: "light", background: "white",

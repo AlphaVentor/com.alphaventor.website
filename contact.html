@@ -1,21 +1,17 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
 <title>AlphaVentor</title>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<link rel="shortcut icon" href="favicon-2.png" type="image/png">
+<link rel="shortcut icon" href="favicon.ico" type="image/png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css" />
-<link rel="stylesheet" href="aero-style.css" />
-<link rel="stylesheet" href="apps-grid.css" />
-<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="aero/boot.css" />
 <script type="module">
-	import { WEB_PAGE } from './contact.js';
-	window.WEB_PAGE = WEB_PAGE;
+	import { boot } from './aero/boot.js';
+	window.boot = boot;
 </script>
 </head>
-<body onload="WEB_PAGE.start()">
+<body onload="boot('/contact.js')">
 </body>
 </html>
