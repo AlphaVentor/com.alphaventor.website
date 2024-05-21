@@ -7,7 +7,7 @@ export const WEB_PAGE = page({
     header: header({
         logo: "assets/logos/logo-small-light.png",
         menus: ["Platform", "Engineering", "Stack", "Contact"],
-        hrefs: ["/index.html", "/engineering.html", "/stack.html", "/contact.html"],
+        hrefs: ["/platform.html", "/engineering.html", "/stack.html", "/contact.html"],
         selected: "Contact"
     }),
     elements: [

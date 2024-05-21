@@ -7,18 +7,20 @@ export const WEB_PAGE = page({
     header: header({
         logo: "assets/logos/logo-small-light.png",
         menus: ["Platform", "Engineering", "Stack", "Contact"],
-        hrefs: ["/index.html", "/engineering.html", "/stack.html", "/contact.html"],
+        hrefs: ["/platform.html", "/engineering.html", "/stack.html", "/contact.html"],
         selected: "Stack"
     }),
     elements: [
         slide("prime", {
             theme: "light", background: "white",
-            title: `<b>Make</b> your technical objects <b>teamwide</b>`,
-            subtitle: `Unlock access to playing with core business technical objects throughout your team.`,
+            title: `The <b>Complex</b> objects handling made <b>simple</b>`,
+            subtitle: `S8 is a one-of-its kind integrated stack for Saas, enabling simple 
+            coding and deployment of complex SaaS applications.`,
             paragraph: `Vastly increase your sales performance by providing your team with direct insights of the core business objects. 
             Want to answer to a client on how will the product will perform in its use case? 
             Alphaventor platform is the way.`,
-            asset: "assets/slides/slide02.png",
+            asset: "assets/logos/S8-stack-logo.png",
+            arrangement: "text-down",
             assetAspectRatio : 16/9
         }),
         slide("prime", {

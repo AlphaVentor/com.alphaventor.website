@@ -87,6 +87,7 @@ export class AeroSlide extends AeroComponent {
         this.setType(this.type);
         this.setTheme(this.props.theme ? this.props.theme : "light");
 
+        if(this.props.arrangement){ this.setArrangement(this.props.arrangement); }
 
         /* <background> */
         if (this.props.background != undefined) {
@@ -151,7 +152,7 @@ export class AeroSlide extends AeroComponent {
         /* <asset> */
         if (this.props.asset != undefined) {
             let assetNode = document.createElement("div");
-            assetNode.classList.add("aero-slide-asset");
+            assetNode.classList.add("aero-slide-picture");
             if(this.props.assetAspectRatio){ assetNode.style.aspectRatio = this.props.assetAspectRatio; }
             let assetImagePath = this.props.asset;
             handler.loadBackgroundImage(assetNode, assetImagePath);
@@ -169,6 +170,10 @@ export class AeroSlide extends AeroComponent {
 
     setTheme(theme) {
         this.sectionNode.setAttribute("theme", theme);
+    }
+
+    setArrangement(arrangement) {
+        this.sectionNode.setAttribute("arrangement", arrangement);
     }
 
 

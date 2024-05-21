@@ -32,17 +32,9 @@ export const boot = function (pagePathname, hasCookiesModalBox = false) {
 
     /* </structure> */
 
-   
 
-    veilNode.innerHTML = `
-        <div class="boot-loader">
-            <div class="boot-embedded-icon"></div>
-            <div class="boot-spinner">
-                <svg class="circular" viewBox="25 25 50 50">
-                    <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
-                </svg>
-            </div>
-        </div>`;
+
+    veilNode.appendChild(createSpinner());
 
 
     /**
@@ -58,7 +50,7 @@ window.WEB_PAGE = WEB_PAGE;
 
         /* start page */
         page.start();
-        
+
         console.log("WEBPAGE loaded!");
 
         if (hasCookiesModalBox) {
@@ -66,7 +58,7 @@ window.WEB_PAGE = WEB_PAGE;
                 image: "icons/cookie.png",
                 title: "0 cookies : Total privacy",
                 explanation: "Zero cookie policy means that no tracking of any kind is used on this site."
-            }, () => { 
+            }, () => {
                 topLayerNode.removeChild(modalBox.getEnvelope());
 
                 /* run */
@@ -76,6 +68,23 @@ window.WEB_PAGE = WEB_PAGE;
         }
 
     });
-    
 
+
+}
+
+
+
+export const createSpinner = function () {
+
+    const node = document.createElement("div");
+    node.className = "boot-loader";
+    node.innerHTML = `
+        <div class="boot-embedded-icon"></div>
+        <div class="boot-spinner">
+            <svg class="circular" viewBox="25 25 50 50">
+                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+            </svg>
+        </div>`;
+
+        return node;
 }

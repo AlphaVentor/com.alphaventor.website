@@ -44,27 +44,25 @@ body {
 
 
 
-.boot-loader {
+.boot-loader, .boot-spinner, .boot-embedded-icon {
 	position: absolute;
-	left: 50vw;
-	top: 50vh;
-	transform: translate(-50%, -50%);
-	margin: 0px auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
+
 .boot-spinner, .boot-embedded-icon {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
 	margin: 0px;
 	padding: 0px;
 }
+
 
 .boot-spinner {
 	width: 172px;
 	height: 172px;
 }
+
 
 .boot-embedded-icon {
 	width: 128px;

@@ -5,9 +5,9 @@ import { page, header, slide, footer, movie, grid, gridCard } from './aero/aero.
 export const WEB_PAGE = page({
     hasCookiesModalBox : true,
     header: header({
-        logo: "assets/logos/logo-small-light.png",
+        logo: "logos/logo-small-black.png",
         menus: ["Platform", "Engineering", "Stack", "Contact"],
-        hrefs: ["/index.html", "/engineering.html", "/stack.html", "/contact.html"],
+        hrefs: ["/platform.html", "/engineering.html", "/stack.html", "/contact.html"],
         selected: "Platform"
     }),
     elements: [
@@ -38,6 +38,7 @@ export const WEB_PAGE = page({
             subtitle: `Gain value beyond your product inherent value.`,
             paragraph: `Delivering a great product is an achievement. Seamlessly integrate in your customers assemblies is 
             paramount, like going from good to unavoidable.`,
+            arrangement: "text-left",
             asset: "assets/slides/slide04.png"
         }),
         slide("prime", {

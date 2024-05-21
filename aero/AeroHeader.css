@@ -10,6 +10,18 @@ header {
 }
 
 
+header[theme = "light"] {
+	background-color: rgb(255, 255, 255);
+	color: black;
+}
+
+
+header[theme = "dark"] {
+	background-color: rgb(0, 0, 0);
+	color: rgb(255, 255, 255);
+}
+
+
 .aero-header-menu > a {
 	color: rgb(64, 64, 64);
 	text-decoration: none;
@@ -28,6 +40,11 @@ header {
 .menu-login:hover > img {
 	fill: blue;
 }
+
+.menu-login > img > svg {
+	fill: black;
+}
+
 
 
 
@@ -93,12 +110,22 @@ header {
 		vertical-align: baseline;
 	}
 
+	header[theme = "dark"] .aero-header-menu > a {
+		color: rgb(192, 192, 192);
+	}
+
 	.aero-header-menu:hover > a {
 		background-color: rgb(199, 204, 208);
 		border-radius: 4px;
 		color: rgb(24, 24, 24);
 	}
 
+	header[theme = "dark"] .aero-header-menu:hover > a {
+		color: rgb(83, 83, 83);
+	}
+
+
+	
 
 
 	.menu-login>img {
@@ -159,9 +186,11 @@ header {
         transform: translateX(-50%);
         padding: 0px;
         visibility: hidden;
+		color: rgb(64, 64, 64);
         background-color: white;
         border: solid 1px rgb(156, 156, 156);
 	}
+
 
 	@media screen and (max-width: 600px) {
 		nav {
@@ -203,6 +232,7 @@ header {
 		/*padding: 0px;*/
 		padding: 8px 8px 8px 8px;
 		margin: 0px;
+		color: rgb(64, 64, 64);
 		vertical-align: baseline;
 	}
 

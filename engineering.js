@@ -5,17 +5,24 @@ import { page, header, slide, footer, movie, grid, gridCard } from './aero/aero.
 export const WEB_PAGE = page({
     hasCookiesModalBox : true,
     header: header({
-        logo: "assets/logos/logo-small-light.png",
+        theme: "dark",
         menus: ["Platform", "Engineering", "Stack", "Contact"],
-        hrefs: ["/index.html", "/engineering.html", "/stack.html", "/contact.html"],
+        hrefs: ["/platform.html", "/engineering.html", "/stack.html", "/contact.html"],
         selected: "Engineering"
     }),
     elements: [
         slide("prime", {
             theme: "dark", background: "black",
+            title: `<b>Built-in</b> engineering capabilities`,
+            subtitle: `The Alphaventor platform came with efficient libraries to power your engineering app.`,
+            paragraph: `Libraries enables multiple features`,
+            asset: "assets/turbos/SiTyphoon-config-low.png"
+        }),
+        slide("prime", {
+            theme: "dark", background: "black",
             title: `Say Hello to <span class="emphasis">SiTy8000u</span> "Silent Typhoon"`,
             subtitle: `The world's first heavy duty eVTOL propeller`,
-            asset: "assets/turbos/SiTyphoon-config-low.png"
+            asset: "assets/logos/Qx-blocks-logo.png"
         }),
         slide("prime", {
             theme: "dark", background: "black",

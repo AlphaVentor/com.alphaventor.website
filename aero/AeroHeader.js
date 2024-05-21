@@ -22,14 +22,29 @@ export class AeroHeader extends AeroComponent {
      */
     isNavVisible;
 
+
+    /**
+     * @type{String} 
+     * Color of the flat elements (icon/logo)
+     */
+    flatColor;
+
     constructor(props) {
         super();
         this.props = props;
+
+        this.flatColor = "black";
+        switch(this.props.theme){
+            default:
+            case "light": this.flatColor = "black"; break;
+            case "dark": this.flatColor = "white"; break;
+        }
 
     }
 
     initializeNodes(handler, state) {
         this.headerNode = document.createElement('header');
+        this.headerNode.setAttribute("theme", this.props.theme);
         this.isLandscape = state.isLandscape;
         this.draw();
 
@@ -66,7 +81,7 @@ export class AeroHeader extends AeroComponent {
         let menuLogoNode = document.createElement("div");
         menuLogoNode.classList.add("menu-logo");
         let frontImgNode = document.createElement("img");
-        frontImgNode.src = this.props.logo;
+        frontImgNode.src = `logos/logo-small-${this.flatColor}.png`;
         frontImgNode.alt = "logo";
         menuLogoNode.appendChild(frontImgNode);
         this.headerNode.appendChild(menuLogoNode);
@@ -92,7 +107,7 @@ export class AeroHeader extends AeroComponent {
         let menuHandlerNode = document.createElement("div");
         menuHandlerNode.classList.add("menu-handler");
         let menuHandlerImgNode = document.createElement("img");
-        menuHandlerImgNode.src = "aero/menu-icon.svg";
+        menuHandlerImgNode.src = `icons/menu-${this.flatColor}.svg`;
         menuHandlerImgNode.alt = "menu";
         menuHandlerNode.appendChild(menuHandlerImgNode);
         iconsWrapperNode.appendChild(menuHandlerNode);
@@ -102,7 +117,7 @@ export class AeroHeader extends AeroComponent {
         let menuLogoNode = document.createElement("div");
         menuLogoNode.classList.add("menu-logo");
         let frontImgNode = document.createElement("img");
-        frontImgNode.src = this.props.logo;
+        frontImgNode.src = `logos/logo-small-${this.flatColor}.png`;
         frontImgNode.alt = "logo";
         menuLogoNode.appendChild(frontImgNode);
         iconsWrapperNode.appendChild(menuLogoNode);
@@ -165,7 +180,7 @@ export class AeroHeader extends AeroComponent {
 
         loginNode.classList.add("menu-login");
         let loginImgNode = document.createElement("img");
-        loginImgNode.src = "icons/login.svg";
+        loginImgNode.src = `icons/login-${this.flatColor}.svg`; 
         loginImgNode.alt = "login";
         loginNode.appendChild(loginImgNode);
         return loginNode;

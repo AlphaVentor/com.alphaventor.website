@@ -2,6 +2,7 @@ import { AeroComponent } from "./AeroComponent.js";
 
 import { AeroWebPage } from "./AeroWebPage.js";
 import { LoadHandler } from "./aero.js";
+import { createSpinner } from "./boot.js";
 
 
 
@@ -81,6 +82,9 @@ export class AeroMovie extends AeroComponent {
     initializeNodes(handler, state) {
         this.sectionNode = document.createElement("section");
         this.sectionNode.classList.add("aero-movie");
+        this.sectionNode.setAttribute("loaded", "false");
+        const spinnerNode = createSpinner();
+        this.sectionNode.appendChild(spinnerNode);
 
         /* <video> */
         this.videoNode = document.createElement("video");
@@ -99,13 +103,12 @@ export class AeroMovie extends AeroComponent {
         sourceNode.src = this.props.sequence;
         sourceNode.type = "video/mp4";
         
-        /*
-        const id = handler.generateId;
-        handler.registerLoading(id);
+       
+        const _this = this;
         this.videoNode.addEventListener('loadeddata', function() {
-            handler.notifyCompleted(id);
+            _this.sectionNode.setAttribute("loaded", "true");
+            _this.sectionNode.removeChild(spinnerNode);
         }, false);
-        */
 
         this.videoNode.appendChild(sourceNode);
 
