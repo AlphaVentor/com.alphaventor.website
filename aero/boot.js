@@ -1,13 +1,11 @@
 import { ModalBox } from "./ModalBox.js";
 
 
-let hasCookiesModalBox = true;
-
 /**
  * 
  * @param {*} pagePathname 
  */
-export const boot = function (pagePathname, ) {
+export const boot = function (pagePathname, hasCookiesModalBox = false) {
 
     /* <structure> */
 
@@ -64,7 +62,6 @@ window.WEB_PAGE = WEB_PAGE;
         console.log("WEBPAGE loaded!");
 
         if (hasCookiesModalBox) {
-            this.hasCookiesModalBox = false;
             const modalBox = new ModalBox({
                 image: "icons/cookie.png",
                 title: "0 cookies : Total privacy",
@@ -73,7 +70,7 @@ window.WEB_PAGE = WEB_PAGE;
                 topLayerNode.removeChild(modalBox.getEnvelope());
 
                 /* run */
-                this.run();
+                page.run();
             });
             topLayerNode.appendChild(modalBox.getEnvelope());
         }
