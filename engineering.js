@@ -75,13 +75,28 @@ export const WEB_PAGE = page({
             subtitle: `CFD for advanced turbo-units`,
             paragraph: `With a comprehensive know-how in aerodynamics, AlphaVentor is able to support custom turbomachines development`,
         }),
-        slide("prime", {
-            theme: "dark", background: "pic:assets/backgrounds/london-octofan-env01.jpg",
-            title: `Downtown airport`,
-            subtitle: `Versatile <b>Point-to-Point</b> Build versatile aircraft`,
-            paragraph: `Silent Typhoon propeller enables advanced aircraft like Octofan.`,
-            asset: "assets/aircrafts/evtol-cruise-low.png"
-        }),
+        grid("light", {
+            theme: "light", 
+            background: "white",
+            cards : [
+                gridCard("light", {
+                    theme: "light", 
+                    background: "pic:assets/images/casing00.png",
+                }),
+                gridCard("light", {
+                    theme: "light", 
+                    background: "pic:assets/aircrafts/evtol-cruise-low.png",
+                }),
+                gridCard("light", {
+                    theme: "light", 
+                    background: "blue",
+                }),
+                gridCard("light", {
+                    theme: "light", 
+                    background: "white",
+                })
+            ]
+        })
     ],
     footer: footer()
 });

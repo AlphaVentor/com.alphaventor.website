@@ -46,28 +46,6 @@ export const WEB_PAGE = page({
             subtitle: `Leverage the power of the <span class="emphasis">AlphaVentor</span> 
             platform to give your client a digital twin of your products`,
             asset: "assets/slides/slide00.png"
-        }),
-        grid("light", {
-            theme: "light", 
-            background: "white",
-            cards : [
-                gridCard("light", {
-                    theme: "light", 
-                    background: "pic:assets/images/casing00.png",
-                }),
-                gridCard("light", {
-                    theme: "light", 
-                    background: "pic:assets/aircrafts/evtol-cruise-low.png",
-                }),
-                gridCard("light", {
-                    theme: "light", 
-                    background: "blue",
-                }),
-                gridCard("light", {
-                    theme: "light", 
-                    background: "white",
-                })
-            ]
         })
     ],
     footer: footer()
