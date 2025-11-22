@@ -23,3 +23,6 @@
 hs_err_pid*
 /bin/
 /local-server/
+
+# Mac OS Stuff */
+*.DS_Store
