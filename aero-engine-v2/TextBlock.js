@@ -85,7 +85,7 @@ export class TextBlock extends AeroElement {
     build(page) {
 
         /* CSS requirements */
-        page.css_requireStylesheet("/aero/TextBlock.css");
+        page.css_requireStylesheet("/aero-engine-v2/TextBlock.css");
 
         /* build nodes */
         this.sectionNode = document.createElement("section");

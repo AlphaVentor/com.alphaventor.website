@@ -75,7 +75,7 @@ export class SquareGridV2 extends AeroElement {
         super();
 
         /* CSS requirements */
-        page.css_requireStylesheet("/aero/SquareGrid.css");
+        page.css_requireStylesheet("/aero-engine-v2/SquareGrid.css");
 
         /* build nodes */
         this.sectionNode = document.createElement("section");

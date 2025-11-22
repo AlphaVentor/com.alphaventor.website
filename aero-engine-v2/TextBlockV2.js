@@ -92,7 +92,7 @@ export class TextBlockV2 extends AeroElement {
         super();
 
         /* CSS requirements */
-        page.css_requireStylesheet("/aero/TextBlock.css");
+        page.css_requireStylesheet("/aero-engine-v2/TextBlock.css");
 
         /* build nodes */
         this.sectionNode = document.createElement("section");
@@ -127,7 +127,7 @@ export class TextBlockV2 extends AeroElement {
         }
         else if (val = sources.getAttribute("backgroundGradient")) {
             /* ee */
-            page.css_requireStylesheet("/aero/gradient-backgrounds.css");
+            page.css_requireStylesheet("/aero-engine-v2/gradient-backgrounds.css");
             this.sectionNode.classList.add("aero-background-gradient-" + val);
         }
         else if (val = sources.getAttribute("backgroundImage")) {

@@ -54,8 +54,8 @@ export class WebPage {
 
         
         /* CSS requirements */
-        this.css_requireStylesheet("/aero/WebPage.css");
-        this.css_requireStylesheet("/aero/ModalBox.css");
+        this.css_requireStylesheet("/aero-engine-v2/WebPage.css");
+        this.css_requireStylesheet("/aero-engine-v2/ModalBox.css");
     }
 
 

@@ -92,7 +92,7 @@ export class DocumentationV2 extends AeroElement {
         super();
 
         /* CSS requirements */
-        page.css_requireStylesheet("/aero/Documentation.css");
+        page.css_requireStylesheet("/aero-engine-v2/Documentation.css");
 
         /* build nodes */
         this.sectionNode = document.createElement("section");

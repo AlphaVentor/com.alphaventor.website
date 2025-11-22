@@ -16,7 +16,7 @@ export class Video extends AeroElement {
         super();
 
         /* CSS requirements */
-        page.css_requireStylesheet("/aero/Video.css");
+        page.css_requireStylesheet("/aero-engine-v2/Video.css");
 
 
         /* build nodes */

@@ -56,7 +56,7 @@ export class HeaderV2 extends AeroElement {
         this.logo = (val = sources.getAttribute("logo")) ? val : "light";
 
         /* CSS requirements */
-        page.css_requireStylesheet("/aero/Header.css");
+        page.css_requireStylesheet("/aero-engine-v2/Header.css");
 
         /* build nodes */
         this.headerNode = document.createElement('header');

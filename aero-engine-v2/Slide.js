@@ -84,8 +84,8 @@ export class Slide extends AeroElement {
     build(page) {
 
         /* CSS requirements */
-        page.css_requireStylesheet("/aero/Slide.css");
-        page.css_requireStylesheet("/aero/gradient-backgrounds.css");
+        page.css_requireStylesheet("/aero-engine-v2/Slide.css");
+        page.css_requireStylesheet("/aero-engine-v2/gradient-backgrounds.css");
 
         /* build nodes */
         this.sectionNode = document.createElement("section");

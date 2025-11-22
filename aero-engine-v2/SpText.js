@@ -83,7 +83,7 @@ export class SpText extends AeroElement {
     build(page) {
 
         /* CSS requirements */
-        page.css_requireStylesheet("/aero/SpText.css");
+        page.css_requireStylesheet("/aero-engine-v2/SpText.css");
 
         /* build nodes */
         this.sectionNode = document.createElement("section");

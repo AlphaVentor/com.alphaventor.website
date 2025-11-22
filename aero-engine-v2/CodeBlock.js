@@ -38,7 +38,7 @@ export class CodeBlock extends AeroElement {
         //page.css_requireStylesheet("https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.0/styles/default.min.css");
         page.css_requireStylesheet("https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.0/styles/atom-one-dark.css");
 
-        page.css_requireStylesheet("/aero/CodeBlock.css");
+        page.css_requireStylesheet("/aero-engine-v2/CodeBlock.css");
 
       
 

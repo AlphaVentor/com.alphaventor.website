@@ -24,7 +24,7 @@ export class Footer extends AeroElement {
   build(page) {
 
     /* CSS requirements */
-    page.css_requireStylesheet("/aero/Footer.css");
+    page.css_requireStylesheet("/aero-engine-v2/Footer.css");
 
     /* build nodes */
     this.footerNode = document.createElement('footer');
