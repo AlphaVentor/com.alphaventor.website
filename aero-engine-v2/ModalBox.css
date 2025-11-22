@@ -1,0 +1,141 @@
+/* modal box */
+
+
+.modalbox-overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: #808080d9;
+    z-index: 64;
+}
+
+.modalbox {
+    position: absolute;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    background-color: rgb(240, 240, 240);
+    border-radius: 16px;
+    border: 1px solid grey;
+    box-shadow: rgba(64, 64, 64, 0.507) 0px 4px 16px;
+    display: flex;
+    flex-direction: row;
+    padding: 24px;
+    z-index: 68;
+}
+
+
+.modalbox-icon {
+    width: 120px;
+    margin: 24px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.modalbox-icon>svg {
+    fill: rgb(241, 241, 41);
+    filter: drop-shadow(0px 1px 4px rgb(0 0 0 / 0.4));
+}
+
+
+.modalbox-main {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+}
+
+.modalbox-main>div:last-child {
+    margin-top: auto;
+}
+
+.modalbox-message {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 80px;
+}
+
+.modalbox-message>h1 {
+    margin: 16px 8px 16px 8px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.modalbox-message>p {
+    margin: 32px 8px 8px 8px;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.modalbox-validation {
+    padding: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    /* Pack items from the end */
+}
+
+.modalbox-validation>* {
+    margin: 2px 8px 2px 8px;
+    padding: 0px;
+}
+
+.modalbox-button {
+    border: solid 1px green;
+    padding: 12px 24px 12px 24px;
+    border-radius: 8px;
+    background-color: rgb(18, 173, 18);
+    color: white;
+    outline: solid 8px rgba(166, 213, 180, 0.588);
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.modalbox-button:hover {
+    border: solid 1px rgb(1, 144, 1);
+    background-color: rgb(17, 197, 17);
+}
+
+
+
+
+/* <nav> */
+
+@media (orientation : landscape) {
+
+    .modalbox {
+        width: 600px;
+        padding: 24px;
+        flex-direction: row;
+    }
+
+
+    .modalbox-icon {
+        width: 120px;
+        margin: 24px;
+    }
+
+}
+
+@media (orientation : portrait) {
+    .modalbox {
+        width: 80vw;
+        padding: 5vw;
+        flex-direction: column;
+    }
+
+    .modalbox-icon {
+        height: 18vh;
+        margin: 4vw;
+        width: auto;
+        background-position: center;
+    }
+
+    .modalbox-button {
+        flex-shrink: 0;
+        flex-grow: 1;
+    }
+}

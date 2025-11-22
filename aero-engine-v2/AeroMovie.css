@@ -1,0 +1,40 @@
+/* <aero-slide> */
+section[class^="aero-movie-"] {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	width: 100%;
+}
+
+section[class^="aero-movie-"]>div.text {
+	margin: 0px 0px 0px 0px;
+	padding: 8px 16% 8px 16%;
+}
+
+
+/* <asset> */
+
+.aero-movie {
+	background-color: rgb(255, 255, 255);
+	width: 100%;
+	/*overflow: auto;*/
+}
+
+
+.aero-movie[loaded = "false"] {
+	aspect-ratio: 16 / 9;
+	background-color: aqua;
+	position: relative;
+}
+
+.aero-movie[loaded = "true"] {
+	height: fit-content;
+	background-color: white;
+	position: relative;
+}
+
+.aero-movie-video{
+	width: 100%;
+	/*overflow: auto;*/
+}
+
+

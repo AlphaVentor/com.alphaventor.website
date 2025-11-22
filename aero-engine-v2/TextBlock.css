@@ -1,0 +1,571 @@
+/* <aero-slide> */
+
+/* <text> */
+
+.textblock {
+	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande",
+		sans-serif;
+	margin: 0px 0px 0px 0px;
+	padding: 8px 16% 8px 16%;
+}
+
+
+@media (orientation : landscape) {
+	.textblock {
+		margin: 0px 0px 0px 0px;
+		padding: 32px 16% 8px 16%;
+	}
+}
+
+
+@media (orientation : portrait) {
+	.textblock {
+		margin: 0px 0px 0px 0px;
+		padding: 16px 4% 8px 4%;
+	}
+}
+
+/* <text> */
+
+
+/* <asset> */
+
+div.aero-slide-picture {
+	padding: 0px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: 2;
+	aspect-ratio: 3 / 2;
+	/*overflow: auto;*/
+}
+
+@media (orientation : landscape) {
+	div.aero-slide-picture {
+		margin: 0px 20% 0px 20%;
+		width: 60%;
+	}
+
+	.aero-slide[type="hThird"]>.aero-slide-picture {
+		margin: 32px 32px 32px 32px;
+		background-size: contain;
+	}
+}
+
+@media (orientation : portrait) {
+	div.aero-slide-picture {
+		margin: 0px 4% 0px 4%;
+		width: 92%;
+	}
+
+	.aero-slide[type="hThird"]>.aero-slide-picture {
+		margin: 32px 32px 32px 32px;
+		background-size: contain;
+	}
+
+	.aero-slide[type="hThird"] {
+		display: flex;
+		flex-direction: row-reverse;
+		padding: 8px 16% 8px 16%;
+	}
+
+}
+
+/* <asset> */
+
+
+/* <arrangements> */
+@media (orientation : landscape) {
+
+
+	.aero-slide[arrangement="text-up"] {
+		flex-direction: column;
+	}
+
+	.aero-slide[arrangement="text-down"] {
+		flex-direction: column-reverse;
+	}
+
+	.aero-slide[arrangement="text-left"] {
+		flex-direction: row;
+	}
+
+	.aero-slide[arrangement="text-right"] {
+		flex-direction: row-reverse;
+	}
+
+}
+
+/* </arrangements> */
+
+
+
+
+
+
+
+/* <h1> */
+.textblock>h1 {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
+		"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: lighter;
+	max-width: 92%;
+	padding: 8px;
+	border-radius: 4px;
+	margin: 0px;
+	z-index: 8;
+	text-align: left;
+}
+
+.textblock>h1>span:first-child {
+	margin: 0px 16px 0px 0px;
+}
+
+.textblock[type="legal"]>h1 {
+	font-size: 32px;
+	color: #1635a5;
+	padding: 16px 8px 8px 8px;
+}
+
+@media (orientation : landscape) {
+	.textblock>h1 {
+		font-size: 64px;
+		line-height: 64px;
+	}
+}
+
+@media (orientation : portrait) {
+	aero-slide-text>h1 {
+		font-size: 48px;
+		line-height: 48px;
+	}
+}
+
+.textblock>h1>span.emphasis {
+	font-weight: bold;
+}
+
+
+
+.textblock[type="legal"]>h1 {
+	padding: 32px 8px 16px 8px;
+}
+
+/* </h1> */
+
+
+/* <h2> */
+.textblock>h2 {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
+		"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: 24px;
+	line-height: 24px;
+	font-weight: bold;
+	max-width: 92%;
+	padding: 16px 8px 8px 8px;
+	border-radius: 4px;
+	/*white-space: nowrap;*/
+	margin: 0px;
+	z-index: 6;
+	text-align: left;
+}
+
+.textblock>h2>span:first-child {
+	margin: 0px 8px 0px 0px;
+}
+
+.textblock[type="legal"]>h2 {
+	font-size: 20px;
+	padding: 16px 8px 8px 8px;
+}
+
+@media (orientation : landscape) {
+	.textblock>h2 {
+		font-size: 24px;
+		line-height: 24px;
+	}
+}
+
+@media (orientation : portrait) {
+	.textblock>h2 {
+		font-size: 20px;
+		line-height: 20px;
+	}
+}
+
+/* </h2> */
+
+/* <p> */
+.textblock>p {
+	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande",
+		sans-serif;
+	font-size: 20px;
+	font-weight: normal;
+	text-align: justify;
+	z-index: 4;
+	padding: 0px 0px 0px 0px;
+	padding: 6px 6px 6px 8px;
+	border-radius: 4px;
+	margin: 0px;
+}
+
+.textblock>p code, .textblock>ul code, .textblock>ol code{
+	font-weight: bold;
+	color: #1635a5;
+}
+
+
+
+/* <p> */
+.textblock[type="legal"]>p {
+	font-size: 16px;
+}
+
+.textblock[type="legal"]>ul>li {
+	padding: 8px 8px 8px 16px;
+}
+
+
+@media (orientation : landscape) {
+	.textblock>p {
+		font-size: 16px;
+	}
+}
+
+@media (orientation : portrait) {
+	.textblock>p {
+		font-size: 13px;
+	}
+}
+/* </p> */
+
+
+
+/* <ol> */
+.textblock>ol {
+	counter-reset: section;
+	margin: 8px 0px 0px 0px;
+    padding: 0px 0px 0px 24px;
+  }
+
+  .textblock>ol>li {
+	margin: 4px 0px 0px 0px;
+    padding: 4px;
+	text-align: justify;
+  }
+/* </ol> */
+
+/* <ul> */
+
+.textblock>ul>li {
+	font-size: 16px;
+	padding: 4px 8px;
+}
+
+.textblock[type="legal"]>ul {
+	font-size: 16px;
+    padding: 0px 0px 0px 24px;
+}
+
+.textblock[type="legal"]>ul>li {
+	padding: 8px 8px 8px 16px;
+	text-align: justify;
+}
+
+
+@media (orientation : landscape) {
+	.textblock>ul {
+		font-size: 16px;
+	}
+}
+
+@media (orientation : portrait) {
+	.textblock>ul {
+		font-size: 13px;
+	}
+}
+/* </ul> */
+
+/* <a> */
+
+.textblock-links {
+	display: flex;
+	flex-direction: row;
+	padding: 8px;
+}
+
+.textblock-link {
+	color: white;
+	font-size: 14px;
+	font-weight: bold;
+    padding: 4px;
+    margin: 8px;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+	background-color: #3862fbca;
+	/*background-image: linear-gradient(to right, #3525e5 0%, #3525e5  20%, #b214d2 100%);*/
+	border-radius: 20px;
+	cursor: pointer;
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.367);
+	text-decoration: none;
+}
+
+.textblock-link:hover {
+	background-color: #476bed;
+}
+
+.textblock-link-pic {
+	width: 24px;
+	height: 24px;
+	margin: 0px;
+	padding: 0px;
+	background-size: auto;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.textblock-link-pic > svg {
+	stroke: #ffffff;
+	fill: #ffffff;
+}
+
+.textblock-link-text {
+	padding-bottom: 2px;
+	font-size: 14px;
+	margin-left: 8px;
+	color: #ffffff;
+}
+
+
+
+.textblock-link:hover > .textblock-link-pic >svg {
+	stroke: white;
+	fill: white;
+}
+
+.textblock-link:hover > .textblock-link-text{
+	color: white;
+}
+
+/* <a:styles> */
+
+.textblock-link[type="marketing"] {
+	padding: 12px 24px;
+	border-radius: 4px;
+}
+.textblock-link[type="marketing"]>.textblock-link-text {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+/* </a:styles> */
+
+/* <a:color> */
+.textblock-link[color="resource"] {
+	color: white;
+	background-color: #3862fbca;
+}
+.textblock-link[color="resource"]:hover {
+	background-color: #7291ff;
+}
+
+.textblock-link[color="doc"] {
+	color: white;
+	background-color: #008925ca;
+}
+.textblock-link[color="doc"]:hover {
+	background-color: #02c035ca;
+}
+
+/* </a:color> */
+
+
+/* </a> */
+
+
+.aero-slide>a {
+	position: absolute;
+	z-index: 10;
+	overflow: hidden;
+	padding: 12px 24px;
+	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande",
+		sans-serif;
+	font-size: 20px;
+	font-weight: normal;
+	line-height: 16px;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	user-select: none;
+	background-repeat: repeat-x;
+	background-position: -1px -1px;
+	background-size: 110% 110%;
+	border: 1px solid rgba(240, 240, 255, 1.0);
+	border-radius: 8px;
+	appearance: none;
+	/* appearance */
+	color: #ffffff;
+	background-color: rgba(28, 77, 45, 0.16);
+	background-image: linear-gradient(-180deg, rgb(46 46 46/ 52%) 0%,
+			rgb(16 16 16/ 67%) 90%);
+	backdrop-filter: blur(2px);
+	text-decoration: none;
+}
+
+.aero-slide>a:hover {
+	background-color: #269f42;
+	background-image: linear-gradient(-180deg, #2fcb53 0%, #269f42 90%);
+	background-position: -.5em;
+	border-color: rgba(27, 31, 35, 0.5);
+	text-decoration: none;
+}
+
+.aero-slide>a:focus {
+	box-shadow: 0 0 0 0.2em rgba(52, 208, 88, 0.4);
+	text-decoration: none;
+}
+
+.aero-slide>a:active {
+	background-color: #279f43;
+	background-image: none;
+	border-color: rgba(27, 31, 35, 0.5);
+	box-shadow: inset 0 0.15em 0.3em rgba(27, 31, 35, 0.15);
+	text-decoration: none;
+}
+
+@media (orientation : landscape) {}
+
+@media (orientation : portrait) {
+	.aero-slide h1 {
+		font-size: 32px;
+		line-height: 32px;
+	}
+
+	.aero-slide h2 {
+		font-size: 18px;
+		line-height: 18px;
+	}
+
+	.aero-slide p {
+		font-size: 16px;
+	}
+}
+
+.aero-slide-paragraph {
+	font-size: 16px;
+	padding: 32px 0px 32px 0px;
+}
+
+/* </aero-slides> */
+
+/* <aero-slide-prime> */
+
+/* </aero-slide-prime> */
+
+
+
+/* <themes> */
+.textblock[theme="light"] {
+	color: black;
+	/*background-color: rgba(255, 255, 255, 0.24);*/
+	/*backdrop-filter: blur(12px);*/
+	/*text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.75);*/
+	/*text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.75);*/
+}
+
+.textblock[theme="dark"] {
+	color: white;
+	/*background-color: rgba(0, 0, 0, 0.16);*/
+	/*backdrop-filter: blur(12px);*/
+	/*text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.75);*/
+}
+
+/* </themes> */
+
+
+/* <svg> */
+.textblock-pic-svg {
+	padding: 32px 16px 32px 16px;
+}
+
+.textblock[theme="light"] > .textblock-pic-svg svg {
+	fill: black;
+	stroke: black;
+}
+
+.textblock[theme="dark"] > .textblock-pic-svg svg {
+	fill: white;
+	stroke: white;
+}
+
+/* </svg> */
+
+/* <backgrounds> */
+div[class^="background-"] {
+	background-repeat: no-repeat;
+}
+
+.background-white {
+	background-color: white;
+}
+
+.background-blue {
+	background-color: blue;
+}
+
+.background-teal {
+	background-color: teal;
+}
+
+.background-black {
+	background-color: black;
+}
+
+.background-grey64 {
+	background-color: rgb(64, 64, 64);
+}
+
+.background-grey128 {
+	background-color: rgb(128, 128, 128);
+}
+
+.background-grey192 {
+	background-color: rgb(192, 192, 192);
+}
+
+.background-pic {
+	background-size: cover;
+	background-position: center;
+}
+
+
+/* </backgrounds> */
+
+
+/* <code> */
+
+
+.txbk-code-section {
+	padding: 24px max(5%, 16px) 24px max(5%, 16px);
+}
+
+.txbk-code-window {
+	background-color: rgb(33, 23, 59);
+	border-radius: 16px;
+	padding: 16px 32px;
+	color: rgb(87, 211, 211);
+}
+
+.txbk-code-window pre {
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	tab-size: 2;
+}
+
+.txbk-code-window code {
+	margin: 0;
+	padding: 0;
+}

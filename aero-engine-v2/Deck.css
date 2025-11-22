@@ -1,0 +1,79 @@
+
+.aero-deck {
+	padding: 16px 8% 16px 8%;
+	display: flex;
+	flex-wrap: wrap;
+	background-color: rgb(128, 128, 128);
+}
+
+
+.aero-deck-card-space {
+	margin: 8px;
+}
+
+.aero-deck-card {
+	border-radius: 8px;
+	border: solid 2px rgb(200, 200, 200);
+}
+
+
+.aero-deck-card-photo {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 160px;
+	width: 160px;
+	z-index: 2;
+	border-radius: 6px 6px 0px 0px;
+}
+
+.aero-deck-card-name {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
+		"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	width: 152px;
+	padding: 4px 4px 4px 4px;
+	background-color: white;
+	text-align: center;
+}
+
+.aero-deck-card-role {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
+		"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+	width: 152px;
+	padding: 4px 4px 4px 4px;
+	background-color: white;
+	text-align: center;
+}
+
+.aero-deck-card-bio {
+	font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: 12px;
+	width: 144px;
+	padding: 8px 8px 8px 8px;
+	font-weight: normal;
+	background-color: white;
+	border-radius: 0px 0px 6px 6px;
+}
+
+
+
+
+@media (orientation : landscape) {
+	.aero-deck {
+		padding: 16px 10% 16px 10%;
+	}
+}
+
+@media (max-width: 480px) {
+	.aero-deck {
+		padding: 0px calc(50vw - 180px) 0px calc(50vw - 180px);
+	}
+}
+
+

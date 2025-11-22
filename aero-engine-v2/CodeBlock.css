@@ -1,0 +1,25 @@
+
+
+.code-block-section {
+	background-color: rgb(63, 63, 63);
+	padding: 32px max(15%, 16px) 32px max(15%, 16px);
+}
+
+.code-block-window {
+	background-color: rgb(33, 23, 59);
+	border-radius: 8px;
+	padding: 16px 24px;
+	color: rgb(87, 211, 211);
+}
+
+.code-block-window pre {
+	margin: 0;
+	padding: 0;
+	overflow-x: scroll;
+	tab-size: 2;
+}
+
+.code-block-window code {
+	margin: 0;
+	padding: 0;
+}
