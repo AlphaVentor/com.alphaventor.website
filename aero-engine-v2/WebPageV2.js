@@ -87,26 +87,6 @@ export class WebPageV2 {
 
 
     constructor() {
-
-
-        /* CSS requirements */
-        this.css_requireStylesheet("/aero-engine-v2/WebPage.css");
-        this.css_requireStylesheet("/aero-engine-v2/ModalBox.css");
-
-        const sources = document.querySelector("#aero-page");
-        let node = sources.firstChild;
-        while (node) {
-            
-            const element = buildPageElement(this, node);
-
-            /** add element */
-            if(element !=null){ this.elements.push(element); }
-
-            /* save next node */
-            node = node.nextSibling;
-        }
-        document.body.removeChild(sources);
-        console.log("WEBPAGE loaded!");
     }
 
 
@@ -122,8 +102,56 @@ export class WebPageV2 {
 
     start() {
 
-        /* create structure */
-        this.createStructure();
+         /* CSS requirements */
+        this.css_requireStylesheet("/aero-engine-v2/WebPage.css");
+        this.css_requireStylesheet("/aero-engine-v2/ModalBox.css");
+
+        /* read the custom components of the source */
+        const sources = document.querySelector("#aero-sources");
+        let node = sources.firstChild;
+        while (node) {
+            
+            const element = buildPageElement(this, node);
+
+            /** add element */
+            if(element !=null){ this.elements.push(element); }
+
+            /* save next node */
+            node = node.nextSibling;
+        }
+        document.body.removeChild(sources);
+
+        console.log("WEBPAGE loaded!");
+
+        /* <structure> */
+         const bodyNode = document.body;
+
+        const wrapperNode = document.createElement("div");
+    
+        /* build */
+        const baseLayerNode = document.createElement("div");
+        baseLayerNode.classList.add("hidden");
+        baseLayerNode.id = "base";
+        wrapperNode.appendChild(baseLayerNode);
+        this.baseLayerNode = baseLayerNode;
+    
+        const topLayerNode = document.createElement("div");
+        topLayerNode.classList.add("hidden");
+        topLayerNode.id = "overlay";
+        wrapperNode.appendChild(topLayerNode);
+        this.topLayerNode = topLayerNode;
+    
+        const veilNode = document.createElement("div");
+        veilNode.id = "aero-veil";
+        veilNode.appendChild(this.createSpinner());
+        wrapperNode.appendChild(veilNode);
+        this.veilNode = veilNode;
+
+        this.wrapperNode = wrapperNode;
+
+        bodyNode.appendChild(wrapperNode);
+        /* </structure> */
+    
 
         /** populate structure */
         this.elements.forEach(element => this.baseLayerNode.appendChild(element.html_getNode()));
@@ -241,43 +269,6 @@ export class WebPageV2 {
         }
     }
 
-
-    createStructure(){
-     /* <structure> */
-    
-        const bodyNode = document.body;
-    
-    
-        const wrapperNode = document.createElement("div");
-    
-        /* build */
-        const baseLayerNode = document.createElement("div");
-        baseLayerNode.classList.add("hidden");
-        baseLayerNode.id = "base";
-        wrapperNode.appendChild(baseLayerNode);
-        this.baseLayerNode = baseLayerNode;
-    
-        const topLayerNode = document.createElement("div");
-        topLayerNode.classList.add("hidden");
-        topLayerNode.id = "overlay";
-        wrapperNode.appendChild(topLayerNode);
-        this.topLayerNode = topLayerNode;
-    
-        const veilNode = document.createElement("div");
-        veilNode.id = "veil";
-        wrapperNode.appendChild(veilNode);
-        bodyNode.appendChild(wrapperNode);
-        this.veilNode = veilNode;
-
-        this.wrapperNode = wrapperNode;
-    
-        /* </structure> */
-    
-    
-    
-        veilNode.appendChild(this.createSpinner());
-    
-    }
     
     
     createSpinner() {

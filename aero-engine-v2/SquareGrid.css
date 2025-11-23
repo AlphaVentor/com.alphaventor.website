@@ -221,6 +221,8 @@
 
 
 /* <theme> */
+
+/* <theme="light"> */
 .square-grid-card[theme="light"] {
 	border-color: rgb(204, 204, 204);
 }
@@ -244,9 +246,39 @@
 	color: rgb(38, 5, 84);
 	/*text-shadow: 0px 0px 4px white;*/
 }
+/* <theme="light"> */
+
+/* <theme="dawn"> */
+.square-grid-card[theme="dawn"] {
+	border-color: rgb(204, 204, 204);
+}
+
+.square-grid-card[theme="dawn"] h1 {
+	color: rgb(36, 36, 36);
+	background-color: rgba(255, 255, 255, 0.64);
+	/*text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.82); /* offset-x | offset-y | blur-radius | color */
+}
+
+.square-grid-card[theme="dawn"] h2 {
+	color: rgb(36, 36, 36);
+	background-color: rgba(255, 255, 255, 0.64);
+	/*text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.82); /* offset-x | offset-y | blur-radius | color */
+}
+
+.square-grid-card[theme="dawn"] p {
+	color: rgb(36, 36, 36);
+	background-color: rgba(255, 255, 255, 0.64);
+	/*text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.82); /* offset-x | offset-y | blur-radius | color */
+}
+
+.square-grid-card[theme="dawn"] li {
+	color: rgb(38, 5, 84);
+	/*text-shadow: 0px 0px 4px white;*/
+}
+/* </theme="dawn"> */
 
 
-
+/* <theme="light"> */
 .square-grid-card[theme="dark"] {
 	border-color: rgb(80, 80, 80);
 }
@@ -270,7 +302,7 @@
 	color: rgb(253, 226, 255);
 	/*text-shadow: 0px 0px 4px white;*/
 }
-
+/* </theme="light"> */
 /* </theme> */
 
 

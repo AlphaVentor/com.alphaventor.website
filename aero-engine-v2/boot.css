@@ -11,8 +11,13 @@ body {
 	margin: 0px;
 }
 
-body > div#aero-page {
+body > div#aero-sources {
 	display: none;
+}
+
+
+#aero-sources {
+	visibility: hidden;
 }
 
 
@@ -34,7 +39,7 @@ body > div#aero-page {
 	margin: 0px;
 }
 
-#veil {
+#aero-veil {
 	z-index: 128;
 	background: rgb(89, 85, 85);
 	background: linear-gradient(0deg, rgba(89, 85, 85, 1) 25%, rgba(62, 60, 60, 1) 70%, rgba(66, 66, 66, 1) 100%);
@@ -72,7 +77,7 @@ body > div#aero-page {
 .boot-embedded-icon {
 	width: 128px;
 	height: 128px;
-	background-image: url('/logos/S8-logo-v4-256px.png');
+	background-image: url('/logos/logo-small-white.png');
 	background-position: center;
 	background-size: contain;
 }
