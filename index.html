@@ -16,7 +16,7 @@
 
 <body onload="boot()">
 	<div id="aero-page" hasCookiesModalBox>
-		<header theme="dark" logo="logos/logo-small-white.png">
+		<aero-header theme="dark" logo="logos/logo-small-white.png">
 			<nav>
 				<menu to="/index.html" selected>Home</menu>
 				<menu to="/solutions.html">Solutions</menu>
@@ -29,8 +29,8 @@
 				<a to="https://www.linkedin.com/company/s8-stack" pic="/social/linkedin-icon-256px.png"></a>
 				<a to="https://x.com/Stack8Official" pic="/social/x-icon-256px.png"></a>
 			</social>
-		</header>
-		<slide theme="dark" backgroundColor="rgb(19, 37, 79)" asset="home/hero-biomass-power-plant-02.jpg"
+		</aero-header>
+		<aero-slide theme="dark" backgroundColor="rgb(19, 37, 79)" asset="home/hero-biomass-power-plant-02.jpg"
 			assetAspectRatio="4/3" arrangement="text-left">
 			<h1>Bring <b>Process</b> to the next level</h1>
 			<h2>Procurement</h2>
@@ -44,7 +44,7 @@
 				ORC or HVAC, and fluid handling (compressed process gas for Oil&Gas sector). We have also a dedicated
 				expertise in turbomachines, especially for advanced Organic cycle turbogénérator, turbocompressors, etc.
 			</p>
-		</slide>
+		</aero-slide>
 		<square-grid theme="light" backgroundColor="white">
 			<card type="light" size="std" theme="light"
 				backgroundImage="/solutions/cards/pid-sample-02.png">
@@ -108,20 +108,19 @@
 				backgroundImage="/solutions/cards/oil-gas-sector.jpg">
 				<hgroup>Procurement</hgroup>
 				<h1>Oil & Gas packages</h1>
-				<p isMobileHideable >Bespoke API617 packages are key components for Oil&Gas projects.</pisMobileHideable>
+				<p isMobileHideable >Bespoke API617 packages are key components for Oil&Gas projects.</p>
 				<a icon="/icons/left-circled-arrow.svg" href="#core-bohr-neon">Learn more...</a>
 			</card>
-			
 			<card type="light" size="std" theme="dark" backgroundImage="assets/cards/core-bohr-lithium/background.jpg">
 				<hgroup>Design</hgroup>
 				<h1>Storage & UPS</h1>
-				<p>Battery package for UPS and buffering</p>
+				<p isMobileHideable>Battery package for UPS and buffering</p>
 				<a icon="/icons/left-circled-arrow.svg" href="#core-bohr-lithium">Learn more...</a>
 			</card>
 			<card type="light" size="std" theme="dark" backgroundImage="assets/cards/core-web-xenon/background.png">
 				<hgroup>core.web.xenon</hgroup>
 				<h1>The Base Server</h1>
-				<p>Xenon is the default implementation of the S8 API.</p>
+				<p isMobileHideable>Xenon is the default implementation of the S8 API.</p>
 				<a icon="/icons/left-circled-arrow.svg" href="#core-web-xenon">Learn more...</a>
 			</card>
 			<card type="light" size="std" theme="dark"
@@ -383,7 +382,7 @@
 				cluster. And so on. Each node being able to perform the entire set of tasks required by the applications
 				enables a smooth and arbitrary large scale up.</p>
 		</text-block>
-		<footer path="footer.html"></footer>
+		<aero-footer path="footer.html"></aero-footer>
 	</div>
 </body>
 

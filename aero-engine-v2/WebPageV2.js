@@ -28,12 +28,12 @@ export const boot = function(){
 export const buildPageElement = function (page, sourceNode) {
     const type = sourceNode.nodeName.toLowerCase();
     switch (type) {
-        case "header": return new HeaderV2(page, sourceNode);
-        case "slide": return new SlideV2(page, sourceNode);
+        case "aero-header": return new HeaderV2(page, sourceNode);
+        case "aero-slide": return new SlideV2(page, sourceNode);
         case "square-grid": return new SquareGridV2(page, sourceNode);
         case "text-block": return new TextBlockV2(page, sourceNode);
         case "video": return new Video(page, sourceNode);
-        case "footer": return new FooterV2(page, sourceNode);
+        case "aero-footer": return new FooterV2(page, sourceNode);
         case "aero-doc": return new DocumentationV2(page, sourceNode);
         default : return null;
     }
