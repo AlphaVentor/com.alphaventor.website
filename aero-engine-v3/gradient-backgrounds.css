@@ -1,0 +1,82 @@
+.aero-background-gradient-light0012 {
+    background:
+        radial-gradient(circle farthest-side at 50% 180%, white 15%, transparent 20%),
+        radial-gradient(closest-corner at 121% 84%, #ef5d5d 190%, transparent 307%),
+        radial-gradient(closest-side at 40% 77%, #fff64d 76%, transparent 185%),
+        linear-gradient(#9933ff 10%, transparent);
+}
+
+.aero-background-gradient-light0016 {
+    background:
+        linear-gradient(142deg, transparent, white),
+        linear-gradient(108deg, red, transparent),
+        linear-gradient(45deg, #fff722, #ff26f9);
+
+}
+
+
+
+.aero-background-gradient-dark0014 {
+    background:
+        radial-gradient(circle farthest-side at 50% 180%, rgb(85, 85, 85) 15%, transparent 20%),
+        radial-gradient(closest-corner at 121% 84%, #96125f 190%, transparent 307%),
+        radial-gradient(closest-side at 40% 77%, #908912 76%, transparent 185%),
+        linear-gradient(#5f209f 10%, transparent);
+}
+
+.aero-background-gradient-dark0016 {
+    background: linear-gradient(108deg, #05050e, transparent), linear-gradient(45deg, #FFF72D, #262bff);
+}
+
+
+
+.aero-background-gradient-light-tile00 {
+    background: linear-gradient(108deg, #fae7eb, white);
+}
+
+
+.aero-background-gradient-light-tile01 {
+    background: linear-gradient(108deg, #e0d4e7, white);
+}
+
+
+.aero-background-gradient-light-tile02 {
+    background: linear-gradient(108deg, #dbeef7, white);
+}
+
+
+.aero-background-gradient-light-tile03 {
+    background: linear-gradient(108deg, #d0edef, white);
+}
+
+
+.aero-background-gradient-light-tile04 {
+    background: linear-gradient(108deg, #b5f6cf, white);
+}
+
+
+.aero-background-gradient-light-tile05 {
+    background: linear-gradient(108deg, #e3e5ff, white);
+}
+
+
+.aero-background-gradient-light-tile06 {
+    background: linear-gradient(108deg, #faedcb, white);
+}
+
+
+.aero-background-gradient-light-tile07 {
+    background: linear-gradient(108deg, #fcd5ce, white);
+}
+
+
+.aero-background-gradient-wip {
+    background: repeating-linear-gradient(
+        45deg,
+        #e9e9e9,
+        #e4e4e4 32px,
+        #f8d2a0 32px,
+        #f8d2a0 64px
+    );
+}
+

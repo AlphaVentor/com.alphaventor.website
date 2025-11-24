@@ -1,0 +1,384 @@
+/* <aero-slide> */
+aero-slide {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	box-sizing: content-box;
+}
+
+/* <text> */
+
+.aero-slide-text {
+	margin: 0px 0px 0px 0px;
+	padding: 8px 12% 8px 12%;
+	box-sizing: border-box;
+}
+
+
+@media (orientation : landscape) {
+	div.aero-slide-text {
+		margin: 0px 0px 0px 0px;
+		padding: 8px 8% 8px 8%;
+		width: 50%;
+	}
+}
+
+
+@media (orientation : portrait) {
+	div.aero-slide-text {
+		margin: 0px 0px 0px 0px;
+		padding: 8px 4% 8px 4%;
+		height: 50%;
+	}
+}
+
+/* <text> */
+
+
+/* <asset> */
+
+div.aero-slide-picture {
+	padding: 0px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: 2;
+	aspect-ratio: 3 / 2;
+	/*overflow: auto;*/
+}
+
+@media (orientation : landscape) {
+	div.aero-slide-picture {
+		margin: 0px 0px 0px 0px;
+		width: 50%;
+	}
+
+	aero-slide[type="hThird"]>.aero-slide-picture {
+		margin: 32px 32px 32px 32px;
+		background-size: contain;
+	}
+}
+
+@media (orientation : portrait) {
+	div.aero-slide-picture {
+		margin: 0px 0px 0px 0px;
+		width: 100%;
+		height: 50%;
+	}
+
+	aero-slide[type="hThird"]>.aero-slide-picture {
+		margin: 32px 32px 32px 32px;
+		background-size: contain;
+	}
+
+	aero-slide[type="hThird"] {
+		display: flex;
+		flex-direction: row-reverse;
+		padding: 8px 16% 8px 16%;
+	}
+
+}
+
+/* <asset> */
+
+
+/* <arrangements> */
+@media (orientation : landscape) {
+
+
+	aero-slide[arrangement="text-up"] {
+		flex-direction: column;
+	}
+
+	aero-slide[arrangement="text-down"] {
+		flex-direction: column-reverse;
+	}
+
+	aero-slide[arrangement="text-left"] {
+		flex-direction: row;
+	}
+
+	aero-slide[arrangement="text-right"] {
+		flex-direction: row-reverse;
+	}
+
+}
+
+/* </arrangements> */
+
+
+
+
+
+
+
+/* <h1> */
+.aero-slide-text>h1 {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
+		"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: lighter;
+	max-width: 92%;
+	padding: 8px;
+	border-radius: 4px;
+	margin: 0px;
+	z-index: 8;
+	text-align: left;
+}
+
+aero-slide[theme="dark"] h1 {
+	text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.804); /* offset-x | offset-y | blur-radius | color */
+}
+aero-slide[theme="light"] h1 {
+	text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.804); /* offset-x | offset-y | blur-radius | color */
+}
+
+aero-slide h1>b {
+	font-weight: 800;
+}
+
+@media (orientation : landscape) {
+	.aero-slide-text>h1 {
+		font-size: 64px;
+		line-height: 64px;
+	}
+}
+
+@media (orientation : portrait) {
+	.aero-slide-text>h1 {
+		font-size: 48px;
+		line-height: 48px;
+	}
+}
+
+.aero-slide-text>h1>span.emphasis {
+	font-weight: bold;
+}
+
+/* </h1> */
+
+
+/* <h2> */
+.aero-slide-text>h2 {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
+		"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: 24px;
+	line-height: 24px;
+	font-weight: bold;
+	max-width: 92%;
+	padding: 8px;
+	border-radius: 4px;
+	/*white-space: nowrap;*/
+	margin: 0px;
+	z-index: 6;
+	text-align: left;
+}
+
+aero-slide[theme="dark"] h2 {
+	text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.804); /* offset-x | offset-y | blur-radius | color */
+}
+aero-slide[theme="light"] h2 {
+	text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.804); /* offset-x | offset-y | blur-radius | color */
+}
+
+aero-slide h2>b {
+	font-weight: 800;
+	background-color: yellow;
+}
+
+@media (orientation : landscape) {
+	.aero-slide-text>h2 {
+		font-size: 24px;
+		line-height: 24px;
+	}
+}
+
+@media (orientation : portrait) {
+	.aero-slide-text>h2 {
+		font-size: 20px;
+		line-height: 20px;
+	}
+}
+
+/* </h2> */
+
+/* <p> */
+.aero-slide-text>p {
+	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande",
+		sans-serif;
+	font-size: 20px;
+	font-weight: normal;
+	text-align: left;
+	z-index: 4;
+	padding: 0px 0px 0px 0px;
+	padding: 6px 6px 6px 8px;
+	border-radius: 4px;
+	margin: 0px;
+}
+
+aero-slide[theme="dark"] p {
+	text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.804); /* offset-x | offset-y | blur-radius | color */
+}
+aero-slide[theme="light"] p {
+	text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.804); /* offset-x | offset-y | blur-radius | color */
+}
+
+aero-slide p>b {
+	font-weight: 800;
+	background-color: yellow;
+}
+
+@media (orientation : landscape) {
+	.aero-slide-text>p {
+		font-size: 16px;
+	}
+}
+
+@media (orientation : portrait) {
+	.aero-slide-text>p {
+		font-size: 20px;
+	}
+}
+/* </p> */
+
+aero-slide>a {
+	position: absolute;
+	z-index: 10;
+	overflow: hidden;
+	padding: 12px 24px;
+	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande",
+		sans-serif;
+	font-size: 20px;
+	font-weight: normal;
+	line-height: 16px;
+	white-space: nowrap;
+	vertical-align: middle;
+	cursor: pointer;
+	user-select: none;
+	background-repeat: repeat-x;
+	background-position: -1px -1px;
+	background-size: 110% 110%;
+	border: 1px solid rgba(240, 240, 255, 1.0);
+	border-radius: 8px;
+	appearance: none;
+	/* appearance */
+	color: #ffffff;
+	background-color: rgba(28, 77, 45, 0.16);
+	background-image: linear-gradient(-180deg, rgb(46 46 46/ 52%) 0%,
+			rgb(16 16 16/ 67%) 90%);
+	backdrop-filter: blur(2px);
+	text-decoration: none;
+}
+
+aero-slide>a:hover {
+	background-color: #269f42;
+	background-image: linear-gradient(-180deg, #2fcb53 0%, #269f42 90%);
+	background-position: -.5em;
+	border-color: rgba(27, 31, 35, 0.5);
+	text-decoration: none;
+}
+
+aero-slide>a:focus {
+	box-shadow: 0 0 0 0.2em rgba(52, 208, 88, 0.4);
+	text-decoration: none;
+}
+
+aero-slide>a:active {
+	background-color: #279f43;
+	background-image: none;
+	border-color: rgba(27, 31, 35, 0.5);
+	box-shadow: inset 0 0.15em 0.3em rgba(27, 31, 35, 0.15);
+	text-decoration: none;
+}
+
+@media (orientation : landscape) {}
+
+@media (orientation : portrait) {
+	aero-slide h1 {
+		font-size: 32px;
+		line-height: 32px;
+	}
+
+	aero-slide h2 {
+		font-size: 18px;
+		line-height: 18px;
+	}
+
+	aero-slide p {
+		font-size: 16px;
+	}
+}
+
+.aero-slide-paragraph {
+	font-size: 16px;
+	padding: 32px 0px 32px 0px;
+}
+
+/* </aero-slides> */
+
+/* <aero-slide-prime> */
+
+/* </aero-slide-prime> */
+
+
+
+/* <themes> */
+aero-slide[theme="light"] {
+	color: black;
+	background-color: rgba(255, 255, 255, 0.24);
+	/*backdrop-filter: blur(12px);*/
+	/*text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.75);*/
+	/*text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.75);*/
+}
+
+aero-slide[theme="dark"] {
+	color: white;
+	background-color: rgb(19, 37, 79);
+	/*backdrop-filter: blur(12px);*/
+	/*text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.75);*/
+}
+
+/* </themes> */
+
+
+/* <backgrounds> */
+div[class^="background-"] {
+	background-repeat: no-repeat;
+}
+
+.background-white {
+	background-color: white;
+}
+
+.background-blue {
+	background-color: blue;
+}
+
+.background-teal {
+	background-color: teal;
+}
+
+.background-black {
+	background-color: black;
+}
+
+.background-grey64 {
+	background-color: rgb(64, 64, 64);
+}
+
+.background-grey128 {
+	background-color: rgb(128, 128, 128);
+}
+
+.background-grey192 {
+	background-color: rgb(192, 192, 192);
+}
+
+.background-pic {
+	background-size: cover;
+	background-position: center;
+}
+
+
+/* </backgrounds> */

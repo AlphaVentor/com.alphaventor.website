@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<title>S8 Home</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" type="image/x-icon" href="/favicon.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="aero-engine-v2/boot.css" />
+	<script type="module">
+		import { boot } from './aero-engine-v3/AeroWebPage.js';
+		window.boot = boot;
+	</script>
+</head>
+
+<body onload="boot()">
+	<div id="aero-wrapper" hasCookiesModalBox">
+		<aero-header theme="dark" logo="logos/logo-small-white.png">
+			<nav>
+				<menu to="/index.html" selected>Home</menu>
+				<menu to="/solutions.html">Solutions</menu>
+				<menu to="/services.html">Services</menu>
+				<menu to="/softwares.html">Softwares</menu>
+				<menu to="/stack.html">Stack</menu>
+				<menu to="/team.html">Team</menu>
+			</nav>
+			<social>
+				<a to="https://www.linkedin.com/company/s8-stack" pic="/social/linkedin-icon-256px.png"></a>
+				<a to="https://x.com/Stack8Official" pic="/social/x-icon-256px.png"></a>
+			</social>
+		</aero-header>
+		<aero-slide theme="dark" backgroundColor="rgb(19, 37, 79)" asset="home/hero-biomass-power-plant-02.jpg"
+			assetAspectRatio="4/3" arrangement="text-left">
+			<h1>Bring <b>Process</b> to the next level</h1>
+			<h2>Procurement</h2>
+			<p>We turn process owner requirements into specifications, pre-designing the most adequate solution and find
+				the right EPC (Engineering Procurement Construction) companies to achieve your goals, select the most
+				competitive for you, help you setup strong legal guiding and supervise execution at your benefit.
+			</p>
+			<h2>Design</h2>
+			<p>We design custom process plants or equipment, with a strong emphasis on thermal (boiler, district
+				heating, datacenter cooling), thermodynamics (stream generators, steam cycles, Organic fluid cycles like
+				ORC or HVAC, and fluid handling (compressed process gas for Oil&Gas sector). We have also a dedicated
+				expertise in turbomachines, especially for advanced Organic cycle turbogénérator, turbocompressors, etc.
+			</p>
+		</aero-slide>
+		<aero-square-grid theme="light" backgroundColor="white">
+			<aero-card type="light" size="std" theme="light"
+				backgroundImage="/solutions/cards/pid-sample-02.png">
+				<hgroup>Design</hgroup>
+				<h1>Process Design</h1>
+				<h2>Thermodynamics, PFD, PI&D, </h2>
+				<p isMobileHideable>We provide the core elements for the design of fluid processes.
+				</p>
+				<a icon="/icons/left-circled-arrow.svg" href="#core-arch-silicon">Learn more...</a>
+			</aero-card>
+			<aero-card type="light" size="large-horizontal" theme="dark"
+				backgroundImage="/solutions/cards/steam-turbine-02.jpg">
+				<hgroup>Procurement</hgroup>
+				<h1>Steam Turbines</h1>
+				<h2>Small Steam Turbines</h2>
+				<p isMobileHideable>Small steam turbines for industrial/Power generation purposes.
+				</p>
+				<a icon="/icons/left-circled-arrow.svg" href="#core-bohr-neodymium">Learn more...</a>
+			</aero-card>
+			<aero-card type="light" size="std" theme="dark" backgroundImage="/solutions/cards/combined-cycle-02.jpg">
+				<hgroup>Procurement</hgroup>
+				<h1>Efficiency</h1>
+				<h2>Wasted Heat Recovery</h2>
+				<p isMobileHideable>Turn wasted heat into useful power generation.</p>
+				<a icon="/icons/left-circled-arrow.svg" href="#core-io-xml">Learn more...</a>
+			</aero-card>
+			<aero-card type="light" size="large-horizontal" theme="dark"
+				backgroundImage="/solutions/cards/special-turbomachine-01.jpg">
+				<hgroup>Design</hgroup>
+				<h1>Turbo Design</h1>
+				<h2>Special turbo-expanders and turbo-compressors</h2>
+				<p>For special duty, or for equipping a new process or packages, we provide tailored made turbo-machiens designs.
+				</p>
+				<a icon="/icons/left-circled-arrow.svg" href="#core-bohr-neodymium">Learn more...</a>
+			</aero-card>
+			<aero-card type="light" size="std" theme="dark" backgroundImage="/assets/cards/core/json-background.jpg">
+				<hgroup>Procurement</hgroup>
+				<h1>Datacenters</h1>
+				<h2>Heavy duty cooling</h2>
+				<p isMobileHideable>Your bespoke solutions for high density hyperscale datacenters</p>
+				<a icon="/icons/left-circled-arrow.svg" href="#core-io-json">Learn more...</a>
+			</aero-card>
+			<aero-card type="light" size="large-square" theme="light"
+				backgroundImage="/solutions/cards/woodchips-05.jpg">
+				<hgroup>Procurement</hgroup>
+				<h1>Biomass Power Plants</h1>
+				<h2>Integrated heat and power</h2>
+				<p>Biomass Power plants are the sole Full renewable 24/7 local power supply that currently achieve net
+					zero. It also begins tremenouds beneifts in terms of combined Heat&Power supply, making it
+					supercharger for virtually every industry.:</p>
+				<li icon="/icons/flow.svg"><b>Stream to Front</b>: This is the key to send compelx structure to front
+					with
+					extremely tight data frame: every single object sent to front is part of graph wehere every
+					node is identified. Therefore, any modification of the screen does not need any reload of
+					previously transmitted objects.</li>
+				<li icon="/icons/flow.svg"><b>Native Undo</b>: Since all objects are persisted in a flow of sequential
+					modifications, undo reconstruction comes at no costs.</li>
+				<a icon="/icons/left-circled-arrow.svg" href="#core-bohr-atom">Learn more...</a>
+			</aero-card>
+			<aero-card type="light" size="large-horizontal" theme="dark"
+				backgroundImage="/solutions/cards/oil-gas-sector.jpg">
+				<hgroup>Procurement</hgroup>
+				<h1>Oil & Gas packages</h1>
+				<p isMobileHideable >Bespoke API617 packages are key components for Oil&Gas projects.</p>
+				<a icon="/icons/left-circled-arrow.svg" href="#core-bohr-neon">Learn more...</a>
+			</aero-card>
+			<aero-card type="light" size="std" theme="dark" backgroundImage="assets/cards/core-bohr-lithium/background.jpg">
+				<hgroup>Design</hgroup>
+				<h1>Storage & UPS</h1>
+				<p isMobileHideable>Battery package for UPS and buffering</p>
+				<a icon="/icons/left-circled-arrow.svg" href="#core-bohr-lithium">Learn more...</a>
+			</aero-card>
+			<aero-card type="light" size="std" theme="dark" backgroundImage="assets/cards/core-web-xenon/background.png">
+				<hgroup>core.web.xenon</hgroup>
+				<h1>The Base Server</h1>
+				<p isMobileHideable>Xenon is the default implementation of the S8 API.</p>
+				<a icon="/icons/left-circled-arrow.svg" href="#core-web-xenon">Learn more...</a>
+			</aero-card>
+			<aero-card type="light" size="std" theme="dark"
+				backgroundImage="/assets/cards/core-bohr-beryllium/background.jpg">
+				<hgroup>core.bohr.beryllium</hgroup>
+				<h1>NoSQL serializer</h1>
+				<p>Serilization for table-shaped database records.</p>
+				<a icon="/icons/left-circled-arrow.svg" href="#core-web-xenon">Learn more...</a>
+			</aero-card>
+			<aero-card type="light" size="large-square" theme="dawn"
+				backgroundImage="/solutions/cards/orc-1.jpg">
+				<hgroup>Design</hgroup>
+				<h1>Organic Rankine Cycles</h1>
+				<h2>High efficiency cycles for low temperatures</h2>
+				<p>Organic Rankine cycles play a specific role in Energy efficiency. They are best in class solutions for Power generation in 
+					numerous situation, like for instance: low grade heat recovery, Geothermal, Ocean Thermal Energy, etc.
+				</p>
+				<a icon="/icons/left-circled-arrow.svg" href="#core-bohr-atom">Learn more...</a>
+			</aero-card>
+		</aero-square-grid>
+	</div>
+</body>
+
+</html>

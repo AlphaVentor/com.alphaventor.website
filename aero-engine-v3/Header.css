@@ -1,0 +1,321 @@
+/* <header> */
+aero-header {
+	display: block;
+	background-color: rgb(255, 255, 255);
+	/*width: 100%;*/
+	width: 100vw;
+	color: black;
+}
+
+.aero-header-placeholder {
+	width: 100vw;
+	height: 64px;
+}
+
+.aero-header-flying {
+	width: 100vw;
+	height: 64px;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 128;
+}
+
+.aero-header-bar {
+	height: 64px;
+}
+
+/* <placeholder> */
+aero-header[theme="light"] > .aero-header-placeholder {
+	background-color: rgb(255, 255, 255);
+	color: black;
+}
+
+aero-header[theme="dark"] > .aero-header-placeholder {
+	background-color: rgb(0, 0, 0);
+	color: rgb(255, 255, 255);
+}
+/* </placeholder> */
+
+
+/* <flying> */
+aero-header[theme="light"] > .aero-header-flying {
+	background-color: rgb(255, 255, 255);
+}
+
+aero-header[theme="dark"] > .aero-header-flying {
+	background-color: rgb(0, 0, 0);
+}
+/* </flying> */
+
+
+/* <bar> */
+aero-header[theme="light"] .aero-header-bar {
+	background-color: rgb(255, 255, 255);
+	color: black;
+	border-bottom: solid 1px rgba(192, 192, 192, 0.76);
+}
+
+aero-header[theme="dark"] .aero-header-bar {
+	background-color: rgb(0, 0, 0);
+	color: rgb(255, 255, 255);
+	border-bottom: solid 1px rgba(64, 64, 64, 0.76);
+}
+/* </bar> */
+
+
+aero-header[theme="dark"] > .aero-header-bar, header[theme="dark"] > .aero-header-placeholder {
+	background-color: rgb(0, 0, 0);
+	color: rgb(255, 255, 255);
+}
+
+
+
+.aero-header-menu>a {
+	color: rgb(64, 64, 64);
+	text-decoration: none;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
+		"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+
+.menu-login {
+	width: 64px;
+	cursor: pointer;
+}
+
+.menu-login:hover>img {
+	fill: blue;
+}
+
+.menu-login>img>svg {
+	fill: black;
+}
+
+
+
+
+/* <nav> */
+
+@media (orientation : landscape) {
+	aero-header {
+		height: 64px;
+	}
+
+	.aero-header-placeholder {
+		height: 64px;
+	}
+
+
+	.aero-header-logo {
+		width: 12%;
+		min-width: 64px;
+		cursor: pointer;
+	}
+
+	.aero-header-logo>img {
+		margin: 8px 16px 8px 16px;
+		height: 48px;
+		width: 48px;
+	}
+
+	.aero-header-bar {
+		height: 64px;
+		padding: 0px 4% 0px 4%;
+		display: flex;
+		flex-direction: row;
+	}
+
+	.aero-header-bar>* {
+		flex: auto;
+	}
+
+
+	nav {
+		z-index: 12;
+		width: 72%;
+	}
+
+	nav>ul {
+		margin: 0px 0px 0px 0px;
+		margin-inline-start: 0px;
+		padding-inline-start: 0px;
+	}
+
+	.aero-header-menu {
+		display: inline-block;
+		color: red;
+		text-decoration: none;
+		padding: 8px 12px 4px 12px;
+		line-height: 48px;
+		height: 48px;
+		cursor: pointer;
+	}
+
+	.aero-header-menu[selected] {
+		border-bottom: solid 4px rgb(224, 149, 0);
+	}
+
+	.aero-header-menu>a {
+		padding: 8px;
+		margin: 0px;
+		vertical-align: baseline;
+	}
+
+	aero-header[theme="dark"] .aero-header-menu>a {
+		color: rgb(239, 239, 239);
+	}
+
+	.aero-header-menu:hover>a {
+		background-color: rgb(94, 53, 231);
+		border-radius: 4px;
+		color: rgb(255, 243, 249);
+	}
+
+
+
+	.aero-header-social {
+		width: 16%;
+		min-width: 64px;
+		/*overflow: hidden; */
+	}
+	
+
+
+	.aero-header-social-link>img {
+		margin: 16px;
+		width: 32px;
+		height: 32px;
+	}
+
+}
+
+
+@media (orientation : portrait) {
+	aero-header {
+		height: 64px;
+	}
+
+	.aero-header-bar {
+		height: 64px;
+		padding: 0px 0px 0px 0px;
+	}
+
+	.aero-menu-icons-wrapper {
+		display: inline-block;
+		vertical-align: top;
+		display: flex;
+		height: 64px;
+	}
+
+	.menu-handler {
+		display: inline-block;
+		vertical-align: top;
+		padding: 0px;
+		margin: 0px 0px 0px 0px;
+		cursor: pointer;
+	}
+
+	.menu-handler>img {
+		margin: 14px 14px 14px 14px;
+		/*height: 48px;*/
+		width: 36px;
+	}
+
+	.aero-header-logo {
+		display: inline-block;
+		vertical-align: top;
+		width: 80px;
+		margin: 0px 0px 0px calc(50vw - 96px);
+	}
+
+	.aero-header-logo>img {
+		margin: 4px 0px 0px 0px;
+		width: 56px;
+	}
+
+
+	nav {
+		z-index: 12;
+		width: 80vw;
+		position: absolute;
+		top: 72px;
+		left: 50vw;
+		transform: translateX(-50%);
+		padding: 0px;
+		visibility: hidden;
+		color: rgb(64, 64, 64);
+		border: solid 1px rgb(192, 192, 192, 0.76);
+		background-color: rgba(232, 232, 232, 0.64);
+		backdrop-filter: blur(16px);
+		padding: 16px 0 16px 0;
+		border-radius: 12px;
+	}
+
+
+	@media screen and (max-width: 600px) {
+		nav {
+			width: calc(100% - 64px);
+		}
+	}
+
+	nav>ul {
+		margin: 0px 0px 0px 0px;
+		margin-inline-start: 0px;
+		padding-inline-start: 0px;
+	}
+
+	.aero-header-menu {
+		display: block;
+		color: red;
+		text-decoration: none;
+		padding: 12px 12px 12px 12px;
+	}
+
+	.aero-header-menu:first-child {
+		border-top: none;
+	}
+
+	.aero-header-menu:hover>a {
+		background-color: rgb(199, 204, 208);
+		border-radius: 4px;
+	}
+
+	.aero-header-menu[selected] {
+		border-left: solid 8px rgb(224, 149, 0);
+	}
+
+	.aero-header-menu>a {
+		font-weight: lighter;
+		line-height: 48px;
+		height: 48px;
+		font-size: 20px;
+		font-weight: bold;
+		/*padding: 0px;*/
+		padding: 8px 8px 8px 16px;
+		margin: 0px;
+		color: rgb(0, 0, 0);
+		vertical-align: baseline;
+	}
+
+	.aero-header-social {
+		display: inline-block;
+		vertical-align: top;
+		margin: 0px 0px 10px 0px;
+		margin-left: auto;
+	}
+
+	.aero-header-social-link>img {
+		margin: 16px;
+		width: 32px;
+		height: 32px;
+	}
+
+
+}
+
+/* </nav> */
+
+/* </header> */
