@@ -2,6 +2,7 @@
 
 
 import { Header } from "./Header.js";
+import { ModalBox } from "./ModalBox.js";
 import { Slide } from "./Slide.js";
 import { SquareGrid } from "./SquareGrid.js";
 
@@ -55,6 +56,12 @@ export class AeroWebPage {
          const bodyNode = document.body;
 
         this.wrapperNode = document.querySelector("#aero-wrapper");
+
+        const topLayerNode = document.createElement("div");
+        topLayerNode.classList.add("hidden");
+        topLayerNode.id = "overlay";
+        bodyNode.appendChild(topLayerNode);
+        this.topLayerNode = topLayerNode;
         
         const veilNode = document.createElement("div");
         veilNode.id = "aero-veil";
@@ -145,7 +152,7 @@ export class AeroWebPage {
     }
 
 
-    onUpdate() {
+    update() {
         if (this.css_isStylesheetsLoadingCompleted) {
             this.render();
             this.show();
@@ -160,7 +167,7 @@ export class AeroWebPage {
             if (!value) { this.css_isStylesheetsLoadingCompleted = false; }
         });
 
-        this.onUpdate();
+        this.update();
     }
 
 
@@ -171,8 +178,6 @@ export class AeroWebPage {
      */
     requireCSSStylesheet(pathname) {
         if (!this.css_stylesheetsMap.has(pathname)) {
-            this.css_stylesheetsMap.set(pathname, false);
-
             /** @type{HTMLLinkElement} */
             const linkNode = document.createElement("link");
             linkNode.type = "text/css";
@@ -210,41 +215,3 @@ export class AeroWebPage {
 
 }
 
-
-
-/**
- * the base page
- */
-export const AERO_WEB_PAGE = new AeroWebPage();
-
-// 2. Register the new tag name
-customElements.define(Slide.TAG, Slide);
-customElements.define(Header.TAG, Header);
-customElements.define(SquareGrid.TAG, SquareGrid);
-
-const TAGS = [];
-TAGS.forEach(tag => customElements.whenDefined(Slide.TAG).then());
-
-async function waitForAllWebComponents() {
-  const tags = [
-    Slide.TAG, 
-    Header.TAG, 
-    SquareGrid.TAG
-  ];
-
-  await Promise.allSettled(tags.map(tag => customElements.whenDefined(tag)));
-}
-
-// Use it
-waitForAllWebComponents().then(() => {
-  // Safe to run app init, enhance, etc.
-});
-
-
-/**
- * 
- * @param {*} props 
- */
-export const boot = function(){
-   AERO_WEB_PAGE.start();
-}

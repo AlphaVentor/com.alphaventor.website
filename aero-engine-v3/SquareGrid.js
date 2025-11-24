@@ -1,7 +1,6 @@
 
 
 import { AeroUtilities } from "./AeroUtilities.js";
-import { AERO_WEB_PAGE } from "./AeroWebPage.js";
 import { Icon } from "./Icon.js";
 
 
@@ -43,6 +42,7 @@ export class SquareGrid extends HTMLElement {
 
     static TAG = "aero-square-grid";
 
+    static STYLESHEET = "/aero-engine-v3/SquareGrid.css";
 
 
     /**
@@ -70,8 +70,6 @@ export class SquareGrid extends HTMLElement {
     constructor() {
         super();
 
-        /* CSS requirements */
-        AERO_WEB_PAGE.requireCSSStylesheet("/aero-engine-v3/SquareGrid.css");
 
         /* build nodes */
 

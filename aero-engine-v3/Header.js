@@ -1,10 +1,12 @@
 
-import { AERO_WEB_PAGE } from "./AeroWebPage.js";
-
 /*
 export const MENUS = ["Home", "Technology", "Applications", "Team", "Contact"];
 export const HREF = ["/index.html", "/technology.html", "/applications.html", "/team.html", "/contact.html"];
 */
+
+import { AERO_WEB_PAGE } from "./boot.js";
+
+
 
 /**
  * 
@@ -12,6 +14,8 @@ export const HREF = ["/index.html", "/technology.html", "/applications.html", "/
 export class Header extends HTMLElement {
 
     static TAG = "aero-header";
+
+    static STYLESHEET = "/aero-engine-v3/Header.css";
 
      /**
      * @type{Nav}
@@ -52,8 +56,6 @@ export class Header extends HTMLElement {
 
         this.logo = (val = this.getAttribute("logo")) ? val : "light";
 
-        /* CSS requirements */
-        AERO_WEB_PAGE.requireCSSStylesheet("/aero-engine-v3/Header.css");
 
         /* build nodes */
         this.setAttribute("theme", this.theme);

@@ -1,6 +1,5 @@
 
 import { AeroUtilities } from "./AeroUtilities.js";
-import { AERO_WEB_PAGE } from "./AeroWebPage.js";
 
 
 
@@ -44,6 +43,8 @@ export class Slide extends HTMLElement {
 
     static TAG = "aero-slide";
 
+    static STYLESHEET = "/aero-engine-v3/Slide.css";
+
     /** @type {HTMLElement } */
     sectionNode;
 
@@ -80,8 +81,8 @@ export class Slide extends HTMLElement {
         super(); /* base HTML element */
 
         /* CSS requirements */
-        AERO_WEB_PAGE.requireCSSStylesheet("/aero-engine-v3/Slide.css");
-        AERO_WEB_PAGE.requireCSSStylesheet("/aero-engine-v3/gradient-backgrounds.css");
+        //AERO_WEB_PAGE.requireCSSStylesheet("/aero-engine-v3/Slide.css");
+        //AERO_WEB_PAGE.requireCSSStylesheet("/aero-engine-v3/gradient-backgrounds.css");
 
       
         /* <id> */

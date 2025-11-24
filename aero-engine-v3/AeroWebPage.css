@@ -5,7 +5,40 @@ body {
 }
 
 
-.aero-wrapper {
-    visibility: hidden;
+.hidden {
+	visibility: hidden;
+	height: 0px;
+	overflow: hidden;
 }
 
+
+#aero-wrapper {
+	z-index: 2;
+	background-color: rgb(255, 255, 255);
+	padding: 0px;
+	margin: 0px;
+}
+
+
+#overlay {
+	z-index: 64;
+	background-color: rgb(255, 255, 255);
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	padding: 0px;
+	margin: 0px;
+}
+
+#aero-veil {
+	z-index: 128;
+	background: rgb(89, 85, 85);
+	background: linear-gradient(0deg, rgba(89, 85, 85, 1) 25%, rgba(62, 60, 60, 1) 70%, rgba(66, 66, 66, 1) 100%);
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	top: 0px;
+	bottom: 0px;
+	padding: 0px;
+	margin: 0px;
+}
