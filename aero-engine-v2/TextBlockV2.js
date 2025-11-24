@@ -111,7 +111,7 @@ export class TextBlockV2 extends AeroElement {
         this.numbering = (val = sources.getAttribute("numbering")) ? val : "none";
 
         /* <id> */
-        if (sources.id != undefined) { this.sectionNode.id = sources.id; }
+        if (sources.hasAttribute("aero-id")) { this.sectionNode.id = sources.getAttribute("aero-id"); }
         /* </id> */
 
 
