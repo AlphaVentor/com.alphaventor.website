@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<title>S8 Contact</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" type="image/x-icon" href="/favicon.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/aero/boot.css" />
+	<script type="module">
+		import { boot } from '/aero/WebPageV2.js';
+		window.boot = boot;
+	</script>
+</head>
+
+<body onload="boot()">
+	<div id="aero-page">
+		<header theme="dark" logo="/logos/S8-logo-v4-256px.png">
+			<nav>
+				<menu to="/index.html">Home</menu>
+				<menu to="/get-started.html">Get Started</menu>
+				<menu to="/plans.html">Plans</menu>
+				<menu to="/core.html">Core</menu>
+				<menu to="/packages.html">Packages</menu>
+				<menu to="/extensions.html">Extensions</menu>
+			</nav>
+			<social>
+				<a to="https://www.linkedin.com/company/s8-stack" pic="/assets/social/linkedin-icon-256px.png"></a>
+				<a to="https://x.com/Stack8Official" pic="/assets/social/x-icon-256px.png"></a>
+			</social>
+		</header>
+		<text-block type="legal" theme="light" backgroundColor="white">
+			<svg path="/legal/images/cookie.svg" width="128" height="128"></svg>
+			<h1>Cookies Policy</h1>
+			<p>
+				We do not use cookies to collect information on the current Website users. Our CDN provider might be
+				using
+				cookies, but do not retain any information other than those strictly needed to display this website.
+			</p>
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+		</text-block>
+		<footer path="/footer.html"></footer>
+	</div>
+</body>
+
+</html>

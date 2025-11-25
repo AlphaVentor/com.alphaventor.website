@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>AlphaVentor</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="shortcut icon" href="favicon.ico" type="image/png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="aero/boot.css" />
+<script type="module">
+	import { boot } from './aero/boot.js';
+	window.boot = boot;
+</script>
+</head>
+<body onload="boot('/stack.js')">
+</body>
+</html>

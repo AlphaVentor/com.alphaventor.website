@@ -17,22 +17,6 @@ aero-slide {
 }
 
 
-@media (orientation : landscape) {
-	div.aero-slide-text {
-		margin: 0px 0px 0px 0px;
-		padding: 8px 8% 8px 8%;
-		width: 50%;
-	}
-}
-
-
-@media (orientation : portrait) {
-	div.aero-slide-text {
-		margin: 0px 0px 0px 0px;
-		padding: 8px 4% 8px 4%;
-		height: 50%;
-	}
-}
 
 /* <text> */
 
@@ -48,18 +32,9 @@ div.aero-slide-picture {
 	aspect-ratio: 3 / 2;
 	/*overflow: auto;*/
 }
+/* <asset> */
 
-@media (orientation : landscape) {
-	div.aero-slide-picture {
-		margin: 0px 0px 0px 0px;
-		width: 50%;
-	}
 
-	aero-slide[type="hThird"]>.aero-slide-picture {
-		margin: 32px 32px 32px 32px;
-		background-size: contain;
-	}
-}
 
 @media (orientation : portrait) {
 	div.aero-slide-picture {
@@ -81,7 +56,6 @@ div.aero-slide-picture {
 
 }
 
-/* <asset> */
 
 
 /* <arrangements> */
@@ -104,6 +78,50 @@ div.aero-slide-picture {
 		flex-direction: row-reverse;
 	}
 
+}
+
+
+@media (orientation : landscape) {
+	aero-slide[arrangement="text-left"] > div.aero-slide-text, aero-slide[arrangement="text-right"] > div.aero-slide-text {
+		margin: 0px 0px 0px 0px;
+		padding: 8px 8% 8px 8%;
+		width: 50%;
+	}
+
+	aero-slide[arrangement="text-left"] > div.aero-slide-picture, aero-slide[arrangement="text-right"] > div.aero-slide-picture {
+		margin: 0px 0px 0px 0px;
+		padding: 0px;
+		width: 50%;
+		background-size: cover;
+	}
+
+	aero-slide[arrangement="text-up"] > div.aero-slide-text, aero-slide[arrangement="text-down"] > div.aero-slide-text {
+		margin: 0px 0px 0px 0px;
+		padding: 8px 8% 8px 8%;
+	}
+
+	aero-slide[arrangement="text-up"] > div.aero-slide-picture, aero-slide[arrangement="text-down"] > div.aero-slide-picture {
+		margin-top: 0px;
+		margin-bottom: 0px;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 4%;
+		width: 50%;
+		background-size: contain;
+	}
+
+	aero-slide[type="hThird"]>.aero-slide-picture {
+		margin: 32px 32px 32px 32px;
+		background-size: contain;
+	}
+}
+
+
+@media (orientation : portrait) {
+	div.aero-slide-text {
+		margin: 0px 0px 0px 0px;
+		padding: 8px 4% 8px 4%;
+	}
 }
 
 /* </arrangements> */

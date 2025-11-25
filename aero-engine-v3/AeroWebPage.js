@@ -1,6 +1,7 @@
 
 
 
+import { Footer } from "./Footer.js";
 import { Header } from "./Header.js";
 import { ModalBox } from "./ModalBox.js";
 import { Slide } from "./Slide.js";
@@ -228,7 +229,7 @@ export class AeroWebPage {
 export const AERO_WEB_PAGE = new AeroWebPage();
 
 
-const components = [Slide, Header, SquareGrid, TextBlock];
+const components = [Slide, Header, SquareGrid, TextBlock, Footer];
 
 
 AERO_WEB_PAGE.requireCSSStylesheet("/aero-engine-v3/gradient-backgrounds.css");

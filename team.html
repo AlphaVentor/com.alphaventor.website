@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<title>Alphaventor</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" type="image/x-icon" href="/favicon.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="aero-engine-v3/AeroWebPage.css" />
+	<script type="module">
+		import { boot } from './aero-engine-v3/AeroWebPage.js';
+		window.boot = boot;
+	</script>
+</head>
+
+<body onload="boot()">
+	<div id="aero-wrapper" hasCookiesModalBox>
+		<aero-header theme="dark" logo="logos/logo-small-white.png">
+			<nav>
+				<menu to="/index.html">Home</menu>
+				<menu to="/solutions.html">Solutions</menu>
+				<menu to="/services.html">Services</menu>
+				<menu to="/softwares.html">Softwares</menu>
+				<menu to="/stack.html">Stack</menu>
+				<menu to="/team.html" selected>Team</menu>
+			</nav>
+			<social>
+				<a to="https://www.linkedin.com/company/s8-stack" pic="/social/linkedin-icon-256px.png"></a>
+				<a to="https://x.com/Stack8Official" pic="/social/x-icon-256px.png"></a>
+			</social>
+		</aero-header>
+		<aero-slide theme="dark" backgroundImage="team/slide-2.jpg" assetAspectRatio="4/3" arrangement="text-left">
+			<h1>A <b>Distributed</b> team</h1>
+			<h1>Two Cities, One Team – Your Project Never Sleeps</h1>
+			<h2>24-Hour Momentum Without Burnout</h2>
+			<p>With engineering hubs in Paris and Shanghai, we operate in a seamless follow-the-sun workflow. When
+				Europe ends the day, Asia picks up instantly – calculations advance, supplier responses are chased,
+				urgent reviews happen overnight. Critical paths move twice as fast, decisions are accelerated, and
+				delays that plague single-location teams simply don’t exist.
+			</p>
+			<h2>Local Strength, Global Reach</h2>
+			<p>Paris gives us direct proximity to European technology leaders, regulatory bodies, and premium R&D
+				ecosystems, while Shanghai places us in the heart of the world’s most dynamic manufacturing base and
+				Asian energy markets. This dual footprint means faster supplier audits in China, real-time cost
+				intelligence on components, smoother customs and logistics, and cultural fluency on both sides of the
+				planet – all translating into shorter lead times, lower total cost, and zero surprises for your project,
+				wherever it is built or operated.</p>
+		</aero-slide>
+		<aero-footer path="footer.html"></aero-footer>
+	</div>
+</body>
+
+</html>

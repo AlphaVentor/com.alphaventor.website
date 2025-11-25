@@ -1,17 +1,80 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-<title>AlphaVentor</title>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<link rel="shortcut icon" href="favicon.ico" type="image/png">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="aero/boot.css" />
-<script type="module">
-	import { boot } from './aero/boot.js';
-	window.boot = boot;
-</script>
+	<title>Alphaventor</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" type="image/x-icon" href="/favicon.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="aero-engine-v3/AeroWebPage.css" />
+	<script type="module">
+		import { boot } from './aero-engine-v3/AeroWebPage.js';
+		window.boot = boot;
+	</script>
 </head>
-<body onload="boot('/stack.js')">
+
+<body onload="boot()">
+	<div id="aero-wrapper" hasCookiesModalBox>
+		<aero-header theme="dark" logo="logos/logo-small-white.png">
+			<nav>
+				<menu to="/index.html">Home</menu>
+				<menu to="/solutions.html">Solutions</menu>
+				<menu to="/services.html">Services</menu>
+				<menu to="/softwares.html">Softwares</menu>
+				<menu to="/stack.html" selected>Stack</menu>
+				<menu to="/team.html">Team</menu>
+			</nav>
+			<social>
+				<a to="https://www.linkedin.com/company/s8-stack" pic="/social/linkedin-icon-256px.png"></a>
+				<a to="https://x.com/Stack8Official" pic="/social/x-icon-256px.png"></a>
+			</social>
+		</aero-header>
+		<aero-slide theme="light" background="white" arrangement="text-down" asset="assets/logos/S8-stack-logo.png"
+			assetAspectRatio="16/9">
+			<h1>The <b>Complex</b> objects handling made <b>simple</b></h1>
+			<h2>S8 is a one-of-its kind integrated stack for Saas, enabling simple
+				coding and deployment of complex SaaS applications.</h2>
+			<p>Vastly increase your sales performance by providing your team with direct insights of the core business
+				objects.
+				Want to answer to a client on how will the product will perform in its use case?
+				Alphaventor platform is a new way proposed for innovative industries.
+			</p>
+			<h2>Local Strength, Global Reach</h2>
+			<p>Paris gives us direct proximity to European technology leaders, regulatory bodies, and premium R&D
+				ecosystems, while Shanghai places us in the heart of the world’s most dynamic manufacturing base and
+				Asian energy markets. This dual footprint means faster supplier audits in China, real-time cost
+				intelligence on components, smoother customs and logistics, and cultural fluency on both sides of the
+				planet – all translating into shorter lead times, lower total cost, and zero surprises for your project,
+				wherever it is built or operated.</p>
+		</aero-slide>
+		<aero-slide theme="light" background="white" arrangement="text-right" asset="assets/slides/slide03.png"
+			assetAspectRatio="16/9">
+			<h1><b>Showcase</b> your technical objects <b>anywhere</b></h1>
+			<h2>Enable your customer to deep dive in your products capabilities.</h2>
+			<p>Strong engagement relies on appropriation. By enabling your customers and partners to use your products
+				virtually anywhere, you become de facto the reference product.</p>
+		</aero-slide>
+
+		<aero-slide theme="light" background="white" arrangement="text-up" asset="assets/slides/slide04.png"
+			assetAspectRatio="16/9">
+			<h1><b>Deliver</b> your technical objects along the <b>integration chain</b></h1>
+			<h2>Gain value beyond your product inherent value.</h2>
+			<p>Delivering a great product is an achievement. Seamlessly integrate in your customers assemblies is
+				paramount, like going from good to unavoidable.</p>
+		</aero-slide>
+
+		<aero-slide theme="light" background="white" arrangement="text-up" asset="assets/slides/slide00.png"
+			assetAspectRatio="16/9">
+			<h1>Stay in control</h1>
+			<h2>Leverage the power of the <span class="emphasis">AlphaVentor</span>
+				platform to give your client a digital twin of your products</h2>
+			<p>Delivering a great product is an achievement. Seamlessly integrate in your customers assemblies is
+				paramount, like going from good to unavoidable.</p>
+		</aero-slide>
+
+		<aero-footer path="footer.html"></aero-footer>
+	</div>
 </body>
+
 </html>
