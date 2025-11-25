@@ -2,20 +2,20 @@
 <html lang="fr">
 
 <head>
-	<title>S8 Home</title>
+	<title>Alphaventor</title>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<link rel="icon" type="image/x-icon" href="/favicon.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="aero-engine-v2/boot.css" />
+	<link rel="stylesheet" href="/aero-engine-v3/AeroWebPage.css" />
 	<script type="module">
-		import { boot } from './aero-engine-v2/WebPageV2.js';
+		import { boot } from './aero-engine-v3/AeroWebPage.js';
 		window.boot = boot;
 	</script>
 </head>
 
 <body onload="boot()">
-	<div id="aero-sources" hasCookiesModalBox">
+	<div id="aero-wrapper" hasCookiesModalBox">
 		<aero-header theme="dark" logo="logos/logo-small-white.png">
 			<nav>
 				<menu to="/index.html">Home</menu>
@@ -36,197 +36,165 @@
 			<p>Discover the services we can offer to accompany your most daring projects:
 			</p>
 		</aero-slide>
-		<text-block aero-id="tile00-text" type="std" backgroundGradient="light-tile00">
+		<aero-text-block id="tile00-text" type="std" backgroundGradient="light-tile00">
 			<svg path="/assets/principles/etoile.svg" width="128" height="128"></svg>
-			<h1>Simple</h1>
-			<p>The idea of maximum productivity encompasses all aspects of the Saas development and deployment.
-				S8 brings a certain number of radical changes to make this it simpler.</p>
-			<h2>Language</h2>
-			<p>
-				First it proposes the development team to reduce to a single language JAVA, that -despite being
-				seen as less hype than other new languages- is widely adopted, highly efficient but also very complete
-				in terms of features. But have no fear! All the gory aspects of traditional JAVA project development
-				have been left behind, to leverage only the very best of language: JAVA core. It’s even more than
-				that: JAVA comes with a lot high level functions that require expert level team to master, but
-				regarding this, we just ask our user not to use them and to use JAVA as a simpler version of TypeScript.
+			<h1><b>Procurement</b></h1>
+			<h1>Your Perfect Partner, Found – Without the Guesswork</h1>
+			<h2>Mapping the Best Players in the Market</h2>
+			<p>We don’t leave partner selection to chance. Using our extensive industry network
+				and up-to-date market intelligence, we rapidly map the global landscape of OEMs and
+				EPC companies that match your technical scope, capacity, track record, and strategic fit.
+				From niche specialists in turbomachinery or ORC systems to large-scale EPC contractors
+				for thermal plants and Oil & Gas projects, we identify every credible option – including
+				hidden champions you won’t find through standard tenders.
 			</p>
-			<h2>Booting fast</h2>
-			<p>
-				S8 marks a clear cut with traditional web-app deployment on JAVA server (Tomcat, etc.). S8 server-side
-				boots in less than 1s on most environments, meaning you don’t care stopping and redeploying an instance
-				anytime you want it. This drastically reduces the development cycle by enabling super frequent test
-				in real world testing environment. This is especially true for apps with advanced graphics where
-				the entire db-back-front is required, even to play unit tests.
+			<h2>Qualifying & Selecting with Zero Compromise</h2>
+			<p>Once the field is mapped, we rigorously qualify each candidate through technical audits,
+				financial due diligence, reference checks, and risk assessment. We then run a structured,
+				competition-driven selection process that maximizes value while minimizing your exposure.
+				The result? You get the strongest, most competitive partner – fully vetted, perfectly aligned
+				with your goals, and ready to deliver on time and budget.
 			</p>
-			<h2>Single man orchestra</h2>
-			<p>
-				Ok, this is wild. But that’s how we built it. We wanted -day 1- that S8 can be efficiently used to
-				build and deploy a project with a record low number of people, so we squeeze all the
-				{params, configs, scripts} around to just focus on app development.
-				S8 enables to have your server life from any simple JAVA environment.
-				We broke the rule of having two servers, one server dedicated for the back and another one for the
-				front, and merged everything into a single stack, for the sake of simplicity and efficient project
-				management.
-			</p>
-		</text-block>
-		<text-block aero-id="tile01-text" backgroundGradient="light-tile01">
+			<links>
+				<a icon="/icons/mail-2.svg"
+					href="mailto:contact@alphaventor.com?subject=Enquiry%20for%20Procurement%20Services"
+					type="marketing" color="doc">Contact us</a>
+			</links>
+		</aero-text-block>
+		<aero-text-block id="tile01-text" backgroundGradient="light-tile01">
 			<svg path="/assets/principles/shield.svg" width="128" height="128"></svg>
-			<h1>Secure</h1>
-			<h2>Zero dependencies</h2>
-			<p>While open source supply with valuable tools and features, it also creates uncontrolled dependencies
-				from unchecked origins. Many incidents through two decades illustrated how easily a malicious
-				contributor
-				can inject vulnerabilities inside applications based on external modules. The number of those
-				dependencies
-				is out of control for most organizations and this results in random highly critical incidents. With open
-				sources modules deeply nested inside layers and layers of code, it becomes virtually impossible to
-				guarantee
-				a safe system. On top of that, any previously clear dependency can become malevolent through updates.
+			<h1><b>Contracting</b></h1>
+			<h1>Contracts That Protect You – Before a Single Bolt is Turned</h1>
+			<h2>Building Bulletproof Protection into Every Clause</h2>
+			<p>With one decade of hands-on experience in executing complex thermal, ORC, and Oil & Gas projects,
+				we know exactly where risks hide and how contractors try to shift them. We translate this hard-won
+				insight into clear, balanced-yet-firm contractual frameworks (EPC, EPCM, split contracts, or hybrid
+				models)
+				that lock in scope, performance guarantees, schedule milestones, and payment terms while keeping your
+				interests
+				first.
 			</p>
-			<p>
-				That’s why we decided to rebuild the entire stack from the ground up, carefully crafting and validating
-				each of our modules. Therefore, we can guarantee the total absence of the traditional worms inside
-				the code you will build on S8.
-			</p>
-			<h2>HTTPS and all the rest...</h2>
-			<p>We also implement HTTP2 and TLS security layer with a somewhat restrictive inner policy to stay on
-				the safe side.</p>
-		</text-block>
-		<text-block aero-id="tile02-text" type="std" backgroundGradient="light-tile02">
+			<h2>Turning Obligations into Guaranteed Performance</h2>
+			<p>We craft incentive mechanisms, liquidated damages, performance bonds, and testing protocols that leave no
+				room for ambiguity. From steam turbine efficiency and ORC output to district heating availability and
+				datacenter cooling reliability, every key indicator you care about becomes contractually enforceable.
+				The result is not just a signed agreement – it’s the peace of mind that comes from knowing your project
+				will deliver exactly what you paid for.</p>
+			<links>
+				<a icon="/icons/mail-2.svg"
+					href="mailto:contact@alphaventor.com?subject=Enquiry%20for%20Contracting%20Services"
+					type="marketing" color="doc">Contact us</a>
+			</links>
+		</aero-text-block>
+		<aero-text-block id="tile02-text" type="std" backgroundGradient="light-tile02">
 			<svg path="/assets/principles/3d-printer.svg" width="128" height="128"></svg>
-			<h1>Small</h1>
-			<h2>Small Surface API is the key</h2>
-			<p>Small surface API might be seen as a limitation. We see a strength: only key features are here, but
-				all key features. This enables a fast learning curve, and an almost immediate kicking off. It also
-				offers a serenity for creator, when you know you sit on something that is taking care of fine grain
-				details, without having to spend time resolving problems -including integration problems- that have
-				been solved so many time. You leverage performance improvement of the entire stack effortlessly.
-			</p>
-			<h2>Multiple environnement, one API</h2>
-			<p>Also, we have plans to build even more aggressive of some module (in a JAVA sense) of current ones,
-				and to propose them on future version. Having a high-level API enables you to take advantage of many
-				implementations fine tuning with the same codebase. It provides a stable environment, just as JVM
-				provides a standardized coding environment over different machines.
-			</p>
-			<h2>The flow</h2>
-			<p>The key concept of this stack relies on the flow. The flow let you access pretty much every feature
-				of the stack in an asynchronous and unified way. The flow is the context against which you build
-				the big lambda expression which is in the end your app.
-			</p>
-		</text-block>
-		<text-block type="std" aero-id="tile03-text" backgroundGradient="light-tile03">
+			<h1><b>Sizing</b></h1>
+			<h1>Size It Once, Build It Right – No Costly Surprises Later</h1>
+			<h2>Auditing Your Process with Ruthless Precision</h2>
+			<p>Before any euro is committed, we dive deep into your existing or planned process streams, energy
+				balances, and operational constraints. Using proven thermodynamic modeling, real-world data
+				reconciliation, and scenario analysis, we uncover hidden inefficiencies, oversizing traps, or
+				underestimated peak loads that typical feasibility studies miss – whether it’s a district heating
+				network, an ORC waste-heat recovery unit, a datacenter cooling loop, or a compressed-gas facility.</p>
+			<h2>Defining the Key Metrics That Actually Matter</h2>
+			<p>We deliver a crystal-clear sizing report with verifiable key performance indicators: exact thermal duty,
+				optimum turbine or compressor power, realistic turndown ratios, annual energy yield, and lifecycle cost
+				curves. These aren’t theoretical numbers – they become the unbreakable foundation for specifications,
+				tenders, and contracts, ensuring your plant is neither underpowered nor wastefully oversized, but
+				perfectly dimensioned for performance and profitability from day one.</p>
+		</aero-text-block>
+		<aero-text-block type="std" id="tile03-text" backgroundGradient="light-tile03">
 			<svg path="/assets/principles/sync.svg" width="128" height="128"></svg>
-			<h1>Synced</h1>
-			<p>
-				One of the main obstacles into writing a scalable application is the proper handling of high
-				concurrency through asynchronous task orchestration. Since this is a recurring problem, and a hard
-				to solve one, we decided to embedded deep into the S8 stack what we think is the best solution (and
-				we have a high-level API that gives us plenty of room to make further improvements under the hood).
-				Also, because the S8 stack is managing the server aspects, we needed to have this asynchronous engine
-				ready to support the stack inner systems.
-			</p>
-			<p>
-				That’s why we designed a light threads engine with a built-in thread workers pool along with a thread
-				allocation mechanism that prevent congestion and enable high scaling up.
-			</p>
-		</text-block>
-		<text-block aero-id="tile04-text" type="std" backgroundGradient="light-tile04">
+			<h1><b>Supervising</b></h1>
+			<h1>Signed Doesn’t Mean Finished – We Stay Until It’s Perfectly Delivered</h1>
+			<h2>Real-Time Oversight That Keeps Everyone Accountable</h2>
+			<p>From kick-off meeting to final performance test, we act as your eyes and ears on the ground. We monitor
+				engineering progress, manufacturing milestones, quality inspections, and site installation with a
+				structured dashboard, regular audits, and on-site presence when needed. Deviations from schedule, scope
+				creep, or early signs of technical shortcuts are caught immediately – long before they become expensive
+				claims.</p>
+			<h2>Enforcing the Performance You Paid For</h2>
+			<p>Using the contractual levers we built from day one (milestone payments, LDs, acceptance protocols), we
+				drive the selected EPC or OEM to respect every commitment: turbine isentropic efficiency, ORC net
+				output, boiler availability, or cooling-system redundancy. The result is not just a project that
+				finishes – it’s a project that finishes on time, on budget, and performs exactly as promised from the
+				very first day of operation.</p>
+		</aero-text-block>
+		<aero-text-block id="tile04-text" type="std" backgroundGradient="light-tile04">
 			<svg path="/assets/principles/servers.svg" width="128" height="128"></svg>
-			<h1>Storage</h1>
-			<p>
-				Every web-app relies at some point on databases. Moreover, the proximity with data is key to write
-				easily
-				complex treatment. Having noticed this, we came up to think that data must be served efficiently,
-				seamlessly
-				within the app through very simple accesses directly available in the flow. So every instance running on
-				the
-				S8 stack have by default the possibility of working with three types of databases, and build as many
-				tables,
-				objects on the fly.
-			</p>
-			<h2>Annotations</h2>
-			<p>Objects persistency relies on annotating object classes -most robust approach so far. Access to objects
-				is exclusively made through the call of methods on the flow, as well as all subsequent actions (saving,
-				reverting, etc.).
-			</p>
-			<h2>Caching<h2>
-					<p>Caching is a key part of performance, and one of the goals of S8 is to handle this seamlessly. As
-						a result,
-						you can make the assumption that data is always readily available since the caching will balance
-						memory retention
-						to reflect data usage.</p>
-					<h2>Scaling and replicating</h2>
-					<p>For the scaling up versions, we will provide automatic synchronization of instances running S8
-						stack on our cloud to
-						ensure that any modifications made to data contained on the databases of one instance are
-						replicated to other instances,
-						and efficiently handling copies to ensure a given requirement in terms of redundancy.
-					</p>
-		</text-block>
-		<text-block aero-id="tile05-text" type="std" backgroundGradient="light-tile05">
+			<h1><b>Storage</b></h1>
+			<h1>Your Project’s Memory, Secured Forever – Nothing Lost, Nothing Forgotten</h1>
+			<h2>Keeping track of every Document</h2>
+			<p>From the first feasibility note to final as-built drawings, we implement a secure, structured, and fully
+				searchable documentation system from day one. Specifications, vendor data sheets, meeting minutes,
+				calculation notes, certificates, test reports, change orders – everything is captured,
+				version-controlled, and instantly accessible to your team, eliminating the classic “where is that file?”
+				delays that plague most projects.</p>
+			<h2>Safeguarding Knowledge for Operation, Claims, and Beyond</h2>
+			<p>We don’t just store – we protect and future-proof. All documents are classified, backed-up in redundant
+				locations, and delivered in open formats with clear indexing so that years later, during audits,
+				warranty claims, revamping, or replication projects, you can retrieve the exact evidence you need in
+				minutes. The result: total traceability, bulletproof defense against disputes, and a living knowledge
+				base that turns your finished plant into a repeatable success.</p>
+		</aero-text-block>
+		<aero-text-block id="tile05-text" type="std" backgroundGradient="light-tile05">
 			<svg path="/assets/principles/graph.svg" width="128" height="128"></svg>
-			<h1>Structured</h1>
-			<h2>Key-value DB</h2>
-			<p>Key value db is probably the most efficient pattern to get data. S8 provides with efficient table-like
-				list of objects
-				you can search through or retrieve through id, effectively mimicking the core features of NO SQL like
-				db. For more advanced
-				searches, selection with JAVA queries can be used.
-			</p>
-			<h2>Structured DB"</h2>
-			<p>Structured DB works with large objects, each representing a group of data you can navigate through points
-				and methods.
-				This group of data typically represent the data of a big project, including hundreds or even hundreds of
-				thousands sub
-				objects, but that belong to a same logical entity and need to remain grouped from a logical point of
-				view (think of the
-				plan of a building), even if you can traverse it easily.
-			</p>
-		</text-block>
-		<text-block aero-id="tile06-text" type="std" backgroundGradient="light-tile06">
+			<h1><b>Integration</b></h1>
+			<h1>One Package, Perfectly Woven into the Whole – for Seamless and Smooth operation</h1>
+			<h2>Seeing the Big Picture When Others See Only Their Scope</h2>
+			<p>Your new ORC turbogenerator, boiler, or gas compressor isn’t an island. We map every interface –
+				mechanical, electrical, control, fluid, thermal, and civil – with the existing plant or parallel
+				packages long before steel is ordered. By leading coordination meetings, producing integration matrices,
+				and delivering unified P&IDs, loop diagrams, and 3D models, we eliminate the classic finger-pointing
+				that arises when separate suppliers work in silos.</p>
+			<h2>Delivering a Plant That Starts Up Like Clockwork</h2>
+			<p>We go beyond coordination: at your request, we take full responsibility for integration scope – from
+				common platforms and shared utilities to DCS logic, alarm management, and overall sequence of operation.
+				The outcome is a turnkey handover where the new equipment doesn’t just work in isolation; it boosts the
+				performance, reliability, and efficiency of the entire system, with first-time start-up success and zero
+				post-commissioning surprises.</p>
+		</aero-text-block>
+		<aero-text-block id="tile06-text" type="std" backgroundGradient="light-tile06">
 			<svg path="/assets/principles/monitor.svg" width="128" height="128"></svg>
-			<h1>Screen</h1>
-			<p>One thing that makes Saas so time-consuming to develop is that development is split between two realms,
-				with deiffrenet
-				languages, logics, teams, deployment tools, etc. This gigantically increases the number of skills a team
-				must master to
-				deliver a webapp. So we came up with something different.</p>
-			<h2>Your front as a remote screen</h2>
-			<p>When you develop a app that will run on local device (say desktop or mobile), things are much more
-				simple: without exiting your development environment, you directly have access to all graphical
-				components that come standard
-				with the OS, and you can manipulate in any imaginable way, even inside a deeply nested function. You
-				don’t have to define an
-				API between the back and the front so both can communicate. Everything is fused together, and that’s why
-				it is so easy to
-				achieve remarkable graphical complexity with minimum effort. We thought it was the way to go for Saas as
-				well!
-			</p>
-			<h2>Additional hidden benefits</h2>
-			<p>S8 way of handling the front is radical: each graphical component comes as a JAVA realm object, that you
-				can manipulate at
-				will, and a ghost counterpart -that you never have to touch- that lives on the front side. Connection
-				between both sides of the
-				same entity is handled under the hood by S8. The tremendous benefits are the following:
-			<ul>
-				<li>High compression throughput
-				<li>Natural caching strategies of large objects on the front, operated from the back.
-				<li>Radical speed improvements when switching of views of large objects (like opening the plan of
-					building A, closing it,
-					opening plan of building B, closing it and reopening plan of building B).
-			</ul>
-			</p>
-		</text-block>
-		<text-block aero-id="tile07-text" backgroundGradient="light-tile07">
+			<h1><b>Design</b></h1>
+			<h1>From Vision to Reality – We Design It, Then Make It Real</h1>
+			<h2>Creating Tailor-Made Solutions That Actually Work</h2>
+			<p>We don’t do off-the-shelf. Our in-house team designs custom process plants and equipment with deep
+				expertise in thermal systems (boilers, district heating, datacenter cooling), advanced thermodynamic
+				cycles (steam, ORC, sCO₂), and high-performance turbomachinery (expanders, turbocompressors, ORC
+				turbogenerators). Every design is born from your specific energy, footprint, and budget constraints –
+				optimized for efficiency, operability, and long-term value.</p>
+			<h2>From Concept to Production-Ready Deliverables</h2>
+			<p>We take the idea all the way: process flow diagrams, heat & mass balances, detailed mechanical design, 3D
+				modeling, stress analysis, and full manufacturing drawings. Because we also handle procurement and
+				supervision, our designs are inherently buildable, cost-aware, and de-risked – ready for fabrication by
+				the best shops worldwide, with zero disconnect between what was imagined and what gets delivered on
+				site.</p>
+			<links>
+				<a icon="/icons/mail-2.svg"
+					href="mailto:contact@alphaventor.com?subject=Enquiry%20for%20Design%20Services" type="marketing"
+					color="doc">Contact us</a>
+			</links>
+		</aero-text-block>
+		<aero-text-block id="tile07-text" backgroundGradient="light-tile07">
 			<svg path="/assets/principles/scalability.svg" width="128" height="128"></svg>
-			<h1>Scalable</h1>
-			<p>Scalability is the long-time concern of every project builder. We designed the S8 stack to enable a
-				natural and powerful way of scaling up: each node running S8 is a member of a cluster. It is a member of
-				a database cluster. It is a member of lambda expression workers pools clusters. It is a member of login
-				cluster. And so on. Each node being able to perform the entire set of tasks required by the applications
-				enables a smooth and arbitrary large scale up.</p>
-		</text-block>
+			<h1><b>Scaling</b></h1>
+			<h1>From Prototype to Thousands – We Scale Your Success Without Compromise</h1>
+			<h2>Matching Your Design to True High-Volume Champions</h2>
+			<p>When your ORC turbogenerator, heat exchanger, or specialized compressor moves from pilot to commercial
+				series, we rapidly identify and qualify the few OEMs worldwide that combine proven high-volume
+				manufacturing capability with the technical rigor your product demands. We go beyond standard
+				directories – targeting hidden leaders in Asia, Europe, and North America that already produce similar
+				rotating or thermal equipment at rates of hundreds or thousands per year.</p>
+			<h2>Securing Quality, Cost, and Speed at Scale</h2>
+			<p>We structure the partnership for seamless transfer: detailed manufacturing drawings, tolerance stack-up
+				reviews, dedicated tooling packages, and rigorous qualification runs. Then we negotiate capacity
+				reservation, stepped pricing curves, and quality gates that protect performance even at peak production.
+				The result is your equipment rolling off the line at the lowest possible unit cost, with zero drift in
+				efficiency or reliability – ready for global deployment from the very first commercial batch.</p>
+		</aero-text-block>
 		<aero-footer path="footer.html"></aero-footer>
 	</div>
 </body>
+
 </html>

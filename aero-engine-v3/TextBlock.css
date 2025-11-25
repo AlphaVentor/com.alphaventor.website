@@ -1,0 +1,424 @@
+/* <aero-slide> */
+
+/* <text> */
+
+aero-text-block {
+	display: block;
+	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande",
+		sans-serif;
+	margin: 0px 0px 0px 0px;
+	padding: 8px 16% 8px 16%;
+}
+
+
+@media (orientation : landscape) {
+	aero-text-block {
+		margin: 0px 0px 0px 0px;
+		padding: 32px 16% 8px 16%;
+	}
+}
+
+
+@media (orientation : portrait) {
+	aero-text-block {
+		margin: 0px 0px 0px 0px;
+		padding: 16px 4% 8px 4%;
+	}
+}
+
+/* <text> */
+
+aero-text-block b {
+	font-weight: 800;
+}
+
+
+
+/* <h1> */
+aero-text-block>h1 {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
+		"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: lighter;
+	max-width: 92%;
+	padding: 8px;
+	border-radius: 4px;
+	margin: 0px;
+	z-index: 8;
+	text-align: left;
+}
+
+aero-text-block>h1>span:first-child {
+	margin: 0px 16px 0px 0px;
+}
+
+aero-text-block[type="legal"]>h1 {
+	font-size: 32px;
+	color: #1635a5;
+	padding: 16px 8px 8px 8px;
+}
+
+@media (orientation : landscape) {
+	aero-text-block>h1 {
+		font-size: 64px;
+		line-height: 64px;
+	}
+}
+
+@media (orientation : portrait) {
+	aero-text-block>h1 {
+		font-size: 48px;
+		line-height: 48px;
+	}
+}
+
+aero-text-block>h1>span.emphasis {
+	font-weight: bold;
+}
+
+
+
+aero-text-block[type="legal"]>h1 {
+	padding: 32px 8px 16px 8px;
+}
+
+/* </h1> */
+
+
+/* <h2> */
+aero-text-block>h2 {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
+		"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: 24px;
+	line-height: 24px;
+	font-weight: bold;
+	max-width: 92%;
+	padding: 16px 8px 8px 8px;
+	border-radius: 4px;
+	/*white-space: nowrap;*/
+	margin: 0px;
+	z-index: 6;
+	text-align: left;
+}
+
+aero-text-block>h2>span:first-child {
+	margin: 0px 8px 0px 0px;
+}
+
+aero-text-block[type="legal"]>h2 {
+	font-size: 20px;
+	padding: 16px 8px 8px 8px;
+}
+
+@media (orientation : landscape) {
+	aero-text-block>h2 {
+		font-size: 24px;
+		line-height: 24px;
+	}
+}
+
+@media (orientation : portrait) {
+	aero-text-block>h2 {
+		font-size: 20px;
+		line-height: 20px;
+	}
+}
+
+/* </h2> */
+
+/* <p> */
+aero-text-block>p {
+	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande",
+		sans-serif;
+	font-size: 20px;
+	font-weight: normal;
+	text-align: justify;
+	z-index: 4;
+	padding: 0px 0px 0px 0px;
+	padding: 6px 6px 6px 8px;
+	border-radius: 4px;
+	margin: 0px;
+}
+
+aero-text-block>p code, aero-text-block>ul code, aero-text-block>ol code{
+	font-weight: bold;
+	color: #1635a5;
+}
+
+
+
+/* <p> */
+aero-text-block[type="legal"]>p {
+	font-size: 16px;
+}
+
+aero-text-block[type="legal"]>ul>li {
+	padding: 8px 8px 8px 16px;
+}
+
+
+@media (orientation : landscape) {
+	aero-text-block>p {
+		font-size: 16px;
+	}
+}
+
+@media (orientation : portrait) {
+	aero-text-block>p {
+		font-size: 13px;
+	}
+}
+/* </p> */
+
+
+
+/* <ol> */
+aero-text-block>ol {
+	counter-reset: section;
+	margin: 8px 0px 0px 0px;
+    padding: 0px 0px 0px 24px;
+  }
+
+aero-text-block>ol>li {
+	margin: 4px 0px 0px 0px;
+    padding: 4px;
+	text-align: justify;
+  }
+/* </ol> */
+
+/* <ul> */
+
+aero-text-block>ul>li {
+	font-size: 16px;
+	padding: 4px 8px;
+}
+
+aero-text-block[type="legal"]>ul {
+	font-size: 16px;
+    padding: 0px 0px 0px 24px;
+}
+
+aero-text-block[type="legal"]>ul>li {
+	padding: 8px 8px 8px 16px;
+	text-align: justify;
+}
+
+
+@media (orientation : landscape) {
+	aero-text-block>ul {
+		font-size: 16px;
+	}
+}
+
+@media (orientation : portrait) {
+	aero-text-block>ul {
+		font-size: 13px;
+	}
+}
+/* </ul> */
+
+/* <a> */
+
+.textblock-links {
+	display: flex;
+	flex-direction: row;
+	padding: 8px;
+}
+
+.textblock-link {
+	color: white;
+	font-size: 14px;
+	font-weight: bold;
+    padding: 4px;
+    margin: 8px;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+	background-color: #3862fbca;
+	/*background-image: linear-gradient(to right, #3525e5 0%, #3525e5  20%, #b214d2 100%);*/
+	border-radius: 20px;
+	cursor: pointer;
+	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.367);
+	text-decoration: none;
+}
+
+.textblock-link:hover {
+	background-color: #476bed;
+}
+
+.textblock-link-pic {
+	width: 24px;
+	height: 24px;
+	margin: 0px;
+	padding: 0px;
+	background-size: auto;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.textblock-link-pic > svg {
+	stroke: #ffffff;
+	fill: #ffffff;
+}
+
+.textblock-link-text {
+	padding-bottom: 2px;
+	font-size: 14px;
+	margin-left: 8px;
+	color: #ffffff;
+}
+
+
+
+.textblock-link:hover > .textblock-link-pic >svg {
+	stroke: white;
+	fill: white;
+}
+
+.textblock-link:hover > .textblock-link-text{
+	color: white;
+}
+
+/* <a:styles> */
+
+.textblock-link[type="marketing"] {
+	padding: 12px 24px;
+	border-radius: 4px;
+}
+.textblock-link[type="marketing"]>.textblock-link-text {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+/* </a:styles> */
+
+/* <a:color> */
+.textblock-link[color="resource"] {
+	color: white;
+	background-color: #3862fbca;
+}
+.textblock-link[color="resource"]:hover {
+	background-color: #7291ff;
+}
+
+.textblock-link[color="doc"] {
+	color: white;
+	background-color: #008925ca;
+}
+.textblock-link[color="doc"]:hover {
+	background-color: #02c035ca;
+}
+
+/* </a:color> */
+
+
+
+/* <aero-slide-prime> */
+
+/* </aero-slide-prime> */
+
+
+
+/* <themes> */
+aero-text-block[theme="light"] {
+	color: black;
+	/*background-color: rgba(255, 255, 255, 0.24);*/
+	/*backdrop-filter: blur(12px);*/
+	/*text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.75);*/
+	/*text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.75);*/
+}
+
+aero-text-block[theme="dark"] {
+	color: white;
+	/*background-color: rgba(0, 0, 0, 0.16);*/
+	/*backdrop-filter: blur(12px);*/
+	/*text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.75);*/
+}
+
+/* </themes> */
+
+
+/* <svg> */
+.textblock-pic-svg {
+	padding: 32px 16px 32px 16px;
+}
+
+aero-text-block[theme="light"] > .textblock-pic-svg svg {
+	fill: black;
+	stroke: black;
+}
+
+aero-text-block[theme="dark"] > .textblock-pic-svg svg {
+	fill: white;
+	stroke: white;
+}
+
+/* </svg> */
+
+/* <backgrounds> */
+div[class^="background-"] {
+	background-repeat: no-repeat;
+}
+
+.background-white {
+	background-color: white;
+}
+
+.background-blue {
+	background-color: blue;
+}
+
+.background-teal {
+	background-color: teal;
+}
+
+.background-black {
+	background-color: black;
+}
+
+.background-grey64 {
+	background-color: rgb(64, 64, 64);
+}
+
+.background-grey128 {
+	background-color: rgb(128, 128, 128);
+}
+
+.background-grey192 {
+	background-color: rgb(192, 192, 192);
+}
+
+.background-pic {
+	background-size: cover;
+	background-position: center;
+}
+
+
+/* </backgrounds> */
+
+
+/* <code> */
+
+
+.txbk-code-section {
+	padding: 24px max(5%, 16px) 24px max(5%, 16px);
+}
+
+.txbk-code-window {
+	background-color: rgb(33, 23, 59);
+	border-radius: 16px;
+	padding: 16px 32px;
+	color: rgb(87, 211, 211);
+}
+
+.txbk-code-window pre {
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	tab-size: 2;
+}
+
+.txbk-code-window code {
+	margin: 0;
+	padding: 0;
+}

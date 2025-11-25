@@ -2,20 +2,20 @@
 <html lang="fr">
 
 <head>
-	<title>S8 Home</title>
+	<title>Alphaventor</title>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<link rel="icon" type="image/x-icon" href="/favicon.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="aero-engine-v2/boot.css" />
+	<link rel="stylesheet" href="aero-engine-v3/AeroWebPage.css" />
 	<script type="module">
-		import { boot } from './aero-engine-v2/WebPageV2.js';
+		import { boot } from './aero-engine-v3/AeroWebPage.js';
 		window.boot = boot;
 	</script>
 </head>
 
 <body onload="boot()">
-	<div id="aero-sources" hasCookiesModalBox">
+	<div id="aero-wrapper" hasCookiesModalBox>
 		<aero-header theme="dark" logo="logos/logo-small-white.png">
 			<nav>
 				<menu to="/index.html" selected>Home</menu>
@@ -45,8 +45,8 @@
 				expertise in turbomachines, especially for advanced Organic cycle turbogénérator, turbocompressors, etc.
 			</p>
 		</aero-slide>
-		<square-grid theme="light" backgroundColor="white">
-			<card type="light" size="std" theme="light"
+		<aero-square-grid theme="light" backgroundColor="white">
+			<aero-card type="light" size="std" theme="light"
 				backgroundImage="/solutions/cards/pid-sample-02.png">
 				<hgroup>Design</hgroup>
 				<h1>Process Design</h1>
@@ -54,8 +54,8 @@
 				<p isMobileHideable>We provide the core elements for the design of fluid processes.
 				</p>
 				<a icon="/icons/left-circled-arrow.svg" href="#core-arch-silicon">Learn more...</a>
-			</card>
-			<card type="light" size="large-horizontal" theme="dark"
+			</aero-card>
+			<aero-card type="light" size="large-horizontal" theme="dark"
 				backgroundImage="/solutions/cards/steam-turbine-02.jpg">
 				<hgroup>Procurement</hgroup>
 				<h1>Steam Turbines</h1>
@@ -63,15 +63,15 @@
 				<p isMobileHideable>Small steam turbines for industrial/Power generation purposes.
 				</p>
 				<a icon="/icons/left-circled-arrow.svg" href="#core-bohr-neodymium">Learn more...</a>
-			</card>
-			<card type="light" size="std" theme="dark" backgroundImage="/solutions/cards/combined-cycle-02.jpg">
+			</aero-card>
+			<aero-card type="light" size="std" theme="dark" backgroundImage="/solutions/cards/combined-cycle-02.jpg">
 				<hgroup>Procurement</hgroup>
 				<h1>Efficiency</h1>
 				<h2>Wasted Heat Recovery</h2>
 				<p isMobileHideable>Turn wasted heat into useful power generation.</p>
 				<a icon="/icons/left-circled-arrow.svg" href="#core-io-xml">Learn more...</a>
-			</card>
-			<card type="light" size="large-horizontal" theme="dark"
+			</aero-card>
+			<aero-card type="light" size="large-horizontal" theme="dark"
 				backgroundImage="/solutions/cards/special-turbomachine-01.jpg">
 				<hgroup>Design</hgroup>
 				<h1>Turbo Design</h1>
@@ -79,15 +79,15 @@
 				<p>For special duty, or for equipping a new process or packages, we provide tailored made turbo-machiens designs.
 				</p>
 				<a icon="/icons/left-circled-arrow.svg" href="#core-bohr-neodymium">Learn more...</a>
-			</card>
-			<card type="light" size="std" theme="dark" backgroundImage="/assets/cards/core/json-background.jpg">
+			</aero-card>
+			<aero-card type="light" size="std" theme="dark" backgroundImage="/assets/cards/core/json-background.jpg">
 				<hgroup>Procurement</hgroup>
 				<h1>Datacenters</h1>
 				<h2>Heavy duty cooling</h2>
 				<p isMobileHideable>Your bespoke solutions for high density hyperscale datacenters</p>
 				<a icon="/icons/left-circled-arrow.svg" href="#core-io-json">Learn more...</a>
-			</card>
-			<card type="light" size="large-square" theme="light"
+			</aero-card>
+			<aero-card type="light" size="large-square" theme="light"
 				backgroundImage="/solutions/cards/woodchips-05.jpg">
 				<hgroup>Procurement</hgroup>
 				<h1>Biomass Power Plants</h1>
@@ -103,34 +103,41 @@
 				<li icon="/icons/flow.svg"><b>Native Undo</b>: Since all objects are persisted in a flow of sequential
 					modifications, undo reconstruction comes at no costs.</li>
 				<a icon="/icons/left-circled-arrow.svg" href="#core-bohr-atom">Learn more...</a>
-			</card>
-			<card type="light" size="large-horizontal" theme="dark"
+			</aero-card>
+			<aero-card type="light" size="large-horizontal" theme="dark"
 				backgroundImage="/solutions/cards/oil-gas-sector.jpg">
 				<hgroup>Procurement</hgroup>
 				<h1>Oil & Gas packages</h1>
 				<p isMobileHideable >Bespoke API617 packages are key components for Oil&Gas projects.</p>
 				<a icon="/icons/left-circled-arrow.svg" href="#core-bohr-neon">Learn more...</a>
-			</card>
-			<card type="light" size="std" theme="dark" backgroundImage="assets/cards/core-bohr-lithium/background.jpg">
+			</aero-card>
+			<aero-card type="light" size="std" theme="dark" backgroundImage="assets/cards/core-bohr-lithium/background.jpg">
 				<hgroup>Design</hgroup>
 				<h1>Storage & UPS</h1>
 				<p isMobileHideable>Battery package for UPS and buffering</p>
 				<a icon="/icons/left-circled-arrow.svg" href="#core-bohr-lithium">Learn more...</a>
-			</card>
-			<card type="light" size="std" theme="dark" backgroundImage="assets/cards/core-web-xenon/background.png">
+			</aero-card>
+			<aero-card type="light" size="std" theme="dark" backgroundImage="assets/cards/core-web-xenon/background.png">
 				<hgroup>core.web.xenon</hgroup>
 				<h1>The Base Server</h1>
 				<p isMobileHideable>Xenon is the default implementation of the S8 API.</p>
 				<a icon="/icons/left-circled-arrow.svg" href="#core-web-xenon">Learn more...</a>
-			</card>
-			<card type="light" size="std" theme="dark"
+			</aero-card>
+			<aero-card type="light" size="large-horizontal" theme="dark"
+				backgroundImage="/solutions/cards/turbofan-02.jpg">
+				<hgroup>Design</hgroup>
+				<h1>Electrical Turbofans</h1>
+				<p isMobileHideable >Powering new air mobility with advanced concepts.</p>
+				<a icon="/icons/left-circled-arrow.svg" href="#core-bohr-neon">Learn more...</a>
+			</aero-card>
+			<aero-card type="light" size="std" theme="dark"
 				backgroundImage="/assets/cards/core-bohr-beryllium/background.jpg">
 				<hgroup>core.bohr.beryllium</hgroup>
 				<h1>NoSQL serializer</h1>
 				<p>Serilization for table-shaped database records.</p>
 				<a icon="/icons/left-circled-arrow.svg" href="#core-web-xenon">Learn more...</a>
-			</card>
-			<card type="light" size="large-square" theme="dawn"
+			</aero-card>
+			<aero-card type="light" size="large-square" theme="dawn"
 				backgroundImage="/solutions/cards/orc-1.jpg">
 				<hgroup>Design</hgroup>
 				<h1>Organic Rankine Cycles</h1>
@@ -139,258 +146,68 @@
 					numerous situation, like for instance: low grade heat recovery, Geothermal, Ocean Thermal Energy, etc.
 				</p>
 				<a icon="/icons/left-circled-arrow.svg" href="#core-bohr-atom">Learn more...</a>
-			</card>
-		</square-grid>
+			</aero-card>
+		</aero-square-grid>
 		<aero-slide theme="dark" backgroundColor="rgb(19, 37, 79)" asset="solutions/process-plant-monitoring-2.avif"
 			assetAspectRatio="4/3" arrangement="text-left">
 			<h1>We provide <b>Services</b> for many industries</h1>
 			<p>Discover the services we can offer to accompany your most daring projects:
 			</p>
 		</aero-slide>
-		<square-grid theme="light" backgroundColor="white">
-			<card type="light" size="std" theme="light" backgroundImage="assets/principles/tile00.png">
+		<aero-square-grid theme="light" backgroundColor="white">
+			<aero-card type="light" size="std" theme="light" backgroundImage="assets/principles/tile00.png">
 				<h1>Procurement</h1>
 				<h2>Finding the right partners</h2>
 				<p isMobileHideable="true">Whether an OEM or an EPC, we can map, qualify and select the right companies for you.</p>
 				<a icon="/icons/left-circled-arrow.svg" href="services.html#tile00-text">Learn more...</a>
-			</card>
-			<card type="light" size="std" theme="light" backgroundImage="assets/principles/tile01.png">
+			</aero-card>
+			<aero-card type="light" size="std" theme="light" backgroundImage="assets/principles/tile01.png">
 				<h1>Contracting</h1>
 				<h2>Structuring your serenity</h2>
 				<p isMobileHideable="true">Good knowledge of project execution enables us to write the appropriate contractual 
 					arrangement to protect your interest and ensure the performance you request.</p>
-				<a icon="/icons/left-circled-arrow.svg" href="#tile01-text">Learn more...</a>
-			</card>
-			<card type="light" size="std" theme="light" backgroundImage="assets/principles/tile02.png">
+				<a icon="/icons/left-circled-arrow.svg" href="services.html#tile01-text">Learn more...</a>
+			</aero-card>
+			<aero-card type="light" size="std" theme="light" backgroundImage="assets/principles/tile02.png">
 				<h1>Sizing</h1>
 				<h2>The right dimension</h2>
 				<p isMobileHideable="true">Estimating the true needs might sometimes be challenging. We can help 
 					auditing your process and define the key metrics before starting your project.</p>
-				<a icon="/icons/left-circled-arrow.svg" href="#tile02-text">Learn more...</a>
-			</card>
-			<card type="light" size="std" theme="light" backgroundImage="assets/principles/tile03.png">
+				<a icon="/icons/left-circled-arrow.svg" href="services.html#tile02-text">Learn more...</a>
+			</aero-card>
+			<aero-card type="light" size="std" theme="light" backgroundImage="assets/principles/tile03.png">
 				<h1>Synced</h1>
 				<h2>Monitoring execution</h2>
 				<p isMobileHideable="true">Because procurement of big projects does not stop at signing the purchasing contract, we are here to follow the 
 					companies we selected for you.
 				</p>
-			</card>
-			<card type="light" size="std" theme="light" backgroundImage="assets/principles/tile04.png">
+				<a icon="/icons/left-circled-arrow.svg" href="services.html#tile03-text">Learn more...</a>
+			</aero-card>
+			<aero-card type="light" size="std" theme="light" backgroundImage="assets/principles/tile04.png">
 				<h1>Storage</h1>
 				<h2>Documentation Safeguarding</h2>
 				<p isMobileHideable="true">Keeping track of the project documentation is of the uttermost importance during all phases of the project life cycle.</p>
-				<a icon="/icons/left-circled-arrow.svg" href="#tile04-text">Learn more...</a>
-			</card>
-			<card type="light" size="std" theme="light" backgroundImage="assets/principles/tile05.png">
-				<h1>Network</h1>
-				<h2>Structuring your network</h2>
-				<p isMobileHideable="true">We are in the business of building connections between industries. You can take advantage of this.</p>
-				<a icon="/icons/left-circled-arrow.svg" href="#tile05-text">Learn more...</a>
-			</card>
-			<card type="light" size="std" theme="light" backgroundImage="assets/principles/tile06.png">
+				<a icon="/icons/left-circled-arrow.svg" href="services.html#tile04-text">Learn more...</a>
+			</aero-card>
+			<aero-card type="light" size="std" theme="light" backgroundImage="assets/principles/tile05.png">
+				<h1>Integration</h1>
+				<h2>Because each package is always part of something bigger</h2>
+				<p isMobileHideable="true">We are can at your request offer integration services that goes beyond the packages we supply.</p>
+				<a icon="/icons/left-circled-arrow.svg" href="services.html#tile05-text">Learn more...</a>
+			</aero-card>
+			<aero-card type="light" size="std" theme="light" backgroundImage="assets/principles/tile06.png">
 				<h1>Design</h1>
 				<h2>Imagining and putting in production</h2>
 				<p isMobileHideable="true">Besides procurement, we have dedicated design capabilities.</p>
-				<a icon="/icons/left-circled-arrow.svg" href="#tile06-text">Learn more...</a>
-			</card>
-			<card type="light" size="std" theme="light" backgroundImage="assets/principles/tile07.png">
+				<a icon="/icons/left-circled-arrow.svg" href="services.html#tile06-text">Learn more...</a>
+			</aero-card>
+			<aero-card type="light" size="std" theme="light" backgroundImage="assets/principles/tile07.png">
 				<h1>Scaling</h1>
 				<h2>High Volume Equipment manufacturing</h2>
 				<p isMobileHideable="true">For high volume OEM design and production, we can assist with findign the right partners to scale up.</p>
-				<a icon="/icons/left-circled-arrow.svg" href="#tile07-text">Learn more...</a>
-			</card>
-		</square-grid>
-		<text-block id="tile00-text" type="std" backgroundGradient="light-tile00">
-			<svg path="/assets/principles/etoile.svg" width="128" height="128"></svg>
-			<h1>Simple</h1>
-			<p>The idea of maximum productivity encompasses all aspects of the Saas development and deployment.
-				S8 brings a certain number of radical changes to make this it simpler.</p>
-			<h2>Language</h2>
-			<p>
-				First it proposes the development team to reduce to a single language JAVA, that -despite being
-				seen as less hype than other new languages- is widely adopted, highly efficient but also very complete
-				in terms of features. But have no fear! All the gory aspects of traditional JAVA project development
-				have been left behind, to leverage only the very best of language: JAVA core. It’s even more than
-				that: JAVA comes with a lot high level functions that require expert level team to master, but
-				regarding this, we just ask our user not to use them and to use JAVA as a simpler version of TypeScript.
-			</p>
-			<h2>Booting fast</h2>
-			<p>
-				S8 marks a clear cut with traditional web-app deployment on JAVA server (Tomcat, etc.). S8 server-side
-				boots in less than 1s on most environments, meaning you don’t care stopping and redeploying an instance
-				anytime you want it. This drastically reduces the development cycle by enabling super frequent test
-				in real world testing environment. This is especially true for apps with advanced graphics where
-				the entire db-back-front is required, even to play unit tests.
-			</p>
-			<h2>Single man orchestra</h2>
-			<p>
-				Ok, this is wild. But that’s how we built it. We wanted -day 1- that S8 can be efficiently used to
-				build and deploy a project with a record low number of people, so we squeeze all the
-				{params, configs, scripts} around to just focus on app development.
-				S8 enables to have your server life from any simple JAVA environment.
-				We broke the rule of having two servers, one server dedicated for the back and another one for the
-				front, and merged everything into a single stack, for the sake of simplicity and efficient project
-				management.
-			</p>
-		</text-block>
-		<text-block id="tile01-text" backgroundGradient="light-tile01">
-			<svg path="/assets/principles/shield.svg" width="128" height="128"></svg>
-			<h1>Secure</h1>
-			<h2>Zero dependencies</h2>
-			<p>While open source supply with valuable tools and features, it also creates uncontrolled dependencies
-				from unchecked origins. Many incidents through two decades illustrated how easily a malicious
-				contributor
-				can inject vulnerabilities inside applications based on external modules. The number of those
-				dependencies
-				is out of control for most organizations and this results in random highly critical incidents. With open
-				sources modules deeply nested inside layers and layers of code, it becomes virtually impossible to
-				guarantee
-				a safe system. On top of that, any previously clear dependency can become malevolent through updates.
-			</p>
-			<p>
-				That’s why we decided to rebuild the entire stack from the ground up, carefully crafting and validating
-				each of our modules. Therefore, we can guarantee the total absence of the traditional worms inside
-				the code you will build on S8.
-			</p>
-			<h2>HTTPS and all the rest...</h2>
-			<p>We also implement HTTP2 and TLS security layer with a somewhat restrictive inner policy to stay on
-				the safe side.</p>
-		</text-block>
-		<text-block id="tile02-text" type="std" backgroundGradient="light-tile02">
-			<svg path="/assets/principles/3d-printer.svg" width="128" height="128"></svg>
-			<h1>Small</h1>
-			<h2>Small Surface API is the key</h2>
-			<p>Small surface API might be seen as a limitation. We see a strength: only key features are here, but
-				all key features. This enables a fast learning curve, and an almost immediate kicking off. It also
-				offers a serenity for creator, when you know you sit on something that is taking care of fine grain
-				details, without having to spend time resolving problems -including integration problems- that have
-				been solved so many time. You leverage performance improvement of the entire stack effortlessly.
-			</p>
-			<h2>Multiple environnement, one API</h2>
-			<p>Also, we have plans to build even more aggressive of some module (in a JAVA sense) of current ones,
-				and to propose them on future version. Having a high-level API enables you to take advantage of many
-				implementations fine tuning with the same codebase. It provides a stable environment, just as JVM
-				provides a standardized coding environment over different machines.
-			</p>
-			<h2>The flow</h2>
-			<p>The key concept of this stack relies on the flow. The flow let you access pretty much every feature
-				of the stack in an asynchronous and unified way. The flow is the context against which you build
-				the big lambda expression which is in the end your app.
-			</p>
-		</text-block>
-		<text-block type="std" id="tile03-text" backgroundGradient="light-tile03">
-			<svg path="/assets/principles/sync.svg" width="128" height="128"></svg>
-			<h1>Synced</h1>
-			<p>
-				One of the main obstacles into writing a scalable application is the proper handling of high
-				concurrency through asynchronous task orchestration. Since this is a recurring problem, and a hard
-				to solve one, we decided to embedded deep into the S8 stack what we think is the best solution (and
-				we have a high-level API that gives us plenty of room to make further improvements under the hood).
-				Also, because the S8 stack is managing the server aspects, we needed to have this asynchronous engine
-				ready to support the stack inner systems.
-			</p>
-			<p>
-				That’s why we designed a light threads engine with a built-in thread workers pool along with a thread
-				allocation mechanism that prevent congestion and enable high scaling up.
-			</p>
-		</text-block>
-		<text-block id="tile04-text" type="std" backgroundGradient="light-tile04">
-			<svg path="/assets/principles/servers.svg" width="128" height="128"></svg>
-			<h1>Storage</h1>
-			<p>
-				Every web-app relies at some point on databases. Moreover, the proximity with data is key to write
-				easily
-				complex treatment. Having noticed this, we came up to think that data must be served efficiently,
-				seamlessly
-				within the app through very simple accesses directly available in the flow. So every instance running on
-				the
-				S8 stack have by default the possibility of working with three types of databases, and build as many
-				tables,
-				objects on the fly.
-			</p>
-			<h2>Annotations</h2>
-			<p>Objects persistency relies on annotating object classes -most robust approach so far. Access to objects
-				is exclusively made through the call of methods on the flow, as well as all subsequent actions (saving,
-				reverting, etc.).
-			</p>
-			<h2>Caching<h2>
-					<p>Caching is a key part of performance, and one of the goals of S8 is to handle this seamlessly. As
-						a result,
-						you can make the assumption that data is always readily available since the caching will balance
-						memory retention
-						to reflect data usage.</p>
-					<h2>Scaling and replicating</h2>
-					<p>For the scaling up versions, we will provide automatic synchronization of instances running S8
-						stack on our cloud to
-						ensure that any modifications made to data contained on the databases of one instance are
-						replicated to other instances,
-						and efficiently handling copies to ensure a given requirement in terms of redundancy.
-					</p>
-		</text-block>
-		<text-block id="tile05-text" type="std" backgroundGradient="light-tile05">
-			<svg path="/assets/principles/graph.svg" width="128" height="128"></svg>
-			<h1>Structured</h1>
-			<h2>Key-value DB</h2>
-			<p>Key value db is probably the most efficient pattern to get data. S8 provides with efficient table-like
-				list of objects
-				you can search through or retrieve through id, effectively mimicking the core features of NO SQL like
-				db. For more advanced
-				searches, selection with JAVA queries can be used.
-			</p>
-			<h2>Structured DB"</h2>
-			<p>Structured DB works with large objects, each representing a group of data you can navigate through points
-				and methods.
-				This group of data typically represent the data of a big project, including hundreds or even hundreds of
-				thousands sub
-				objects, but that belong to a same logical entity and need to remain grouped from a logical point of
-				view (think of the
-				plan of a building), even if you can traverse it easily.
-			</p>
-		</text-block>
-		<text-block id="tile06-text" type="std" backgroundGradient="light-tile06">
-			<svg path="/assets/principles/monitor.svg" width="128" height="128"></svg>
-			<h1>Screen</h1>
-			<p>One thing that makes Saas so time-consuming to develop is that development is split between two realms,
-				with deiffrenet
-				languages, logics, teams, deployment tools, etc. This gigantically increases the number of skills a team
-				must master to
-				deliver a webapp. So we came up with something different.</p>
-			<h2>Your front as a remote screen</h2>
-			<p>When you develop a app that will run on local device (say desktop or mobile), things are much more
-				simple: without exiting your development environment, you directly have access to all graphical
-				components that come standard
-				with the OS, and you can manipulate in any imaginable way, even inside a deeply nested function. You
-				don’t have to define an
-				API between the back and the front so both can communicate. Everything is fused together, and that’s why
-				it is so easy to
-				achieve remarkable graphical complexity with minimum effort. We thought it was the way to go for Saas as
-				well!
-			</p>
-			<h2>Additional hidden benefits</h2>
-			<p>S8 way of handling the front is radical: each graphical component comes as a JAVA realm object, that you
-				can manipulate at
-				will, and a ghost counterpart -that you never have to touch- that lives on the front side. Connection
-				between both sides of the
-				same entity is handled under the hood by S8. The tremendous benefits are the following:
-			<ul>
-				<li>High compression throughput
-				<li>Natural caching strategies of large objects on the front, operated from the back.
-				<li>Radical speed improvements when switching of views of large objects (like opening the plan of
-					building A, closing it,
-					opening plan of building B, closing it and reopening plan of building B).
-			</ul>
-			</p>
-		</text-block>
-		<text-block id="tile07-text" backgroundGradient="light-tile07">
-			<svg path="/assets/principles/scalability.svg" width="128" height="128"></svg>
-			<h1>Scalable</h1>
-			<p>Scalability is the long-time concern of every project builder. We designed the S8 stack to enable a
-				natural and powerful way of scaling up: each node running S8 is a member of a cluster. It is a member of
-				a database cluster. It is a member of lambda expression workers pools clusters. It is a member of login
-				cluster. And so on. Each node being able to perform the entire set of tasks required by the applications
-				enables a smooth and arbitrary large scale up.</p>
-		</text-block>
-		<aero-footer path="footer.html"></aero-footer>
+				<a icon="/icons/left-circled-arrow.svg" href="services.html#tile07-text">Learn more...</a>
+			</aero-card>
+		</aero-square-grid>
 	</div>
 </body>
 

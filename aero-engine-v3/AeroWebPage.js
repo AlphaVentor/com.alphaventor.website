@@ -5,6 +5,7 @@ import { Header } from "./Header.js";
 import { ModalBox } from "./ModalBox.js";
 import { Slide } from "./Slide.js";
 import { SquareGrid } from "./SquareGrid.js";
+import { TextBlock } from "./TextBlock.js";
 
 
 
@@ -70,6 +71,8 @@ export class AeroWebPage {
         veilNode.appendChild(this.createSpinner());
         bodyNode.appendChild(veilNode);
         this.veilNode = veilNode;
+
+        this.hide();
 
         /* </structure> */
     
@@ -225,8 +228,10 @@ export class AeroWebPage {
 export const AERO_WEB_PAGE = new AeroWebPage();
 
 
-const components = [Slide, Header, SquareGrid];
+const components = [Slide, Header, SquareGrid, TextBlock];
 
+
+AERO_WEB_PAGE.requireCSSStylesheet("/aero-engine-v3/gradient-backgrounds.css");
 
 components.forEach(component => {
     customElements.define(component.TAG, component);
