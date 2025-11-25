@@ -43,13 +43,15 @@ export class AeroWebPage {
 
     isLandscape = true;
 
+    orientationListeners = new Array();
+
     css_isStylesheetsLoadingCompleted = false;
 
 
     constructor() {
 
           /* CSS requirements */
-        this.requireCSSStylesheet("/aero-engine-v3/AeroWebPage.css");
+        //this.requireCSSStylesheet("/aero-engine-v3/AeroWebPage.css");
         //this.css_requireStylesheet("/aero-engine-v2/ModalBox.css");
 
         /* <structure> */
@@ -98,13 +100,15 @@ export class AeroWebPage {
         this.imageResolution = 0;
 
         /* orientation */
-        const page = this;
-        this.orientationObserver.addEventListener("change", function (event) {
-            page.isLandscape = page.orientationObserver.matches;
-            page.render();
+        this.orientationObserver.addEventListener("change", (event) => {
+            this.isLandscape = this.orientationObserver.matches;
+            this.orientationListeners.forEach(listener => listener(this.isLandscape));
         }, false);
     }
 
+    addOrientationListener(listener){
+        this.orientationListeners.push(listener);
+    }
 
 
     generateState() {
@@ -211,7 +215,31 @@ export class AeroWebPage {
     
         return node;
     }
-
-
 }
 
+
+
+/**
+ * the base page
+ */
+export const AERO_WEB_PAGE = new AeroWebPage();
+
+
+const components = [Slide, Header, SquareGrid];
+
+
+components.forEach(component => {
+    customElements.define(component.TAG, component);
+    AERO_WEB_PAGE.requireCSSStylesheet(component.STYLESHEET);
+});
+
+
+AERO_WEB_PAGE.update();
+
+/**
+ * 
+ * @param {*} props 
+ */
+export const boot = function(){
+   //AERO_WEB_PAGE.start();
+}

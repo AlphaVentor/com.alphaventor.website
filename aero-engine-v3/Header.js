@@ -4,7 +4,7 @@ export const MENUS = ["Home", "Technology", "Applications", "Team", "Contact"];
 export const HREF = ["/index.html", "/technology.html", "/applications.html", "/team.html", "/contact.html"];
 */
 
-import { AERO_WEB_PAGE } from "./boot.js";
+import { AERO_WEB_PAGE } from "./AeroWebPage.js";
 
 
 
@@ -17,15 +17,15 @@ export class Header extends HTMLElement {
 
     static STYLESHEET = "/aero-engine-v3/Header.css";
 
-     /**
-     * @type{Nav}
-     */
+    /**
+    * @type{Nav}
+    */
     nav;
 
-     /**
-     * @type{Social}
-     */
-     social;
+    /**
+    * @type{Social}
+    */
+    social;
 
     /**
      * @type {boolean}
@@ -66,10 +66,10 @@ export class Header extends HTMLElement {
         /* build menus */
         let node = this.firstChild;
         while (node) {
-            if (node.nodeName.toLowerCase() == "nav") { 
+            if (node.nodeName.toLowerCase() == "nav") {
                 this.nav = new Nav(node);
             }
-            else if (node.nodeName.toLowerCase() == "social") { 
+            else if (node.nodeName.toLowerCase() == "social") {
                 this.social = new Social(node);
             }
 
@@ -83,6 +83,15 @@ export class Header extends HTMLElement {
 
         toBeRemovedNodes.forEach(node => this.removeChild(node));
 
+
+        /* orientation listener */
+        AERO_WEB_PAGE.addOrientationListener((isLandscape) => {
+            if (this.isLandscape != isLandscape) { // repaint
+                this.isLandscape = isLandscape;
+                clearChildNodes(this);
+                this.draw();
+            }
+        });
     }
 
 
@@ -96,23 +105,11 @@ export class Header extends HTMLElement {
     html_getNode() {
 
         /* return wrapper node */
-        return this.headerNode;
+        return this;
     }
 
     load() { /* nothing to load here */ }
 
-    /**
-     * 
-     * @param {WebPage} page 
-     * @returns {}
-     */
-    render(page) {
-        if (page.isLandscape != this.isLandscape) { // repaint
-            this.isLandscape = page.isLandscape;
-            clearChildNodes(this.headerNode);
-            this.draw();
-        }
-    }
 
     draw() {
 
@@ -200,10 +197,10 @@ export class Header extends HTMLElement {
         /* </nav> */
 
         /* <login-icon> */
-        if(this.social){
+        if (this.social) {
             barNode.appendChild(this.social.html_getNode());
         }
-        
+
         /* </login-icon> */
     }
 
@@ -305,10 +302,10 @@ class Nav {
      */
     menus = new Array();
 
-    constructor(sources){
+    constructor(sources) {
         let node = sources.firstChild;
         while (node) {
-            if (node.nodeName.toLowerCase() == "menu") { 
+            if (node.nodeName.toLowerCase() == "menu") {
                 this.menus.push(new Menu(node));
             }
 
@@ -316,24 +313,24 @@ class Nav {
             node = node.nextSibling;
         }
 
-          /* <nav> */
-          let navNode = document.createElement('nav');
-          let unorderedListNode = document.createElement('ul');
-          this.menus.forEach(menu => unorderedListNode.appendChild(menu.html_getNode()));
-          navNode.appendChild(unorderedListNode);
-          /* </nav> */
-  
-          this.navNode = navNode;
+        /* <nav> */
+        let navNode = document.createElement('nav');
+        let unorderedListNode = document.createElement('ul');
+        this.menus.forEach(menu => unorderedListNode.appendChild(menu.html_getNode()));
+        navNode.appendChild(unorderedListNode);
+        /* </nav> */
+
+        this.navNode = navNode;
     }
 
-    html_getNode(){ return this.navNode; }
+    html_getNode() { return this.navNode; }
 
 }
 
 
 class Menu {
 
-    constructor(source){
+    constructor(source) {
         let listItemNode = document.createElement('li');
         listItemNode.classList.add("aero-header-menu")
 
@@ -350,7 +347,7 @@ class Menu {
     }
 
 
-    html_getNode(){
+    html_getNode() {
         return this.listItemNode;
     }
 
@@ -365,10 +362,10 @@ class Social {
      */
     links = new Array();
 
-    constructor(sources){
+    constructor(sources) {
         let node = sources.firstChild;
         while (node) {
-            if (node.nodeName.toLowerCase() == "a") { 
+            if (node.nodeName.toLowerCase() == "a") {
                 this.links.push(new Link(node));
             }
 
@@ -376,36 +373,36 @@ class Social {
             node = node.nextSibling;
         }
 
-          /* <wrapper> */
-          let socialNode = document.createElement('div');
-          socialNode.classList.add("aero-header-social");
-          this.links.forEach(link => socialNode.appendChild(link.html_getNode()));
-          /* </wrapper> */
-  
-          this.socialNode = socialNode;
+        /* <wrapper> */
+        let socialNode = document.createElement('div');
+        socialNode.classList.add("aero-header-social");
+        this.links.forEach(link => socialNode.appendChild(link.html_getNode()));
+        /* </wrapper> */
+
+        this.socialNode = socialNode;
     }
 
-    html_getNode(){ return this.socialNode; }
+    html_getNode() { return this.socialNode; }
 }
 
 class Link {
 
-    constructor(sources){
-         /* <login-icon> */
-         const loginNode = document.createElement("a");
+    constructor(sources) {
+        /* <login-icon> */
+        const loginNode = document.createElement("a");
 
-         loginNode.href = sources.getAttribute("to");
- 
-         loginNode.classList.add("aero-header-social-link");
-         let loginImgNode = document.createElement("img");
-         loginImgNode.src = sources.getAttribute("pic");
-         loginImgNode.alt = "login";
-         loginNode.appendChild(loginImgNode);
-         this.loginNode = loginNode;
-         /* </login-icon> */
+        loginNode.href = sources.getAttribute("to");
+
+        loginNode.classList.add("aero-header-social-link");
+        let loginImgNode = document.createElement("img");
+        loginImgNode.src = sources.getAttribute("pic");
+        loginImgNode.alt = "login";
+        loginNode.appendChild(loginImgNode);
+        this.loginNode = loginNode;
+        /* </login-icon> */
     }
 
-    html_getNode(){ return this.loginNode; }
+    html_getNode() { return this.loginNode; }
 
 }
 
@@ -413,7 +410,7 @@ class Link {
 /**
  * @param{HTMLDivElement} enveloppeNode
  */
-const clearChildNodes = function(enveloppeNode) {
+const clearChildNodes = function (enveloppeNode) {
     let child;
     while ((child = enveloppeNode.firstChild)) {
         enveloppeNode.removeChild(enveloppeNode.lastChild);

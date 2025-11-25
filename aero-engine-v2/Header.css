@@ -193,7 +193,7 @@ header[theme="dark"] > .aero-header-bar, header[theme="dark"] > .aero-header-pla
 
 
 @media (orientation : portrait) {
-	header {
+	aero-header {
 		height: 64px;
 	}
 
