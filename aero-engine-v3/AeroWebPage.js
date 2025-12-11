@@ -56,36 +56,29 @@ export class AeroWebPage {
 
     constructor() {
 
-          /* CSS requirements */
+        /* CSS requirements */
         //this.requireCSSStylesheet("/aero-engine-v3/AeroWebPage.css");
         //this.css_requireStylesheet("/aero-engine-v2/ModalBox.css");
 
         /* <structure> */
-         const bodyNode = document.body;
+        const bodyNode = document.body;
 
         this.wrapperNode = document.querySelector("#aero-wrapper");
 
-        const topLayerNode = document.createElement("div");
-        topLayerNode.classList.add("hidden");
-        topLayerNode.id = "overlay";
-        bodyNode.appendChild(topLayerNode);
-        this.topLayerNode = topLayerNode;
-        
-        const veilNode = document.createElement("div");
-        veilNode.id = "aero-veil";
-        veilNode.appendChild(this.createSpinner());
-        bodyNode.appendChild(veilNode);
-        this.veilNode = veilNode;
+        this.topLayerNode = document.querySelector("#overlay");
 
+        this.veilNode = document.querySelector("#aero-veil");
+        this.veilNode.appendChild(this.createSpinner());
+        
         this.hide();
 
         /* </structure> */
-    
+
 
         /** populate structure */
 
         let val, hasBeenShown = (val = window.sessionStorage.getItem(COOKIES_KEY)) ? val : false;
-        
+
         if (!hasBeenShown) {
             const modalBox = new ModalBox({
                 image: "/icons/cookie.png",
@@ -114,7 +107,7 @@ export class AeroWebPage {
         }, false);
     }
 
-    addOrientationListener(listener){
+    addOrientationListener(listener) {
         this.orientationListeners.push(listener);
     }
 
@@ -128,35 +121,32 @@ export class AeroWebPage {
     }
 
 
-    appendDependency(){
+    appendDependency() {
         const index = this.dependencies.length;
         this.dependencies.push(false);
-        return () => { 
+        return () => {
             this.dependencies[index] = true;
-           
-            /* check if all css stylesheets have been loaded */
-        this.areAllDependenciesLoaded = true;
-        this.dependencies.forEach(value => {
-            if (!value && this.areAllDependenciesLoaded) { this.areAllDependenciesLoaded = false; }
-        });
 
-        this.update();
+            /* check if all css stylesheets have been loaded */
+            this.areAllDependenciesLoaded = true;
+            this.dependencies.forEach(value => {
+                if (!value && this.areAllDependenciesLoaded) { this.areAllDependenciesLoaded = false; }
+            });
+
+            this.update();
         }
     }
 
-    onDependencyLoaded(){
- 
-    }
 
 
     hide() {
-        this.wrapperNode.classList.add("hidden");
-        this.veilNode.classList.remove("hidden");
+        this.wrapperNode.setAttribute("state", "closed");
+        this.veilNode.setAttribute("state", "unrolled");
     }
 
     show() {
-        this.wrapperNode.classList.remove("hidden");
-        this.veilNode.classList.add("hidden");
+        this.wrapperNode.setAttribute("state", "open");
+        this.veilNode.setAttribute("state", "rolled");
     }
 
     render() {
@@ -228,12 +218,12 @@ export class AeroWebPage {
         }
     }
 
-    
-    
+
+
     createSpinner() {
 
         //const iconPathname = this.iconPathname;
-    
+
         const node = document.createElement("div");
         node.className = "boot-loader";
         node.innerHTML = `
@@ -243,7 +233,7 @@ export class AeroWebPage {
                     <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
                 </svg>
             </div>`;
-    
+
         return node;
     }
 }
@@ -273,6 +263,6 @@ AERO_WEB_PAGE.update();
  * 
  * @param {*} props 
  */
-export const boot = function(){
-   //AERO_WEB_PAGE.start();
+export const boot = function () {
+    //AERO_WEB_PAGE.start();
 }

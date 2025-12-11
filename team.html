@@ -15,7 +15,7 @@
 </head>
 
 <body onload="boot()">
-	<div id="aero-wrapper" hasCookiesModalBox>
+	<div id="aero-wrapper" state="closed" hasCookiesModalBox>
 		<aero-header theme="dark" logo="logos/logo-small-white.png">
 			<nav>
 				<menu to="/index.html">Home</menu>
@@ -49,6 +49,8 @@
 		</aero-slide>
 		<aero-footer path="footer.html"></aero-footer>
 	</div>
+	<div id="overlay"></div>
+	<div id="aero-veil" state="unrolled"></div>
 </body>
 
 </html>
