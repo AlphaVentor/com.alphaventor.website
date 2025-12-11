@@ -1,5 +1,6 @@
 
 import { AeroUtilities } from "./AeroUtilities.js";
+import { AERO_WEB_PAGE } from "./AeroWebPage.js";
 
 
 
@@ -117,7 +118,7 @@ export class Slide extends HTMLElement {
         }
         else if (val = this.getAttribute("backgroundImage")) {
             this.classList.add("background-pic");
-            AeroUtilities.loadBackgroundImage(this, val, () => this.render(page));
+            AeroUtilities.loadBackgroundImage(this, val, AERO_WEB_PAGE.appendDependency());
         }
         /* </background> */
 

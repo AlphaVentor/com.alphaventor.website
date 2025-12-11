@@ -50,6 +50,10 @@ export class AeroWebPage {
     css_isStylesheetsLoadingCompleted = false;
 
 
+    areAllDependenciesLoaded = false;
+    dependencies = new Array();
+
+
     constructor() {
 
           /* CSS requirements */
@@ -124,6 +128,26 @@ export class AeroWebPage {
     }
 
 
+    appendDependency(){
+        const index = this.dependencies.length;
+        this.dependencies.push(false);
+        return () => { 
+            this.dependencies[index] = true;
+           
+            /* check if all css stylesheets have been loaded */
+        this.areAllDependenciesLoaded = true;
+        this.dependencies.forEach(value => {
+            if (!value && this.areAllDependenciesLoaded) { this.areAllDependenciesLoaded = false; }
+        });
+
+        this.update();
+        }
+    }
+
+    onDependencyLoaded(){
+ 
+    }
+
 
     hide() {
         this.wrapperNode.classList.add("hidden");
@@ -161,7 +185,7 @@ export class AeroWebPage {
 
 
     update() {
-        if (this.css_isStylesheetsLoadingCompleted) {
+        if (this.areAllDependenciesLoaded) {
             this.render();
             this.show();
         }
@@ -186,6 +210,9 @@ export class AeroWebPage {
      */
     requireCSSStylesheet(pathname) {
         if (!this.css_stylesheetsMap.has(pathname)) {
+
+            const onLoaded = this.appendDependency();
+
             /** @type{HTMLLinkElement} */
             const linkNode = document.createElement("link");
             linkNode.type = "text/css";
@@ -193,7 +220,7 @@ export class AeroWebPage {
             linkNode.href = pathname;
             linkNode.addEventListener("load", () => {
                 this.css_stylesheetsMap.set(pathname, true);
-                this.css_onStyleSheetLoaded();
+                onLoaded();
             });
 
             /* append and trigger */

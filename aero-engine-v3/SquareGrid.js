@@ -1,6 +1,7 @@
 
 
 import { AeroUtilities } from "./AeroUtilities.js";
+import { AERO_WEB_PAGE } from "./AeroWebPage.js";
 import { Icon } from "./Icon.js";
 
 
@@ -86,7 +87,7 @@ export class SquareGrid extends HTMLElement {
         /* <background> */
         if (val = this.getAttribute("backgroundImage")) {
             this.classList.add("background-pic");
-            AeroUtilities.loadBackgroundImage(this, val);
+            AeroUtilities.loadBackgroundImage(this, val, AERO_WEB_PAGE.appendDependency());
         }
         else if (val = this.getAttribute("backgroundColor")) {
             this.classList.add("background-color");
