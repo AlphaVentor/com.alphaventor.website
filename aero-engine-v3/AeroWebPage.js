@@ -4,6 +4,7 @@
 import { Footer } from "./Footer.js";
 import { Header } from "./Header.js";
 import { ModalBox } from "./ModalBox.js";
+import { Picture } from "./Picture.js";
 import { Slide } from "./Slide.js";
 import { SquareGrid } from "./SquareGrid.js";
 import { TextBlock } from "./TextBlock.js";
@@ -79,7 +80,7 @@ export class AeroWebPage {
 
         let val, hasBeenShown = (val = window.sessionStorage.getItem(COOKIES_KEY)) ? val : false;
 
-        hasBeenShown = false;
+        //hasBeenShown = false; // For DEBUG
         if (!hasBeenShown) {
             const modalBox = new ModalBox({
                 image: "/icons/cookie.png",
@@ -250,7 +251,7 @@ export const AERO_WEB_PAGE = new AeroWebPage();
 
 AERO_WEB_PAGE.requireCssStylesheet("/aero-engine-v3/gradient-backgrounds.css");
 
-const components = [Slide, Header, SquareGrid, TextBlock, Footer, ModalBox];
+const components = [Slide, Header, SquareGrid, TextBlock, Footer, ModalBox, Picture];
 components.forEach(component => component.init0(AERO_WEB_PAGE));
 
 
