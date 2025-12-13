@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<title>Alphaventor</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" type="image/x-icon" href="/favicon.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/aero-engine-v3/AeroWebPage.css" />
+	<script type="module">
+		import { boot } from '/aero-engine-v3/AeroWebPage.js';
+		window.boot = boot;
+	</script>
+</head>
+
+<body onload="boot()">
+	<div id="aero-wrapper" hasCookiesModalBox state="closed">
+		<aero-header theme="dark" logo="/logos/logo-small-white.png">
+			<nav>
+				<menu to="/index.html">Home</menu>
+				<menu to="/solutions.html">Solutions</menu>
+				<menu to="/services.html">Services</menu>
+				<menu to="/softwares.html">Softwares</menu>
+				<menu to="/stack.html">Stack</menu>
+				<menu to="/team.html">Team</menu>
+			</nav>
+			<social>
+				<a to="https://www.linkedin.com/company/s8-stack" pic="/social/linkedin-icon-256px.png"></a>
+				<a to="https://x.com/Stack8Official" pic="/social/x-icon-256px.png"></a>
+			</social>
+		</aero-header>
+		<t1-slide theme="dark" backgroundColor="rgb(19, 37, 79)" asset="/home/hero-biomass-power-plant-02.jpg"
+			assetAspectRatio="4/3" arrangement="text-left">
+			<h1>Bring <b>Process</b> to the next level</h1>
+			<h2>Procurement</h2>
+			<p>We turn process owner requirements into specifications, pre-designing the most adequate solution and find
+				the right EPC (Engineering Procurement Construction) companies to achieve your goals, select the most
+				competitive for you, help you setup strong legal guiding and supervise execution at your benefit.
+			</p>
+			<h2>Design</h2>
+			<p>We design custom process plants or equipment, with a strong emphasis on thermal (boiler, district
+				heating, datacenter cooling), thermodynamics (stream generators, steam cycles, Organic fluid cycles like
+				ORC or HVAC, and fluid handling (compressed process gas for Oil&Gas sector). We have also a dedicated
+				expertise in turbomachines, especially for advanced Organic cycle turbogénérator, turbocompressors, etc.
+			</p>
+		</t1-slide>
+		<picture-banner theme="light" backgroundColor="white" arrangement="text-up">
+			<picture-banner-asset path="/solutions/process/process00.png" height="80vh">
+			</picture-banner-asset>
+			<picture-banner-legend>
+				<h1>Bring <b>Process</b> to the next level</h1>
+				<h2>Procurement</h2>
+			</picture-banner-legend>
+		</picture-banner>
+		<aero-footer path="/footer.html"></aero-footer>
+	</div>
+	<div id="overlay"></div>
+	<div id="aero-veil" state="unrolled"></div>
+</body>
+
+</html>
