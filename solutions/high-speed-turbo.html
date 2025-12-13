@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<title>Alphaventor</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" type="image/x-icon" href="/favicon.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/aero-engine-v3/AeroWebPage.css" />
+	<script type="module">
+		import { boot } from '/aero-engine-v3/AeroWebPage.js';
+		window.boot = boot;
+	</script>
+</head>
+
+<body onload="boot()">
+	<div id="aero-wrapper" state="closed" hasCookiesModalBox>
+		<aero-header theme="dark" logo="/logos/logo-small-white.png">
+			<nav>
+				<menu to="/index.html">Home</menu>
+				<menu to="/solutions.html">Solutions</menu>
+				<menu to="/services.html">Services</menu>
+				<menu to="/softwares.html">Softwares</menu>
+				<menu to="/stack.html">Stack</menu>
+				<menu to="/team.html">Team</menu>
+			</nav>
+			<social>
+				<a to="https://www.linkedin.com/company/s8-stack" pic="/social/linkedin-icon-256px.png"></a>
+				<a to="https://x.com/Stack8Official" pic="/social/x-icon-256px.png"></a>
+			</social>
+		</aero-header>
+		<picture-banner theme="dark" style="background-color: rgb(28, 108, 179);">
+			<picture-banner-legend>
+				<h1>Special High-Speed Expanders</h1>
+			</picture-banner-legend>
+			<picture-banner-asset path="/solutions/high-speed-turbo/TGAx4-hero.PNG" verticalHeight="60vh">
+			</picture-banner-asset>
+		</picture-banner>
+		<picture-banner theme="dark" style="background-color: rgb(33 33 33);">
+			<picture-banner-legend>
+				<h1>Key Points</h1>
+				<h2>Highly evolved architecture, virtually matching every needs</h2>
+			</picture-banner-legend>
+			<picture-banner-asset path="/solutions/high-speed-turbo/TGAx4-slide01.png" verticalHeight="60vh">
+			</picture-banner-asset>
+		</picture-banner>
+		<picture-banner theme="dark" style="background-color: rgb(33 33 33);">
+			<picture-banner-legend>
+				<h1>Architecture Overview</h1>
+			</picture-banner-legend>
+			<picture-banner-asset path="/solutions/high-speed-turbo/TGAx4-slide02.png" verticalHeight="60vh">
+			</picture-banner-asset>
+		</picture-banner>
+		<picture-banner theme="dark" style="background-color: rgb(38 38 38);">
+			<picture-banner-legend>
+				<h1>Integration</h1>
+			</picture-banner-legend>
+			<picture-banner-asset path="/solutions/high-speed-turbo/TGAx4-slide03.png" verticalHeight="60vh">
+			</picture-banner-asset>
+		</picture-banner>
+		<picture-banner theme="dark" style="background-color: rgb(38 38 38);">
+			<picture-banner-asset path="/solutions/high-speed-turbo/TGAx4-slide04.png" verticalHeight="60vh">
+			</picture-banner-asset>
+		</picture-banner>
+		<picture-banner theme="dark" style="background-color: rgb(38 38 38);">
+			<picture-banner-asset path="/solutions/high-speed-turbo/TGAx4-slide05.png" verticalHeight="60vh">
+			</picture-banner-asset>
+		</picture-banner>
+		<picture-banner theme="dark" style="background-color: rgb(38 38 38);">
+			<picture-banner-asset path="/solutions/high-speed-turbo/TGAx4-slide06.png" verticalHeight="60vh">
+			</picture-banner-asset>
+		</picture-banner>
+		<aero-footer path="/footer.html"></aero-footer>
+	</div>
+	<div id="overlay"></div>
+	<div id="aero-veil" state="unrolled"></div>
+</body>
+
+</html>

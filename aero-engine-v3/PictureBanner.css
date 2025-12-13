@@ -1,0 +1,277 @@
+/* <aero-slide> */
+picture-banner {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	width: 100%;
+	box-sizing: content-box;
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+
+/* <arrangements> */
+@media (orientation : landscape) {
+
+
+	picture-banner[arrangement="text-up"] {
+		flex-direction: column;
+	}
+
+	picture-banner[arrangement="text-down"] {
+		flex-direction: column-reverse;
+	}
+
+	picture-banner[arrangement="text-left"] {
+		flex-direction: row;
+	}
+
+	picture-banner[arrangement="text-right"] {
+		flex-direction: row-reverse;
+	}
+
+}
+
+@media (orientation : portrait) {
+
+
+	picture-banner[arrangement="text-up"] {
+		flex-direction: column;
+	}
+
+	picture-banner[arrangement="text-down"] {
+		flex-direction: column-reverse;
+	}
+
+	picture-banner[arrangement="text-left"] {
+		flex-direction: column;
+	}
+
+	picture-banner[arrangement="text-right"] {
+		flex-direction: column-reverse;
+	}
+
+}
+
+
+/* <asset> */
+
+picture-banner-asset {
+	display: block;
+	height: 100%;
+	padding: 0px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: 2;
+	/*overflow: auto;*/
+}
+
+
+picture-banner-asset>img {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+
+	height: auto;
+	/* Automatically adjusts height to maintain natural ratio */
+	display: block;
+	/* Optional: Removes extra space below inline images */
+
+	margin: 0px;
+	padding: 0px;
+}
+
+
+@media (orientation : landscape) {
+	picture-banner-asset>img {
+		max-width: 80%;
+	}
+}
+
+@media (orientation : portrait) {
+	picture-banner-asset>img {
+		max-width: 100%;
+	}
+}
+
+/* <asset> */
+
+
+
+
+/* <legend> */
+
+picture-banner-legend {
+	display: block;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 0px;
+	width: 100%;
+	/*overflow: auto;*/
+}
+
+
+picture-banner-legend>h1>span.emphasis {
+	font-weight: bold;
+}
+
+picture-banner[arrangement="text-up"]>picture-banner-legend {
+	margin-top: 16px;
+}
+
+picture-banner[arrangement="text-right"]>picture-banner-legend {
+	margin-right: 16px;
+}
+
+picture-banner[arrangement="text-down"]>picture-banner-legend {
+	margin-bottom: 16px;
+}
+
+picture-banner[arrangement="text-left"]>picture-banner-legend {
+	margin-left: 16px;
+}
+
+/* <h1> */
+picture-banner-legend>h1 {
+	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 200;
+	max-width: 92%;
+	padding: 8px;
+	border-radius: 4px;
+	margin: 0px;
+	z-index: 8;
+	text-align: center;
+}
+
+picture-banner[theme="dark"] h1 {
+	color: white;
+	text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.804);
+	/* offset-x | offset-y | blur-radius | color */
+}
+
+
+picture-banner[theme="light"] h1 {
+	color: black;
+	text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.804);
+	/* text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.804); */
+	/* offset-x | offset-y | blur-radius | color */
+}
+
+
+picture-banner h1>b {
+	font-weight: 800;
+}
+
+@media (orientation : landscape) {
+	picture-banner-legend>h1 {
+		font-size: 64px;
+		line-height: 64px;
+	}
+}
+
+@media (orientation : portrait) {
+	picture-banner-legend>h1 {
+		font-size: 48px;
+		line-height: 48px;
+	}
+}
+
+
+/* </h1> */
+
+
+/* <h2> */
+picture-banner-legend>h2 {
+	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: 32px;
+	line-height: 24px;
+	font-weight: bold;
+	max-width: 92%;
+	padding: 8px;
+	border-radius: 4px;
+	/*white-space: nowrap;*/
+	margin: 0px;
+	z-index: 6;
+	text-align: center;
+}
+
+picture-banner[theme="dark"] h2 {
+	color: white;
+	text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.804);
+	/* offset-x | offset-y | blur-radius | color */
+}
+
+picture-banner[theme="light"] h2 {
+	color: black;
+	text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.804);
+	/* offset-x | offset-y | blur-radius | color */
+}
+
+picture-banner h2>b {
+	font-weight: 800;
+	background-color: yellow;
+}
+
+@media (orientation : landscape) {
+	picture-banner-legend>h2 {
+		font-size: 32px;
+		line-height: 24px;
+	}
+}
+
+@media (orientation : portrait) {
+	picture-banner-legend>h2 {
+		font-size: 24px;
+		line-height: 20px;
+	}
+}
+
+/* </h2> */
+
+/* <p> */
+.picture-banner-legend>p {
+	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande",
+		sans-serif;
+	font-size: 20px;
+	font-weight: normal;
+	text-align: left;
+	z-index: 4;
+	padding: 0px 0px 0px 0px;
+	padding: 6px 6px 6px 8px;
+	border-radius: 4px;
+	margin: 0px;
+}
+
+picture-banner[theme="dark"] p {
+	color: white;
+	text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.804);
+	/* offset-x | offset-y | blur-radius | color */
+}
+
+picture-banner[theme="light"] p {
+	color: black;
+	text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.804);
+	/* offset-x | offset-y | blur-radius | color */
+}
+
+picture-banner p>b {
+	font-weight: 800;
+	background-color: yellow;
+}
+
+@media (orientation : landscape) {
+	.picture-banner-legend>p {
+		font-size: 16px;
+	}
+}
+
+@media (orientation : portrait) {
+	.picture-banner-legend>p {
+		font-size: 20px;
+	}
+}
+
+/* </p> */
+
+/* </legend> */

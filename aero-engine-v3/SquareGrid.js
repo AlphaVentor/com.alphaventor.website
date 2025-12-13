@@ -48,7 +48,7 @@ export class SquareGrid extends HTMLElement {
     * @param {AeroWebPage} page 
     */
     static init0(page) {
-        customElements.define("aero-square-grid", SquareGrid);
+        customElements.define("square-grid", SquareGrid);
         page.requireCssStylesheet("/aero-engine-v3/SquareGrid.css");
     }
 
@@ -110,7 +110,7 @@ export class SquareGrid extends HTMLElement {
         let node = this.firstChild;
         while(node){
             let type = node.nodeName.toLowerCase();
-            if(type == "aero-card"){
+            if(type == "square-grid-card"){
                 this.cards.push(new SquareGridCard(node));
             }
             toBeRemovedNodes.push(node);

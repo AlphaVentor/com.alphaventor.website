@@ -1,13 +1,13 @@
 /** */
 
 
-aero-square-grid {
+square-grid {
 	display: block;
 }
 
 @media (width >=620px) {
 
-	aero-square-grid {
+	square-grid {
 		top: 0px;
 		left: 0px;
 		padding: 32px 32px 32px 32px;
@@ -31,7 +31,7 @@ aero-square-grid {
 
 @media (width < 620px) {
 
-	aero-square-grid {
+	square-grid {
 		top: 0px;
 		left: 0px;
 		padding: 32px 0px 32px 0px;

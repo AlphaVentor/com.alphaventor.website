@@ -1,12 +1,13 @@
 
 
 
-import { Footer } from "./Footer.js";
-import { Header } from "./Header.js";
+import { AeroFooter } from "./AeroFooter.js";
+import { AeroHeader } from "./AeroHeader.js";
 import { ModalBox } from "./ModalBox.js";
-import { Picture } from "./Picture.js";
-import { Slide } from "./Slide.js";
+import { PictureBanner } from "./PictureBanner.js";
+import { T1Slide } from "./T1Slide.js";
 import { SquareGrid } from "./SquareGrid.js";
+import { TextBanner } from "./TextBanner.js";
 import { TextBlock } from "./TextBlock.js";
 
 
@@ -251,7 +252,7 @@ export const AERO_WEB_PAGE = new AeroWebPage();
 
 AERO_WEB_PAGE.requireCssStylesheet("/aero-engine-v3/gradient-backgrounds.css");
 
-const components = [Slide, Header, SquareGrid, TextBlock, Footer, ModalBox, Picture];
+const components = [T1Slide, AeroHeader, SquareGrid, TextBlock, AeroFooter, ModalBox, PictureBanner, TextBanner];
 components.forEach(component => component.init0(AERO_WEB_PAGE));
 
 

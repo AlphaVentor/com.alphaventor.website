@@ -40,7 +40,7 @@ import { AERO_WEB_PAGE, AeroWebPage } from "./AeroWebPage.js";
 export const LOW_RESOLUTION_TAG = "-low";
 export const HIGH_RESOLUTION_TAG = "-high";
 
-export class Slide extends HTMLElement {
+export class T1Slide extends HTMLElement {
 
 
     /**
@@ -48,8 +48,8 @@ export class Slide extends HTMLElement {
     * @param {AeroWebPage} page 
     */
     static init0(page) {
-        customElements.define("aero-slide", Slide);
-        page.requireCssStylesheet("/aero-engine-v3/Slide.css");
+        customElements.define("t1-slide", T1Slide);
+        page.requireCssStylesheet("/aero-engine-v3/T1Slide.css");
     }
 
     /** @type {HTMLElement } */
@@ -130,7 +130,7 @@ export class Slide extends HTMLElement {
 
         /* <text> */
         let textNode = document.createElement("div");
-        textNode.classList.add("aero-slide-text");
+        textNode.classList.add("t1-slide-text");
 
         let sourceNode = this.firstChild;
         const toBeRemovedNodes = new Array();
@@ -174,7 +174,7 @@ export class Slide extends HTMLElement {
         if (val = this.getAttribute("asset")) {
             let assetImagePath = val;
             let assetNode = document.createElement("div");
-            assetNode.classList.add("aero-slide-picture");
+            assetNode.classList.add("t1-slide-picture");
             if (val = this.getAttribute("assetAspectRatio")) { assetNode.style.aspectRatio = val; }
             AeroUtilities.loadBackgroundImage(assetNode, assetImagePath, () => { });
             this.appendChild(assetNode);

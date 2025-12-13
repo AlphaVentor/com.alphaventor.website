@@ -2,15 +2,15 @@
 import { AeroUtilities } from "./AeroUtilities.js";
 
 
-export class Footer extends HTMLElement {
+export class AeroFooter extends HTMLElement {
 
   /**
    * Static Initialization
    * @param {AeroWebPage} page 
    */
   static init0(page) {
-    customElements.define("aero-footer", Footer);
-    page.requireCssStylesheet("/aero-engine-v3/Footer.css");
+    customElements.define("aero-footer", AeroFooter);
+    page.requireCssStylesheet("/aero-engine-v3/AeroFooter.css");
   }
 
   constructor() {

@@ -37,7 +37,7 @@ import { AERO_WEB_PAGE, AeroWebPage } from "./AeroWebPage.js";
 
 
 
-export class Picture extends HTMLElement {
+export class PictureBanner extends HTMLElement {
 
 
     /**
@@ -45,9 +45,10 @@ export class Picture extends HTMLElement {
     * @param {AeroWebPage} page 
     */
     static init0(page) {
-        customElements.define("aero-picture", Picture);
-        page.requireCssStylesheet("/aero-engine-v3/Picture.css");
-        PictureAsset.init0();
+        customElements.define("picture-banner", PictureBanner);
+        page.requireCssStylesheet("/aero-engine-v3/PictureBanner.css");
+        PictureBannerAsset.init0();
+        PictureBannerLegend.init0();
     }
 
     type;
@@ -98,55 +99,75 @@ export class Picture extends HTMLElement {
         this.setAttribute("theme", this.theme);
         /* </theme> */
 
+        /* <arrangement> */
+        this.arrangement = (val = this.getAttribute("arrangement")) ? val : "text-up";
+        this.setAttribute("arrangement", this.arrangement);
+        /* </arrangement> */
 
-        /* <vertical-height> */
-        this.verticalHeight = (val = this.getAttribute("verticalHeight")) ? val : "40vh";
-        this.style.height = this.verticalHeight;
-        /* </vertical-height> */
 
-
-        /* <background> */
+        /* <background-color> */
         if (this.hasAttribute("backgroundColor")) {
             this.style.backgroundColor = this.getAttribute("backgroundColor");
         }
-        else if (val = this.getAttribute("backgroundGradient")) {
-            this.classList.add("aero-background-gradient-" + val);
+        /* </background-color> */
+        
+        if (this.hasAttribute("backgroundImage")) {
+            this.style.backgroundImage = this.getAttribute("backgroundImage");
         }
-        else if (val = this.getAttribute("backgroundImage")) {
-            this.classList.add("background-pic");
-            AeroUtilities.loadBackgroundImage(this, val, AERO_WEB_PAGE.appendDependency());
-        }
-        /* </background> */
 
     }
 }
 
 
-export class PictureAsset extends HTMLElement {
+export class PictureBannerAsset extends HTMLElement {
     /**
        * Static Initialization
        * @param {AeroWebPage} page 
        */
     static init0(page) {
-        customElements.define("aero-picture-asset", PictureAsset);
+        customElements.define("picture-banner-asset", PictureBannerAsset);
     }
 
     constructor(){
         super();
 
-        let val;
+        this.imageElement = document.createElement("img");
 
+        let val;
+        
+       
         /* <vertical-height> */
-        this.aspectRatio = (val = this.getAttribute("aspectRatio")) ? val : "2/3";
-        this.style.aspectRatio = this.aspectRatio;
+        this.verticalHeight = (val = this.getAttribute("verticalHeight")) ? val : "40vh";
+        this.imageElement.style.maxHeight = this.verticalHeight;
         /* </vertical-height> */
 
-
         /* <background> */
-        if (val = this.getAttribute("image")) {
-            AeroUtilities.loadBackgroundImage(this, val, AERO_WEB_PAGE.appendDependency());
+        let path;
+        if (path = this.getAttribute("path")) {
+           
+            this.imageElement.src = path;
+            //AeroUtilities.loadBackgroundImage(this, path, AERO_WEB_PAGE.appendDependency());
         }
         /* </background> */
+
+
+        this.appendChild(this.imageElement);
+    }
+}
+
+
+export class PictureBannerLegend extends HTMLElement {
+    /**
+       * Static Initialization
+       * @param {AeroWebPage} page 
+       */
+    static init0(page) {
+        customElements.define("picture-banner-legend", PictureBannerLegend);
+    }
+
+    constructor(){
+        super();
+
     }
 
 

@@ -11,7 +11,7 @@ import { AERO_WEB_PAGE, AeroWebPage } from "./AeroWebPage.js";
 /**
  * 
  */
-export class Header extends HTMLElement {
+export class AeroHeader extends HTMLElement {
 
 
     /**
@@ -19,8 +19,8 @@ export class Header extends HTMLElement {
     * @param {AeroWebPage} page 
     */
     static init0(page) {
-        customElements.define("aero-header", Header);
-        page.requireCssStylesheet("/aero-engine-v3/Header.css");
+        customElements.define("aero-header", AeroHeader);
+        page.requireCssStylesheet("/aero-engine-v3/AeroHeader.css");
     }
 
 

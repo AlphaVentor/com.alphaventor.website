@@ -1,0 +1,182 @@
+/* <aero-slide> */
+text-banner {
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	width: 100%;
+	box-sizing: border-box;
+	display: block;
+}
+
+text-banner[arrangement="text-up"] {
+	padding-bottom: 5vh;
+}
+
+text-banner[arrangement="text-up"]>h1,
+text-banner[arrangement="text-up"]>h2,
+text-banner[arrangement="text-up"]>p {
+	text-align: justify;
+}
+
+text-banner[arrangement="text-right"] {
+	padding-left: 16vw;
+}
+
+text-banner[arrangement="text-right"]>h1,
+text-banner[arrangement="text-right"]>h2,
+text-banner[arrangement="text-right"]>p {
+	text-align: right;
+}
+
+text-banner[arrangement="text-down"] {
+	padding-top: 5vh;
+}
+text-banner[arrangement="text-down"]>h1,
+text-banner[arrangement="text-down"]>h2,
+text-banner[arrangement="text-down"]>p {
+	text-align: justify;
+}
+
+text-banner[arrangement="text-left"] {
+	padding-right: 30%;
+	padding-left: 20%;
+}
+text-banner[arrangement="text-left"]>h1,
+text-banner[arrangement="text-left"]>h2,
+text-banner[arrangement="text-left"]>p {
+	text-align: left;
+}
+
+/* <h1> */
+text-banner>h1 {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
+		"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: 100;
+	max-width: 92%;
+	padding: 8px;
+	border-radius: 4px;
+	margin: 0px;
+	z-index: 8;
+	text-align: center;
+}
+
+text-banner[theme="dark"]>h1 {
+	text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.804);
+	/* offset-x | offset-y | blur-radius | color */
+}
+
+text-banner[theme="light"]>h1 {
+	text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.804);
+	/* offset-x | offset-y | blur-radius | color */
+}
+
+text-banner h1>b {
+	font-weight: 800;
+}
+
+@media (orientation : landscape) {
+	text-banner>h1 {
+		font-size: 64px;
+		line-height: 64px;
+	}
+}
+
+@media (orientation : portrait) {
+	text-banner>h1 {
+		font-size: 48px;
+		line-height: 48px;
+	}
+}
+
+
+/* </h1> */
+
+
+/* <h2> */
+text-banner>h2 {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
+		"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: 32px;
+	line-height: 24px;
+	font-weight: bold;
+	max-width: 92%;
+	padding: 8px;
+	border-radius: 4px;
+	/*white-space: nowrap;*/
+	margin: 0px;
+	z-index: 6;
+	text-align: center;
+}
+
+text-banner[theme="dark"] h2 {
+	text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.804);
+	/* offset-x | offset-y | blur-radius | color */
+}
+
+text-banner[theme="light"] h2 {
+	text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.804);
+	/* offset-x | offset-y | blur-radius | color */
+}
+
+text-banner h2>b {
+	font-weight: 800;
+	background-color: yellow;
+}
+
+@media (orientation : landscape) {
+	text-banner>h2 {
+		font-size: 32px;
+		line-height: 24px;
+	}
+}
+
+@media (orientation : portrait) {
+	text-banner>h2 {
+		font-size: 24px;
+		line-height: 20px;
+	}
+}
+
+/* </h2> */
+
+/* <p> */
+text-banner>p {
+	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande",
+		sans-serif;
+	font-size: 24px;
+	font-weight: normal;
+	text-align: left;
+	z-index: 4;
+	padding: 0px 0px 0px 0px;
+	padding: 6px 6px 6px 8px;
+	border-radius: 4px;
+	margin: 0px;
+}
+
+text-banner[theme="dark"] p {
+	text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.804);
+	/* offset-x | offset-y | blur-radius | color */
+}
+
+text-banner[theme="light"] p {
+	text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.804);
+	/* offset-x | offset-y | blur-radius | color */
+}
+
+text-banner p>b {
+	font-weight: 800;
+	background-color: yellow;
+}
+
+@media (orientation : landscape) {
+	text-banner-legend>p {
+		font-size: 20px;
+	}
+}
+
+@media (orientation : portrait) {
+	text-banner-legend>p {
+		font-size: 24px;
+	}
+}
+
+/* </p> */
