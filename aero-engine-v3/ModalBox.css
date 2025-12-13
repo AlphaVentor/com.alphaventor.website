@@ -118,6 +118,10 @@
         margin: 24px;
     }
 
+    .modalbox-main {
+        width: 480px;
+    }
+
 }
 
 @media (orientation : portrait) {

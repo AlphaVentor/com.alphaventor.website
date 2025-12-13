@@ -1,8 +1,18 @@
+import { AeroWebPage } from "./AeroWebPage.js";
+
+
+
 
 
 export class ModalBox {
 
-
+    /**
+     * Static Initialization
+     * @param {AeroWebPage} page 
+     */
+    static init0(page){
+        page.requireCssStylesheet("/aero-engine-v3/ModalBox.css");
+    }
 
     /** @type{object} */
     modalLayer;

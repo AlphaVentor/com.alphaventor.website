@@ -49,10 +49,15 @@ import { AERO_WEB_PAGE } from "./AeroWebPage.js";
 export class TextBlock extends HTMLElement {
 
 
-    static TAG = "aero-text-block";
 
-    static STYLESHEET = "/aero-engine-v3/TextBlock.css";
-
+    /**
+    * Static Initialization
+    * @param {AeroWebPage} page 
+    */
+    static init0(page) {
+        customElements.define("aero-text-block", TextBlock);
+        page.requireCssStylesheet("/aero-engine-v3/TextBlock.css");
+    }
 
     type;
 
@@ -324,7 +329,7 @@ export class TxBkCodeSnippet extends TextBlockElement {
         }
 
         //page.css_requireStylesheet("https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.0/styles/default.min.css");
-        AERO_WEB_PAGE.requireCSSStylesheet("https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.0/styles/atom-one-dark.css");
+        AERO_WEB_PAGE.requireCssStylesheet("https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.0/styles/atom-one-dark.css");
 
 
         const wrapperNode = document.createElement("div");

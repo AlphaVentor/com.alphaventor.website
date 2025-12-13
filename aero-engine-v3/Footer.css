@@ -32,11 +32,12 @@ aero-footer .column-block {
 .aero-footer-row {
 	margin-bottom: 1rem;
 	display: flex;
+	column-gap: 8%;
 	padding: 0 8% 0 8%;
 }
 
 .aero-footer-column {
-	padding: 0px 4% 0px 4%;
+	padding: 0px;
 }
 
 .aero-footer-social > a > img {

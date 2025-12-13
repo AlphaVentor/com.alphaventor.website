@@ -41,9 +41,16 @@ import { Icon } from "./Icon.js";
 
 export class SquareGrid extends HTMLElement {
 
-    static TAG = "aero-square-grid";
 
-    static STYLESHEET = "/aero-engine-v3/SquareGrid.css";
+
+    /**
+    * Static Initialization
+    * @param {AeroWebPage} page 
+    */
+    static init0(page) {
+        customElements.define("aero-square-grid", SquareGrid);
+        page.requireCssStylesheet("/aero-engine-v3/SquareGrid.css");
+    }
 
 
     /**

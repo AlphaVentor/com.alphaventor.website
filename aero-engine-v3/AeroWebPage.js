@@ -79,11 +79,14 @@ export class AeroWebPage {
 
         let val, hasBeenShown = (val = window.sessionStorage.getItem(COOKIES_KEY)) ? val : false;
 
+        hasBeenShown = false;
         if (!hasBeenShown) {
             const modalBox = new ModalBox({
                 image: "/icons/cookie.png",
-                title: "0 cookies : Total privacy",
-                explanation: "Zero cookie policy means that no tracking of any kind is used on this site."
+                title: "Zero cookies : Total privacy",
+                explanation: `Zero cookie policy means that no tracking of any kind is 
+                used on this site. We never use the value of any cookie from our side. 
+                Everything remains local on your side.`,
             }, () => {
                 this.topLayerNode.removeChild(modalBox.getEnvelope());
 
@@ -198,7 +201,7 @@ export class AeroWebPage {
      * Trigger css loading if necessary
      * @param {} pathname 
      */
-    requireCSSStylesheet(pathname) {
+    requireCssStylesheet(pathname) {
         if (!this.css_stylesheetsMap.has(pathname)) {
 
             const onLoaded = this.appendDependency();
@@ -245,16 +248,10 @@ export class AeroWebPage {
  */
 export const AERO_WEB_PAGE = new AeroWebPage();
 
+AERO_WEB_PAGE.requireCssStylesheet("/aero-engine-v3/gradient-backgrounds.css");
 
-const components = [Slide, Header, SquareGrid, TextBlock, Footer];
-
-
-AERO_WEB_PAGE.requireCSSStylesheet("/aero-engine-v3/gradient-backgrounds.css");
-
-components.forEach(component => {
-    customElements.define(component.TAG, component);
-    AERO_WEB_PAGE.requireCSSStylesheet(component.STYLESHEET);
-});
+const components = [Slide, Header, SquareGrid, TextBlock, Footer, ModalBox];
+components.forEach(component => component.init0(AERO_WEB_PAGE));
 
 
 AERO_WEB_PAGE.update();

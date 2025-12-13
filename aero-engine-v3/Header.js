@@ -4,7 +4,7 @@ export const MENUS = ["Home", "Technology", "Applications", "Team", "Contact"];
 export const HREF = ["/index.html", "/technology.html", "/applications.html", "/team.html", "/contact.html"];
 */
 
-import { AERO_WEB_PAGE } from "./AeroWebPage.js";
+import { AERO_WEB_PAGE, AeroWebPage } from "./AeroWebPage.js";
 
 
 
@@ -13,9 +13,16 @@ import { AERO_WEB_PAGE } from "./AeroWebPage.js";
  */
 export class Header extends HTMLElement {
 
-    static TAG = "aero-header";
 
-    static STYLESHEET = "/aero-engine-v3/Header.css";
+    /**
+    * Static Initialization
+    * @param {AeroWebPage} page 
+    */
+    static init0(page) {
+        customElements.define("aero-header", Header);
+        page.requireCssStylesheet("/aero-engine-v3/Header.css");
+    }
+
 
     /**
     * @type{Nav}

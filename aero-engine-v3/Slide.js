@@ -1,6 +1,6 @@
 
 import { AeroUtilities } from "./AeroUtilities.js";
-import { AERO_WEB_PAGE } from "./AeroWebPage.js";
+import { AERO_WEB_PAGE, AeroWebPage } from "./AeroWebPage.js";
 
 
 
@@ -42,9 +42,15 @@ export const HIGH_RESOLUTION_TAG = "-high";
 
 export class Slide extends HTMLElement {
 
-    static TAG = "aero-slide";
 
-    static STYLESHEET = "/aero-engine-v3/Slide.css";
+    /**
+    * Static Initialization
+    * @param {AeroWebPage} page 
+    */
+    static init0(page) {
+        customElements.define("aero-slide", Slide);
+        page.requireCssStylesheet("/aero-engine-v3/Slide.css");
+    }
 
     /** @type {HTMLElement } */
     sectionNode;

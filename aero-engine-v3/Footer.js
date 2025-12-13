@@ -4,12 +4,14 @@ import { AeroUtilities } from "./AeroUtilities.js";
 
 export class Footer extends HTMLElement {
 
-  static TAG = "aero-footer";
-
-  /* CSS requirements */
-  static STYLESHEET = "/aero-engine-v3/Footer.css";
-
-
+  /**
+   * Static Initialization
+   * @param {AeroWebPage} page 
+   */
+  static init0(page) {
+    customElements.define("aero-footer", Footer);
+    page.requireCssStylesheet("/aero-engine-v3/Footer.css");
+  }
 
   constructor() {
     super();
