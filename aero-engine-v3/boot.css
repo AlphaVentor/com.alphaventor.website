@@ -35,7 +35,7 @@ body {
 	background: rgb(89, 85, 85);
 	background: linear-gradient(0deg, rgba(89, 85, 85, 1) 25%, rgba(62, 60, 60, 1) 70%, rgba(66, 66, 66, 1) 100%);
 	position: absolute;
-	width: 100vw;
+	width: 100%; /* for scroll reasons on Windows ...*/
 	height: 100vh;
 	top: 0px;
 	bottom: 0px;
