@@ -7,15 +7,15 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<link rel="icon" type="image/x-icon" href="/favicon.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="aero-engine-v3/AeroWebPage.css" />
+	<link rel="stylesheet" href="aero-engine-v3/boot.css" />
 	<script type="module">
-		import { boot } from './aero-engine-v3/AeroWebPage.js';
+		import { boot } from './aero-engine-v3/boot.js';
 		window.boot = boot;
 	</script>
 </head>
 
 <body onload="boot()">
-	<div id="aero-wrapper" hasCookiesModalBox state="closed">
+	<div id="aero-wrapper" state="code">
 		<aero-header theme="dark" logo="logos/logo-small-white.png">
 			<nav>
 				<menu to="/index.html" selected>Home</menu>
@@ -188,64 +188,9 @@
 			<p>Discover the services we can offer to accompany your most daring projects:
 			</p>
 		</t1-slide>
-		<square-grid theme="light" backgroundColor="white">
-			<square-grid-card type="light" size="std" theme="light" backgroundImage="assets/principles/tile00.png">
-				<h1>Procurement</h1>
-				<h2>Finding the right partners</h2>
-				<p isMobileHideable="true">Whether an OEM or an EPC, we can map, qualify and select the right companies for you.</p>
-				<a icon="/icons/left-circled-arrow.svg" href="services.html#tile00-text">Learn more...</a>
-			</square-grid-card>
-			<square-grid-card type="light" size="std" theme="light" backgroundImage="assets/principles/tile01.png">
-				<h1>Contracting</h1>
-				<h2>Structuring your serenity</h2>
-				<p isMobileHideable="true">Good knowledge of project execution enables us to write the appropriate contractual 
-					arrangement to protect your interest and ensure the performance you request.</p>
-				<a icon="/icons/left-circled-arrow.svg" href="services.html#tile01-text">Learn more...</a>
-			</square-grid-card>
-			<square-grid-card type="light" size="std" theme="light" backgroundImage="assets/principles/tile02.png">
-				<h1>Sizing</h1>
-				<h2>The right dimension</h2>
-				<p isMobileHideable="true">Estimating the true needs might sometimes be challenging. We can help 
-					auditing your process and define the key metrics before starting your project.</p>
-				<a icon="/icons/left-circled-arrow.svg" href="services.html#tile02-text">Learn more...</a>
-			</square-grid-card>
-			<square-grid-card type="light" size="std" theme="light" backgroundImage="assets/principles/tile03.png">
-				<h1>Synced</h1>
-				<h2>Monitoring execution</h2>
-				<p isMobileHideable="true">Because procurement of big projects does not stop at signing the purchasing contract, we are here to follow the 
-					companies we selected for you.
-				</p>
-				<a icon="/icons/left-circled-arrow.svg" href="services.html#tile03-text">Learn more...</a>
-			</square-grid-card>
-			<square-grid-card type="light" size="std" theme="light" backgroundImage="assets/principles/tile04.png">
-				<h1>Storage</h1>
-				<h2>Documentation Safeguarding</h2>
-				<p isMobileHideable="true">Keeping track of the project documentation is of the uttermost importance during all phases of the project life cycle.</p>
-				<a icon="/icons/left-circled-arrow.svg" href="services.html#tile04-text">Learn more...</a>
-			</square-grid-card>
-			<square-grid-card type="light" size="std" theme="light" backgroundImage="assets/principles/tile05.png">
-				<h1>Integration</h1>
-				<h2>Because each package is always part of something bigger</h2>
-				<p isMobileHideable="true">We are can at your request offer integration services that goes beyond the packages we supply.</p>
-				<a icon="/icons/left-circled-arrow.svg" href="services.html#tile05-text">Learn more...</a>
-			</square-grid-card>
-			<square-grid-card type="light" size="std" theme="light" backgroundImage="assets/principles/tile06.png">
-				<h1>Design</h1>
-				<h2>Imagining and putting in production</h2>
-				<p isMobileHideable="true">Besides procurement, we have dedicated design capabilities.</p>
-				<a icon="/icons/left-circled-arrow.svg" href="services.html#tile06-text">Learn more...</a>
-			</square-grid-card>
-			<square-grid-card type="light" size="std" theme="light" backgroundImage="assets/principles/tile07.png">
-				<h1>Scaling</h1>
-				<h2>High Volume Equipment manufacturing</h2>
-				<p isMobileHideable="true">For high volume OEM design and production, we can assist with findign the right partners to scale up.</p>
-				<a icon="/icons/left-circled-arrow.svg" href="services.html#tile07-text">Learn more...</a>
-			</square-grid-card>
-		</square-grid>
+		
 		<aero-footer path="footer.html"></aero-footer>
 	</div>
-	<div id="overlay"></div>
-	<div id="aero-veil" state="unrolled"></div>
 </body>
 
 </html>

@@ -67,10 +67,13 @@ export class AeroWebPage {
 
         this.wrapperNode = document.querySelector("#aero-wrapper");
 
+
+
+        /* <top-layer-node> */
         this.topLayerNode = document.querySelector("#overlay");
 
+        /* <veil node> */
         this.veilNode = document.querySelector("#aero-veil");
-        this.veilNode.appendChild(this.createSpinner());
         
         this.hide();
 
@@ -145,7 +148,7 @@ export class AeroWebPage {
 
 
     hide() {
-        this.wrapperNode.setAttribute("state", "closed");
+        this.wrapperNode.setAttribute("state", "code");
         this.veilNode.setAttribute("state", "unrolled");
     }
 
@@ -224,23 +227,6 @@ export class AeroWebPage {
     }
 
 
-
-    createSpinner() {
-
-        //const iconPathname = this.iconPathname;
-
-        const node = document.createElement("div");
-        node.className = "boot-loader";
-        node.innerHTML = `
-            <div class="boot-embedded-icon"></div>
-            <div class="boot-spinner">
-                <svg class="circular" viewBox="25 25 50 50">
-                    <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
-                </svg>
-            </div>`;
-
-        return node;
-    }
 }
 
 

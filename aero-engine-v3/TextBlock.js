@@ -55,7 +55,7 @@ export class TextBlock extends HTMLElement {
     * @param {AeroWebPage} page 
     */
     static init0(page) {
-        customElements.define("aero-text-block", TextBlock);
+        customElements.define("text-block", TextBlock);
         page.requireCssStylesheet("/aero-engine-v3/TextBlock.css");
     }
 

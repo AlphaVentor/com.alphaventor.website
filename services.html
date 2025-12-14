@@ -7,9 +7,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<link rel="icon" type="image/x-icon" href="/favicon.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="/aero-engine-v3/AeroWebPage.css" />
+	<link rel="stylesheet" href="aero-engine-v3/boot.css" />
 	<script type="module">
-		import { boot } from './aero-engine-v3/AeroWebPage.js';
+		import { boot } from './aero-engine-v3/boot.js';
 		window.boot = boot;
 	</script>
 </head>
@@ -30,13 +30,67 @@
 				<a to="https://x.com/Stack8Official" pic="/social/x-icon-256px.png"></a>
 			</social>
 		</aero-header>
-		<aero-slide theme="dark" backgroundColor="rgb(19, 37, 79)" asset="solutions/process-plant-monitoring-2.avif"
+		<t1-slide theme="dark" backgroundColor="rgb(19, 37, 79)" asset="solutions/process-plant-monitoring-2.avif"
 			assetAspectRatio="4/3" arrangement="text-right">
 			<h1>We provide many <b>Services</b> for our solutions</h1>
 			<p>Discover the services we can offer to accompany your most daring projects:
 			</p>
-		</aero-slide>
-		<aero-text-block id="tile00-text" type="std" backgroundGradient="light-tile00">
+		</t1-slide>
+		<square-grid theme="light" backgroundColor="white">
+			<square-grid-card type="light" size="std" theme="light" backgroundImage="/services/principles/tile00.png">
+				<h1>Procurement</h1>
+				<h2>Finding the right partners</h2>
+				<p isMobileHideable="true">Whether an OEM or an EPC, we can map, qualify and select the right companies for you.</p>
+				<a icon="/icons/left-circled-arrow.svg" href="services.html#tile00-text">Learn more...</a>
+			</square-grid-card>
+			<square-grid-card type="light" size="std" theme="light" backgroundImage="/services/principles/tile01.png">
+				<h1>Contracting</h1>
+				<h2>Structuring your serenity</h2>
+				<p isMobileHideable="true">Good knowledge of project execution enables us to write the appropriate contractual 
+					arrangement to protect your interest and ensure the performance you request.</p>
+				<a icon="/icons/left-circled-arrow.svg" href="services.html#tile01-text">Learn more...</a>
+			</square-grid-card>
+			<square-grid-card type="light" size="std" theme="light" backgroundImage="/services/principles/tile02.png">
+				<h1>Sizing</h1>
+				<h2>The right dimension</h2>
+				<p isMobileHideable="true">Estimating the true needs might sometimes be challenging. We can help 
+					auditing your process and define the key metrics before starting your project.</p>
+				<a icon="/icons/left-circled-arrow.svg" href="services.html#tile02-text">Learn more...</a>
+			</square-grid-card>
+			<square-grid-card type="light" size="std" theme="light" backgroundImage="/services/principles/tile03.png">
+				<h1>Synced</h1>
+				<h2>Monitoring execution</h2>
+				<p isMobileHideable="true">Because procurement of big projects does not stop at signing the purchasing contract, we are here to follow the 
+					companies we selected for you.
+				</p>
+				<a icon="/icons/left-circled-arrow.svg" href="services.html#tile03-text">Learn more...</a>
+			</square-grid-card>
+			<square-grid-card type="light" size="std" theme="light" backgroundImage="/services/principles/tile04.png">
+				<h1>Storage</h1>
+				<h2>Documentation Safeguarding</h2>
+				<p isMobileHideable="true">Keeping track of the project documentation is of the uttermost importance during all phases of the project life cycle.</p>
+				<a icon="/icons/left-circled-arrow.svg" href="services.html#tile04-text">Learn more...</a>
+			</square-grid-card>
+			<square-grid-card type="light" size="std" theme="light" backgroundImage="/services/principles/tile05.png">
+				<h1>Integration</h1>
+				<h2>Because each package is always part of something bigger</h2>
+				<p isMobileHideable="true">We are can at your request offer integration services that goes beyond the packages we supply.</p>
+				<a icon="/icons/left-circled-arrow.svg" href="services.html#tile05-text">Learn more...</a>
+			</square-grid-card>
+			<square-grid-card type="light" size="std" theme="light" backgroundImage="/services/principles/tile06.png">
+				<h1>Design</h1>
+				<h2>Imagining and putting in production</h2>
+				<p isMobileHideable="true">Besides procurement, we have dedicated design capabilities.</p>
+				<a icon="/icons/left-circled-arrow.svg" href="services.html#tile06-text">Learn more...</a>
+			</square-grid-card>
+			<square-grid-card type="light" size="std" theme="light" backgroundImage="/services/principles/tile07.png">
+				<h1>Scaling</h1>
+				<h2>High Volume Equipment manufacturing</h2>
+				<p isMobileHideable="true">For high volume OEM design and production, we can assist with findign the right partners to scale up.</p>
+				<a icon="/icons/left-circled-arrow.svg" href="services.html#tile07-text">Learn more...</a>
+			</square-grid-card>
+		</square-grid>
+		<text-block id="tile00-text" type="std" backgroundGradient="light-tile00">
 			<svg path="/assets/principles/etoile.svg" width="128" height="128"></svg>
 			<h1><b>Procurement</b></h1>
 			<h1>Your Perfect Partner, Found – Without the Guesswork</h1>
@@ -60,8 +114,8 @@
 					href="mailto:contact@alphaventor.com?subject=Enquiry%20for%20Procurement%20Services"
 					type="marketing" color="doc">Contact us</a>
 			</links>
-		</aero-text-block>
-		<aero-text-block id="tile01-text" backgroundGradient="light-tile01">
+		</text-block>
+		<text-block id="tile01-text" backgroundGradient="light-tile01">
 			<svg path="/assets/principles/shield.svg" width="128" height="128"></svg>
 			<h1><b>Contracting</b></h1>
 			<h1>Contracts That Protect You – Before a Single Bolt is Turned</h1>
@@ -85,8 +139,8 @@
 					href="mailto:contact@alphaventor.com?subject=Enquiry%20for%20Contracting%20Services"
 					type="marketing" color="doc">Contact us</a>
 			</links>
-		</aero-text-block>
-		<aero-text-block id="tile02-text" type="std" backgroundGradient="light-tile02">
+		</text-block>
+		<text-block id="tile02-text" type="std" backgroundGradient="light-tile02">
 			<svg path="/assets/principles/3d-printer.svg" width="128" height="128"></svg>
 			<h1><b>Sizing</b></h1>
 			<h1>Size It Once, Build It Right – No Costly Surprises Later</h1>
@@ -102,8 +156,8 @@
 				curves. These aren’t theoretical numbers – they become the unbreakable foundation for specifications,
 				tenders, and contracts, ensuring your plant is neither underpowered nor wastefully oversized, but
 				perfectly dimensioned for performance and profitability from day one.</p>
-		</aero-text-block>
-		<aero-text-block type="std" id="tile03-text" backgroundGradient="light-tile03">
+		</text-block>
+		<text-block type="std" id="tile03-text" backgroundGradient="light-tile03">
 			<svg path="/assets/principles/sync.svg" width="128" height="128"></svg>
 			<h1><b>Supervising</b></h1>
 			<h1>Signed Doesn’t Mean Finished – We Stay Until It’s Perfectly Delivered</h1>
@@ -119,8 +173,8 @@
 				output, boiler availability, or cooling-system redundancy. The result is not just a project that
 				finishes – it’s a project that finishes on time, on budget, and performs exactly as promised from the
 				very first day of operation.</p>
-		</aero-text-block>
-		<aero-text-block id="tile04-text" type="std" backgroundGradient="light-tile04">
+		</text-block>
+		<text-block id="tile04-text" type="std" backgroundGradient="light-tile04">
 			<svg path="/assets/principles/servers.svg" width="128" height="128"></svg>
 			<h1><b>Storage</b></h1>
 			<h1>Your Project’s Memory, Secured Forever – Nothing Lost, Nothing Forgotten</h1>
@@ -136,8 +190,8 @@
 				warranty claims, revamping, or replication projects, you can retrieve the exact evidence you need in
 				minutes. The result: total traceability, bulletproof defense against disputes, and a living knowledge
 				base that turns your finished plant into a repeatable success.</p>
-		</aero-text-block>
-		<aero-text-block id="tile05-text" type="std" backgroundGradient="light-tile05">
+		</text-block>
+		<text-block id="tile05-text" type="std" backgroundGradient="light-tile05">
 			<svg path="/assets/principles/graph.svg" width="128" height="128"></svg>
 			<h1><b>Integration</b></h1>
 			<h1>One Package, Perfectly Woven into the Whole – for Seamless and Smooth operation</h1>
@@ -153,8 +207,8 @@
 				The outcome is a turnkey handover where the new equipment doesn’t just work in isolation; it boosts the
 				performance, reliability, and efficiency of the entire system, with first-time start-up success and zero
 				post-commissioning surprises.</p>
-		</aero-text-block>
-		<aero-text-block id="tile06-text" type="std" backgroundGradient="light-tile06">
+		</text-block>
+		<text-block id="tile06-text" type="std" backgroundGradient="light-tile06">
 			<svg path="/assets/principles/monitor.svg" width="128" height="128"></svg>
 			<h1><b>Design</b></h1>
 			<h1>From Vision to Reality – We Design It, Then Make It Real</h1>
@@ -175,8 +229,8 @@
 					href="mailto:contact@alphaventor.com?subject=Enquiry%20for%20Design%20Services" type="marketing"
 					color="doc">Contact us</a>
 			</links>
-		</aero-text-block>
-		<aero-text-block id="tile07-text" backgroundGradient="light-tile07">
+		</text-block>
+		<text-block id="tile07-text" backgroundGradient="light-tile07">
 			<svg path="/assets/principles/scalability.svg" width="128" height="128"></svg>
 			<h1><b>Scaling</b></h1>
 			<h1>From Prototype to Thousands – We Scale Your Success Without Compromise</h1>
@@ -192,11 +246,9 @@
 				reservation, stepped pricing curves, and quality gates that protect performance even at peak production.
 				The result is your equipment rolling off the line at the lowest possible unit cost, with zero drift in
 				efficiency or reliability – ready for global deployment from the very first commercial batch.</p>
-		</aero-text-block>
+		</text-block>
 		<aero-footer path="footer.html"></aero-footer>
 	</div>
-	<div id="overlay"></div>
-	<div id="aero-veil" state="unrolled"></div>
 </body>
 
 </html>

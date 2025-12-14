@@ -2,7 +2,7 @@
 
 /* <text> */
 
-aero-text-block {
+text-block {
 	display: block;
 	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande",
 		sans-serif;
@@ -12,7 +12,7 @@ aero-text-block {
 
 
 @media (orientation : landscape) {
-	aero-text-block {
+	text-block {
 		margin: 0px 0px 0px 0px;
 		padding: 32px 16% 8px 16%;
 	}
@@ -20,7 +20,7 @@ aero-text-block {
 
 
 @media (orientation : portrait) {
-	aero-text-block {
+	text-block {
 		margin: 0px 0px 0px 0px;
 		padding: 16px 4% 8px 4%;
 	}
@@ -28,14 +28,14 @@ aero-text-block {
 
 /* <text> */
 
-aero-text-block b {
+text-block b {
 	font-weight: 800;
 }
 
 
 
 /* <h1> */
-aero-text-block>h1 {
+text-block>h1 {
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
 		"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	font-weight: lighter;
@@ -47,37 +47,37 @@ aero-text-block>h1 {
 	text-align: left;
 }
 
-aero-text-block>h1>span:first-child {
+text-block>h1>span:first-child {
 	margin: 0px 16px 0px 0px;
 }
 
-aero-text-block[type="legal"]>h1 {
+text-block[type="legal"]>h1 {
 	font-size: 32px;
 	color: #1635a5;
 	padding: 16px 8px 8px 8px;
 }
 
 @media (orientation : landscape) {
-	aero-text-block>h1 {
+	text-block>h1 {
 		font-size: 64px;
 		line-height: 64px;
 	}
 }
 
 @media (orientation : portrait) {
-	aero-text-block>h1 {
+	text-block>h1 {
 		font-size: 48px;
 		line-height: 48px;
 	}
 }
 
-aero-text-block>h1>span.emphasis {
+text-block>h1>span.emphasis {
 	font-weight: bold;
 }
 
 
 
-aero-text-block[type="legal"]>h1 {
+text-block[type="legal"]>h1 {
 	padding: 32px 8px 16px 8px;
 }
 
@@ -85,7 +85,7 @@ aero-text-block[type="legal"]>h1 {
 
 
 /* <h2> */
-aero-text-block>h2 {
+text-block>h2 {
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
 		"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	font-size: 24px;
@@ -100,24 +100,24 @@ aero-text-block>h2 {
 	text-align: left;
 }
 
-aero-text-block>h2>span:first-child {
+text-block>h2>span:first-child {
 	margin: 0px 8px 0px 0px;
 }
 
-aero-text-block[type="legal"]>h2 {
+text-block[type="legal"]>h2 {
 	font-size: 20px;
 	padding: 16px 8px 8px 8px;
 }
 
 @media (orientation : landscape) {
-	aero-text-block>h2 {
+	text-block>h2 {
 		font-size: 24px;
 		line-height: 24px;
 	}
 }
 
 @media (orientation : portrait) {
-	aero-text-block>h2 {
+	text-block>h2 {
 		font-size: 20px;
 		line-height: 20px;
 	}
@@ -126,7 +126,7 @@ aero-text-block[type="legal"]>h2 {
 /* </h2> */
 
 /* <p> */
-aero-text-block>p {
+text-block>p {
 	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande",
 		sans-serif;
 	font-size: 20px;
@@ -139,7 +139,7 @@ aero-text-block>p {
 	margin: 0px;
 }
 
-aero-text-block>p code, aero-text-block>ul code, aero-text-block>ol code{
+text-block>p code, text-block>ul code, text-block>ol code{
 	font-weight: bold;
 	color: #1635a5;
 }
@@ -147,23 +147,23 @@ aero-text-block>p code, aero-text-block>ul code, aero-text-block>ol code{
 
 
 /* <p> */
-aero-text-block[type="legal"]>p {
+text-block[type="legal"]>p {
 	font-size: 16px;
 }
 
-aero-text-block[type="legal"]>ul>li {
+text-block[type="legal"]>ul>li {
 	padding: 8px 8px 8px 16px;
 }
 
 
 @media (orientation : landscape) {
-	aero-text-block>p {
+	text-block>p {
 		font-size: 16px;
 	}
 }
 
 @media (orientation : portrait) {
-	aero-text-block>p {
+	text-block>p {
 		font-size: 13px;
 	}
 }
@@ -172,13 +172,13 @@ aero-text-block[type="legal"]>ul>li {
 
 
 /* <ol> */
-aero-text-block>ol {
+text-block>ol {
 	counter-reset: section;
 	margin: 8px 0px 0px 0px;
     padding: 0px 0px 0px 24px;
   }
 
-aero-text-block>ol>li {
+text-block>ol>li {
 	margin: 4px 0px 0px 0px;
     padding: 4px;
 	text-align: justify;
@@ -187,30 +187,30 @@ aero-text-block>ol>li {
 
 /* <ul> */
 
-aero-text-block>ul>li {
+text-block>ul>li {
 	font-size: 16px;
 	padding: 4px 8px;
 }
 
-aero-text-block[type="legal"]>ul {
+text-block[type="legal"]>ul {
 	font-size: 16px;
     padding: 0px 0px 0px 24px;
 }
 
-aero-text-block[type="legal"]>ul>li {
+text-block[type="legal"]>ul>li {
 	padding: 8px 8px 8px 16px;
 	text-align: justify;
 }
 
 
 @media (orientation : landscape) {
-	aero-text-block>ul {
+	text-block>ul {
 		font-size: 16px;
 	}
 }
 
 @media (orientation : portrait) {
-	aero-text-block>ul {
+	text-block>ul {
 		font-size: 13px;
 	}
 }
@@ -320,7 +320,7 @@ aero-text-block[type="legal"]>ul>li {
 
 
 /* <themes> */
-aero-text-block[theme="light"] {
+text-block[theme="light"] {
 	color: black;
 	/*background-color: rgba(255, 255, 255, 0.24);*/
 	/*backdrop-filter: blur(12px);*/
@@ -328,7 +328,7 @@ aero-text-block[theme="light"] {
 	/*text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.75);*/
 }
 
-aero-text-block[theme="dark"] {
+text-block[theme="dark"] {
 	color: white;
 	/*background-color: rgba(0, 0, 0, 0.16);*/
 	/*backdrop-filter: blur(12px);*/
@@ -343,12 +343,12 @@ aero-text-block[theme="dark"] {
 	padding: 32px 16px 32px 16px;
 }
 
-aero-text-block[theme="light"] > .textblock-pic-svg svg {
+text-block[theme="light"] > .textblock-pic-svg svg {
 	fill: black;
 	stroke: black;
 }
 
-aero-text-block[theme="dark"] > .textblock-pic-svg svg {
+text-block[theme="dark"] > .textblock-pic-svg svg {
 	fill: white;
 	stroke: white;
 }
