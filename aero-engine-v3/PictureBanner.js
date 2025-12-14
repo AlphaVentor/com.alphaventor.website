@@ -137,8 +137,8 @@ export class PictureBannerAsset extends HTMLElement {
         
        
         /* <vertical-height> */
-        this.verticalHeight = (val = this.getAttribute("height")) ? val : "40vh";
-        this.imageElement.style.maxHeight = this.verticalHeight;
+        this.maxHeight = (val = this.getAttribute("height")) ? val : "40vh";
+        this.imageElement.style.maxHeight = this.maxHeight;
         /* </vertical-height> */
 
         /* <background> */

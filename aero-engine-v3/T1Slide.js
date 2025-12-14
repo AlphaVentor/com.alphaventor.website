@@ -108,6 +108,12 @@ export class T1Slide extends HTMLElement {
         this.setAttribute("theme", this.theme);
         /* </theme> */
 
+        /* <vertical-height> */
+        if(this.hasAttribute("height")){
+            this.height = this.getAttribute("height");
+            this.style.height = this.height;
+        }
+        /* </vertical-height> */
 
         /* <arrangement> */
         this.arrangement = (val = this.getAttribute("arrangement")) ? val : "default";

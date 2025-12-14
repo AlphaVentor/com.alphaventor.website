@@ -7,22 +7,22 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<link rel="icon" type="image/x-icon" href="/favicon.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="aero-engine-v3/AeroWebPage.css" />
+	<link rel="stylesheet" href="aero-engine-v3/boot.css" />
 	<script type="module">
-		import { boot } from './aero-engine-v3/AeroWebPage.js';
+		import { boot } from './aero-engine-v3/boot.js';
 		window.boot = boot;
 	</script>
 </head>
 
 <body onload="boot()">
-	<div id="aero-wrapper" state="closed" hasCookiesModalBox>
+	<div id="aero-wrapper" state="code">
 		<aero-header theme="dark" logo="logos/logo-small-white.png">
 			<nav>
 				<menu to="/index.html">Home</menu>
 				<menu to="/solutions.html">Solutions</menu>
 				<menu to="/services.html">Services</menu>
-				<menu to="/softwares.html">Softwares</menu>
-				<menu to="/stack.html">Stack</menu>
+				<menu to="/qx-stack.html">Qx-Stack</menu>
+				<menu to="/s8-stack.html">S8-Stack</menu>
 				<menu to="/team.html" selected>Team</menu>
 			</nav>
 			<social>
@@ -30,9 +30,11 @@
 				<a to="https://x.com/Stack8Official" pic="/social/x-icon-256px.png"></a>
 			</social>
 		</aero-header>
-		<aero-slide theme="dark" backgroundImage="team/slide-2.jpg" assetAspectRatio="4/3" arrangement="text-left">
+		<t1-slide theme="dark" backgroundImage="/team/slide-2.jpg" height="60vh" arrangement="text-down">
 			<h1>A <b>Distributed</b> team</h1>
 			<h1>Two Cities, One Team – Your Project Never Sleeps</h1>
+		</t1-slide>
+		<t1-slide theme="dark" style="background-color: rgb(26, 37, 49);" arrangement="text-up">
 			<h2>24-Hour Momentum Without Burnout</h2>
 			<p>With engineering hubs in Paris and Shanghai, we operate in a seamless follow-the-sun workflow. When
 				Europe ends the day, Asia picks up instantly – calculations advance, supplier responses are chased,
@@ -46,11 +48,9 @@
 				intelligence on components, smoother customs and logistics, and cultural fluency on both sides of the
 				planet – all translating into shorter lead times, lower total cost, and zero surprises for your project,
 				wherever it is built or operated.</p>
-		</aero-slide>
+		</t1-slide>
 		<aero-footer path="footer.html"></aero-footer>
 	</div>
-	<div id="overlay"></div>
-	<div id="aero-veil" state="unrolled"></div>
 </body>
 
 </html>

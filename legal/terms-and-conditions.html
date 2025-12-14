@@ -6,30 +6,29 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<link rel="icon" type="image/x-icon" href="/favicon.png">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="/aero/boot.css" />
+	<link rel="stylesheet" href="/aero-engine-v3/boot.css" />
 	<script type="module">
-		import { boot } from '/aero/WebPageV2.js';
+		import { boot } from '/aero-engine-v3/boot.js';
 		window.boot = boot;
 	</script>
 </head>
 
 <body onload="boot()">
-	<div id="aero-page">
-		<header theme="dark" logo="/logos/S8-logo-v4-256px.png">
+	<div id="aero-wrapper" state="code">
+		<aero-header theme="dark" logo="/logos/logo-small-white.png">
 			<nav>
 				<menu to="/index.html">Home</menu>
-				<menu to="/get-started.html">Get Started</menu>
-				<menu to="/plans.html">Plans</menu>
-				<menu to="/core.html">Core</menu>
-				<menu to="/packages.html">Packages</menu>
-				<menu to="/extensions.html">Extensions</menu>
+				<menu to="/solutions.html">Solutions</menu>
+				<menu to="/services.html">Services</menu>
+				<menu to="/qx-stack.html">Qx-Stack</menu>
+				<menu to="/s8-stack.html">S8-Stack</menu>
+				<menu to="/team.html">Team</menu>
 			</nav>
 			<social>
-				<a to="https://www.linkedin.com/company/s8-stack" pic="/assets/social/linkedin-icon-256px.png"></a>
-				<a to="https://x.com/Stack8Official" pic="/assets/social/x-icon-256px.png"></a>
+				<a to="https://www.linkedin.com/company/s8-stack" pic="/social/linkedin-icon-256px.png"></a>
+				<a to="https://x.com/Stack8Official" pic="/social/x-icon-256px.png"></a>
 			</social>
-		</header>
+		</aero-header>
 		<text-block type="legal" theme="light" backgroundColor="white">
 			<svg path="/legal/images/contract-2.svg" width="128" height="128"></svg>
 			<h1>Terms and Conditions</h1>
@@ -109,7 +108,7 @@
 				French law applies to the AlphaVentor site and to these terms and conditions & Disclaimer.
 			</p>
 		</text-block>
-		<footer path="/footer.html"></footer>
+		<aero-footer path="/footer.html"></aero-footer>
 	</div>
 </body>
 
