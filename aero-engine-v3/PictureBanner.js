@@ -145,8 +145,9 @@ export class PictureBannerAsset extends HTMLElement {
         let path;
         if (path = this.getAttribute("path")) {
            
+            this.imageElement.onload = AERO_WEB_PAGE.appendDependency();
             this.imageElement.src = path;
-            //AeroUtilities.loadBackgroundImage(this, path, AERO_WEB_PAGE.appendDependency());
+            //AeroUtilities.loadBackgroundImage(this, path, );
         }
         /* </background> */
 

@@ -99,7 +99,7 @@ export class T2Slide extends HTMLElement {
         /* </theme> */
 
         /* <height> */
-        if(this.hasAttribute("height")){
+        if (this.hasAttribute("height")) {
             this.height = this.getAttribute("height");
             this.style.height = this.height;
         }
@@ -118,7 +118,7 @@ export class T2Slide extends HTMLElement {
         }
         /* </background> */
 
-        
+
         /*
         const toBeRemovedNodes = new Array();
         let node = this.firstChild;
@@ -146,6 +146,18 @@ class T2SlideBox extends HTMLElement {
     constructor() {
         super(); /* base HTML element */
 
+        /* <column-start> */
+        let val;
+        this.columnStart = (val = this.getAttribute("column-start")) ? val : 1;
+        this.columnSpan = (val = this.getAttribute("column-span")) ? val : 1;
+        this.rowStart = (val = this.getAttribute("row-start")) ? val : 1;
+        this.rowSpan = (val = this.getAttribute("row-span")) ? val : 1;
+        /* </column-start> */
+
+        this.style = `
+            grid-row: ${this.rowStart} / span ${this.rowSpan}; 
+            grid-column: ${this.columnStart} / span ${this.columnSpan};
+        `;
     }
 
 
@@ -154,7 +166,7 @@ class T2SlideBox extends HTMLElement {
 
 class T2SlideCall extends HTMLElement {
 
-    constructor(){
+    constructor() {
         super(); /* base HTML element */
     }
 
