@@ -1,4 +1,5 @@
 
+import { Icon } from "../Icon.js";
 import { AeroUtilities } from "/aero-engine-v3/AeroUtilities.js";
 import { AERO_WEB_PAGE, AeroWebPage } from "/aero-engine-v3/AeroWebPage.js";
 
@@ -46,7 +47,7 @@ export class T2Slide extends HTMLElement {
     static init0(page) {
         customElements.define("t2-slide", T2Slide);
         customElements.define("t2-slide-box", T2SlideBox);
-        customElements.define("t2-slide-call", T2SlideCall);
+        customElements.define("t2-slide-button", T2SlideButton);
         page.requireCssStylesheet("/aero-engine-v3/slides/T2Slide.css");
     }
 
@@ -164,10 +165,42 @@ class T2SlideBox extends HTMLElement {
 }
 
 
-class T2SlideCall extends HTMLElement {
+class T2SlideButton extends HTMLElement {
 
+    /**
+     * 
+     */
     constructor() {
         super(); /* base HTML element */
+
+        /* <column-start> */
+        let val;
+        this.rowStart = (val = this.getAttribute("row")) ? val : 1;
+        this.columnStart = (val = this.getAttribute("column")) ? val : 1;
+        /* </column-start> */
+
+        this.style = `
+            grid-row: ${this.rowStart} / span 1; 
+            grid-column: ${this.columnStart} / span 1;
+        `;
+
+        this.iconPathname = this.getAttribute("icon");
+        this.url = this.getAttribute("href");
+            
+        const textNode = document.createElement("div");
+        textNode.classList.add("t2-slide-button-text");
+        textNode.innerHTML = this.textContent;
+        this.textContent = '';
+        this.appendChild(textNode);
+                
+        const linkIcon = new Icon(this.iconPathname, { width: 64, height: 64 });
+        linkIcon.build();
+        linkIcon.getEnvelope().classList.add("t2-slide-button-icon");
+        this.appendChild(linkIcon.getEnvelope());
+                
+       
+        this.addEventListener("click", () => {window.location = this.url; }, false);
+        
     }
 
 

@@ -15,20 +15,6 @@ t2-slide {
 
 }
 
-/* <text> */
-
-t2-slide-box {
-	display: block;
-	padding: 16px;
-	box-sizing: border-box;
-	background-color: rgba(0, 0, 0, 0.24);
-	border-radius: 16px;
-	border: 1px radius rgba(255, 255, 255, 0.205);
-	backdrop-filter: blur(24px);
-}
-
-/* <text> */
-
 
 /* <asset> */
 
@@ -144,7 +130,15 @@ div.t2-slide-picture {
 
 
 
-
+t2-slide-box {
+	display: block;
+	padding: 16px;
+	box-sizing: border-box;
+	background-color: rgba(0, 0, 0, 0.24);
+	border-radius: 16px;
+	border: 1px radius rgba(255, 255, 255, 0.205);
+	backdrop-filter: blur(24px);
+}
 
 
 /* <h1> */
@@ -283,7 +277,48 @@ t2-slide p>b {
 	}
 }
 
+
+
 /* </p> */
+
+
+t2-slide-button {
+	padding: 16px;
+	box-sizing: border-box;
+	background-color: rgba(0, 0, 0, 0.24);
+	border-radius: 16px;
+	border: 1px radius rgba(255, 255, 255, 0.205);
+	backdrop-filter: blur(24px);
+	display: grid;
+	grid-template-columns: 144px 64px;
+	grid-template-rows: 144px 64px;
+	gap: 16px;
+	background-color: violet;
+}
+
+.t2-slide-button-text {
+	margin-top: 32px;
+	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande",
+		sans-serif;
+	font-size: 32px;
+	font-weight: normal;
+	line-height: 16px;
+	white-space: nowrap;
+	vertical-align: middle;
+	color: white;
+	grid-column: 1 / span 2;
+	grid-row: 1 / span 1;
+}
+
+.t2-slide-button-icon {
+	grid-column: 2;
+	grid-row: 2;
+}
+
+.t2-slide-button-icon > svg {
+	stroke: white;
+}
+
 
 t2-slide>a {
 	position: absolute;
