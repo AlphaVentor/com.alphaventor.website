@@ -7,9 +7,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<link rel="icon" type="image/x-icon" href="/favicon.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="/aero-engine-v3/AeroWebPage.css" />
+	<link rel="stylesheet" href="/aero-engine-v3/boot.css" />
 	<script type="module">
-		import { boot } from '/aero-engine-v3/AeroWebPage.js';
+		import { boot } from '/aero-engine-v3/boot.js';
 		window.boot = boot;
 	</script>
 </head>
@@ -81,7 +81,7 @@
 			<h2>Medium to high expansion ratio, large volume flow</h2>
 			<p>Overhung cantilevered single shaft architecture for an engineered and highly efficient expander. From 250 kW up to 5 MW. Adapted for high volume flow and medium to <b>high enthalpy drop</b>. Ideally suited for refrigerant such as pentane, butane, toluene, hexamethyldisiloxane, octomethyltrisiloxane.</p>
 		</text-banner>
-		<aero-text-block type="legal" theme="light" backgroundColor="white">
+		<text-block type="legal" theme="light" backgroundColor="white">
 			<svg path="/legal/images/chat.svg" width="128" height="128"></svg>
 			<h1>Contact</h1>
 			<p>
@@ -97,11 +97,9 @@
 			<p>
 				For any question, please send a mail at: contact@stack8.io
 			</p>
-		</aero-text-block>
+		</text-block>
 		<aero-footer path="/footer.html"></aero-footer>
 	</div>
-	<div id="overlay"></div>
-	<div id="aero-veil" state="unrolled"></div>
 </body>
 
 </html>

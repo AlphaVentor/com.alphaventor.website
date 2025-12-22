@@ -99,12 +99,12 @@ export class T2Slide extends HTMLElement {
         this.setAttribute("theme", this.theme);
         /* </theme> */
 
-        /* <height> */
+        /* 
         if (this.hasAttribute("height")) {
             this.height = this.getAttribute("height");
             this.style.height = this.height;
         }
-        /* </height> */
+         */
 
         /* <arrangement> */
         this.arrangement = (val = this.getAttribute("arrangement")) ? val : "default";
@@ -139,6 +139,7 @@ export class T2Slide extends HTMLElement {
 }
 
 
+
 class T2SlideBox extends HTMLElement {
 
     /**
@@ -149,16 +150,25 @@ class T2SlideBox extends HTMLElement {
 
         /* <column-start> */
         let val;
-        this.columnStart = (val = this.getAttribute("column-start")) ? val : 1;
-        this.columnSpan = (val = this.getAttribute("column-span")) ? val : 1;
-        this.rowStart = (val = this.getAttribute("row-start")) ? val : 1;
-        this.rowSpan = (val = this.getAttribute("row-span")) ? val : 1;
-        /* </column-start> */
+        if (this.hasAttribute("column-start") && this.hasAttribute("column-span") ) {
+            this.style.gridColumn = `${this.getAttribute("column-start")} / span ${this.getAttribute("column-span")}`;
+        }
+        else if (this.hasAttribute("column-start") && !this.hasAttribute("column-span") ) {
+            this.style.gridColumn = `${this.getAttribute("column-start")}`;
+        }
+        else if (!this.hasAttribute("column-start") && this.hasAttribute("column-span") ) {
+            this.style.gridColumn = `span ${this.getAttribute("column-span")}`;
+        }
 
-        this.style = `
-            grid-row: ${this.rowStart} / span ${this.rowSpan}; 
-            grid-column: ${this.columnStart} / span ${this.columnSpan};
-        `;
+        if (this.hasAttribute("row-start") && this.hasAttribute("row-span")) {
+            this.style.gridRow = `${this.getAttribute("row-start")} / span ${this.getAttribute("row-span")}`;
+        }
+        else if (this.hasAttribute("row-start") && !this.hasAttribute("row-span")) {
+            this.style.gridRow = `${this.getAttribute("row-start")}`;
+        }
+        else if (!this.hasAttribute("row-start") && this.hasAttribute("row-span")) {
+            this.style.gridRow = `span ${this.getAttribute("row-span")}`;
+        }
     }
 
 
@@ -175,32 +185,36 @@ class T2SlideButton extends HTMLElement {
 
         /* <column-start> */
         let val;
-        this.rowStart = (val = this.getAttribute("row")) ? val : 1;
-        this.columnStart = (val = this.getAttribute("column")) ? val : 1;
-        /* </column-start> */
+        if (this.hasAttribute("row-start")) {
+            this.rowStart = this.getAttribute("row-start");
+            this.style.gridRow = this.rowStart;
+        }
 
-        this.style = `
-            grid-row: ${this.rowStart} / span 1; 
-            grid-column: ${this.columnStart} / span 1;
-        `;
+        if (this.hasAttribute("column-start")) {
+            this.columnStart = this.getAttribute("column-start");
+            this.style.gridColumn = this.columnStart;
+        }
+
+        /* </column-start> */
 
         this.iconPathname = this.getAttribute("icon");
         this.url = this.getAttribute("href");
-            
+
         const textNode = document.createElement("div");
         textNode.classList.add("t2-slide-button-text");
-        textNode.innerHTML = this.textContent;
+        const pNode = document.createElement("p");
+        pNode.innerHTML = this.textContent;
         this.textContent = '';
+        textNode.appendChild(pNode);
         this.appendChild(textNode);
-                
-        const linkIcon = new Icon(this.iconPathname, { width: 64, height: 64 });
+
+        const linkIcon = new Icon(this.iconPathname, { width: 32, height: 32 });
         linkIcon.build();
         linkIcon.getEnvelope().classList.add("t2-slide-button-icon");
         this.appendChild(linkIcon.getEnvelope());
-                
-       
-        this.addEventListener("click", () => {window.location = this.url; }, false);
-        
+
+
+        this.addEventListener("click", () => { window.location = this.url; }, false);
     }
 
 
