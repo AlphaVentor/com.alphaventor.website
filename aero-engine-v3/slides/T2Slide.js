@@ -120,21 +120,20 @@ export class T2Slide extends HTMLElement {
         /* </background> */
 
 
-        /*
+        const wrapperNode = document.createElement("div");
+        wrapperNode.classList.add("t2-slide-wrapper");
+        
         const toBeRemovedNodes = new Array();
+        const wrapperContent = new Array();
         let node = this.firstChild;
         while (node) {
-            let type = node.nodeName.toLowerCase();
-            switch (type) {
-                case "box": { boxNode.appendChild(node); } break;
-                case "call": { boxNode.appendChild(node); } break;
-            }
+            wrapperContent.push(node);
             toBeRemovedNodes.push(node);
             node = node.nextSibling;
         }
-        this.appendChild(boxNode);
         toBeRemovedNodes.forEach(node => this.removeChild(node));
-        */
+        wrapperContent.forEach(node => wrapperNode.appendChild(node));
+        this.appendChild(wrapperNode);
     }
 }
 
@@ -149,24 +148,11 @@ class T2SlideBox extends HTMLElement {
         super(); /* base HTML element */
 
         /* <column-start> */
-        let val;
-        if (this.hasAttribute("column-start") && this.hasAttribute("column-span") ) {
-            this.style.gridColumn = `${this.getAttribute("column-start")} / span ${this.getAttribute("column-span")}`;
-        }
-        else if (this.hasAttribute("column-start") && !this.hasAttribute("column-span") ) {
-            this.style.gridColumn = `${this.getAttribute("column-start")}`;
-        }
-        else if (!this.hasAttribute("column-start") && this.hasAttribute("column-span") ) {
+        if (this.hasAttribute("column-span") ) {
             this.style.gridColumn = `span ${this.getAttribute("column-span")}`;
         }
 
-        if (this.hasAttribute("row-start") && this.hasAttribute("row-span")) {
-            this.style.gridRow = `${this.getAttribute("row-start")} / span ${this.getAttribute("row-span")}`;
-        }
-        else if (this.hasAttribute("row-start") && !this.hasAttribute("row-span")) {
-            this.style.gridRow = `${this.getAttribute("row-start")}`;
-        }
-        else if (!this.hasAttribute("row-start") && this.hasAttribute("row-span")) {
+        if (this.hasAttribute("row-span")) {
             this.style.gridRow = `span ${this.getAttribute("row-span")}`;
         }
     }
@@ -183,19 +169,6 @@ class T2SlideButton extends HTMLElement {
     constructor() {
         super(); /* base HTML element */
 
-        /* <column-start> */
-        let val;
-        if (this.hasAttribute("row-start")) {
-            this.rowStart = this.getAttribute("row-start");
-            this.style.gridRow = this.rowStart;
-        }
-
-        if (this.hasAttribute("column-start")) {
-            this.columnStart = this.getAttribute("column-start");
-            this.style.gridColumn = this.columnStart;
-        }
-
-        /* </column-start> */
 
         this.iconPathname = this.getAttribute("icon");
         this.url = this.getAttribute("href");

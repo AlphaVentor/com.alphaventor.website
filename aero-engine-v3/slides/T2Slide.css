@@ -1,40 +1,72 @@
 /* <t2-slide> */
 t2-slide {
-	margin: 0px 0px 0px 0px;
-	padding: 16px 16px 16px 16px;
+	position: relative;
+	display: block;
+	margin: 0px;
+	padding: 0px;
 	position: relative;
 	box-sizing: content-box;
 	background-position: center;
 
-	display: grid;
-	/* Colonnes de 200px chacune, autant que possible dans la largeur disponible */
-	grid-auto-columns: 200px;
-	/* Toutes les lignes font 200px de haut */
-	grid-auto-rows: 200px;
-	grid-auto-flow: column;
-	gap: 16px;
+
 	height: 680px;
 	width: 100%;
 	box-sizing: border-box;
-    overflow-x: scroll;
+	overflow-x: scroll;
 }
 
 
-	t2-slide[arrangement="top-left"] {
-		padding: 16px 32% 240px 16px;
+.t2-slide-wrapper {
+	position: absolute;
+	display: grid;
+	/* Colonnes de 200px chacune, autant que possible dans la largeur disponible */
+	/* grid-auto-columns: 200px; */
+	grid-template-columns: repeat(auto-fill, 200px);
+	/* Toutes les lignes font 200px de haut */
+	grid-auto-rows: 200px;
+	grid-auto-flow: dense row;
+	gap: 16px;
+}
+
+@media (orientation : landscape) {
+	.t2-slide-wrapper {
+		width: 60%;
+		margin: 16px;
 	}
 
-	t2-slide[arrangement="top-right"] {
-		padding: 16px 16px 240px 32%;
+	t2-slide[arrangement="top-left"]>div.t2-slide-wrapper {
+		top: 0px;
+		left: 0px;
 	}
 
-	t2-slide[arrangement="bottom-right"] {
-		padding: 240px 16px 16px 32%;
+	t2-slide[arrangement="top-right"]>div.t2-slide-wrapper {
+		top: 0px;
+		right: 0px;
 	}
 
-	t2-slide[arrangement="bottom-left"] {
-		padding: 240px 32% 16px 16px;
+	t2-slide[arrangement="bottom-right"]>div.t2-slide-wrapper {
+		bottom: 0px;
+		right: 0px;
 	}
+
+	t2-slide[arrangement="bottom-left"]>div.t2-slide-wrapper {
+		bottom: 0px;
+		left: 0px;
+	}
+}
+
+@media (orientation : portrait) {
+	.t2-slide-wrapper {
+		margin: 32px 0 32px 0;
+		left: 50%;
+		/* Move the left edge to the center of the parent */
+		transform: translateX(-50%);
+		/* Then shift it back left by half its own width */
+	}
+}
+
+
+
 
 
 
@@ -321,7 +353,6 @@ t2-slide-button:hover {
 
 
 .t2-slide-button-text {
-	margin-top: 24px;
 	vertical-align: middle;
 	grid-row: 1 / span 1;
 	grid-column: 1 / span 2;
@@ -330,6 +361,7 @@ t2-slide-button:hover {
 }
 
 .t2-slide-button-text>p {
+	margin: 8px 0px 8px 0px;
 	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande",
 		sans-serif;
 	font-size: 24px;
