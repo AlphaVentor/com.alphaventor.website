@@ -166,14 +166,12 @@ picture-banner h1>b {
 @media (orientation : landscape) {
 	picture-banner-legend>h1 {
 		font-size: 64px;
-		line-height: 64px;
 	}
 }
 
 @media (orientation : portrait) {
 	picture-banner-legend>h1 {
 		font-size: 48px;
-		line-height: 48px;
 	}
 }
 

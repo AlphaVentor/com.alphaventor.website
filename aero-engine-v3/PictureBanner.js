@@ -169,6 +169,10 @@ export class PictureBannerLegend extends HTMLElement {
     constructor(){
         super();
 
+        const h1Node = document.createElement("h1");
+        h1Node.innerHTML = this.textContent;
+        this.textContent = '';
+        this.appendChild(h1Node);
     }
 
 

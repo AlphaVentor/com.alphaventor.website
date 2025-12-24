@@ -181,7 +181,7 @@ class T2SlideButton extends HTMLElement {
         textNode.appendChild(pNode);
         this.appendChild(textNode);
 
-        const linkIcon = new Icon(this.iconPathname, { width: 32, height: 32 });
+        const linkIcon = new Icon(this.iconPathname, { width: 64, height: 64 });
         linkIcon.build();
         linkIcon.getEnvelope().classList.add("t2-slide-button-icon");
         this.appendChild(linkIcon.getEnvelope());
