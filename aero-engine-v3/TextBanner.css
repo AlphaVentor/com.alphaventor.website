@@ -129,8 +129,8 @@ text-banner>p {
 	font-weight: normal;
 	text-align: left;
 	z-index: 4;
-	padding: 0px 0px 0px 0px;
-	padding: 6px 6px 6px 8px;
+	margin: 0px;
+	padding: 6px 6px 32px 8px;
 	border-radius: 4px;
 	margin: 0px;
 }

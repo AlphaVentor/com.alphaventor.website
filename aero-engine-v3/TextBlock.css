@@ -14,7 +14,17 @@ text-block {
 @media (orientation : landscape) {
 	text-block {
 		margin: 0px 0px 0px 0px;
-		padding: 32px 16% 8px 16%;
+		padding: 32px 16% 64px 16%;
+	}
+
+	text-block[type="legal"] {
+		margin: 0px 0px 0px 0px;
+		padding: 32px 16% 64px 16%;
+	}
+
+	text-block[type="marketing"] {
+		margin: 0px 0px 0px 0px;
+		padding: 32px 16% 12% 16%;
 	}
 }
 
@@ -22,7 +32,17 @@ text-block {
 @media (orientation : portrait) {
 	text-block {
 		margin: 0px 0px 0px 0px;
-		padding: 16px 4% 8px 4%;
+		padding: 16px 4% 52px 4%;
+	}
+
+	text-block[type="legal"] {
+		margin: 0px 0px 0px 0px;
+		padding: 16px 4% 52px 4%;
+	}
+
+	text-block[type="marketing"] {
+		margin: 0px 0px 0px 0px;
+		padding: 16px 4% 12% 4%;
 	}
 }
 
@@ -58,14 +78,34 @@ text-block[type="legal"]>h1 {
 }
 
 @media (orientation : landscape) {
-	text-block>h1 {
+	text-block>h1 { /* default */
+		font-size: 64px;
+		line-height: 64px;
+	}
+
+	text-block[type="marketing"]>h1 {
+		font-size: 64px;
+		line-height: 64px;
+	}
+
+	text-block[type="legal"]>h1 {
 		font-size: 64px;
 		line-height: 64px;
 	}
 }
 
 @media (orientation : portrait) {
-	text-block>h1 {
+	text-block>h1 { /* default */
+		font-size: 48px;
+		line-height: 48px;
+	}
+
+	text-block[type="marketing"]>h1 {
+		font-size: 48px;
+		line-height: 48px;
+	}
+
+	text-block[type="legal"]>h1 {
 		font-size: 48px;
 		line-height: 48px;
 	}
@@ -123,6 +163,10 @@ text-block[type="legal"]>h2 {
 	}
 }
 
+text-block[type="marketing"]>h2 {
+	font-size: 24px;
+	padding: 16px 8px 8px 8px;
+}
 /* </h2> */
 
 /* <p> */
@@ -150,6 +194,12 @@ text-block>p code, text-block>ul code, text-block>ol code{
 text-block[type="legal"]>p {
 	font-size: 16px;
 }
+
+
+text-block[type="marketing"]>p {
+	font-size: 20px;
+}
+
 
 text-block[type="legal"]>ul>li {
 	padding: 8px 8px 8px 16px;
@@ -286,7 +336,8 @@ text-block[type="legal"]>ul>li {
 	border-radius: 4px;
 }
 .textblock-link[type="marketing"]>.textblock-link-text {
-	font-size: 16px;
+	font-size: 20px;
+	padding-bottom: 0px;
 	font-weight: bold;
 }
 
@@ -422,3 +473,4 @@ div[class^="background-"] {
 	margin: 0;
 	padding: 0;
 }
+

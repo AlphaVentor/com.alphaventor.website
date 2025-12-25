@@ -127,7 +127,7 @@ export class TextBlock extends HTMLElement {
             /* ee */
             this.classList.add("aero-background-gradient-" + val);
         }
-        else if (val = sources.getAttribute("backgroundImage")) {
+        else if (val = this.getAttribute("backgroundImage")) {
             this.classList.add("background-pic");
             AeroUtilities.loadBackgroundImage(this, val, () => this.render(page));
         }
