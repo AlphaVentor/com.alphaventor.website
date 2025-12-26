@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<title>Alphaventor</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" type="image/x-icon" href="/favicon.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/aero-engine-v3/boot.css" />
+	<script type="module">
+		import { boot } from '/aero-engine-v3/boot.js';
+		window.boot = boot;
+	</script>
+</head>
+
+<body onload="boot()">
+	<div id="aero-wrapper" hasCookiesModalBox state="code">
+		<aero-header theme="dark" logo="/logos/logo-small-white.png">
+			<nav>
+				<menu to="/index.html">Home</menu>
+				<menu to="/solutions.html">Solutions</menu>
+				<menu to="/services.html">Services</menu>
+				<menu to="/softwares.html">Softwares</menu>
+				<menu to="/stack.html">Stack</menu>
+				<menu to="/team.html">Team</menu>
+			</nav>
+			<social>
+				<a to="https://www.linkedin.com/company/s8-stack" pic="/social/linkedin-icon-256px.png"></a>
+				<a to="https://x.com/Stack8Official" pic="/social/x-icon-256px.png"></a>
+			</social>
+		</aero-header>
+		<t2-slide backgroundImage="/solutions/biomass-power-plants/chaufferie-Arc1600-Exterior-4.jpg" arrangement="bottom-left" theme="dark">
+			<t2-slide-box column-span="2">
+				<h1>Biomass</h1>
+				<h2>The only on-demand carbon neutral power generation solution</h2>
+			</t2-slide-box>
+		</t2-slide>
+		<t1-slide theme="dark" backgroundColor="rgb(19, 37, 79)" asset="/solutions/cards/woodchips-03.jpg"
+			assetAspectRatio="4/3" arrangement="text-left">
+			<h1>Cogeneration <b>Biomass</b> Power Plants</h1>
+			<h2>Stable Heat & Power with record efficiency</h2>
+			<p>We turn process owner requirements into specifications, pre-designing the most adequate solution and find
+				the right EPC (Engineering Procurement Construction) companies to achieve your goals, select the most
+				competitive for you, help you setup strong legal guiding and supervise execution at your benefit.
+			</p>
+		</t1-slide>
+		<t2-slide backgroundImage="/solutions/biomass-power-plants/AB-power-plant01.jpg" arrangement="bottom-left" theme="dark">
+			<t2-slide-box column-span="2">
+				<h1>EPC</h1>
+				<h2>Turn key solutions</h2>
+			</t2-slide-box>
+		</t2-slide>
+		<aero-footer path="/footer.html"></aero-footer>
+	</div>
+</body>
+
+</html>
