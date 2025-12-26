@@ -46,8 +46,13 @@ t2-slide[theme="dark"] {
 	gap: 32px;
 }
 
+
 @media (orientation : landscape) {
 	.t2-slide-wrapper {
+		grid-template-columns: repeat(auto-fill, 256px);
+		/* Toutes les lignes font 200px de haut */
+		grid-auto-rows: 256px;
+		gap: 32px;
 		width: 76%;
 		margin: 32px;
 	}
@@ -77,17 +82,23 @@ t2-slide[theme="dark"] {
 	.t2-slide-wrapper {
 		width: 92%;
 		margin: 32px 0 32px 0;
+		grid-template-columns: repeat(auto-fill, calc(50vw - 32px));
+		/* Toutes les lignes font 200px de haut */
+		grid-auto-rows: calc(50vw - 32px);
+		gap: 32px;
 		left: 50%;
 		/* Move the left edge to the center of the parent */
 		transform: translateX(-50%);
 		/* Then shift it back left by half its own width */
 	}
 
-	t2-slide[arrangement="top-left"]>div.t2-slide-wrapper, t2-slide[arrangement="top-right"]>div.t2-slide-wrapper {
+	t2-slide[arrangement="top-left"]>div.t2-slide-wrapper,
+	t2-slide[arrangement="top-right"]>div.t2-slide-wrapper {
 		top: 0px;
 	}
 
-	t2-slide[arrangement="bottom-right"]>div.t2-slide-wrapper, t2-slide[arrangement="bottom-left"]>div.t2-slide-wrapper {
+	t2-slide[arrangement="bottom-right"]>div.t2-slide-wrapper,
+	t2-slide[arrangement="bottom-left"]>div.t2-slide-wrapper {
 		bottom: 0px;
 	}
 }
@@ -248,7 +259,7 @@ t2-slide-box>h1>b {
 
 @media (orientation : portrait) {
 	t2-slide-box>h1 {
-		font-size: 64px;
+		font-size: 32px;
 	}
 }
 
@@ -297,7 +308,7 @@ t2-slide h2>b {
 
 @media (orientation : portrait) {
 	t2-slide-box>h2 {
-		font-size: 32px;
+		font-size: 24px;
 	}
 }
 
@@ -334,7 +345,7 @@ t2-slide p>b {
 
 @media (orientation : landscape) {
 	t2-slide-box>p {
-		font-size: 16px;
+		font-size: 20px;
 	}
 }
 
@@ -373,6 +384,7 @@ t2-slide-button:hover {
 	grid-row: 1 / span 1;
 	grid-column: 1 / span 2;
 	max-width: 100%;
+	overflow: hidden;
 	/* ensures it never exceeds container */
 }
 
@@ -395,12 +407,48 @@ t2-slide-button:hover {
 
 .t2-slide-button-icon>svg {
 	stroke: white;
+	width: 64px;
+	height: 64px;
 }
 
+
+@media (orientation : landscape) {
+	t2-slide-button {
+		grid-template-columns: 152px 64px;
+		grid-template-rows: 152px 64px;
+		gap: 8px;
+	}
+
+	.t2-slide-button-text>p{
+		font-size: 24px;
+	}
+
+	.t2-slide-button-icon>svg {
+		stroke: white;
+		width: 64px;
+		height: 64px;
+	}
+}
+
+@media (orientation : portrait) {
+
+	t2-slide-button {
+		grid-template-columns: 2fr 1fr;
+		grid-template-rows: 2fr 1fr;
+		gap: 8px;
+	}
+
+	.t2-slide-button-text>p{
+		font-size: 20px;
+	}
+
+	.t2-slide-button-icon>svg {
+		stroke: white;
+		width: 32px;
+		height: 32px;
+	}
+}
 
 /* <t2-slide-prime> */
 
 /* </t2-slide-prime> */
-
-
-

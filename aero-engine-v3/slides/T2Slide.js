@@ -170,9 +170,6 @@ class T2SlideButton extends HTMLElement {
         super(); /* base HTML element */
 
 
-        this.iconPathname = this.getAttribute("icon");
-        this.url = this.getAttribute("href");
-
         const textNode = document.createElement("div");
         textNode.classList.add("t2-slide-button-text");
         const pNode = document.createElement("p");
@@ -181,12 +178,19 @@ class T2SlideButton extends HTMLElement {
         textNode.appendChild(pNode);
         this.appendChild(textNode);
 
-        const linkIcon = new Icon(this.iconPathname, { width: 64, height: 64 });
-        linkIcon.build();
-        linkIcon.getEnvelope().classList.add("t2-slide-button-icon");
-        this.appendChild(linkIcon.getEnvelope());
 
 
+        this.iconPathname = this.getAttribute("icon");
+        const iconNode = document.createElement("div");
+        iconNode.classList.add("t2-slide-button-icon");
+        AeroUtilities.getResourceFromOrigin(this.iconPathname, "text", responseText => {
+            iconNode.innerHTML = responseText;
+            this.svgNode = this.wrapperNode.getElementsByTagName("svg")[0];
+        });
+        this.appendChild(iconNode);
+
+
+        this.url = this.getAttribute("href");
         this.addEventListener("click", () => { window.location = this.url; }, false);
     }
 
