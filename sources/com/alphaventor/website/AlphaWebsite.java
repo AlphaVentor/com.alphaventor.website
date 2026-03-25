@@ -1,6 +1,6 @@
 package com.alphaventor.website;
 
-import com.s8.meta.modular.S8Module;
+import com.s8.meta.env.modular.S8Module;
 
 /**
  * 

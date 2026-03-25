@@ -58,13 +58,30 @@ square-grid {
 .square-grid-card {
 	box-sizing: border-box;
 	position: relative;
-	padding: 8px;
+	padding: 0px;
 	margin: 0px;
 	border-radius: 16px;
 	box-shadow: 0px 0px 4px rgb(172, 172, 172);
 	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	font-weight: normal;
 	overflow: hidden;
+}
+
+.square-grid-card > img {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.square-grid-card-content {
+	padding: 8px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
 }
 
 

@@ -3,8 +3,8 @@
  * @author pierreconvert
  *
  */
-import com.s8.meta.modular.S8ModuleDescriptor;
 import com.alphaventor.website.AlphaWebsite;
+import com.s8.meta.env.modular.S8ModuleDescriptor;
 
 
 
@@ -13,5 +13,5 @@ module com.alphaventor.website {
 	
 	exports com.alphaventor.website;
 	
-	requires transitive com.s8.meta;
+	requires transitive com.s8.meta.env;
 }

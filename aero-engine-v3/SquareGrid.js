@@ -177,14 +177,19 @@ export class SquareGridCard {
 
         /* <background> */
         if (val = sources.getAttribute("backgroundImage")) {
-            this.cardNode.classList.add("background-pic");
-            AeroUtilities.loadBackgroundImage(this.cardNode, val);
+            this.cardNode.appendChild(AeroUtilities.createImageNode(val));
         }
         else if (val = sources.getAttribute("backgroundColor")) {
             this.cardNode.classList.add("background-color");
             this.cardNode.style.backgroundColor = val;
         }
         /* </background> */
+
+
+        this.cardNodeContent = document.createElement("div");
+        this.cardNodeContent.classList.add("square-grid-card-content");
+        this.cardNode.appendChild(this.cardNodeContent);
+
 
         /* <elements> */
         let node = sources.firstChild;
@@ -204,7 +209,7 @@ export class SquareGridCard {
         }
         /* </elements> */
         
-        this.elements.forEach(element => { this.cardNode.appendChild(element.html_getNode()); });
+        this.elements.forEach(element => { this.cardNodeContent.appendChild(element.html_getNode()); });
     }
 
     html_getNode(){

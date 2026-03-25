@@ -2,6 +2,9 @@
 
 
 
+const IS_DEBUG_ENABLED = false;
+
+
 export const AeroUtilities = {
 
 
@@ -11,26 +14,68 @@ export const AeroUtilities = {
      * @param {*} pathname 
      * @param {*} onLoaded 
      */
-    loadBackgroundImage : function(target, pathname, onLoaded) {
+    loadBackgroundImage: function (target, pathname, onLoaded) {
 
         const backgroundImageBuffer = new Image();
-        
+
         const _this = this;
         backgroundImageBuffer.onload = function () {
-            
+
             /* assign image from buffer */
             target.style.backgroundImage = `url(${backgroundImageBuffer.src})`;
-    
+
             /* notify handler */
-            if(onLoaded){ onLoaded(); }
+            if (onLoaded) { onLoaded(); }
         };
-    
+
         /* trigger loading */
         backgroundImageBuffer.src = pathname;
     },
 
+    /**
+    * 
+    * @param {*} target 
+    * @param {*} pathname 
+    * @param {*} onLoaded 
+    */
+    createImageNode: function (pathname, onLoaded) {
 
-    getResourceFromOrigin : function(requestPath, responseType, responseCallback){
+        const imageNode = new Image();
+
+        const _this = this;
+        imageNode.onload = function () {
+
+            /* assign image from buffer */
+            target.style.backgroundImage = `url(${imageNode.src})`;
+
+            /* notify handler */
+            if (onLoaded) { onLoaded(); }
+        };
+
+
+        if(!IS_DEBUG_ENABLED){
+            imageNode.src = `/.netlify/images?url=${pathname}&w=800&fm=avif&q=75`;
+
+            imageNode.srcset = `
+            /.netlify/images?url=${pathname}&w=400&fm=avif&q=75   400w,
+            /.netlify/images?url=${pathname}&w=800&fm=avif&q=75   800w,
+            /.netlify/images?url=${pathname}&w=1200&fm=avif&q=75  1200w,
+            /.netlify/images?url=${pathname}&w=1600&fm=avif&q=75  1600w`;
+        }
+        else{
+            imageNode.src = `${pathname}`;
+        }
+
+        imageNode.alt = "Hero image";
+        imageNode.loading = "lazy";
+
+        return imageNode;
+    },
+
+
+
+
+    getResourceFromOrigin: function (requestPath, responseType, responseCallback) {
         this.sendRequest_HTTP_GET(window.location.origin + requestPath, responseType, responseCallback);
     },
 
@@ -42,7 +87,7 @@ export const AeroUtilities = {
      * @param {string} responseType 
      * @param {Function} responseCallback 
      */
-    sendRequest_HTTP_GET : function(requestPath, responseType, responseCallback) {
+    sendRequest_HTTP_GET: function (requestPath, responseType, responseCallback) {
 
         /**
                 * Relies on browser cache for speeding things up
