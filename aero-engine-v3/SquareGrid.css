@@ -69,7 +69,9 @@ square-grid {
 
 .square-grid-card > img {
 	width: 100%;
-	height: 100%;
+	height: auto;
+	object-fit: cover;
+	object-position: center;
 	position: absolute;
 	top: 0px;
 	left: 0px;
@@ -82,6 +84,7 @@ square-grid {
 	left: 0px;
 	width: 100%;
 	height: 100%;
+	box-sizing: border-box;
 }
 
 
