@@ -1,8 +1,6 @@
+import { IS_DEBUG_ENABLED } from "./boot.js";
 
 
-
-
-const IS_DEBUG_ENABLED = false;
 
 
 export const AeroUtilities = {
@@ -44,10 +42,6 @@ export const AeroUtilities = {
 
         const _this = this;
         imageNode.onload = function () {
-
-            /* assign image from buffer */
-            target.style.backgroundImage = `url(${imageNode.src})`;
-
             /* notify handler */
             if (onLoaded) { onLoaded(); }
         };

@@ -30,7 +30,14 @@ div.t1-slide-picture {
 	background-position: center;
 	z-index: 2;
 	aspect-ratio: 3 / 2;
-	/*overflow: auto;*/
+	overflow: hidden;     /* This is the key! */
+}
+
+div.t1-slide-picture>img {
+	height: 100%;
+	width: auto;
+	object-fit: cover;
+	display: block;
 }
 /* <asset> */
 

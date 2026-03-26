@@ -1,0 +1,331 @@
+hero-video {
+	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande",
+		sans-serif;
+	margin: 0px 0px 0px 0px;
+	padding: 0px;
+	display: block;
+	position: relative;
+	width: 100vw;
+}
+
+
+hero-video>video {
+	display: block;
+	z-index: 2;
+}
+
+
+
+@media (orientation : landscape) {
+	hero-video>video {
+		width: 100vw;
+		height: auto;
+	}
+}
+
+@media (orientation : portrait) {
+	hero-video>video {
+		width: auto;
+		height: 64vh;
+		/* object-position: center; */
+		position: relative;
+		z-index: 2;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+
+/* <theme> */
+hero-video[theme="dark"] {
+	color: rgb(247, 247, 247);
+}
+
+hero-video[theme="light"] {
+	color: rgb(32, 32, 32);
+}
+
+
+
+hero-video-box {
+	position: absolute;
+	display: block;
+	z-index: 64;
+	margin: 8px;
+	padding: 8px;
+	box-sizing: border-box;
+	background-color: rgba(0, 0, 0, 0.24);
+	border-radius: 16px;
+	backdrop-filter: blur(24px);
+}
+
+
+@media (orientation : landscape) {
+	hero-video-box {
+		margin: 32px;
+		width: 50%;
+	}
+
+	hero-video-box[arrangement="top-left"] {
+		top: 0px;
+		left: 10%;
+	}
+
+	hero-video-box[arrangement="top-right"] {
+		top: 0px;
+		right: 15%;
+	}
+
+	hero-video-box[arrangement="bottom-right"] {
+		bottom: 0px;
+		right: 15%;
+	}
+
+	hero-video-box[arrangement="bottom-left"] {
+		bottom: 0px;
+		left: 15%;
+	}
+}
+
+@media (orientation : portrait) {
+	hero-video-box {
+		width: 92%;
+		margin: 32px 0 32px 0;
+		left: 50%;
+		/* Move the left edge to the center of the parent */
+		transform: translateX(-50%);
+		/* Then shift it back left by half its own width */
+	}
+
+	hero-video-box[arrangement="top-left"],
+	hero-video-box[arrangement="top-right"] {
+		top: 0px;
+	}
+
+	hero-video-box[arrangement="bottom-right"],
+	hero-video-box[arrangement="bottom-left"] {
+		bottom: 0px;
+	}
+}
+
+
+
+/* <h1> */
+hero-video-box>h1 {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
+		"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-weight: bold;
+	max-width: 92%;
+	padding: 8px;
+	border-radius: 4px;
+	margin: 0px;
+	z-index: 8;
+	text-align: left;
+}
+
+
+hero-video-box>h1>b {
+	font-weight: 800;
+}
+
+@media (orientation : landscape) {
+	hero-video-box>h1 {
+		font-size: 32px;
+	}
+}
+
+@media (orientation : portrait) {
+	hero-video-box>h1 {
+		font-size: 32px;
+	}
+}
+
+hero-video-box>h1>span.emphasis {
+	font-weight: bold;
+}
+
+/* </h1> */
+
+
+/* <h2> */
+hero-video-box>h2 {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
+		"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: 20px;
+	font-weight: normal;
+	max-width: 92%;
+	padding: 8px;
+	border-radius: 4px;
+	/*white-space: nowrap;*/
+	margin: 0px;
+	z-index: 6;
+	text-align: left;
+}
+
+hero-video[theme="dark"] h2 {
+	text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.804);
+	/* offset-x | offset-y | blur-radius | color */
+}
+
+t2-slide[theme="light"] h2 {
+	text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.804);
+	/* offset-x | offset-y | blur-radius | color */
+}
+
+t2-slide h2>b {
+	font-weight: 800;
+	background-color: yellow;
+}
+
+@media (orientation : landscape) {
+	hero-video-box>h2 {
+		font-size: 20px;
+	}
+}
+
+@media (orientation : portrait) {
+	hero-video-box>h2 {
+		font-size: 20px;
+	}
+}
+
+/* </h2> */
+
+/* <p> */
+hero-video-box>p {
+	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande",
+		sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	text-align: left;
+	z-index: 4;
+	padding: 0px 0px 0px 0px;
+	padding: 6px 6px 6px 8px;
+	border-radius: 4px;
+	margin: 0px;
+}
+
+hero-video[theme="dark"] p {
+	text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.804);
+	/* offset-x | offset-y | blur-radius | color */
+}
+
+hero-video[theme="light"] p {
+	text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.216);
+	/* offset-x | offset-y | blur-radius | color */
+}
+
+hero-video p>b {
+	font-weight: 800;
+	background-color: yellow;
+}
+
+@media (orientation : landscape) {
+	hero-video-box>p {
+		font-size: 20px;
+	}
+}
+
+@media (orientation : portrait) {
+	hero-video-box>p {
+		font-size: 20px;
+	}
+}
+
+
+
+/* </p> */
+
+
+t2-slide-button {
+	padding: 16px;
+	box-sizing: border-box;
+	border-radius: 16px;
+	backdrop-filter: blur(12px);
+	display: grid;
+	grid-template-columns: 152px 64px;
+	grid-template-rows: 152px 64px;
+	gap: 8px;
+	background-color: rgba(97, 52, 231, 0.587);
+	box-shadow: azure 0px 0px 16px;
+	cursor: pointer;
+}
+
+t2-slide-button:hover {
+	background-color: violet;
+}
+
+
+.t2-slide-button-text {
+	vertical-align: middle;
+	grid-row: 1 / span 1;
+	grid-column: 1 / span 2;
+	max-width: 100%;
+	overflow: hidden;
+	/* ensures it never exceeds container */
+}
+
+.t2-slide-button-text>p {
+	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande",
+		sans-serif;
+	font-weight: normal;
+	word-wrap: break-word;
+	/* breaks long words if needed */
+	color: white;
+	margin: 8px 0px 8px 0px;
+	font-size: 24px;
+	font-weight: normal;
+}
+
+.t2-slide-button-icon {
+	grid-column: 2;
+	grid-row: 2;
+}
+
+.t2-slide-button-icon>svg {
+	stroke: white;
+	width: 64px;
+	height: 64px;
+}
+
+
+@media (orientation : landscape) {
+	t2-slide-button {
+		grid-template-columns: 152px 64px;
+		grid-template-rows: 152px 64px;
+		gap: 8px;
+	}
+
+	.t2-slide-button-text>p{
+		font-size: 24px;
+	}
+
+	.t2-slide-button-icon>svg {
+		stroke: white;
+		width: 64px;
+		height: 64px;
+	}
+}
+
+@media (orientation : portrait) {
+
+	t2-slide-button {
+		grid-template-columns: 2fr 1fr;
+		grid-template-rows: 2fr 1fr;
+		gap: 8px;
+	}
+
+	.t2-slide-button-text>p{
+		font-size: 20px;
+	}
+
+	.t2-slide-button-icon>svg {
+		stroke: white;
+		width: 32px;
+		height: 32px;
+	}
+}
+
+/* <t2-slide-prime> */
+
+/* </t2-slide-prime> */

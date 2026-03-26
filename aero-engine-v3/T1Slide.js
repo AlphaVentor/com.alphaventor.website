@@ -182,7 +182,7 @@ export class T1Slide extends HTMLElement {
             let assetNode = document.createElement("div");
             assetNode.classList.add("t1-slide-picture");
             if (val = this.getAttribute("assetAspectRatio")) { assetNode.style.aspectRatio = val; }
-            AeroUtilities.loadBackgroundImage(assetNode, assetImagePath, () => { });
+            assetNode.appendChild(AeroUtilities.createImageNode(assetImagePath, () => {}));
             this.appendChild(assetNode);
         }
         /* </assset> */

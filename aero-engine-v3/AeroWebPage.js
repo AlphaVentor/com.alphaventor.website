@@ -10,6 +10,8 @@ import { T2Slide } from "./slides/T2Slide.js";
 import { SquareGrid } from "./SquareGrid.js";
 import { TextBanner } from "./TextBanner.js";
 import { TextBlock } from "./TextBlock.js";
+import { HeroVideo } from "./HeroVideo.js";
+import { LinkButton2 } from "./buttons/LinkButton2.js";
 
 
 
@@ -75,7 +77,7 @@ export class AeroWebPage {
 
         /* <veil node> */
         this.veilNode = document.querySelector("#aero-veil");
-        
+
         this.hide();
 
         /* </structure> */
@@ -85,7 +87,11 @@ export class AeroWebPage {
 
         let val, hasBeenShown = (val = window.sessionStorage.getItem(COOKIES_KEY)) ? val : false;
 
-        //hasBeenShown = false; // For DEBUG
+        let forceModalBox = this.wrapperNode.hasAttribute("forceModalBox");
+        if(forceModalBox){
+            hasBeenShown = false; // for trigerring video
+        }
+       
         if (!hasBeenShown) {
             const modalBox = new ModalBox({
                 image: "/icons/cookie.png",
@@ -97,7 +103,7 @@ export class AeroWebPage {
                 this.topLayerNode.removeChild(modalBox.getEnvelope());
 
                 /* run */
-                page.run();
+                this.run();
             });
             this.topLayerNode.appendChild(modalBox.getEnvelope());
 
@@ -163,7 +169,11 @@ export class AeroWebPage {
     }
 
     run() {
-        this.elements.forEach(element => { if (element.run) { element.run(); } });
+        for (let element of this.wrapperNode.children) {   // .children skips text/comment nodes
+            if (element.run) {
+                element.run();
+            }
+        }
     }
 
     notifyElementHasBeenLoaded() {
@@ -239,7 +249,19 @@ export const AERO_WEB_PAGE = new AeroWebPage();
 
 AERO_WEB_PAGE.requireCssStylesheet("/aero-engine-v3/gradient-backgrounds.css");
 
-const components = [T1Slide, T2Slide, AeroHeader, SquareGrid, TextBlock, AeroFooter, ModalBox, PictureBanner, TextBanner];
+const components = [
+    T1Slide,
+    T2Slide,
+    AeroHeader,
+    SquareGrid,
+    TextBlock,
+    AeroFooter,
+    ModalBox,
+    PictureBanner,
+    TextBanner,
+    HeroVideo,
+    LinkButton2
+];
 components.forEach(component => component.init0(AERO_WEB_PAGE));
 
 

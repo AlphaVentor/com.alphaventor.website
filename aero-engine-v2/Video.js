@@ -2,6 +2,7 @@ import { AeroElement } from "./AeroElement.js";
 import { WebPage } from "./WebPage.js";
 
 
+import { Hls } from "https://cdn.jsdelivr.net/npm/hls.js@latest";
 
 export class Video extends AeroElement {
 
@@ -17,6 +18,8 @@ export class Video extends AeroElement {
 
         /* CSS requirements */
         page.css_requireStylesheet("/aero-engine-v2/Video.css");
+
+        
 
 
         /* build nodes */
