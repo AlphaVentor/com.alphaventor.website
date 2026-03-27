@@ -1,6 +1,6 @@
 
 
-export const IS_DEBUG_ENABLED = true;
+export const IS_DEBUG_ENABLED = false;
 
 
 export function boot() {
