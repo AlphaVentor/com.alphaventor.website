@@ -13,6 +13,7 @@ export class HeroVideo extends HTMLElement {
     static init0(page) {
         customElements.define("hero-video", HeroVideo);
         customElements.define("hero-video-box", HeroVideoBox);
+        customElements.define("hero-video-title", HeroVideoTitle);
         
         /* CSS requirements */
         page.requireCssStylesheet("/aero-engine-v3/HeroVideo.css");
@@ -119,6 +120,17 @@ export class HeroVideo extends HTMLElement {
 
 
 export class HeroVideoBox extends HTMLElement {
+
+    /**
+     * 
+     */
+    constructor() {
+        super(); /* base HTML element */
+    }
+}
+
+
+export class HeroVideoTitle extends HTMLElement {
 
     /**
      * 

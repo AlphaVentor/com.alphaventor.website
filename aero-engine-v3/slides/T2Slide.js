@@ -48,6 +48,7 @@ export class T2Slide extends HTMLElement {
         customElements.define("t2-slide", T2Slide);
         customElements.define("t2-slide-box", T2SlideBox);
         customElements.define("t2-slide-button", T2SlideButton);
+        customElements.define("t2-slide-background-picture", T2SlideBackgroundImage);
         page.requireCssStylesheet("/aero-engine-v3/slides/T2Slide.css");
     }
 
@@ -122,16 +123,9 @@ export class T2Slide extends HTMLElement {
 
         const wrapperNode = document.createElement("div");
         wrapperNode.classList.add("t2-slide-wrapper");
-        
-        const toBeRemovedNodes = new Array();
-        const wrapperContent = new Array();
-        let node = this.firstChild;
-        while (node) {
-            wrapperContent.push(node);
-            toBeRemovedNodes.push(node);
-            node = node.nextSibling;
-        }
-        toBeRemovedNodes.forEach(node => this.removeChild(node));
+
+        const wrapperContent = this.querySelectorAll('t2-slide-button, t2-slide-box');
+        wrapperContent.forEach(node => this.removeChild(node));
         wrapperContent.forEach(node => wrapperNode.appendChild(node));
         this.appendChild(wrapperNode);
     }
@@ -148,7 +142,7 @@ class T2SlideBox extends HTMLElement {
         super(); /* base HTML element */
 
         /* <column-start> */
-        if (this.hasAttribute("column-span") ) {
+        if (this.hasAttribute("column-span")) {
             this.style.gridColumn = `span ${this.getAttribute("column-span")}`;
         }
 
@@ -195,4 +189,22 @@ class T2SlideButton extends HTMLElement {
     }
 
 
+}
+
+
+
+class T2SlideBackgroundImage extends HTMLElement {
+
+    constructor() {
+        super();
+
+        /* <asset> */
+        let val;
+        if (val = this.getAttribute("src")) {
+            let assetImagePath = val;
+            if (val = this.getAttribute("assetAspectRatio")) { this.style.aspectRatio = val; }
+            this.appendChild(AeroUtilities.createImageNode(assetImagePath, () => { }));
+        }
+        /* </assset> */
+    }
 }

@@ -451,4 +451,27 @@ t2-slide-button:hover {
 
 /* <t2-slide-prime> */
 
-/* </t2-slide-prime> */
+/* <t2-slide-background-image> */
+
+t2-slide-background-picture {
+	display: block;
+	padding: 0px;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: 2;
+	aspect-ratio: 3 / 2;
+	overflow: hidden;     /* This is the key! */
+}
+
+t2-slide-background-picture>img {
+	display: block;
+	height: 100%;
+	width: auto;
+	object-fit: cover;
+}
+
+
+/* </t2-slide-background-image> */

@@ -47,6 +47,85 @@ hero-video[theme="light"] {
 
 
 
+
+
+hero-video-title {
+	position: absolute;
+	display: block;
+	z-index: 64;
+	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande",
+		sans-serif;
+	font-size: 64px;
+	width: 72%;
+	font-weight: normal;
+	text-align: center;
+	padding: 0px 0px 0px 0px;
+	margin: 0px;
+	text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.804);
+	/* offset-x | offset-y | blur-radius | color */
+}
+
+
+@media (orientation : landscape) {
+	hero-video-title {
+		margin: 32px;
+		width: 80%;
+	}
+
+	hero-video-title[position="center-bottom"] {
+		top: 60%;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	hero-video-title[position="top-left"] {
+		top: 0px;
+		left: 10%;
+	}
+
+	hero-video-title[position="top-right"] {
+		top: 0px;
+		right: 15%;
+	}
+
+	hero-video-title[position="bottom-right"] {
+		bottom: 0px;
+		right: 15%;
+	}
+
+	hero-video-title[position="bottom-left"] {
+		bottom: 0px;
+		left: 15%;
+	}
+}
+
+@media (orientation : portrait) {
+	hero-video-box {
+		width: 92%;
+		margin: 32px 0 32px 0;
+		left: 50%;
+		/* Move the left edge to the center of the parent */
+		transform: translateX(-50%);
+		/* Then shift it back left by half its own width */
+	}
+
+	hero-video-box[position="top-left"],
+	hero-video-box[position="top-right"] {
+		top: 0px;
+	}
+
+	hero-video-box[position="bottom-right"],
+	hero-video-box[position="bottom-left"] {
+		bottom: 0px;
+	}
+}
+
+
+
+
+
+
+
 hero-video-box {
 	position: absolute;
 	display: block;
@@ -255,77 +334,3 @@ t2-slide-button:hover {
 	background-color: violet;
 }
 
-
-.t2-slide-button-text {
-	vertical-align: middle;
-	grid-row: 1 / span 1;
-	grid-column: 1 / span 2;
-	max-width: 100%;
-	overflow: hidden;
-	/* ensures it never exceeds container */
-}
-
-.t2-slide-button-text>p {
-	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande",
-		sans-serif;
-	font-weight: normal;
-	word-wrap: break-word;
-	/* breaks long words if needed */
-	color: white;
-	margin: 8px 0px 8px 0px;
-	font-size: 24px;
-	font-weight: normal;
-}
-
-.t2-slide-button-icon {
-	grid-column: 2;
-	grid-row: 2;
-}
-
-.t2-slide-button-icon>svg {
-	stroke: white;
-	width: 64px;
-	height: 64px;
-}
-
-
-@media (orientation : landscape) {
-	t2-slide-button {
-		grid-template-columns: 152px 64px;
-		grid-template-rows: 152px 64px;
-		gap: 8px;
-	}
-
-	.t2-slide-button-text>p{
-		font-size: 24px;
-	}
-
-	.t2-slide-button-icon>svg {
-		stroke: white;
-		width: 64px;
-		height: 64px;
-	}
-}
-
-@media (orientation : portrait) {
-
-	t2-slide-button {
-		grid-template-columns: 2fr 1fr;
-		grid-template-rows: 2fr 1fr;
-		gap: 8px;
-	}
-
-	.t2-slide-button-text>p{
-		font-size: 20px;
-	}
-
-	.t2-slide-button-icon>svg {
-		stroke: white;
-		width: 32px;
-		height: 32px;
-	}
-}
-
-/* <t2-slide-prime> */
-
-/* </t2-slide-prime> */
