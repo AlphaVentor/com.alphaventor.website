@@ -75,9 +75,20 @@ export class HeroVideo extends HTMLElement {
 			const isLoadedCallback = AERO_WEB_PAGE.appendDependency();
 
 
-			// Trigger play when manifest is ready
-			hls.on(Hls.Events.MANIFEST_PARSED, () => {
-				isLoadedCallback();
+			// Trigger callback when the first fragment is fully loaded
+			let firstFragLoaded = false;
+
+			hls.on(Hls.Events.FRAG_LOADED, (_event, data) => {
+			  if (!firstFragLoaded) {
+			    // This is the first chunk
+			    firstFragLoaded = true;
+			    console.log('First fragment loaded!', data.frag);
+
+			    isLoadedCallback();   // ← your callback for "ready to start playing"
+			    
+			    // Optional: remove the listener if you only care about the very first one
+			    // hls.off(Hls.Events.FRAG_LOADED);
+			  }
 			});
 
 			// Fallback error handling
