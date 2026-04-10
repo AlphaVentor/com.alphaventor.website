@@ -34,78 +34,6 @@ t2-slide[theme="dark"] {
 
 
 
-.t2-slide-wrapper {
-	position: absolute;
-	display: grid;
-	/* Colonnes de 200px chacune, autant que possible dans la largeur disponible */
-	/* grid-auto-columns: 200px; */
-	grid-template-columns: repeat(auto-fill, 256px);
-	/* Toutes les lignes font 200px de haut */
-	grid-auto-rows: 256px;
-	grid-auto-flow: dense row;
-	gap: 32px;
-}
-
-
-@media (orientation : landscape) {
-	.t2-slide-wrapper {
-		grid-template-columns: repeat(auto-fill, 256px);
-		/* Toutes les lignes font 200px de haut */
-		grid-auto-rows: 256px;
-		gap: 32px;
-		width: 76%;
-		margin: 32px;
-	}
-
-	t2-slide[arrangement="top-left"]>div.t2-slide-wrapper {
-		top: 0px;
-		left: 0px;
-	}
-
-	t2-slide[arrangement="top-right"]>div.t2-slide-wrapper {
-		top: 0px;
-		right: 0px;
-	}
-
-	t2-slide[arrangement="bottom-right"]>div.t2-slide-wrapper {
-		bottom: 0px;
-		right: 0px;
-	}
-
-	t2-slide[arrangement="bottom-left"]>div.t2-slide-wrapper {
-		bottom: 0px;
-		left: 0px;
-	}
-}
-
-@media (orientation : portrait) {
-	.t2-slide-wrapper {
-		width: 92%;
-		margin: 32px 0 32px 0;
-		grid-template-columns: repeat(auto-fill, calc(50vw - 32px));
-		/* Toutes les lignes font 200px de haut */
-		grid-auto-rows: calc(50vw - 32px);
-		gap: 32px;
-		left: 50%;
-		/* Move the left edge to the center of the parent */
-		transform: translateX(-50%);
-		/* Then shift it back left by half its own width */
-	}
-
-	t2-slide[arrangement="top-left"]>div.t2-slide-wrapper,
-	t2-slide[arrangement="top-right"]>div.t2-slide-wrapper {
-		top: 0px;
-	}
-
-	t2-slide[arrangement="bottom-right"]>div.t2-slide-wrapper,
-	t2-slide[arrangement="bottom-left"]>div.t2-slide-wrapper {
-		bottom: 0px;
-	}
-}
-
-
-
-
 
 
 /* <asset> */
@@ -221,15 +149,87 @@ div.t2-slide-picture {
 
 
 
-
 t2-slide-box {
 	display: block;
-	padding: 16px;
-	box-sizing: border-box;
-	background-color: rgba(0, 0, 0, 0.24);
-	border-radius: 16px;
-	border: 1px radius rgba(255, 255, 255, 0.205);
-	backdrop-filter: blur(24px);
+	position: absolute;
+    margin: 0px;
+    width: 62%;
+    padding: 16px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.24);
+    border-radius: 16px;
+    /* border: 2px solid rgba(255, 255, 255, 0.205); */
+    backdrop-filter: blur(24px);
+}
+
+
+
+@media (orientation : landscape) {
+
+	t2-slide-box[arrangement="top-left"] {
+		top: 4%;
+		left: 8%;
+		width: 62%;
+		max-height: 50%;
+	}
+
+	t2-slide-box[arrangement="top-center"] {
+		top: 4%;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 62%;
+		max-height: 50%;
+	}
+
+	t2-slide-box[arrangement="top-right"] {
+		top: 4%;
+		right: 8%;
+		width: 62%;
+		max-height: 50%;
+	}
+
+	t2-slide-box[arrangement="bottom-left"] {
+		bottom: 4%;
+		right: 8%;
+		width: 62%;
+		max-height: 50%;
+	}
+
+	t2-slide-box[arrangement="bottom-center"] {
+		bottom: 4%;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 62%;
+		max-height: 50%;
+	}
+
+	t2-slide-box[arrangement="bottom-right"] {
+		bottom: 4%;
+		right: 8%;
+		width: 62%;
+		max-height: 50%;
+	}
+}
+
+
+@media (orientation : portrait) {
+	t2-slide-box[arrangement="top-left"],
+	t2-slide-box[arrangement="top-center"],
+	t2-slide-box[arrangement="top-right"] {
+		top: 6%;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 80%;
+	}
+
+	t2-slide-box[arrangement="bottom-left"],
+	t2-slide-box[arrangement="bottom-center"],
+	t2-slide-box[arrangement="bottom-right"] {
+		bottom: 6%;
+		left: 50%;
+		transform: translateX(-50%);
+		height: 50%;
+	}
 }
 
 
@@ -259,7 +259,7 @@ t2-slide-box>h1>b {
 
 @media (orientation : portrait) {
 	t2-slide-box>h1 {
-		font-size: 32px;
+		font-size: 64px;
 	}
 }
 
@@ -275,7 +275,7 @@ t2-slide-box>h2 {
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
 		"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	font-size: 24px;
-	font-weight: normal;
+	font-weight: lighter;
 	max-width: 92%;
 	padding: 8px;
 	border-radius: 4px;
@@ -318,7 +318,7 @@ t2-slide h2>b {
 t2-slide-box>p {
 	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande",
 		sans-serif;
-	font-size: 20px;
+	font-size: 12px;
 	font-weight: normal;
 	text-align: left;
 	z-index: 4;
@@ -345,13 +345,13 @@ t2-slide p>b {
 
 @media (orientation : landscape) {
 	t2-slide-box>p {
-		font-size: 20px;
+		font-size: 16px;
 	}
 }
 
 @media (orientation : portrait) {
 	t2-slide-box>p {
-		font-size: 20px;
+		font-size: 14px;
 	}
 }
 

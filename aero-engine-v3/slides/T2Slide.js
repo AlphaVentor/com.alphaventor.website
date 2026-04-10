@@ -119,15 +119,6 @@ export class T2Slide extends HTMLElement {
             AeroUtilities.loadBackgroundImage(this, val, AERO_WEB_PAGE.appendDependency());
         }
         /* </background> */
-
-
-        const wrapperNode = document.createElement("div");
-        wrapperNode.classList.add("t2-slide-wrapper");
-
-        const wrapperContent = this.querySelectorAll('t2-slide-button, t2-slide-box');
-        wrapperContent.forEach(node => this.removeChild(node));
-        wrapperContent.forEach(node => wrapperNode.appendChild(node));
-        this.appendChild(wrapperNode);
     }
 }
 

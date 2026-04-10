@@ -1,42 +1,45 @@
 
 
+
 /* <a> */
 
-.link-button2-group {
+link-button3-group {
 	display: flex;
-	flex-direction: row;
-	justify-content: flex-end;  /* This pushes the whole group to the right */
-	padding: 8px;
+	flex-direction: row-reverse;
+	padding: 0px;
+	margin-top: 32px;
 }
 
-link-button2 {
+
+link-button3{
 	display: block;
-    margin: 8px;
+	margin: 8px;
 }
 
-link-button2>a {
+
+link-button3 > a {
 	color: white;
 	font-size: 14px;
 	font-weight: bold;
     padding: 4px;
+    margin: 8px;
     width: fit-content;
     display: flex;
     flex-direction: row;
     align-items: center;
 	background-color: #3862fbca;
 	/*background-image: linear-gradient(to right, #3525e5 0%, #3525e5  20%, #b214d2 100%);*/
-	border-radius: 8px;
+	border-radius: 20px;
 	cursor: pointer;
 	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.367);
 	text-decoration: none;
-	z-index: 64;
 }
 
-link-button2>a:hover {
+link-button3 > a:hover{
 	background-color: #476bed;
 }
 
-.link-button2-pic {
+.link-button3-pic {
 	width: 24px;
 	height: 24px;
 	margin: 0px;
@@ -46,12 +49,14 @@ link-button2>a:hover {
 	background-repeat: no-repeat;
 }
 
-.link-button2-pic > svg {
+.link-button3-pic > svg {
 	stroke: #ffffff;
 	fill: #ffffff;
 }
 
-.link-button2-text {
+.link-button3-text {
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
+		"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 	padding-bottom: 2px;
 	font-size: 14px;
 	margin-left: 8px;
@@ -60,23 +65,22 @@ link-button2>a:hover {
 
 
 
-link-button2>a:hover .link-button2-pic > svg {
+.link-button3:hover > .link-button3-pic >svg {
 	stroke: white;
 	fill: white;
 }
 
-link-button2>a:hover .link-button2-text{
+.link-button3:hover > .link-button3-text{
 	color: white;
 }
 
 /* <a:styles> */
 
-link-button2>a[type="marketing"] {
+.link-button3[type="marketing"] {
 	padding: 12px 24px;
-	border-radius: 8px;
+	border-radius: 4px;
 }
-
-link-button2>a[type="marketing"] .link-button2-text {
+.link-button3[type="marketing"]>.link-button3-text {
 	font-size: 20px;
 	padding-bottom: 0px;
 	font-weight: bold;
@@ -85,23 +89,20 @@ link-button2>a[type="marketing"] .link-button2-text {
 /* </a:styles> */
 
 /* <a:color> */
-link-button2>a[color="resource"] {
+.link-button3[color="action"] {
 	color: white;
 	background-color: #3862fbca;
 }
-
-link-button2>a[color="resource"]:hover {
+.link-button3[color="action"]:hover {
 	background-color: #7291ff;
 }
 
-link-button2>a[color="doc"] {
+.link-button3[color="prime"] {
 	color: white;
 	background-color: #008925ca;
 }
-
-link-button2>a[color="doc"]:hover {
+.link-button3[color="prime"]:hover {
 	background-color: #02c035ca;
 }
 
 /* </a:color> */
-

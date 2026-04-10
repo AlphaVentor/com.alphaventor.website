@@ -12,6 +12,7 @@ import { TextBanner } from "./TextBanner.js";
 import { TextBlock } from "./TextBlock.js";
 import { HeroVideo } from "./HeroVideo.js";
 import { LinkButton2 } from "./buttons/LinkButton2.js";
+import { LinkButton3 } from "./buttons/LinkButton3.js";
 
 
 
@@ -260,7 +261,8 @@ const components = [
     PictureBanner,
     TextBanner,
     HeroVideo,
-    LinkButton2
+    LinkButton2,
+    LinkButton3
 ];
 components.forEach(component => component.init0(AERO_WEB_PAGE));
 
