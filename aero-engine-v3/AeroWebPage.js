@@ -56,7 +56,7 @@ export class AeroWebPage {
 
 
     areAllDependenciesLoaded = false;
-    dependencies = new Array();
+    dependencyChecks = new Array();
 
 
     constructor() {
@@ -137,14 +137,14 @@ export class AeroWebPage {
 
 
     appendDependency() {
-        const index = this.dependencies.length;
-        this.dependencies.push(false);
+        const index = this.dependencyChecks.length;
+        this.dependencyChecks.push(false);
         return () => {
-            this.dependencies[index] = true;
+            this.dependencyChecks[index] = true;
 
             /* check if all css stylesheets have been loaded */
             this.areAllDependenciesLoaded = true;
-            this.dependencies.forEach(value => {
+            this.dependencyChecks.forEach(value => {
                 if (!value && this.areAllDependenciesLoaded) { this.areAllDependenciesLoaded = false; }
             });
 
