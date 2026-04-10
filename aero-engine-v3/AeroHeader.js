@@ -142,8 +142,8 @@ export class AeroHeader extends HTMLElement {
 
 
 
-
-        let lastKnowScrollY = 0;
+        let scrollY = 0;
+        let lastKnownScrollY = 0;
         let deltaScrollY = 0;
         let upwardDeltaScrollY = 0;
         let ticking = false;
@@ -154,8 +154,10 @@ export class AeroHeader extends HTMLElement {
         const udpateBarPosition = function (y) { flyingNode.style.top = `${y}px`; }
 
         window.addEventListener("scroll", function (e) {
-            deltaScrollY = window.scrollY - lastKnowScrollY;
-            lastKnowScrollY = window.scrollY;
+
+            scrollY = window.scrollY;
+            deltaScrollY = scrollY - lastKnownScrollY;
+            lastKnownScrollY = window.scrollY;
 
             if (deltaScrollY < 0) { /* going upward, deltaScrollY < 0  */
                 //if(previousMove != -1){ barPositionY = -68; }
@@ -164,8 +166,9 @@ export class AeroHeader extends HTMLElement {
                 //previousMove = -1;
             }
             else { /* downward, deltaScrollY > 0 */
-                barPositionY -= deltaScrollY;
-
+                if(scrollY >= 0){ /* suppress in negative regions */
+                    barPositionY -= deltaScrollY;
+                }
                 //previousMove = 1;
             }
             if (barPositionY > 0) { barPositionY = 0; }
