@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<title>Alphaventor</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="icon" type="image/x-icon" href="/favicon.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="aero-engine-v3/boot.css" />
+	<script type="module">
+		import { boot } from './aero-engine-v3/boot.js';
+		window.boot = boot;
+	</script>
+</head>
+
+<body onload="boot()">
+	<div id="aero-wrapper" state="code">
+		<aero-header theme="dark" logo="logos/logo-small-white.png">
+			<nav>
+				<menu to="/index.html">Home</menu>
+				<menu to="/procurement.html" selected>Procurement</menu>
+				<menu to="/your-software.html">YourSoftware</menu>
+				<menu to="/cad-hub.html">CAD Hub</menu>
+				<menu to="/s8-stack.html">Qx-Stack</menu>
+				<menu to="/s8-stack.html">S8-Stack</menu>
+				<menu to="/about-us.html">About us</menu>
+			</nav>
+			<social>
+				<a to="https://x.com/Stack8Official" pic="/social/x-icon-256px.png"></a>
+			</social>
+		</aero-header>
+		<square-grid theme="light" backgroundColor="white">
+			<square-grid-card type="light" size="std" theme="dark"
+				backgroundImage="/solutions/cards/combined-cycle-02.jpg">
+				<hgroup>Procurement</hgroup>
+				<h1>Efficiency</h1>
+				<h2>Wasted Heat Recovery</h2>
+				<p isMobileHideable>Turn wasted heat into useful power generation.</p>
+			</square-grid-card>
+			<square-grid-card type="light" size="large-horizontal" theme="dark"
+				backgroundImage="/solutions/cards/steam-turbine-02.jpg">
+				<hgroup>Procurement</hgroup>
+				<h1>Steam Turbines</h1>
+				<h2>Small Steam Turbines</h2>
+				<p isMobileHideable>Small steam turbines for industrial/Power generation purposes.
+				</p>
+			</square-grid-card>
+			<square-grid-card type="light" size="std" theme="dark"
+				backgroundImage="/solutions/manufacturing/back01.png">
+				<hgroup>Design</hgroup>
+				<h1>Turbine parts</h1>
+				<p isMobileHideable>Spare parts to entire turbo train</p>
+			</square-grid-card>
+			<square-grid-card type="light" size="large-horizontal" theme="dark"
+				backgroundImage="/solutions/expanders/xpander-CAD-general.png">
+				<hgroup>Design</hgroup>
+				<h1>Custom Expanders</h1>
+				<h2>Integral gear based exp</h2>
+				<p isMobileHideable>Turn wasted heat into useful power generation.</p>
+				<a icon="/icons/left-circled-arrow.svg" href="/solutions/expanders.html">Learn more...</a>
+			</square-grid-card>
+			<square-grid-card type="light" size="large-horizontal" theme="dark"
+				backgroundImage="/solutions/cards/special-turbomachine-01.jpg">
+				<hgroup>Design</hgroup>
+				<h1>High-speed Turbo Design</h1>
+				<h2>Special turbo-expanders and turbo-compressors</h2>
+				<p>For special duty, or for equipping a new process or packages, we provide tailored made turbo-machiens
+					designs.
+				</p>
+				<a icon="/icons/left-circled-arrow.svg" href="/solutions/high-speed-turbo.html">Learn more...</a>
+			</square-grid-card>
+			<square-grid-card type="light" size="std" theme="dark"
+				backgroundImage="/solutions/data-center/data-centre-cooling.jpg">
+				<hgroup>Procurement</hgroup>
+				<h1>Datacenters</h1>
+				<h2>Heavy duty cooling</h2>
+				<p isMobileHideable>Your bespoke solutions for high density hyperscale datacenters</p>
+			</square-grid-card>
+			<square-grid-card type="light" size="large-square" theme="dark"
+				backgroundImage="/solutions/biomass-power-plants/chaufferie-Arc1600-02.jpg">
+				<hgroup>Procurement</hgroup>
+				<h1>Biomass Power Plants</h1>
+				<h2>Integrated heat and power</h2>
+				<p>Biomass Power plants are the sole Full renewable 24/7 local power supply that currently achieve net
+					zero. It also begins tremenouds beneifts in terms of combined Heat&Power supply, making it
+					supercharger for virtually every industry.:</p>
+				<li icon="/icons/flow.svg"><b>Stream to Front</b>: This is the key to send compelx structure to front
+					with
+					extremely tight data frame: every single object sent to front is part of graph wehere every
+					node is identified. Therefore, any modification of the screen does not need any reload of
+					previously transmitted objects.</li>
+				<li icon="/icons/flow.svg"><b>Native Undo</b>: Since all objects are persisted in a flow of sequential
+					modifications, undo reconstruction comes at no costs.</li>
+				<a icon="/icons/left-circled-arrow.svg" href="/solutions/biomass-power-plants.html">Learn more...</a>
+			</square-grid-card>
+			<square-grid-card type="light" size="large-horizontal" theme="dark"
+				backgroundImage="/solutions/cards/oil-gas-sector.jpg">
+				<hgroup>Procurement</hgroup>
+				<h1>Oil & Gas packages</h1>
+				<p isMobileHideable>Bespoke API617 packages are key components for Oil&Gas projects.</p>
+				<a icon="/icons/left-circled-arrow.svg" href="/solutions/gas-package.html">Learn more...</a>
+			</square-grid-card>
+			<square-grid-card type="light" size="std" theme="dark"
+				backgroundImage="/solutions/electrical-storage/battery-elec-storage-01.jpg">
+				<hgroup>Design</hgroup>
+				<h1>Storage & UPS</h1>
+				<p isMobileHideable>Battery package for UPS and buffering</p>
+				<a icon="/icons/left-circled-arrow.svg" href="#core-bohr-lithium">Learn more...</a>
+			</square-grid-card>
+			<square-grid-card type="light" size="std" theme="light"
+				backgroundImage="/solutions/cards/pid-sample-02.png">
+				<hgroup>Design</hgroup>
+				<h1>Process Design</h1>
+				<h2>Thermodynamics, PFD, PI&D, </h2>
+				<p isMobileHideable>We provide the core elements for the design of fluid processes.
+				</p>
+				<a icon="/icons/left-circled-arrow.svg" href="/solutions/process.html">Learn more...</a>
+			</square-grid-card>
+			<square-grid-card type="light" size="large-horizontal" theme="dark"
+				backgroundImage="/solutions/cards/turbofan-02.jpg">
+				<hgroup>Design</hgroup>
+				<h1>Electrical Turbofans</h1>
+				<p isMobileHideable>Powering new air mobility with advanced concepts.</p>
+			</square-grid-card>
+			<square-grid-card type="light" size="large-square" theme="dawn"
+				backgroundImage="/solutions/cards/orc-1.jpg">
+				<hgroup>Design</hgroup>
+				<h1>Organic Rankine Cycles</h1>
+				<h2>High efficiency cycles for low temperatures</h2>
+				<p>Organic Rankine cycles play a specific role in Energy efficiency. They are best in class solutions
+					for Power generation in
+					numerous situation, like for instance: low grade heat recovery, Geothermal, Ocean Thermal Energy,
+					etc.
+				</p>
+			</square-grid-card>
+		</square-grid>
+		<text-block type="std" backgroundColor="white">
+			<h1>Procurement</h1>
+			<h2>Sectors</h2>
+			<p>We operate in numerous sectors where we gathered experience, as listed above.
+				The key drivers are process engineering, mechnical drive, turbomachines and rotative equipment. We serve
+				Oil & Gas industries frontier needs, but care about renewable, espcially biomass and Oragnic Rankine
+				Cycle Powered solutions.
+			</p>
+			<h2>Type of Services</h2>
+			<p>
+				We offer a comprehensive range of services to help you with projects in aforementionned sectors. They
+				are geared towards reducing risk in execution by sourcing / pre-designning as much as possible.
+			</p>
+			<links>
+				<a icon="/icons/mail-2.svg"
+					href="mailto:contact@alphaventor.com?subject=Enquiry%20for%20Procurement%20Services"
+					type="marketing" color="doc">Contact us</a>
+			</links>
+		</text-block>
+		
+		<square-grid theme="light" backgroundColor="white">
+			<square-grid-card type="light" size="std" theme="light" backgroundImage="/services/principles/tile00.png">
+				<h1>Procurement</h1>
+				<h2>Finding the right partners</h2>
+				<p isMobileHideable="true">Whether an OEM or an EPC, we can map, qualify and select the right companies
+					for you.</p>
+				<a icon="/icons/left-circled-arrow.svg" href="#tile00-text">Learn more...</a>
+			</square-grid-card>
+			<square-grid-card type="light" size="std" theme="light" backgroundImage="/services/principles/tile01.png">
+				<h1>Contracting</h1>
+				<h2>Structuring your serenity</h2>
+				<p isMobileHideable="true">Good knowledge of project execution enables us to write the appropriate
+					contractual
+					arrangement to protect your interest and ensure the performance you request.</p>
+				<a icon="/icons/left-circled-arrow.svg" href="#tile01-text">Learn more...</a>
+			</square-grid-card>
+			<square-grid-card type="light" size="std" theme="light" backgroundImage="/services/principles/tile02.png">
+				<h1>Sizing</h1>
+				<h2>The right dimension</h2>
+				<p isMobileHideable="true">Estimating the true needs might sometimes be challenging. We can help
+					auditing your process and define the key metrics before starting your project.</p>
+				<a icon="/icons/left-circled-arrow.svg" href="#tile02-text">Learn more...</a>
+			</square-grid-card>
+			<square-grid-card type="light" size="std" theme="light" backgroundImage="/services/principles/tile03.png">
+				<h1>Synced</h1>
+				<h2>Monitoring execution</h2>
+				<p isMobileHideable="true">Because procurement of big projects does not stop at signing the purchasing
+					contract, we are here to follow the
+					companies we selected for you.
+				</p>
+				<a icon="/icons/left-circled-arrow.svg" href="#tile03-text">Learn more...</a>
+			</square-grid-card>
+			<square-grid-card type="light" size="std" theme="light" backgroundImage="/services/principles/tile04.png">
+				<h1>Storage</h1>
+				<h2>Documentation Safeguarding</h2>
+				<p isMobileHideable="true">Keeping track of the project documentation is of the uttermost importance
+					during all phases of the project life cycle.</p>
+				<a icon="/icons/left-circled-arrow.svg" href="#tile04-text">Learn more...</a>
+			</square-grid-card>
+			<square-grid-card type="light" size="std" theme="light" backgroundImage="/services/principles/tile05.png">
+				<h1>Integration</h1>
+				<h2>Because each package is always part of something bigger</h2>
+				<p isMobileHideable="true">We are can at your request offer integration services that goes beyond the
+					packages we supply.</p>
+				<a icon="/icons/left-circled-arrow.svg" href="#tile05-text">Learn more...</a>
+			</square-grid-card>
+			<square-grid-card type="light" size="std" theme="light" backgroundImage="/services/principles/tile06.png">
+				<h1>Design</h1>
+				<h2>Imagining and putting in production</h2>
+				<p isMobileHideable="true">Besides procurement, we have dedicated design capabilities.</p>
+				<a icon="/icons/left-circled-arrow.svg" href="#tile06-text">Learn more...</a>
+			</square-grid-card>
+			<square-grid-card type="light" size="std" theme="light" backgroundImage="/services/principles/tile07.png">
+				<h1>Scaling</h1>
+				<h2>High Volume Equipment manufacturing</h2>
+				<p isMobileHideable="true">For high volume OEM design and production, we can assist with findign the
+					right partners to scale up.</p>
+				<a icon="/icons/left-circled-arrow.svg" href="#tile07-text">Learn more...</a>
+			</square-grid-card>
+		</square-grid>
+		<t1-slide theme="dark" backgroundColor="rgb(19, 37, 79)" asset="solutions/process-plant-monitoring-2.avif"
+			assetAspectRatio="4/3" arrangement="text-right">
+			<h1>We provide many <b>Services</b> for our solutions</h1>
+			<p>Discover the services we can offer to accompany your most demanding projects:
+			</p>
+		</t1-slide>
+		<text-block id="tile00-text" type="std" backgroundGradient="light-tile00">
+			<svg path="/assets/principles/etoile.svg" width="128" height="128"></svg>
+			<h1><b>Procurement</b></h1>
+			<h1>Your Perfect Partner, Found – Without the Guesswork</h1>
+			<h2>Mapping the Best Players in the Market</h2>
+			<p>We don’t leave partner selection to chance. Using our extensive industry network
+				and up-to-date market intelligence, we rapidly map the global landscape of OEMs and
+				EPC companies that match your technical scope, capacity, track record, and strategic fit.
+				From niche specialists in turbomachinery or ORC systems to large-scale EPC contractors
+				for thermal plants and Oil & Gas projects, we identify every credible option – including
+				hidden champions you won’t find through standard tenders.
+			</p>
+			<h2>Qualifying & Selecting with Zero Compromise</h2>
+			<p>Once the field is mapped, we rigorously qualify each candidate through technical audits,
+				financial due diligence, reference checks, and risk assessment. We then run a structured,
+				competition-driven selection process that maximizes value while minimizing your exposure.
+				The result? You get the strongest, most competitive partner – fully vetted, perfectly aligned
+				with your goals, and ready to deliver on time and budget.
+			</p>
+			<links>
+				<a icon="/icons/mail-2.svg"
+					href="mailto:contact@alphaventor.com?subject=Enquiry%20for%20Procurement%20Services"
+					type="marketing" color="doc">Contact us</a>
+			</links>
+		</text-block>
+		<text-block id="tile01-text" backgroundGradient="light-tile01">
+			<svg path="/assets/principles/shield.svg" width="128" height="128"></svg>
+			<h1><b>Contracting</b></h1>
+			<h1>Contracts That Protect You – Before a Single Bolt is Turned</h1>
+			<h2>Building Bulletproof Protection into Every Clause</h2>
+			<p>With one decade of hands-on experience in executing complex thermal, ORC, and Oil & Gas projects,
+				we know exactly where risks hide and how contractors try to shift them. We translate this hard-won
+				insight into clear, balanced-yet-firm contractual frameworks (EPC, EPCM, split contracts, or hybrid
+				models)
+				that lock in scope, performance guarantees, schedule milestones, and payment terms while keeping your
+				interests
+				first.
+			</p>
+			<h2>Turning Obligations into Guaranteed Performance</h2>
+			<p>We craft incentive mechanisms, liquidated damages, performance bonds, and testing protocols that leave no
+				room for ambiguity. From steam turbine efficiency and ORC output to district heating availability and
+				datacenter cooling reliability, every key indicator you care about becomes contractually enforceable.
+				The result is not just a signed agreement – it’s the peace of mind that comes from knowing your project
+				will deliver exactly what you paid for.</p>
+			<links>
+				<a icon="/icons/mail-2.svg"
+					href="mailto:contact@alphaventor.com?subject=Enquiry%20for%20Contracting%20Services"
+					type="marketing" color="doc">Contact us</a>
+			</links>
+		</text-block>
+		<text-block id="tile02-text" type="std" backgroundGradient="light-tile02">
+			<svg path="/assets/principles/3d-printer.svg" width="128" height="128"></svg>
+			<h1><b>Sizing</b></h1>
+			<h1>Size It Once, Build It Right – No Costly Surprises Later</h1>
+			<h2>Auditing Your Process with Ruthless Precision</h2>
+			<p>Before any euro is committed, we dive deep into your existing or planned process streams, energy
+				balances, and operational constraints. Using proven thermodynamic modeling, real-world data
+				reconciliation, and scenario analysis, we uncover hidden inefficiencies, oversizing traps, or
+				underestimated peak loads that typical feasibility studies miss – whether it’s a district heating
+				network, an ORC waste-heat recovery unit, a datacenter cooling loop, or a compressed-gas facility.</p>
+			<h2>Defining the Key Metrics That Actually Matter</h2>
+			<p>We deliver a crystal-clear sizing report with verifiable key performance indicators: exact thermal duty,
+				optimum turbine or compressor power, realistic turndown ratios, annual energy yield, and lifecycle cost
+				curves. These aren’t theoretical numbers – they become the unbreakable foundation for specifications,
+				tenders, and contracts, ensuring your plant is neither underpowered nor wastefully oversized, but
+				perfectly dimensioned for performance and profitability from day one.</p>
+		</text-block>
+		<text-block type="std" id="tile03-text" backgroundGradient="light-tile03">
+			<svg path="/assets/principles/sync.svg" width="128" height="128"></svg>
+			<h1><b>Supervising</b></h1>
+			<h1>Signed Doesn’t Mean Finished – We Stay Until It’s Perfectly Delivered</h1>
+			<h2>Real-Time Oversight That Keeps Everyone Accountable</h2>
+			<p>From kick-off meeting to final performance test, we act as your eyes and ears on the ground. We monitor
+				engineering progress, manufacturing milestones, quality inspections, and site installation with a
+				structured dashboard, regular audits, and on-site presence when needed. Deviations from schedule, scope
+				creep, or early signs of technical shortcuts are caught immediately – long before they become expensive
+				claims.</p>
+			<h2>Enforcing the Performance You Paid For</h2>
+			<p>Using the contractual levers we built from day one (milestone payments, LDs, acceptance protocols), we
+				drive the selected EPC or OEM to respect every commitment: turbine isentropic efficiency, ORC net
+				output, boiler availability, or cooling-system redundancy. The result is not just a project that
+				finishes – it’s a project that finishes on time, on budget, and performs exactly as promised from the
+				very first day of operation.</p>
+		</text-block>
+		<text-block id="tile04-text" type="std" backgroundGradient="light-tile04">
+			<svg path="/assets/principles/servers.svg" width="128" height="128"></svg>
+			<h1><b>Storage</b></h1>
+			<h1>Your Project’s Memory, Secured Forever – Nothing Lost, Nothing Forgotten</h1>
+			<h2>Keeping track of every Document</h2>
+			<p>From the first feasibility note to final as-built drawings, we implement a secure, structured, and fully
+				searchable documentation system from day one. Specifications, vendor data sheets, meeting minutes,
+				calculation notes, certificates, test reports, change orders – everything is captured,
+				version-controlled, and instantly accessible to your team, eliminating the classic “where is that file?”
+				delays that plague most projects.</p>
+			<h2>Safeguarding Knowledge for Operation, Claims, and Beyond</h2>
+			<p>We don’t just store – we protect and future-proof. All documents are classified, backed-up in redundant
+				locations, and delivered in open formats with clear indexing so that years later, during audits,
+				warranty claims, revamping, or replication projects, you can retrieve the exact evidence you need in
+				minutes. The result: total traceability, bulletproof defense against disputes, and a living knowledge
+				base that turns your finished plant into a repeatable success.</p>
+		</text-block>
+		<text-block id="tile05-text" type="std" backgroundGradient="light-tile05">
+			<svg path="/assets/principles/graph.svg" width="128" height="128"></svg>
+			<h1><b>Integration</b></h1>
+			<h1>One Package, Perfectly Woven into the Whole – for Seamless and Smooth operation</h1>
+			<h2>Seeing the Big Picture When Others See Only Their Scope</h2>
+			<p>Your new ORC turbogenerator, boiler, or gas compressor isn’t an island. We map every interface –
+				mechanical, electrical, control, fluid, thermal, and civil – with the existing plant or parallel
+				packages long before steel is ordered. By leading coordination meetings, producing integration matrices,
+				and delivering unified P&IDs, loop diagrams, and 3D models, we eliminate the classic finger-pointing
+				that arises when separate suppliers work in silos.</p>
+			<h2>Delivering a Plant That Starts Up Like Clockwork</h2>
+			<p>We go beyond coordination: at your request, we take full responsibility for integration scope – from
+				common platforms and shared utilities to DCS logic, alarm management, and overall sequence of operation.
+				The outcome is a turnkey handover where the new equipment doesn’t just work in isolation; it boosts the
+				performance, reliability, and efficiency of the entire system, with first-time start-up success and zero
+				post-commissioning surprises.</p>
+		</text-block>
+		<text-block id="tile06-text" type="std" backgroundGradient="light-tile06">
+			<svg path="/assets/principles/monitor.svg" width="128" height="128"></svg>
+			<h1><b>Design</b></h1>
+			<h1>From Vision to Reality – We Design It, Then Make It Real</h1>
+			<h2>Creating Tailor-Made Solutions That Actually Work</h2>
+			<p>We don’t do off-the-shelf. Our in-house team designs custom process plants and equipment with deep
+				expertise in thermal systems (boilers, district heating, datacenter cooling), advanced thermodynamic
+				cycles (steam, ORC, sCO₂), and high-performance turbomachinery (expanders, turbocompressors, ORC
+				turbogenerators). Every design is born from your specific energy, footprint, and budget constraints –
+				optimized for efficiency, operability, and long-term value.</p>
+			<h2>From Concept to Production-Ready Deliverables</h2>
+			<p>We take the idea all the way: process flow diagrams, heat & mass balances, detailed mechanical design, 3D
+				modeling, stress analysis, and full manufacturing drawings. Because we also handle procurement and
+				supervision, our designs are inherently buildable, cost-aware, and de-risked – ready for fabrication by
+				the best shops worldwide, with zero disconnect between what was imagined and what gets delivered on
+				site.</p>
+			<links>
+				<a icon="/icons/mail-2.svg"
+					href="mailto:contact@alphaventor.com?subject=Enquiry%20for%20Design%20Services" type="marketing"
+					color="doc">Contact us</a>
+			</links>
+		</text-block>
+		<text-block id="tile07-text" backgroundGradient="light-tile07">
+			<svg path="/assets/principles/scalability.svg" width="128" height="128"></svg>
+			<h1><b>Scaling</b></h1>
+			<h1>From Prototype to Thousands – We Scale Your Success Without Compromise</h1>
+			<h2>Matching Your Design to True High-Volume Champions</h2>
+			<p>When your ORC turbogenerator, heat exchanger, or specialized compressor moves from pilot to commercial
+				series, we rapidly identify and qualify the few OEMs worldwide that combine proven high-volume
+				manufacturing capability with the technical rigor your product demands. We go beyond standard
+				directories – targeting hidden leaders in Asia, Europe, and North America that already produce similar
+				rotating or thermal equipment at rates of hundreds or thousands per year.</p>
+			<h2>Securing Quality, Cost, and Speed at Scale</h2>
+			<p>We structure the partnership for seamless transfer: detailed manufacturing drawings, tolerance stack-up
+				reviews, dedicated tooling packages, and rigorous qualification runs. Then we negotiate capacity
+				reservation, stepped pricing curves, and quality gates that protect performance even at peak production.
+				The result is your equipment rolling off the line at the lowest possible unit cost, with zero drift in
+				efficiency or reliability – ready for global deployment from the very first commercial batch.</p>
+		</text-block>
+		<aero-footer path="footer.html"></aero-footer>
+	</div>
+</body>
+
+</html>
